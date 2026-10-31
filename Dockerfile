@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=electron37-native-builder:glibc2.27
+ARG BASE_IMAGE=electron37-native-builder:ubuntu18.04
 FROM ${BASE_IMAGE}
 USER root
 COPY inputs/ /tmp/uos-inputs/

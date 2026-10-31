@@ -18,7 +18,10 @@ GCC 8.3, and the target old-ABI sysroot are added by this repository's Dockerfil
 Do not substitute an ARM64 native image: the intended build host is x86_64 and
 the target is LoongArch64.
 
-For public distribution, publish the matching base and final cross image to a
-container registry such as GHCR, or build an equivalent base from independently
-licensed inputs. The target sysroot and Debian packages are deliberately kept out of
-Git and must be obtained from an authorized toolchain source.
+The validated base is available as `electron-loong64-native-glibc227.tar` in
+the public `toolchain-v1` Release. Download and load it with
+`./scripts/fetch-native-base.sh`; the script checks the recorded SHA256 before
+running `docker load`. The same image is also published at
+`ghcr.io/fusionsync/electron-loong64-native:glibc227` for registries where that
+package is accessible. The target sysroot and Debian packages are deliberately
+kept out of Git and are downloaded separately.

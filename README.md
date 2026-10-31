@@ -18,6 +18,7 @@ The image is an x86_64 build environment targeting LoongArch64 old ABI. It is su
 
 ```bash
 ./scripts/fetch-inputs.sh
+./scripts/fetch-native-base.sh
 ./scripts/build-image.sh
 ./scripts/smoke-build.sh
 ```
@@ -28,17 +29,22 @@ and verifies their SHA256 values. A network mirror can be selected with
 `INPUTS_BASE_URL`. `FETCH_INPUTS=1 ./scripts/build-image.sh` performs the same
 download automatically before the Docker build.
 
+`fetch-native-base.sh` downloads the pinned x86_64 host-tools image archive
+from the same public Release and loads the
+`electron37-native-builder:ubuntu18.04` tag. To fetch both sets
+automatically, use `FETCH_INPUTS=1 FETCH_BASE_IMAGE=1 ./scripts/build-image.sh`.
+
 The host tools run as x86_64 processes in Docker. The LoongArch compiler and
 linker produce target ELF files, while the sysroot supplies target headers,
 startup objects, glibc, C++ and desktop libraries, and pkg-config metadata.
 The target executable must be tested on a LoongArch64 machine; it cannot be
 executed by the x86_64 builder.
 
-The target inputs are now separately versioned from the source tree. The
-native builder base is still selected with `BASE_IMAGE`; the local validation
-tag is documented in `metadata/base-image-requirements.md`. A future public
-GHCR base image can be selected there without changing the target sysroot or
-source pins.
+The target inputs and the native builder are separately versioned from the
+source tree. The native builder can be selected with `BASE_IMAGE`; its image
+archive and checksum are documented in `metadata/base-image-requirements.md`.
+The base contains only x86_64 host tools. It does not contain the LoongArch
+sysroot, which is added by this repository's Dockerfile.
 
 The full Electron build needs at least 24 GiB RAM, a large work volume, LLVM 20, Rust 1.88, the host runtime, the complete development sysroot, and the pinned depot tools. Start from a clean clone, populate the release inputs, then run the documented source sync, patch, GN, Ninja, linker, packaging, and audit steps. The final link used the recorded GNU binutils fix for the LoongArch type-44 relocation mask; the exact relink command is retained under `electron37-attempt/tools/`.
 
