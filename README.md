@@ -14,7 +14,7 @@ Do not commit SSH credentials, proxy credentials, private network addresses, UOS
 
 ## Cross image
 
-The image is an x86_64 build environment targeting UOS LoongArch64 old ABI (ELF flags `0x3`, glibc 2.28). It is suitable for C/C++ and CMake cross compilation. The Dockerfile layers the UOS target sysroot onto the pinned native builder base. Supply that base image locally with `BASE_IMAGE` (or load it from the matching release/registry image) and provide the three files under `inputs/`; the repository does not embed multi-gigabyte proprietary/redistributable base layers.
+The image is an x86_64 build environment targeting UOS LoongArch64 old ABI (ELF flags `0x3`, glibc 2.28). It is suitable for C/C++ and CMake cross compilation. The Dockerfile layers the UOS target sysroot onto the pinned native builder base. Supply that base image locally with `BASE_IMAGE` (see `metadata/base-image-requirements.md`, or load the matching release/registry image) and provide the three files under `inputs/`; the repository does not embed multi-gigabyte proprietary/redistributable base layers.
 
 ```bash
 ./scripts/build-image.sh
