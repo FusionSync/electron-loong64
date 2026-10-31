@@ -29,8 +29,9 @@ and verifies their SHA256 values. A network mirror can be selected with
 `INPUTS_BASE_URL`. `FETCH_INPUTS=1 ./scripts/build-image.sh` performs the same
 download automatically before the Docker build.
 
-`fetch-native-base.sh` downloads the pinned x86_64 host-tools image archive
-from the same public Release and loads the
+`fetch-native-base.sh` downloads the numbered parts of the pinned x86_64
+host-tools image archive from the same public Release, verifies and joins them,
+then loads the
 `electron37-native-builder:ubuntu18.04` tag. To fetch both sets
 automatically, use `FETCH_INPUTS=1 FETCH_BASE_IMAGE=1 ./scripts/build-image.sh`.
 

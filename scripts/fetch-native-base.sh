@@ -10,6 +10,7 @@ tag=${BASE_IMAGE_TAG:-electron37-native-builder:ubuntu18.04}
 base_url=${BASE_IMAGE_URL:-https://github.com/FusionSync/electron-loong64/releases/download/toolchain-v1}
 output=$cache_dir/$name
 part=$output.part
+parts_manifest=$root/metadata/native-base-parts-SHA256SUMS
 
 mkdir -p "$cache_dir"
 expected=$(awk -v name="$name" '$2 == name {print $1}' "$root/metadata/native-base-SHA256SUMS")
@@ -19,8 +20,19 @@ if [[ -z "$expected" ]]; then
 fi
 
 if [[ ! -f "$output" || "$(sha256sum "$output" | awk '{print $1}')" != "$expected" ]]; then
-    echo "Downloading $name"
-    curl --fail --location --retry 4 --retry-delay 2 --continue-at - --output "$part" "$base_url/$name"
+    mapfile -t part_names < <(awk '{print $2}' "$parts_manifest" | sort)
+    for part_name in "${part_names[@]}"; do
+        part_output=$cache_dir/$part_name
+        part_part=$part_output.part
+        if [[ ! -f "$part_output" ]]; then
+            echo "Downloading $part_name"
+            curl --fail --location --retry 4 --retry-delay 2 --continue-at - \
+                --output "$part_part" "$base_url/$part_name"
+            mv -- "$part_part" "$part_output"
+        fi
+    done
+    (cd "$cache_dir" && sha256sum -c "$parts_manifest")
+    cat "${part_names[@]/#/$cache_dir/}" > "$part"
     mv -- "$part" "$output"
 fi
 
