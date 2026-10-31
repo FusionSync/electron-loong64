@@ -21,7 +21,7 @@ jobs:
           python -m compileall -q electron37-attempt scripts
       - name: Check public tree for local addresses and credentials
         run: |
-          ! grep -RInE '192\.168\.[0-9]+\.[0-9]+|64022|BEGIN .*PRIVATE KEY|ghp_|github_pat_' --exclude-dir=.git --exclude='*.patch' .
+          ! grep -RInE '192\.168\.[0-9]+\.[0-9]+|64022|BEGIN .*PRIVATE KEY|ghp_|github_pat_' --exclude-dir=.git --exclude='*.patch' --exclude='public-tree.yml' .
       - name: Check source pins and checksums
         run: |
           python -m json.tool research/electron-source-notes/source-pins.json >/dev/null
