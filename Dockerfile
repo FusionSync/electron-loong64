@@ -34,8 +34,8 @@ ENV PATH=/usr/local/bin:/opt/loongson/bin:/opt/node/bin:/opt/cmake/bin:/usr/loca
     AR=loongarch64-linux-gnu-ar RANLIB=loongarch64-linux-gnu-ranlib \
     STRIP=loongarch64-linux-gnu-strip \
     PKG_CONFIG=uos-pkg-config
-LABEL org.opencontainers.image.title="UOS 20 LoongArch old-ABI cross compiler" \
-      org.opencontainers.image.description="x86_64 GCC 8.3 cross compiler with a UOS 20 glibc 2.28 sysroot; Electron itself is not built or validated"
+LABEL org.opencontainers.image.title="Electron Loong64 old-ABI cross compiler" \
+      org.opencontainers.image.description="x86_64 GCC 8.3 cross compiler with a glibc 2.28 LoongArch64 sysroot; Electron itself is not built or validated"
 USER builder
 WORKDIR /work
 CMD ["bash"]

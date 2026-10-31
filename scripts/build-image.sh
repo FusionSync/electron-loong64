@@ -15,4 +15,4 @@ if ! docker image inspect "$base" >/dev/null 2>&1; then
     exit 2
 fi
 docker build --network=none --pull=false --build-arg "BASE_IMAGE=$base" \
-    -t uos20-loongarch64-cross:gcc8-oldabi .
+    -t electron-loong64:gcc8-oldabi .

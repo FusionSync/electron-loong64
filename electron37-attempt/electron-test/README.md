@@ -3,7 +3,7 @@
 这个目录不需要 npm install，直接使用旁边的 Electron 二进制即可。
 
 ```bash
-cd /path/to/electron37-uos-gldfixed/electron-test
+cd /path/to/electron-loong64-gldfixed/electron-test
 DISPLAY=:0 ../electron --no-sandbox --disable-gpu .
 ```
 

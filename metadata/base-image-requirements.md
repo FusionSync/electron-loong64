@@ -14,11 +14,11 @@ The matching base must provide:
 - a non-root `builder` user with UID/GID 1000 and `/work` as its work directory
 
 The base image contains host tools only. LoongArch64 target headers, libraries,
-GCC 8.3, and the UOS old-ABI sysroot are added by this repository's Dockerfile.
+GCC 8.3, and the target old-ABI sysroot are added by this repository's Dockerfile.
 Do not substitute an ARM64 native image: the intended build host is x86_64 and
 the target is LoongArch64.
 
 For public distribution, publish the matching base and final cross image to a
 container registry such as GHCR, or build an equivalent base from independently
-licensed inputs. The UOS sysroot and Debian packages are deliberately kept out of
-Git and must be obtained from an authorized UOS/Loongson source.
+licensed inputs. The target sysroot and Debian packages are deliberately kept out of
+Git and must be obtained from an authorized toolchain source.

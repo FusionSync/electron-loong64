@@ -1,6 +1,6 @@
-# UOS 20 distribution audit
+# LoongArch64 distribution audit
 
-Run inside `uos-electron37-attempt`, after sourcing `env.sh`:
+Run inside the Electron Loong64 build container, after sourcing `env.sh`:
 
 ```sh
 cd /work/electron37-attempt
@@ -10,7 +10,7 @@ python3 audit-dist.py
 
 The default checks `src/out/UOS37/dist.zip`, verifies ZIP CRCs and required distribution files, and audits every ELF in the archive. It requires LoongArch ELF64 little endian, machine 258, old ABI flags `0x3`, and imported glibc versions no newer than 2.28. Executables require `/lib64/ld.so.1`. Shared libraries need no interpreter. RPATH/RUNPATH may contain only `$ORIGIN` or `${ORIGIN}` and subdirectories without `..`; absolute paths, empty search components and path-bearing `DT_NEEDED` entries fail. The JSON report lists all required shared libraries.
 
-Evidence is written to `dist-audit/dist-audit.json` (override with `--report PATH`). Missing ZIPs, missing/empty required files, non-ELF required binaries and ABI failures return status 1. Successful static validation does not replace UOS runtime checks for window creation, GPU, sandbox and native modules.
+Evidence is written to `dist-audit/dist-audit.json` (override with `--report PATH`). Missing ZIPs, missing/empty required files, non-ELF required binaries and ABI failures return status 1. Successful static validation does not replace target runtime checks for window creation, GPU, sandbox and native modules.
 
 While compilation is running, audit only completed files without opening the ZIP:
 

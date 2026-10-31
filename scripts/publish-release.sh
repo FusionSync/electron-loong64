@@ -6,12 +6,12 @@ set -euo pipefail
 # in this script or in the repository.
 root=$(cd -- "$(dirname -- "$0")/.." && pwd)
 repo=${GH_REPO:?Set GH_REPO to your GitHub owner/name}
-tag=${RELEASE_TAG:-v37.2.2-uos-loong64}
-title=${RELEASE_TITLE:-Electron 37.2.2 UOS Loong64}
+tag=${RELEASE_TAG:-v37.2.2-loong64}
+title=${RELEASE_TITLE:-Electron 37.2.2 Loong64}
 bundle=${BUNDLE_ZIP:-$root/../electron37-attempt/electron37.2.2-linux-loong64-bundle.zip}
 sha=${BUNDLE_SHA256:-$bundle.sha256}
 asset_dir=${ASSET_DIR:-$root/../electron37-attempt/release-assets-fixed}
-notes=${RELEASE_NOTES:-$root/release-notes/v37.2.2-uos-loong64.md}
+notes=${RELEASE_NOTES:-$root/release-notes/v37.2.2-loong64.md}
 
 for f in "$bundle" "$sha" "$notes"; do
     [[ -f "$f" ]] || { echo "Missing required file: $f" >&2; exit 2; }

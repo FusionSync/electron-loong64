@@ -1,6 +1,6 @@
-# Electron 37.2.2 Loong64 UOS release bundle
+# Electron 37.2.2 Loong64 release bundle
 
-这是 Electron 37.2.2 LoongArch64 修正版的统一下载包，目标系统是 UOS Loong64。
+这是 Electron 37.2.2 LoongArch64 修正版的统一下载包，目标是 LoongArch64 Linux old ABI。
 
 ## 内容
 
@@ -42,7 +42,7 @@ ELECTRON_TEST_TILE=1 DISPLAY=:0 ../../runtime/electron .
 ELECTRON_TEST_PAGE=xhs DISPLAY=:0 ../../runtime/electron .
 ```
 
-测试程序已经针对当前 UOS Loong64 的 Chromium zygote/GPU 崩溃路径内置了软件渲染、`--no-zygote` 和 `--no-sandbox` 设置。B 站如果显示 `ERR_CONNECTION_RESET`，通常是网络访问问题，不代表 Electron 渲染器崩溃。
+测试程序已经针对当前 Loong64 Linux 的 Chromium zygote/GPU 崩溃路径内置了软件渲染、`--no-zygote` 和 `--no-sandbox` 设置。B 站如果显示 `ERR_CONNECTION_RESET`，通常是网络访问问题，不代表 Electron 渲染器崩溃。
 
 ## 校验
 

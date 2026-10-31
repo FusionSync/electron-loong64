@@ -9,11 +9,11 @@
 运行：
 
 ```bash
-cd /path/to/electron37-uos-gldfixed/electron-pages-test
+cd /path/to/electron-loong64-gldfixed/electron-pages-test
 DISPLAY=:0 ../electron --no-sandbox --disable-gpu --no-zygote .
 ```
 
-程序启动时强制使用软件渲染，关闭 WebGL、硬件视频解码和 GPU 合成，并使用 `--no-zygote --no-sandbox` 绕过当前 UOS Loong64 的渲染器 zygote 崩溃路径。窗口默认等页面完成导航后再显示，避免把加载阶段的白色背景误认为白屏。终端会打印每个页面的
+程序启动时强制使用软件渲染，关闭 WebGL、硬件视频解码和 GPU 合成，并使用 `--no-zygote --no-sandbox` 绕过当前 Loong64 Linux 的渲染器 zygote 崩溃路径。窗口默认等页面完成导航后再显示，避免把加载阶段的白色背景误认为白屏。终端会打印每个页面的
 DOM 状态，并在 `/tmp/electron-page-0.png`、`/tmp/electron-page-1.png`、`/tmp/electron-page-2.png`
 保存截图。若页面加载完成但没有可见内容，窗口内会显示诊断提示和“重新加载”按钮。
 
