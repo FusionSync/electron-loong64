@@ -22,6 +22,9 @@ inputs/*.deb
 *.tar
 *.tar.gz
 
+# Cross-compiler smoke-test output
+output/
+
 # Local diagnostics and signing state
 *.log
 *.pyc
