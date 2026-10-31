@@ -49,7 +49,7 @@ sysroot, which is added by this repository's Dockerfile.
 
 The full Electron build needs at least 24 GiB RAM, a large work volume, LLVM 20, Rust 1.88, the host runtime, the complete development sysroot, and the pinned depot tools. Start from a clean clone, populate the release inputs, then run the documented source sync, patch, GN, Ninja, linker, packaging, and audit steps. The final link used the recorded GNU binutils fix for the LoongArch type-44 relocation mask; the exact relink command is retained under `electron37-attempt/tools/`.
 
-The final Electron bundle and SHA256 manifest are attached to the corresponding GitHub Release. It includes Chromium, libffmpeg, mksnapshot, chromedriver, Node headers, libcxx assets, and the test programs.
+The verified binaries are available from the [v37.2.2-loong64 Release](https://github.com/FusionSync/electron-loong64/releases/tag/v37.2.2-loong64). It includes the Electron bundle, Chromium runtime, libffmpeg, mksnapshot, chromedriver, Node headers, libcxx assets, and the test programs, together with SHA256 manifests.
 
 ## Upstream notices
 
