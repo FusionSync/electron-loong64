@@ -32,3 +32,15 @@ The final Electron bundle and SHA256 manifest are attached to the corresponding 
 ## Upstream notices
 
 Electron is MIT licensed; Chromium and its dependencies carry their respective BSD, MIT, LGPL, GPL, and other notices. See `LICENSES/UPSTREAM-NOTICES.md` and the notices shipped inside the Electron bundle.
+
+
+## Publish the verified release
+
+After installing and authenticating the GitHub CLI, set the destination explicitly and run:
+
+```bash
+export GH_REPO=OWNER/REPOSITORY
+./scripts/publish-release.sh
+```
+
+The script uploads the unified bundle, its checksum, and the nine individual assets under `release-assets-fixed/`. It never uploads the UOS sysroot or Docker base layers. Set `RELEASE_TAG` or `ASSET_DIR` when publishing a different verified build.
