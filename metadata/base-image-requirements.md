@@ -2,8 +2,8 @@
 
 The cross image in `Dockerfile` is a target sysroot layer. It expects an x86_64
 native builder base selected with `BASE_IMAGE`; the local validation build used
-the tag `electron37-native-builder:glibc2.27`. That tag is a local name and is
-not a public registry reference.
+the tag `electron37-native-builder:ubuntu18.04`. The same tag is provided by
+the public Release archive described below.
 
 The matching base must provide:
 
