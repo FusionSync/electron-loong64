@@ -1,0 +1,29 @@
+name: Public tree checks
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  metadata:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Check shell syntax
+        run: |
+          bash -n scripts/*.sh electron37-attempt/*.sh
+          bash -n electron37-attempt/runtime-validation/run.sh electron37-attempt/rust-probe/*.sh electron37-attempt/tools/*.sh
+      - name: Check Python syntax
+        run: |
+          python -m compileall -q electron37-attempt scripts
+      - name: Check public tree for local addresses and credentials
+        run: |
+          ! grep -RInE '192\.168\.[0-9]+\.[0-9]+|64022|BEGIN .*PRIVATE KEY|ghp_|github_pat_' --exclude-dir=.git --exclude='*.patch' .
+      - name: Check source pins and checksums
+        run: |
+          python -m json.tool research/electron-source-notes/source-pins.json >/dev/null
+          test -s electron37-attempt/tools/llvm20.sha256
+          test -s metadata/SHA256SUMS
