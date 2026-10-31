@@ -83,6 +83,9 @@
       "lockfile_unchanged": true,
       "lockfile_sha256": "71e388fe83444756c2a96cc26248a819c6c96b4ac3f0b588266e88d3c5e22eab",
       "evidence": "../../electron37-attempt/logs/yarn-network-diagnosis.md"
-    }
+    },
+    "artifact_build_completed": true,
+    "artifact_link_and_packaging": "Completed with the patched GNU ld LoongArch type-44 relocation mask; static audit and UOS Loong64 desktop runtime checks passed.",
+    "full_electron_build_note": "A clean third-party rebuild from only the public recipe has not yet been independently completed; the published artifact is the verified gldfixed build."
   }
 }
