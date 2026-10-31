@@ -1,0 +1,14 @@
+*
+!Dockerfile
+!inputs/
+inputs/*
+!inputs/uos20-sysroot-20261027.tar.gz
+!inputs/loongson-gcc8.3-rc1.6.tar.xz
+!inputs/libstdc++-8-dev_8.3.0.13-deepin1_loongarch64.deb
+!scripts/
+!toolchains/
+!metadata/
+metadata/*
+!metadata/target-system.txt
+!metadata/target-packages.tsv
+!metadata/SHA256SUMS

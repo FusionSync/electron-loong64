@@ -1,0 +1,9 @@
+--- a/bfd/elfxx-loongarch.c
++++ b/bfd/elfxx-loongarch.c
+@@ -514,7 +514,7 @@
+ 	 false,                                  /* partial_inplace.  */
+ 	 0xfc0003e0,                             /* src_mask */
+-	 0xfc0003e0,                             /* dst_mask */
++	 0x03fffc1f,                             /* dst_mask */
+ 	 false,                                  /* pcrel_offset */
+*** End Patch

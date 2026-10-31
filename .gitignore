@@ -1,0 +1,29 @@
+# Generated Chromium checkout and build output
+electron37-attempt/src/
+electron37-attempt/out/
+electron37-attempt/src/out/
+electron37-attempt/tools/llvm20/
+electron37-attempt/tools/rust188/
+electron37-attempt/tools/depot_tools/
+electron37-attempt/tools/binutils42/
+electron37-attempt/host-runtime/
+electron37-attempt/sysroot-complete/
+electron37-attempt/sysroot-overlay/
+electron37-attempt/dependency-packages/
+electron37-attempt/logs/
+electron37-attempt/llvm20-download-cache/
+electron37-attempt/release-assets/
+electron37-attempt/release-assets-fixed/
+electron37-attempt/electron37.2.2-linux-loong64-bundle.zip
+inputs/*.tar.gz
+inputs/*.tar.xz
+inputs/*.deb
+*.img
+*.tar
+*.tar.gz
+
+# Local diagnostics and signing state
+*.log
+*.pyc
+__pycache__/
+**/gnupg/

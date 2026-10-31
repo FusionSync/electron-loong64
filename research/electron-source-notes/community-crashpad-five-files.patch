@@ -1,0 +1,321 @@
+diff --git a/third_party/crashpad/crashpad/snapshot/linux/exception_snapshot_linux.cc b/third_party/crashpad/crashpad/snapshot/linux/exception_snapshot_linux.cc
+index 677afdaa77362bb0ea83ad5c4fa82dd5dc27da46..0fedcc39cb1a23eee8d4f9b3b51151cb59b8ec82 100644
+--- a/third_party/crashpad/crashpad/snapshot/linux/exception_snapshot_linux.cc
++++ b/third_party/crashpad/crashpad/snapshot/linux/exception_snapshot_linux.cc
+@@ -15,6 +15,7 @@
+ #include "snapshot/linux/exception_snapshot_linux.h"
+ 
+ #include <signal.h>
++#include <cstring>
+ 
+ #include "base/logging.h"
+ #include "snapshot/linux/capture_memory_delegate_linux.h"
+@@ -367,6 +368,78 @@ bool ExceptionSnapshotLinux::ReadContext<ContextTraits64>(
+   return internal::ReadContext(reader, context_address, context_.riscv64);
+ }
+ 
++#elif defined(ARCH_CPU_LOONGARCH64)
++
++static bool ReadContext(ProcessReaderLinux* reader,
++                        LinuxVMAddress context_address,
++                        typename ContextTraits64::CPUContext* dest_context) {
++  const ProcessMemory* memory = reader->Memory();
++  LinuxVMAddress mcontext_address = context_address +
++                                 offsetof(UContext<ContextTraits64>, mcontext);
++  ThreadContext::t64_t thread_context;
++  ContextTraits64::MContext mcontext;
++  if (!memory->Read(mcontext_address, sizeof(mcontext), &mcontext)) {
++    LOG(ERROR) << "Couldn't read gregs";
++    return false;
++  }
++  static_assert(sizeof(thread_context.regs) == sizeof(mcontext.gregs),
++                "gpr context size mismtach");
++  memcpy(thread_context.regs, mcontext.gregs, sizeof(mcontext.gregs));
++  thread_context.csr_era = mcontext.pc;
++  thread_context.orig_a0 = 0;
++  thread_context.csr_badv = 0;
++  InitializeCPUContextLOONG64_NoFloatingPoint(thread_context, dest_context);
++
++  LinuxVMAddress reserved_address =
++        context_address + offsetof(UContext<ContextTraits64>, mcontext.extcontext);
++  if ((reserved_address & 15) != 0) {
++    LOG(ERROR) << "invalid alignment 0x" << std::hex << reserved_address;
++    return false;
++   }
++  constexpr VMSize kMaxContextSpace = 4096;
++  ProcessMemoryRange range;
++  if (!range.Initialize(memory, true, reserved_address, kMaxContextSpace)) {
++    return false;
++  }
++  do {
++    struct sctx_info head;
++    if (!range.Read(reserved_address, sizeof(head), &head)) {
++      LOG(ERROR) << "missing context terminator";
++      return false;
++    }
++    reserved_address += sizeof(head);
++    switch (head.magic) {
++      case FPU_CTX_MAGIC:
++        if (head.size != sizeof(struct fpu_context) + sizeof(head)) {
++          LOG(ERROR) << "unexpected fpu context size " << head.size;
++          return false;
++        }
++        FloatContext::f64_t fpucontext;
++        if (!range.Read(reserved_address, sizeof(fpucontext), &fpucontext)) {
++          LOG(ERROR) << "Couldn't read fpu " << head.size;
++          return false;
++        }
++        InitializeCPUContextLOONG64_OnlyFPU(fpucontext, dest_context);
++        return true;
++      case 0:
++        return true;
++      default:
++        LOG(ERROR) << "invalid magic number 0x" << std::hex << head.magic;
++        return false;
++    }
++  } while (true);
++}
++
++template <>
++bool ExceptionSnapshotLinux::ReadContext<ContextTraits64>(
++    ProcessReaderLinux* reader,
++    LinuxVMAddress context_address) {
++  context_.architecture = kCPUArchitectureLOONG64;
++  context_.loong64 = &context_union_.loong64;
++
++  return internal::ReadContext(reader, context_address, context_.loong64);
++}
++
+ #endif  // ARCH_CPU_X86_FAMILY
+ 
+ bool ExceptionSnapshotLinux::Initialize(
+@@ -397,7 +470,7 @@ bool ExceptionSnapshotLinux::Initialize(
+       return false;
+     }
+   } else {
+-#if !defined(ARCH_CPU_RISCV64)
++#if !defined(ARCH_CPU_RISCV64) && !defined(ARCH_CPU_LOONGARCH64)
+     if (!ReadContext<ContextTraits32>(process_reader, context_address) ||
+         !ReadSiginfo<Traits32>(process_reader, siginfo_address)) {
+       return false;
+diff --git a/third_party/crashpad/crashpad/snapshot/linux/signal_context.h b/third_party/crashpad/crashpad/snapshot/linux/signal_context.h
+index a76852e20edfac46d0ef8af0531b0d31421ca49f..7b0c2d4624ccf3825274b582313e7f5ce9edeb57 100644
+--- a/third_party/crashpad/crashpad/snapshot/linux/signal_context.h
++++ b/third_party/crashpad/crashpad/snapshot/linux/signal_context.h
+@@ -456,6 +456,46 @@ static_assert(offsetof(UContext<ContextTraits64>, mcontext.fpregs) ==
+                   offsetof(ucontext_t, uc_mcontext.__fpregs),
+               "context offset mismatch");
+ 
++#elif defined(ARCH_CPU_LOONGARCH64)
++
++// See asm/sigcontext.h
++struct MContext64 {
++  uint64_t pc;
++  uint64_t gregs[32];
++  uint32_t flags;
++  uint32_t padding;
++  uint64_t extcontext[0] __attribute__((__aligned__(16)));
++};
++
++struct ContextTraits64 : public Traits64 {
++  using MContext = MContext64;
++  using SignalThreadContext = ThreadContext::t64_t;
++  using SignalFloatContext = FloatContext::f64_t;
++  using CPUContext = CPUContextLOONG64;
++};
++
++// See asm/ucontext.h
++template <typename Traits>
++struct UContext {
++  typename Traits::ULong flags;
++  typename Traits::Address link;
++  SignalStack<Traits> stack;
++  Sigset<Traits> sigmask;
++  char alignment_padding_[8];
++  char padding[128 - sizeof(Sigset<Traits>)];
++  MContext64 mcontext;
++};
++
++static_assert(offsetof(UContext<ContextTraits64>, mcontext) ==
++                  offsetof(ucontext_t, uc_mcontext),
++              "context offset mismatch");
++static_assert(offsetof(UContext<ContextTraits64>, mcontext.gregs) ==
++                  offsetof(ucontext_t, uc_mcontext.__gregs),
++              "context offset mismatch");
++static_assert(offsetof(UContext<ContextTraits64>, mcontext.extcontext) ==
++                  offsetof(ucontext_t, uc_mcontext.__extcontext),
++              "context offset mismatch");
++
+ #else
+ #error Port.
+ #endif  // ARCH_CPU_X86_FAMILY
+diff --git a/third_party/crashpad/crashpad/util/linux/ptracer.cc b/third_party/crashpad/crashpad/util/linux/ptracer.cc
+index a985cb1d1ff976ccf68840957f968677efe44a4b..f4375a88928a185c62c0eefa16a2ca2f6f574d41 100644
+--- a/third_party/crashpad/crashpad/util/linux/ptracer.cc
++++ b/third_party/crashpad/crashpad/util/linux/ptracer.cc
+@@ -430,6 +430,37 @@ bool GetThreadArea64(pid_t tid,
+   return true;
+ }
+ 
++#elif defined(ARCH_CPU_LOONGARCH64)
++
++bool GetFloatingPointRegisters64(pid_t tid,
++                                 FloatContext* context,
++                                 bool can_log) {
++  iovec iov;
++  iov.iov_base = context;
++  iov.iov_len = sizeof(*context);
++  if (ptrace(
++          PTRACE_GETREGSET, tid, reinterpret_cast<void*>(NT_PRFPREG), &iov) !=
++      0) {
++    PLOG_IF(ERROR, can_log) << "ptrace";
++    return false;
++  }
++  if (iov.iov_len != sizeof(context->f64)) {
++    LOG_IF(ERROR, can_log) << "Unexpected registers size " << iov.iov_len
++                           << " != " << sizeof(context->f64);
++    return false;
++  }
++  return true;
++}
++
++bool GetThreadArea64(pid_t tid,
++                     const ThreadContext& context,
++                     LinuxVMAddress* address,
++                     bool can_log) {
++  // Thread pointer register
++  *address = context.t64.regs[2];
++  return true;
++}
++
+ #else
+ #error Port.
+ #endif  // ARCH_CPU_X86_FAMILY
+@@ -534,7 +565,7 @@ bool Ptracer::GetThreadInfo(pid_t tid, ThreadInfo* info) {
+                            can_log_);
+   }
+ 
+-#if !defined(ARCH_CPU_RISCV64)
++#if !defined(ARCH_CPU_RISCV64) && !defined(ARCH_CPU_LOONGARCH64)
+   return GetGeneralPurposeRegisters32(tid, &info->thread_context, can_log_) &&
+          GetFloatingPointRegisters32(tid, &info->float_context, can_log_) &&
+          GetThreadArea32(tid,
+diff --git a/third_party/crashpad/crashpad/util/linux/thread_info.h b/third_party/crashpad/crashpad/util/linux/thread_info.h
+index 808b35a3affa2a0c1b1c96e436841c6e828837ff..e3ad411981c19814034f82481a107b49260df615 100644
+--- a/third_party/crashpad/crashpad/util/linux/thread_info.h
++++ b/third_party/crashpad/crashpad/util/linux/thread_info.h
+@@ -87,6 +87,8 @@ union ThreadContext {
+     uint32_t padding1_;
+ #elif defined(ARCH_CPU_RISCV64)
+     // 32 bit RISC-V not supported
++#elif defined(ARCH_CPU_LOONGARCH_FAMILY)
++    // 32 bit LoongArch not supported
+ #else
+ #error Port.
+ #endif  // ARCH_CPU_X86_FAMILY
+@@ -144,13 +146,20 @@ union ThreadContext {
+     // Reflects user_regs_struct in asm/ptrace.h.
+     uint64_t pc;
+     uint64_t regs[31];
++#elif defined(ARCH_CPU_LOONGARCH_FAMILY)
++    // Reflects user_regs_struct in sys/user.h.
++    uint64_t regs[32];
++    uint64_t orig_a0;
++    uint64_t csr_era;
++    uint64_t csr_badv;
++    uint64_t reserved[10];
+ #else
+ #error Port.
+ #endif  // ARCH_CPU_X86_FAMILY
+   } t64;
+ 
+ #if defined(ARCH_CPU_X86_FAMILY) || defined(ARCH_CPU_ARM64) || \
+-    defined(ARCH_CPU_RISCV64)
++    defined(ARCH_CPU_RISCV64) || defined(ARCH_CPU_LOONGARCH_FAMILY)
+   using NativeThreadContext = user_regs_struct;
+ #elif defined(ARCH_CPU_ARMEL)
+   using NativeThreadContext = user_regs;
+@@ -233,6 +242,8 @@ union FloatContext {
+     uint32_t fpu_id;
+ #elif defined(ARCH_CPU_RISCV64)
+     // 32 bit RISC-V not supported
++#elif defined(ARCH_CPU_LOONGARCH_FAMILY)
++    // 32 bit LoongArch not supported
+ #else
+ #error Port.
+ #endif  // ARCH_CPU_X86_FAMILY
+@@ -271,6 +282,11 @@ union FloatContext {
+     // Reflects __riscv_d_ext_state in asm/ptrace.h
+     uint64_t fpregs[32];
+     uint64_t fcsr;
++#elif defined(ARCH_CPU_LOONGARCH_FAMILY)
++    // Reflects user_fp_struct in sys/user.h
++    uint64_t fpregs[32];
++    uint64_t fcc;
++    uint32_t fcsr;
+ #else
+ #error Port.
+ #endif  // ARCH_CPU_X86_FAMILY
+@@ -302,6 +318,8 @@ union FloatContext {
+ // No appropriate floating point context native type for available MIPS.
+ #elif defined(ARCH_CPU_RISCV64)
+   static_assert(sizeof(f64) == sizeof(__riscv_d_ext_state), "Size mismatch");
++#elif defined(ARCH_CPU_LOONGARCH_FAMILY)
++  static_assert(sizeof(f64) == sizeof(user_fp_struct), "Size mismatch");
+ #else
+ #error Port.
+ #endif  // ARCH_CPU_X86
+diff --git a/third_party/crashpad/crashpad/util/misc/capture_context_linux.S b/third_party/crashpad/crashpad/util/misc/capture_context_linux.S
+index cfad85738e572d9cb99221b22d0e9b6d877f5e17..715c86205662cab17b6efcd8af5800dfc6b4c546 100644
+--- a/third_party/crashpad/crashpad/util/misc/capture_context_linux.S
++++ b/third_party/crashpad/crashpad/util/misc/capture_context_linux.S
+@@ -510,4 +510,49 @@ CAPTURECONTEXT_SYMBOL2:
+ 
+   ret
+ 
++#elif defined(__loongarch_lp64)
++
++#define MCONTEXT_GREG_SIZE 8
++#define MCONTEXT_PC_OFFSET 176
++#define MCONTEXT_GREGS_OFFSET 184
++
++#define STORE_GPR(X) st.d $r##X, $a0, MCONTEXT_GREGS_OFFSET + X * MCONTEXT_GREG_SIZE
++#define STORE_PC st.d $ra, $a0, MCONTEXT_PC_OFFSET
++
++  STORE_PC
++  STORE_GPR(0)
++  STORE_GPR(1)
++  STORE_GPR(2)
++  STORE_GPR(3)
++  STORE_GPR(4)
++  STORE_GPR(5)
++  STORE_GPR(6)
++  STORE_GPR(7)
++  STORE_GPR(8)
++  STORE_GPR(9)
++  STORE_GPR(10)
++  STORE_GPR(11)
++  STORE_GPR(12)
++  STORE_GPR(13)
++  STORE_GPR(14)
++  STORE_GPR(15)
++  STORE_GPR(16)
++  STORE_GPR(17)
++  STORE_GPR(18)
++  STORE_GPR(19)
++  STORE_GPR(20)
++  STORE_GPR(21)
++  STORE_GPR(22)
++  STORE_GPR(23)
++  STORE_GPR(24)
++  STORE_GPR(25)
++  STORE_GPR(26)
++  STORE_GPR(27)
++  STORE_GPR(28)
++  STORE_GPR(29)
++  STORE_GPR(30)
++  STORE_GPR(31)
++
++  jirl $zero, $ra, 0
++
+ #endif  // __i386__

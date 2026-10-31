@@ -1,0 +1,27 @@
+{
+  "full": {
+    "url": "https://commondatastorage.googleapis.com/chromium-browser-official/chromium-138.0.7204.100.tar.xz",
+    "size_bytes": 7269991840,
+    "generation": "1752017227448031",
+    "sha256": "368d1a1d73c8703b9f9252340680468e3e3073b33b5127ac9e5fd8e9431b18b8",
+    "md5": "9076df9e4d37a9fb3808d34341f58fad"
+  },
+  "lite": {
+    "url": "https://commondatastorage.googleapis.com/chromium-browser-official/chromium-138.0.7204.100-lite.tar.xz",
+    "size_bytes": 1555634580,
+    "generation": "1752018160474848",
+    "sha256": "d90cc0bd3075f2a9646e0e254aa9cf1865ebf8bf7adf484126f34bb401212f02",
+    "md5": "3ba5ab314b0d48ba653ea66cf7e74d4e"
+  },
+  "evidence": {
+    "official_bucket_listing": "https://storage.googleapis.com/chromium-browser-official/?prefix=chromium-138.0.7204.100",
+    "publish_recipe": "https://chromium.googlesource.com/chromium/tools/build/+/refs/heads/main/recipes/recipes/publish_tarball.py",
+    "export_script": "https://chromium.googlesource.com/chromium/tools/build/+/refs/heads/main/recipes/recipe_modules/chromium/resources/export_tarball.py",
+    "hashes": "Append .hashes to each archive URL; official full and lite hash files are saved alongside this JSON."
+  },
+  "limitations": [
+    "No full archive downloaded or decompressed during this investigation.",
+    "Recipe source inspected is current main, not a proven 2025 recipe revision; historical Gitiles log request returned HTTP401.",
+    "Source coverage inference is based on official packaging code; individual archive members were not exhaustively inspected."
+  ]
+}

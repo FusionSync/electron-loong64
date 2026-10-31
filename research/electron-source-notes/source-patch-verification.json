@@ -1,0 +1,221 @@
+{
+  "checked_at_utc": "2026-10-27T13:20:30.520687+00:00",
+  "mode": "read-only source repository validation; no patch application or hooks executed",
+  "repositories_total": 19,
+  "repositories_complete_and_verified": 19,
+  "patch_commits_total": 240,
+  "custom_hooks": {
+    "configuration": [
+      {
+        "name": "patch_chromium"
+      }
+    ],
+    "suppressed_electron_hooks": [
+      "patch_chromium"
+    ],
+    "other_electron_hooks_retained": [
+      "apply_mtime_cache",
+      "electron_npm_deps",
+      "sysroot_arm",
+      "sysroot_arm64",
+      "sysroot_x86",
+      "sysroot_mips",
+      "sysroot_mips64",
+      "sysroot_x64"
+    ],
+    "implementation_evidence": "tools/depot_tools/gclient.py lines 1026-1040 suppress hooks by exact name and add replacements only when action is present; child dependencies get custom_hooks=None at line 864"
+  },
+  "repositories": [
+    {
+      "repo": "src",
+      "patch_dir": "src/electron/patches/chromium",
+      "status": "complete",
+      "base": "5f45b4744e3d5ba82c2ca6d942f1e7a516110752",
+      "patch_sha256": "2ff47126acdb25e015a8858f1dbaa02ab5e463c915bac58c50f89cbb39e7fc98",
+      "head": "7c3d04f8dfa78f36adb52f6f7ef11f885287f495",
+      "patch_count": 146,
+      "verification": "passed"
+    },
+    {
+      "repo": "src/third_party/boringssl/src",
+      "patch_dir": "src/electron/patches/boringssl",
+      "status": "complete",
+      "base": "9295969e1dad2c31d0d99481734c1c68dcbc6403",
+      "patch_sha256": "2ee63a2d2e96e0f2f5c6b470822ab0851878f2da375d624eb97a3b705e9de4e5",
+      "head": "58592357abcc68e7b5220439d4afe1ac3a9f9b07",
+      "patch_count": 4,
+      "verification": "passed"
+    },
+    {
+      "repo": "src/third_party/devtools-frontend/src",
+      "patch_dir": "src/electron/patches/devtools_frontend",
+      "status": "complete",
+      "base": "a6dbe06dafbad00ef4b0ea139ece1a94a5e2e6d8",
+      "patch_sha256": "7c3d037551cd3b2374ddc6c4746f4fded6110f4454b9d15c9ed1aa256f6a60f9",
+      "head": "023c7f0259cbf78d5d99800e76e3a8fe337253eb",
+      "patch_count": 2,
+      "verification": "passed"
+    },
+    {
+      "repo": "src/third_party/ffmpeg",
+      "patch_dir": "src/electron/patches/ffmpeg",
+      "status": "complete",
+      "base": "dcdd0fa51b65a0b1688ff6b8f0cc81908f09ded2",
+      "patch_sha256": "2f751787ea5a5996abe342a40422e8321a66eb7b504e71862e13fe8185f0e6dc",
+      "head": "46af8d12acafd0e53952a8d712230ce70f511a06",
+      "patch_count": 2,
+      "verification": "passed"
+    },
+    {
+      "repo": "src/v8",
+      "patch_dir": "src/electron/patches/v8",
+      "status": "complete",
+      "base": "e5b4c78b54e8b033b2701db3df0bf67d3030e4c1",
+      "patch_sha256": "c3deb057ea1f6c5e061e1fb1b25304e8789ae93df7a0f0311df6333a91c9f66a",
+      "head": "b4941049186b90e9d317ebfcaf80c9295c19ed21",
+      "patch_count": 1,
+      "verification": "passed"
+    },
+    {
+      "repo": "src/third_party/electron_node",
+      "patch_dir": "src/electron/patches/node",
+      "status": "complete",
+      "base": "3567fa7d70fee8831ab2891e6940ca63be568b08",
+      "patch_sha256": "44be706e4404c455aedacf81e753115606e43da2f9e649c5523d009b681218fd",
+      "head": "d7aff0d5cfc015a05e99bc9c00cf9e9679d26cd1",
+      "patch_count": 50,
+      "verification": "passed"
+    },
+    {
+      "repo": "src/third_party/nan",
+      "patch_dir": "src/electron/patches/nan",
+      "status": "complete",
+      "base": "e14bdcd1f72d62bca1d541b66da43130384ec213",
+      "patch_sha256": "97e1566a8fd67995cf2db90b9faf7812cc2517c45e4b1acc05dcf93eefaffdbc",
+      "head": "1d7d87c14e8ada6e11ec85c36dd559f36fbdc113",
+      "patch_count": 8,
+      "verification": "passed"
+    },
+    {
+      "repo": "src/third_party/perfetto",
+      "patch_dir": "src/electron/patches/perfetto",
+      "status": "complete",
+      "base": "dd35b295cd359ba094404218414955f961a0d6ae",
+      "patch_sha256": "9866eaee4ca8ca41d5babdb6156203da1d8f768553a7901e6ad91b4c3601c158",
+      "head": "8f95dd1056409cf94c5a850f25e832bf7400b296",
+      "patch_count": 1,
+      "verification": "passed"
+    },
+    {
+      "repo": "src/third_party/squirrel.mac",
+      "patch_dir": "src/electron/patches/squirrel.mac",
+      "status": "complete",
+      "base": "0e5d146ba13101a1302d59ea6e6e0b3cace4ae38",
+      "patch_sha256": "6ff08dd77c922ac3c4c47d5a225d9ab49a67a4b8d47f659fc23cb47de980fa80",
+      "head": "c79925ed87707b7746a1356f691f1afbc6aec500",
+      "patch_count": 10,
+      "verification": "passed"
+    },
+    {
+      "repo": "src/third_party/squirrel.mac/vendor/Mantle",
+      "patch_dir": "src/electron/patches/Mantle",
+      "status": "complete",
+      "base": "78d3966b3c331292ea29ec38661b25df0a245948",
+      "patch_sha256": "622e154e3e34bab739c64f5da65dec9af95d234bdf34b6cf3dfc1401da634795",
+      "head": "5d43ff86955cf8d39a82f431b1ec5a24942b09bd",
+      "patch_count": 1,
+      "verification": "passed"
+    },
+    {
+      "repo": "src/third_party/squirrel.mac/vendor/ReactiveObjC",
+      "patch_dir": "src/electron/patches/ReactiveObjC",
+      "status": "complete",
+      "base": "74ab5baccc6f7202c8ac69a8d1e152c29dc1ea76",
+      "patch_sha256": "32680504d1cfbb74204e24d4285cfbfd2c97f53d3318ce2ea8ce5cdaec73b70a",
+      "head": "6557ffbb7260d6f66c6e8543baf9aca49a4e7dd3",
+      "patch_count": 2,
+      "verification": "passed"
+    },
+    {
+      "repo": "src/third_party/webrtc",
+      "patch_dir": "src/electron/patches/webrtc",
+      "status": "complete",
+      "base": "e4445e46a910eb407571ec0b0b8b7043562678cf",
+      "patch_sha256": "72b4029e076dd8434e7c40f0212c902e9b0c97145aef8e78aab8c3b72835593b",
+      "head": "3d32783a9ef8ea2f630baa485dfcf2834b9062c1",
+      "patch_count": 1,
+      "verification": "passed"
+    },
+    {
+      "repo": "src/third_party/engflow-reclient-configs",
+      "patch_dir": "src/electron/patches/reclient-configs",
+      "status": "complete",
+      "base": "955335c30a752e9ef7bff375baab5e0819b6c00d",
+      "patch_sha256": "e34d3526303f460c1f453c742382ec43986da80624309850d3afc710b2598352",
+      "head": "1ea4ba6777a46da92be4631739cddb5b478056e2",
+      "patch_count": 5,
+      "verification": "passed"
+    },
+    {
+      "repo": "src/third_party/sqlite/src",
+      "patch_dir": "src/electron/patches/sqlite",
+      "status": "complete",
+      "base": "0a1397d274701c5d39e661e948160da2b9a8db1e",
+      "patch_sha256": "ba2cc3e2d7aae1178009b0809246ea949e24f4ed73f98fc76e370254f84cb805",
+      "head": "c479a224fe37d1cdf62357da93a633007800cd09",
+      "patch_count": 1,
+      "verification": "passed"
+    },
+    {
+      "repo": "src/third_party/skia",
+      "patch_dir": "src/electron/patches/skia",
+      "status": "complete",
+      "base": "a46d5732d9fca93eaec23e502e2eef814b707e6b",
+      "patch_sha256": "c65a946bcba58d9c036a19a5cce4c046e4448cb62eb8be994b5dfd5a50a7a1cc",
+      "head": "40cc428262638a36957184a2389579de90f5ae41",
+      "patch_count": 1,
+      "verification": "passed"
+    },
+    {
+      "repo": "src/third_party/swiftshader",
+      "patch_dir": "src/electron/patches/swiftshader",
+      "status": "complete",
+      "base": "a8133cbb3c8969e3c1e6b3cea2c02ec8312ef9ca",
+      "patch_sha256": "2619673d48fc3d2dc86aff6b858bc8e7181883fe59675dffceba7a65e942d6e4",
+      "head": "f7416ce7c842db59ef40cb7a20be4f865e2669cd",
+      "patch_count": 1,
+      "verification": "passed"
+    },
+    {
+      "repo": "src/third_party/xnnpack/src",
+      "patch_dir": "src/electron/patches/xnnpack",
+      "status": "complete",
+      "base": "f82ad65ca52cb4d39b73088468a5fe00f56fb47c",
+      "patch_sha256": "9ab993603b46c77e0497c622fc2ab49cfd93a9c591caa1c0fee9f04f60c549bc",
+      "head": "0ccc8ebf5982ec5d179f9b4b1b7cc18fce0e599e",
+      "patch_count": 1,
+      "verification": "passed"
+    },
+    {
+      "repo": "src/third_party/breakpad/breakpad",
+      "patch_dir": "src/electron/patches/breakpad",
+      "status": "complete",
+      "base": "2625edb085169e92cf036c236ac79ab594a7b1cc",
+      "patch_sha256": "650312851517e238a5669be71e5c3bef0ce44b3373052672006a57da04c26c51",
+      "head": "8c13fc9a30e6a555092145751bf515876064aec5",
+      "patch_count": 2,
+      "verification": "passed"
+    },
+    {
+      "repo": "src/third_party/lss",
+      "patch_dir": "src/electron/patches/lss",
+      "status": "complete",
+      "base": "ed31caa60f20a4f6569883b2d752ef7522de51e0",
+      "patch_sha256": "0e1f7a728d2d4338dc87da4e9e178b792c158ec6f6557e4eac304454c79c603d",
+      "head": "89918b609c69475d37300a421247a8bda4aa4606",
+      "patch_count": 1,
+      "verification": "passed"
+    }
+  ],
+  "full_electron_build_completed": false
+}

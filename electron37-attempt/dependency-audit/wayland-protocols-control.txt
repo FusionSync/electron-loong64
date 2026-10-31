@@ -1,0 +1,42 @@
+Package: wayland-protocols
+Version: 1.31.4-deepin5-1
+Architecture: all
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 560
+Multi-Arch: foreign
+Homepage: http://wayland.freedesktop.org/
+Priority: optional
+Section: libdevel
+Filename: pool/main/w/wayland-protocols/wayland-protocols_1.31.4-deepin5-1_all.deb
+Size: 85030
+SHA256: cf8e6ffc2d4f57b5380ef89655b4c46cb087f38d4ca9365d420f4a9f4e826a5a
+SHA1: f04ad5df8027ebf0e585c3d036e4d8862e9b1c02
+MD5sum: e35054008ad5e126bb9c688909cfb922
+Description: wayland compositor protocols
+ Wayland protocols that add functionality not available in the Wayland core
+ protocol. Such protocols either add completely new functionality, or extend
+ the functionality of some other protocol either in Wayland core, or some other
+ protocol in wayland-protocols.
+Description-md5: 54eb65f80319460bda31d074dfcb2889
+
+Package: wayland-protocols
+Version: 1.17-1
+Architecture: all
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 449
+Multi-Arch: foreign
+Homepage: http://wayland.freedesktop.org/
+Priority: optional
+Section: libdevel
+Filename: pool/main/w/wayland-protocols/wayland-protocols_1.17-1_all.deb
+Size: 58888
+SHA256: 1283be617083f7f38c886f7d8bde28ef72d0d76ce9363ca535e9ad76969b0583
+SHA1: a403526afddb8e3aabaf33ecbb60f74a228adff3
+MD5sum: 140f4b5a95c11a316f2a6b05e4e7a27e
+Description: wayland compositor protocols
+ Wayland protocols that add functionality not available in the Wayland core
+ protocol. Such protocols either add completely new functionality, or extend
+ the functionality of some other protocol either in Wayland core, or some other
+ protocol in wayland-protocols.
+Description-md5: 54eb65f80319460bda31d074dfcb2889
+

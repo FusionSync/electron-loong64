@@ -1,0 +1,21 @@
+{
+  "electron_version": "37.2.2",
+  "electron_commit": "102f740ec2fc8f34601c84b79ea1bf06042e8d00",
+  "chromium_version": "138.0.7204.100",
+  "chromium_commit": "5f45b4744e3d5ba82c2ca6d942f1e7a516110752",
+  "depot_tools_commit": "56f1f96c4b83ccd730616eabd24707e82dcc685c",
+  "artifacts": {
+    "tools/electron-102f740.tar.gz": {
+      "sha256": "aff7fd1979c876b63b3b6cccdd7d261c08b43cc45cd58b263f80d60865ca38d4",
+      "bytes": 15826521
+    },
+    "tools/depot_tools.zip": {
+      "sha256": "5a2ef09913a4a72b5df1f9c2ed65672ba420ab47e2fcaa142977dc1a4528fb7a",
+      "bytes": 31259643
+    },
+    "src/electron/patches/chromium/uos20_crashpad_oldabi.patch": {
+      "sha256": "c2f06e64c6cdc7c22259429f58cd523ca5e23385a18d376497c25ea0d43db943",
+      "bytes": 11695
+    }
+  }
+}

@@ -1,0 +1,16 @@
+diff --git a/base/allocator/partition_allocator/src/partition_alloc/partition_alloc_base/compiler_specific.h b/base/allocator/partition_allocator/src/partition_alloc/partition_alloc_base/compiler_specific.h
+--- a/base/allocator/partition_allocator/src/partition_alloc/partition_alloc_base/compiler_specific.h
++++ b/base/allocator/partition_allocator/src/partition_alloc/partition_alloc_base/compiler_specific.h
+@@ -139,7 +139,11 @@
+ //     PA_MUSTTAIL return Func1(d + 1);  // `Func1()` will be tail-called.
+ //   }
+ // ```
+-#if PA_HAS_CPP_ATTRIBUTE(clang::musttail)
++// The vendor LoongArch LLVM 20 large-code-model backend cannot lower an
++// indirect [[clang::musttail]] call and aborts during instruction selection.
++// Keep the ordinary call semantics on that target; the extra frame is safer
++// than making the cross compiler fail for PartitionAlloc's dispatch shim.
++#if PA_HAS_CPP_ATTRIBUTE(clang::musttail) && !defined(__loongarch__)
+ #define PA_MUSTTAIL [[clang::musttail]]
+ #else
+ #define PA_MUSTTAIL

@@ -1,0 +1,19 @@
+diff --git a/build/rust/filter_clang_args.py b/build/rust/filter_clang_args.py
+--- a/build/rust/filter_clang_args.py
++++ b/build/rust/filter_clang_args.py
+@@ -24,6 +24,15 @@
+           pass
+         elif args[i].startswith('-plugin-arg'):
+           i += 2
++      elif args[i] == '-mabi=lp64d':
++        # The vendor LLVM20 driver spells this old hard-float ABI as lp64
++        # with the fp64 feature selected by the LoongArch triple.
++        yield '-mabi=lp64'
++      elif args[i] == '-mcmodel=medium':
++        # LLVM20 accepts the medium code model in cc1, while its driver option
++        # table rejects the spelling used by Chromium's GN configuration.
++        yield '-Xclang'
++        yield '-mcmodel=medium'
+       else:
+         yield args[i]
+       i += 1

@@ -1,0 +1,14 @@
+diff --git a/sandbox/linux/seccomp-bpf/syscall.cc b/sandbox/linux/seccomp-bpf/syscall.cc
+index 5eb6307e29..031509ffd5 100644
+--- a/sandbox/linux/seccomp-bpf/syscall.cc
++++ b/sandbox/linux/seccomp-bpf/syscall.cc
+@@ -327,7 +327,8 @@ asm(// We need to be able to tell the kernel exactly where we made a
+     "ld.d $a0, $a6, 0\n"
+     // Enter the kernel
+     "syscall 0\n"
+-    "2:ret\n"
++    // Spell out the return instruction for old-ABI LoongArch assemblers.
++    "2:jirl $zero, $ra, 0\n"
+     ".cfi_endproc\n"
+     ".size SyscallAsm, .-SyscallAsm\n"
+ #endif

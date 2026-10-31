@@ -1,0 +1,906 @@
+{
+  "packages": [
+    {
+      "name": "libasound2-dev",
+      "version": "1.1.8.4-deepin1+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/a/alsa-lib/libasound2-dev_1.1.8.4-deepin1+sign_loongarch64.deb",
+      "filename": "libasound2-dev_1.1.8.4-deepin1+sign_loongarch64.deb",
+      "sha256": null,
+      "selection_reason": "Exact installed source version, retained official HTTPS pool artifact; not in current APT index"
+    },
+    {
+      "name": "libatk-bridge2.0-dev",
+      "version": "2.30.0-5+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/a/at-spi2-atk/libatk-bridge2.0-dev_2.30.0-5+sign_loongarch64.deb",
+      "filename": "libatk-bridge2.0-dev_2.30.0-5+sign_loongarch64.deb",
+      "sha256": "2c1119585ffddcac3d7ac6fa8c69b04b3c25aa4423e81c6082c2e9bbe58edc80",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libatk1.0-dev",
+      "version": "2.30.0-2+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/a/atk1.0/libatk1.0-dev_2.30.0-2+sign_loongarch64.deb",
+      "filename": "libatk1.0-dev_2.30.0-2+sign_loongarch64.deb",
+      "sha256": "56e480c5e9370d1c4123cc0f2e76252cd7a90e172cefaace47525af798299463",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libatspi2.0-dev",
+      "version": "2.30.0-7+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/a/at-spi2-core/libatspi2.0-dev_2.30.0-7+sign_loongarch64.deb",
+      "filename": "libatspi2.0-dev_2.30.0-7+sign_loongarch64.deb",
+      "sha256": "6f0994e90f4740e7746705a9fb053b6d8bdd32ff6373e453eec4becda0b37794",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libblkid-dev",
+      "version": "2.33.1.21-1+dde",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/u/util-linux/libblkid-dev_2.33.1.21-1+dde_loongarch64.deb",
+      "filename": "libblkid-dev_2.33.1.21-1+dde_loongarch64.deb",
+      "sha256": null,
+      "selection_reason": "Exact installed source version, retained official HTTPS pool artifact; not in current APT index"
+    },
+    {
+      "name": "libcairo2-dev",
+      "version": "1.16.0.3-deepin1+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/c/cairo/libcairo2-dev_1.16.0.3-deepin1+sign_loongarch64.deb",
+      "filename": "libcairo2-dev_1.16.0.3-deepin1+sign_loongarch64.deb",
+      "sha256": "edf48fcf6ddfabc0696ba3d102d02e7c8428069a7d2928dde7102ae29518299a",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libcups2-dev",
+      "version": "2.4.2.2-deepin1",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/c/cups/libcups2-dev_2.4.2.2-deepin1_loongarch64.deb",
+      "filename": "libcups2-dev_2.4.2.2-deepin1_loongarch64.deb",
+      "sha256": null,
+      "selection_reason": "Exact installed source version, retained official HTTPS pool artifact; not in current APT index"
+    },
+    {
+      "name": "libcupsimage2-dev",
+      "version": "2.4.2.2-deepin1",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/c/cups/libcupsimage2-dev_2.4.2.2-deepin1_loongarch64.deb",
+      "filename": "libcupsimage2-dev_2.4.2.2-deepin1_loongarch64.deb",
+      "sha256": null,
+      "selection_reason": "Exact installed source version, retained official HTTPS pool artifact; not in current APT index"
+    },
+    {
+      "name": "libdbus-1-dev",
+      "version": "1.12.20.15-deepin1",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/d/dbus/libdbus-1-dev_1.12.20.15-deepin1_loongarch64.deb",
+      "filename": "libdbus-1-dev_1.12.20.15-deepin1_loongarch64.deb",
+      "sha256": null,
+      "selection_reason": "Exact installed source version, retained official HTTPS pool artifact; not in current APT index"
+    },
+    {
+      "name": "libdrm-dev",
+      "version": "2.4.109-2.2",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libd/libdrm/libdrm-dev_2.4.109-2.2_loongarch64.deb",
+      "filename": "libdrm-dev_2.4.109-2.2_loongarch64.deb",
+      "sha256": "b2ad47d521d4d327147758e2db66c23a206ae6dbd7d8b7c6279974571f0b61f2",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libegl1-mesa-dev",
+      "version": "19.2.6.11-1",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/m/mesa/libegl1-mesa-dev_19.2.6.11-1_loongarch64.deb",
+      "filename": "libegl1-mesa-dev_19.2.6.11-1_loongarch64.deb",
+      "sha256": null,
+      "selection_reason": "Exact installed source version, retained official HTTPS pool artifact; not in current APT index"
+    },
+    {
+      "name": "libepoxy-dev",
+      "version": "1.5.3.2-1+dde+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libe/libepoxy/libepoxy-dev_1.5.3.2-1+dde+sign_loongarch64.deb",
+      "filename": "libepoxy-dev_1.5.3.2-1+dde+sign_loongarch64.deb",
+      "sha256": "b691a023a2ef0f846800e2675e897b5ef2018d90770889a71e3c94808baaec09",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libexpat1-dev",
+      "version": "2.2.6.5-deepin1+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/e/expat/libexpat1-dev_2.2.6.5-deepin1+sign_loongarch64.deb",
+      "filename": "libexpat1-dev_2.2.6.5-deepin1+sign_loongarch64.deb",
+      "sha256": null,
+      "selection_reason": "Exact installed source version, retained official HTTPS pool artifact; not in current APT index"
+    },
+    {
+      "name": "libfontconfig1-dev",
+      "version": "2.13.1.1-2+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/f/fontconfig/libfontconfig1-dev_2.13.1.1-2+sign_loongarch64.deb",
+      "filename": "libfontconfig1-dev_2.13.1.1-2+sign_loongarch64.deb",
+      "sha256": null,
+      "selection_reason": "Exact installed source version, retained official HTTPS pool artifact; not in current APT index"
+    },
+    {
+      "name": "libfreetype6-dev",
+      "version": "2.9.1.2-1-deepin1+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/f/freetype/libfreetype6-dev_2.9.1.2-1-deepin1+sign_loongarch64.deb",
+      "filename": "libfreetype6-dev_2.9.1.2-1-deepin1+sign_loongarch64.deb",
+      "sha256": null,
+      "selection_reason": "Exact installed source version, retained official HTTPS pool artifact; not in current APT index"
+    },
+    {
+      "name": "libfribidi-dev",
+      "version": "1.0.5.3-deepin1+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/f/fribidi/libfribidi-dev_1.0.5.3-deepin1+sign_loongarch64.deb",
+      "filename": "libfribidi-dev_1.0.5.3-deepin1+sign_loongarch64.deb",
+      "sha256": "d55a96dc940d2fee34b718aa88c854ec089fd76f77e01f9f87ca76e5cd2d12e8",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libgbm-dev",
+      "version": "19.2.6.11-1",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/m/mesa/libgbm-dev_19.2.6.11-1_loongarch64.deb",
+      "filename": "libgbm-dev_19.2.6.11-1_loongarch64.deb",
+      "sha256": null,
+      "selection_reason": "Exact installed source version, retained official HTTPS pool artifact; not in current APT index"
+    },
+    {
+      "name": "libgdk-pixbuf2.0-dev",
+      "version": "2.38.1+dfsg-1+d1",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/g/gdk-pixbuf/libgdk-pixbuf2.0-dev_2.38.1+dfsg-1+d1_loongarch64.deb",
+      "filename": "libgdk-pixbuf2.0-dev_2.38.1+dfsg-1+d1_loongarch64.deb",
+      "sha256": null,
+      "selection_reason": "Exact installed source version, retained official HTTPS pool artifact; not in current APT index"
+    },
+    {
+      "name": "libgl1-mesa-dev",
+      "version": "19.2.6.11-1",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/m/mesa/libgl1-mesa-dev_19.2.6.11-1_loongarch64.deb",
+      "filename": "libgl1-mesa-dev_19.2.6.11-1_loongarch64.deb",
+      "sha256": null,
+      "selection_reason": "Exact installed source version, retained official HTTPS pool artifact; not in current APT index"
+    },
+    {
+      "name": "libglib2.0-dev",
+      "version": "2.58.3.13-deepin1",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/g/glib2.0/libglib2.0-dev_2.58.3.13-deepin1_loongarch64.deb",
+      "filename": "libglib2.0-dev_2.58.3.13-deepin1_loongarch64.deb",
+      "sha256": null,
+      "selection_reason": "Exact installed source version, retained official HTTPS pool artifact; not in current APT index"
+    },
+    {
+      "name": "libglvnd-core-dev",
+      "version": "1.1.0.3-deepin1",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libg/libglvnd/libglvnd-core-dev_1.1.0.3-deepin1_loongarch64.deb",
+      "filename": "libglvnd-core-dev_1.1.0.3-deepin1_loongarch64.deb",
+      "sha256": "66b0c516cee1bf0eadcd465082842feb8f993bb90ea434aab6b6baa9c80d4875",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libglvnd-dev",
+      "version": "1.1.0.3-deepin1",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libg/libglvnd/libglvnd-dev_1.1.0.3-deepin1_loongarch64.deb",
+      "filename": "libglvnd-dev_1.1.0.3-deepin1_loongarch64.deb",
+      "sha256": "be91d7d81094d5e5bf55c9b93b7ad3017cbdeff30ee2001c28a26735ea2883d7",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libgraphite2-dev",
+      "version": "1.3.13-7+d1",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/g/graphite2/libgraphite2-dev_1.3.13-7+d1_loongarch64.deb",
+      "filename": "libgraphite2-dev_1.3.13-7+d1_loongarch64.deb",
+      "sha256": null,
+      "selection_reason": "Exact installed source version, retained official HTTPS pool artifact; not in current APT index"
+    },
+    {
+      "name": "libgtk-3-dev",
+      "version": "3.24.5.15-deepin15",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/g/gtk+3.0/libgtk-3-dev_3.24.5.15-deepin15_loongarch64.deb",
+      "filename": "libgtk-3-dev_3.24.5.15-deepin15_loongarch64.deb",
+      "sha256": null,
+      "selection_reason": "Exact installed source version, retained official HTTPS pool artifact; not in current APT index"
+    },
+    {
+      "name": "libharfbuzz-dev",
+      "version": "2.3.1-1+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/h/harfbuzz/libharfbuzz-dev_2.3.1-1+sign_loongarch64.deb",
+      "filename": "libharfbuzz-dev_2.3.1-1+sign_loongarch64.deb",
+      "sha256": null,
+      "selection_reason": "Exact installed source version, retained official HTTPS pool artifact; not in current APT index"
+    },
+    {
+      "name": "libice-dev",
+      "version": "2:1.0.9-2",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libi/libice/libice-dev_1.0.9-2_loongarch64.deb",
+      "filename": "libice-dev_1.0.9-2_loongarch64.deb",
+      "sha256": "ec86ac944ace4af013931cf4f7d081dd24cddbd3cd4a6f5605e03be41695adbc",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libicu-dev",
+      "version": "63.1.6-deepin1",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/i/icu/libicu-dev_63.1.6-deepin1_loongarch64.deb",
+      "filename": "libicu-dev_63.1.6-deepin1_loongarch64.deb",
+      "sha256": null,
+      "selection_reason": "Exact installed source version, retained official HTTPS pool artifact; not in current APT index"
+    },
+    {
+      "name": "libjbig-dev",
+      "version": "2.1.1-1+rebuild1",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/j/jbigkit/libjbig-dev_2.1.1-1+rebuild1_loongarch64.deb",
+      "filename": "libjbig-dev_2.1.1-1+rebuild1_loongarch64.deb",
+      "sha256": null,
+      "selection_reason": "Exact installed source version, retained official HTTPS pool artifact; not in current APT index"
+    },
+    {
+      "name": "libjpeg-dev",
+      "version": "1:1.5.2.7-1+deb10u1+sign",
+      "architecture": "all",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libj/libjpeg-turbo/libjpeg-dev_1.5.2.7-1+deb10u1+sign_all.deb",
+      "filename": "libjpeg-dev_1.5.2.7-1+deb10u1+sign_all.deb",
+      "sha256": null,
+      "selection_reason": "Exact installed source version, retained official HTTPS pool artifact; not in current APT index"
+    },
+    {
+      "name": "libjpeg62-turbo-dev",
+      "version": "1:1.5.2.7-1+deb10u1+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libj/libjpeg-turbo/libjpeg62-turbo-dev_1.5.2.7-1+deb10u1+sign_loongarch64.deb",
+      "filename": "libjpeg62-turbo-dev_1.5.2.7-1+deb10u1+sign_loongarch64.deb",
+      "sha256": null,
+      "selection_reason": "Exact installed source version, retained official HTTPS pool artifact; not in current APT index"
+    },
+    {
+      "name": "liblzma-dev",
+      "version": "5.2.4.1-1+dde+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/x/xz-utils/liblzma-dev_5.2.4.1-1+dde+sign_loongarch64.deb",
+      "filename": "liblzma-dev_5.2.4.1-1+dde+sign_loongarch64.deb",
+      "sha256": null,
+      "selection_reason": "Exact installed source version, retained official HTTPS pool artifact; not in current APT index"
+    },
+    {
+      "name": "libmount-dev",
+      "version": "2.33.1.21-1+dde",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/u/util-linux/libmount-dev_2.33.1.21-1+dde_loongarch64.deb",
+      "filename": "libmount-dev_2.33.1.21-1+dde_loongarch64.deb",
+      "sha256": null,
+      "selection_reason": "Exact installed source version, retained official HTTPS pool artifact; not in current APT index"
+    },
+    {
+      "name": "libnspr4-dev",
+      "version": "2:4.20.2-1+dde",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/n/nspr/libnspr4-dev_4.20.2-1+dde_loongarch64.deb",
+      "filename": "libnspr4-dev_4.20.2-1+dde_loongarch64.deb",
+      "sha256": "c6e0396a820eda162af7bb41c4a350f5ab58f72204c77771110cfda1793f0621",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libnss3-dev",
+      "version": "2:3.42.1.8-1+deepin1",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/n/nss/libnss3-dev_3.42.1.8-1+deepin1_loongarch64.deb",
+      "filename": "libnss3-dev_3.42.1.8-1+deepin1_loongarch64.deb",
+      "sha256": null,
+      "selection_reason": "Exact installed source version, retained official HTTPS pool artifact; not in current APT index"
+    },
+    {
+      "name": "libpango1.0-dev",
+      "version": "1.42.4-8~deb10u1",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/p/pango1.0/libpango1.0-dev_1.42.4-8~deb10u1_loongarch64.deb",
+      "filename": "libpango1.0-dev_1.42.4-8~deb10u1_loongarch64.deb",
+      "sha256": "0e476c77f8528243a396e5e5749792b5d8ac989f00e02e983349525c2cb66db1",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libpci-dev",
+      "version": "1:3.5.2.19-deepin1",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/p/pciutils/libpci-dev_3.5.2.19-deepin1_loongarch64.deb",
+      "filename": "libpci-dev_3.5.2.19-deepin1_loongarch64.deb",
+      "sha256": null,
+      "selection_reason": "Exact installed source version, retained official HTTPS pool artifact; not in current APT index"
+    },
+    {
+      "name": "libpciaccess-dev",
+      "version": "0.14-1+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libp/libpciaccess/libpciaccess-dev_0.14-1+sign_loongarch64.deb",
+      "filename": "libpciaccess-dev_0.14-1+sign_loongarch64.deb",
+      "sha256": "7bf3a01a0b318b5ffe3101237633c4d70faa9bdac1f7eed9840ea2d3804d3749",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libpcre3-dev",
+      "version": "2:8.39.2-12+dde2+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/p/pcre3/libpcre3-dev_8.39.2-12+dde2+sign_loongarch64.deb",
+      "filename": "libpcre3-dev_8.39.2-12+dde2+sign_loongarch64.deb",
+      "sha256": "76623502e995d1903e15f834e7029aeb50647c4346bb39d28bf74992bd90ba42",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libpixman-1-dev",
+      "version": "0.36.0.2-deepin1+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/p/pixman/libpixman-1-dev_0.36.0.2-deepin1+sign_loongarch64.deb",
+      "filename": "libpixman-1-dev_0.36.0.2-deepin1+sign_loongarch64.deb",
+      "sha256": null,
+      "selection_reason": "Exact installed source version, retained official HTTPS pool artifact; not in current APT index"
+    },
+    {
+      "name": "libpng-dev",
+      "version": "1.6.36.2-2+dde",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libp/libpng1.6/libpng-dev_1.6.36.2-2+dde_loongarch64.deb",
+      "filename": "libpng-dev_1.6.36.2-2+dde_loongarch64.deb",
+      "sha256": null,
+      "selection_reason": "Exact installed source version, retained official HTTPS pool artifact; not in current APT index"
+    },
+    {
+      "name": "libpthread-stubs0-dev",
+      "version": "0.4-1",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libp/libpthread-stubs/libpthread-stubs0-dev_0.4-1_loongarch64.deb",
+      "filename": "libpthread-stubs0-dev_0.4-1_loongarch64.deb",
+      "sha256": "fed209f787084895259652e5cd718f35b29842c1a6bbc0e59876f980db335083",
+      "selection_reason": "Header/protocol support package without a separately installed runtime source"
+    },
+    {
+      "name": "libpulse-dev",
+      "version": "12.2.97-deepin1",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/p/pulseaudio/libpulse-dev_12.2.97-deepin1_loongarch64.deb",
+      "filename": "libpulse-dev_12.2.97-deepin1_loongarch64.deb",
+      "sha256": null,
+      "selection_reason": "Exact installed source version, retained official HTTPS pool artifact; not in current APT index"
+    },
+    {
+      "name": "libselinux1-dev",
+      "version": "2.8.1.15-1+dde",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libs/libselinux/libselinux1-dev_2.8.1.15-1+dde_loongarch64.deb",
+      "filename": "libselinux1-dev_2.8.1.15-1+dde_loongarch64.deb",
+      "sha256": null,
+      "selection_reason": "Exact installed source version, retained official HTTPS pool artifact; not in current APT index"
+    },
+    {
+      "name": "libsepol1-dev",
+      "version": "2.8.1-1+dde+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libs/libsepol/libsepol1-dev_2.8.1-1+dde+sign_loongarch64.deb",
+      "filename": "libsepol1-dev_2.8.1-1+dde+sign_loongarch64.deb",
+      "sha256": "753a841cfe48b3032ea0b530d2821600af0bdc9cb365da8cc009112600c0bc23",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libsm-dev",
+      "version": "2:1.2.3-1+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libs/libsm/libsm-dev_1.2.3-1+sign_loongarch64.deb",
+      "filename": "libsm-dev_1.2.3-1+sign_loongarch64.deb",
+      "sha256": "17add22f38f5c998378b20db98f561b423e2bb1d65b5be86db1eb065d88d9900",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libtiff-dev",
+      "version": "4.1.0.8-1+deepin+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/t/tiff/libtiff-dev_4.1.0.8-1+deepin+sign_loongarch64.deb",
+      "filename": "libtiff-dev_4.1.0.8-1+deepin+sign_loongarch64.deb",
+      "sha256": null,
+      "selection_reason": "Exact installed source version, retained official HTTPS pool artifact; not in current APT index"
+    },
+    {
+      "name": "libudev-dev",
+      "version": "241.66-deepin1",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/s/systemd/libudev-dev_241.66-deepin1_loongarch64.deb",
+      "filename": "libudev-dev_241.66-deepin1_loongarch64.deb",
+      "sha256": null,
+      "selection_reason": "Exact installed source version, retained official HTTPS pool artifact; not in current APT index"
+    },
+    {
+      "name": "libwayland-dev",
+      "version": "1.21.0.4-1",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/w/wayland/libwayland-dev_1.21.0.4-1_loongarch64.deb",
+      "filename": "libwayland-dev_1.21.0.4-1_loongarch64.deb",
+      "sha256": null,
+      "selection_reason": "Exact installed source version, retained official HTTPS pool artifact; not in current APT index"
+    },
+    {
+      "name": "libx11-dev",
+      "version": "2:1.6.12.9-1",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libx/libx11/libx11-dev_1.6.12.9-1_loongarch64.deb",
+      "filename": "libx11-dev_1.6.12.9-1_loongarch64.deb",
+      "sha256": null,
+      "selection_reason": "Exact installed source version, retained official HTTPS pool artifact; not in current APT index"
+    },
+    {
+      "name": "libx11-xcb-dev",
+      "version": "2:1.6.12.9-1",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libx/libx11/libx11-xcb-dev_1.6.12.9-1_loongarch64.deb",
+      "filename": "libx11-xcb-dev_1.6.12.9-1_loongarch64.deb",
+      "sha256": null,
+      "selection_reason": "Exact installed source version, retained official HTTPS pool artifact; not in current APT index"
+    },
+    {
+      "name": "libxau-dev",
+      "version": "1:1.0.8.1-1+rebuild1",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libx/libxau/libxau-dev_1.0.8.1-1+rebuild1_loongarch64.deb",
+      "filename": "libxau-dev_1.0.8.1-1+rebuild1_loongarch64.deb",
+      "sha256": "b0d5f55770d70a3bc21745d4bf8588ea49a68657769c81774884381b8bc10b16",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libxcb-dri2-0-dev",
+      "version": "1.13.1-2+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libx/libxcb/libxcb-dri2-0-dev_1.13.1-2+sign_loongarch64.deb",
+      "filename": "libxcb-dri2-0-dev_1.13.1-2+sign_loongarch64.deb",
+      "sha256": "f76f6aca0a36f6c8459d31f043d40135ef464da9ab50a8d72de8bb201d800137",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libxcb-dri3-dev",
+      "version": "1.13.1-2+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libx/libxcb/libxcb-dri3-dev_1.13.1-2+sign_loongarch64.deb",
+      "filename": "libxcb-dri3-dev_1.13.1-2+sign_loongarch64.deb",
+      "sha256": "990501c3fbb2759cfaaec11ae96389359f8584c2e13bcb918cd9fa43d2220e25",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libxcb-glx0-dev",
+      "version": "1.13.1-2+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libx/libxcb/libxcb-glx0-dev_1.13.1-2+sign_loongarch64.deb",
+      "filename": "libxcb-glx0-dev_1.13.1-2+sign_loongarch64.deb",
+      "sha256": "7ca5c06f10c7082ddbc84dd443884971886607ffd219cda891e2ca2b26aecca8",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libxcb-present-dev",
+      "version": "1.13.1-2+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libx/libxcb/libxcb-present-dev_1.13.1-2+sign_loongarch64.deb",
+      "filename": "libxcb-present-dev_1.13.1-2+sign_loongarch64.deb",
+      "sha256": "e64b1dd3fbb2417ee2d0172ebda539f0797fb640036049b131da8b5a110316d7",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libxcb-randr0-dev",
+      "version": "1.13.1-2+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libx/libxcb/libxcb-randr0-dev_1.13.1-2+sign_loongarch64.deb",
+      "filename": "libxcb-randr0-dev_1.13.1-2+sign_loongarch64.deb",
+      "sha256": "b6cf5437f50c4c15a477abc6342326e292bbdd88cfd5ee989cf69032a3558011",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libxcb-render0-dev",
+      "version": "1.13.1-2+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libx/libxcb/libxcb-render0-dev_1.13.1-2+sign_loongarch64.deb",
+      "filename": "libxcb-render0-dev_1.13.1-2+sign_loongarch64.deb",
+      "sha256": "6ec51598705ce252e8fafa2da3ef27d697e9d87a3f34bd9287c974a744e57a83",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libxcb-shape0-dev",
+      "version": "1.13.1-2+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libx/libxcb/libxcb-shape0-dev_1.13.1-2+sign_loongarch64.deb",
+      "filename": "libxcb-shape0-dev_1.13.1-2+sign_loongarch64.deb",
+      "sha256": "8d71a96634460c6f5d15ef409d0a16bc81e24f362512a812251b08cb7754235b",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libxcb-shm0-dev",
+      "version": "1.13.1-2+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libx/libxcb/libxcb-shm0-dev_1.13.1-2+sign_loongarch64.deb",
+      "filename": "libxcb-shm0-dev_1.13.1-2+sign_loongarch64.deb",
+      "sha256": "786775d7b5826783cf0f84c603452119e34b9d51bd2167ab5554dc64afd85f4d",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libxcb-sync-dev",
+      "version": "1.13.1-2+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libx/libxcb/libxcb-sync-dev_1.13.1-2+sign_loongarch64.deb",
+      "filename": "libxcb-sync-dev_1.13.1-2+sign_loongarch64.deb",
+      "sha256": "513a1d0c8a1f7c8138dbe1e628a6fb6b54f1950cced1685bf324a20561de9f9a",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libxcb-xfixes0-dev",
+      "version": "1.13.1-2+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libx/libxcb/libxcb-xfixes0-dev_1.13.1-2+sign_loongarch64.deb",
+      "filename": "libxcb-xfixes0-dev_1.13.1-2+sign_loongarch64.deb",
+      "sha256": "17d0ce3a88007d3895ade8d040f931a29b65708c45089a5aece813b699beb183",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libxcb-xkb-dev",
+      "version": "1.13.1-2+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libx/libxcb/libxcb-xkb-dev_1.13.1-2+sign_loongarch64.deb",
+      "filename": "libxcb-xkb-dev_1.13.1-2+sign_loongarch64.deb",
+      "sha256": "fe1f823c0a83cf6b753c171a6ef09bab36adf1fc3c1d2ac5f4e104df0d7c5b38",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libxcb1-dev",
+      "version": "1.13.1-2+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libx/libxcb/libxcb1-dev_1.13.1-2+sign_loongarch64.deb",
+      "filename": "libxcb1-dev_1.13.1-2+sign_loongarch64.deb",
+      "sha256": "d7b758683aef8b7f765f77adb950c67f1b19287387ac1ef463a63520c356f613",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libxcomposite-dev",
+      "version": "1:0.4.4-2+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libx/libxcomposite/libxcomposite-dev_0.4.4-2+sign_loongarch64.deb",
+      "filename": "libxcomposite-dev_0.4.4-2+sign_loongarch64.deb",
+      "sha256": "ca5fcc462dd64fd8d307dcf9d8b1124cc8b33877c6924db2aa813fd377a73ddd",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libxcursor-dev",
+      "version": "1:1.1.15.1-deepin1",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libx/libxcursor/libxcursor-dev_1.1.15.1-deepin1_loongarch64.deb",
+      "filename": "libxcursor-dev_1.1.15.1-deepin1_loongarch64.deb",
+      "sha256": "0a4fbf63d7710f5d1bceb0533bd4761cfb238abba68af71effff29673e7d5066",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libxdamage-dev",
+      "version": "1:1.1.4.2-1+rebuild1",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libx/libxdamage/libxdamage-dev_1.1.4.2-1+rebuild1_loongarch64.deb",
+      "filename": "libxdamage-dev_1.1.4.2-1+rebuild1_loongarch64.deb",
+      "sha256": "df7d98708043f325edde382bd2620ec479d0bb78209c016d885ff0504f98b1e0",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libxdmcp-dev",
+      "version": "1:1.1.2-3+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libx/libxdmcp/libxdmcp-dev_1.1.2-3+sign_loongarch64.deb",
+      "filename": "libxdmcp-dev_1.1.2-3+sign_loongarch64.deb",
+      "sha256": "f40c8513bc40fa53853caebfdbbd5e9736e74d3f8267fd551d80123b00f33523",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libxext-dev",
+      "version": "2:1.3.3.1-1+rebuild1",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libx/libxext/libxext-dev_1.3.3.1-1+rebuild1_loongarch64.deb",
+      "filename": "libxext-dev_1.3.3.1-1+rebuild1_loongarch64.deb",
+      "sha256": "dd37cce0935c98c8ad56ef0141f388d18fb8929f50e5bf98e441f986e783513b",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libxfixes-dev",
+      "version": "1:5.0.3-1+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libx/libxfixes/libxfixes-dev_5.0.3-1+sign_loongarch64.deb",
+      "filename": "libxfixes-dev_5.0.3-1+sign_loongarch64.deb",
+      "sha256": "92c0e7e51dacbcfcf8058b107690a9c04911961dba5c29962dde1d1a56c174a1",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libxft-dev",
+      "version": "2.3.2-2",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/x/xft/libxft-dev_2.3.2-2_loongarch64.deb",
+      "filename": "libxft-dev_2.3.2-2_loongarch64.deb",
+      "sha256": "823aaf392430ecf0e29608dcfd6fecb92b667f3abd83622cdaaf28c73dfa09e8",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libxi-dev",
+      "version": "2:1.7.9-1+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libx/libxi/libxi-dev_1.7.9-1+sign_loongarch64.deb",
+      "filename": "libxi-dev_1.7.9-1+sign_loongarch64.deb",
+      "sha256": "036805a242368ba0d2e216e3f60c19498bc9fd35e3c3d146571781237982527a",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libxinerama-dev",
+      "version": "2:1.1.4-2+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libx/libxinerama/libxinerama-dev_1.1.4-2+sign_loongarch64.deb",
+      "filename": "libxinerama-dev_1.1.4-2+sign_loongarch64.deb",
+      "sha256": "43757cf0e4038069688c7a24aac7ed58b57cd976d2e9d6372769b880ec92fcd2",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libxkbcommon-dev",
+      "version": "0.8.2-1+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libx/libxkbcommon/libxkbcommon-dev_0.8.2-1+sign_loongarch64.deb",
+      "filename": "libxkbcommon-dev_0.8.2-1+sign_loongarch64.deb",
+      "sha256": "0db3e6c80509bb0c87f39c1db8d2fb7018578c24078dcc56649401f98ea2e0cc",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libxkbcommon-x11-dev",
+      "version": "0.8.2-1+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libx/libxkbcommon/libxkbcommon-x11-dev_0.8.2-1+sign_loongarch64.deb",
+      "filename": "libxkbcommon-x11-dev_0.8.2-1+sign_loongarch64.deb",
+      "sha256": "04f46217463fbe4e49d20ad499b37a8d862c02f041f85bdd6f62fd85c2c3727c",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libxrandr-dev",
+      "version": "2:1.5.1-1+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libx/libxrandr/libxrandr-dev_1.5.1-1+sign_loongarch64.deb",
+      "filename": "libxrandr-dev_1.5.1-1+sign_loongarch64.deb",
+      "sha256": "c366b7be50b8aedecb841e54153914742f31a63d1782b539af2f1e979e931dbd",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libxrender-dev",
+      "version": "1:0.9.10-1+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libx/libxrender/libxrender-dev_0.9.10-1+sign_loongarch64.deb",
+      "filename": "libxrender-dev_0.9.10-1+sign_loongarch64.deb",
+      "sha256": null,
+      "selection_reason": "Exact installed source version, retained official HTTPS pool artifact; not in current APT index"
+    },
+    {
+      "name": "libxshmfence-dev",
+      "version": "1.3-1",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libx/libxshmfence/libxshmfence-dev_1.3-1_loongarch64.deb",
+      "filename": "libxshmfence-dev_1.3-1_loongarch64.deb",
+      "sha256": "00db1f5fdf7029ba3fd7c1f8bc2f159da720ed771dc4fd89e7226626ae0eff03",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libxss-dev",
+      "version": "1:1.2.3-1+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libx/libxss/libxss-dev_1.2.3-1+sign_loongarch64.deb",
+      "filename": "libxss-dev_1.2.3-1+sign_loongarch64.deb",
+      "sha256": "99637634ec5c41401c0083a92de25e6965c3eabfd2a9e636055625af768a35f9",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libxtst-dev",
+      "version": "2:1.2.3-1+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libx/libxtst/libxtst-dev_1.2.3-1+sign_loongarch64.deb",
+      "filename": "libxtst-dev_1.2.3-1+sign_loongarch64.deb",
+      "sha256": "696e7788b9774ba43f71a28deb035ab175b976dd8107bb27421b9fb07a6159f2",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "libxxf86vm-dev",
+      "version": "1:1.1.4.1-1+rebuild1",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libx/libxxf86vm/libxxf86vm-dev_1.1.4.1-1+rebuild1_loongarch64.deb",
+      "filename": "libxxf86vm-dev_1.1.4.1-1+rebuild1_loongarch64.deb",
+      "sha256": "5dde3163d70e69bb6b91c7a6d15f87a201467ca45da8895b096ca3ab2ef2954e",
+      "selection_reason": "APT index version matches installed source version"
+    },
+    {
+      "name": "mesa-common-dev",
+      "version": "19.2.6.11-1",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/m/mesa/mesa-common-dev_19.2.6.11-1_loongarch64.deb",
+      "filename": "mesa-common-dev_19.2.6.11-1_loongarch64.deb",
+      "sha256": null,
+      "selection_reason": "Exact installed source version, retained official HTTPS pool artifact; not in current APT index"
+    },
+    {
+      "name": "uuid-dev",
+      "version": "2.33.1.21-1+dde",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/u/util-linux/uuid-dev_2.33.1.21-1+dde_loongarch64.deb",
+      "filename": "uuid-dev_2.33.1.21-1+dde_loongarch64.deb",
+      "sha256": null,
+      "selection_reason": "Exact installed source version, retained official HTTPS pool artifact; not in current APT index"
+    },
+    {
+      "name": "x11proto-composite-dev",
+      "version": "1:2018.4-4",
+      "architecture": "all",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/x/xorgproto/x11proto-composite-dev_2018.4-4_all.deb",
+      "filename": "x11proto-composite-dev_2018.4-4_all.deb",
+      "sha256": "180f3b85574b17e4d9c36d0e23acbd9ec89b8c72a2430d59a73381a2cd9130df",
+      "selection_reason": "Header/protocol support package without a separately installed runtime source"
+    },
+    {
+      "name": "x11proto-core-dev",
+      "version": "2018.4-4",
+      "architecture": "all",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/x/xorgproto/x11proto-core-dev_2018.4-4_all.deb",
+      "filename": "x11proto-core-dev_2018.4-4_all.deb",
+      "sha256": "8bdb72e48cac24f5a6b284fea4d2bd6cb11cbe5fba2345ce57d8017ac40243cb",
+      "selection_reason": "Header/protocol support package without a separately installed runtime source"
+    },
+    {
+      "name": "x11proto-damage-dev",
+      "version": "1:2018.4-4",
+      "architecture": "all",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/x/xorgproto/x11proto-damage-dev_2018.4-4_all.deb",
+      "filename": "x11proto-damage-dev_2018.4-4_all.deb",
+      "sha256": "33b9b97e107f01f537108143aca6c087eef71ebf46c0f2dd3194b02bf3ef6450",
+      "selection_reason": "Header/protocol support package without a separately installed runtime source"
+    },
+    {
+      "name": "x11proto-dev",
+      "version": "2018.4-4",
+      "architecture": "all",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/x/xorgproto/x11proto-dev_2018.4-4_all.deb",
+      "filename": "x11proto-dev_2018.4-4_all.deb",
+      "sha256": "aa0237467fcb5ccabf6a93fc19fae4d76d8c6dfbf9e449edda5f6393e50d8674",
+      "selection_reason": "Header/protocol support package without a separately installed runtime source"
+    },
+    {
+      "name": "x11proto-fixes-dev",
+      "version": "1:2018.4-4",
+      "architecture": "all",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/x/xorgproto/x11proto-fixes-dev_2018.4-4_all.deb",
+      "filename": "x11proto-fixes-dev_2018.4-4_all.deb",
+      "sha256": "c4bb58f037c0de0ccd9c1021c3bd89de9236f5ac0db64fcd4cb8b636b14a5d64",
+      "selection_reason": "Header/protocol support package without a separately installed runtime source"
+    },
+    {
+      "name": "x11proto-input-dev",
+      "version": "2018.4-4",
+      "architecture": "all",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/x/xorgproto/x11proto-input-dev_2018.4-4_all.deb",
+      "filename": "x11proto-input-dev_2018.4-4_all.deb",
+      "sha256": "364edce8bb7cf3187c1e81d37ea5b8f6b6ddd3a74c4c82efa1810dd451bbddbf",
+      "selection_reason": "Header/protocol support package without a separately installed runtime source"
+    },
+    {
+      "name": "x11proto-kb-dev",
+      "version": "2018.4-4",
+      "architecture": "all",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/x/xorgproto/x11proto-kb-dev_2018.4-4_all.deb",
+      "filename": "x11proto-kb-dev_2018.4-4_all.deb",
+      "sha256": "14df9b61bf65d8cb8b6053c2bc8f993454e8076d2a5ebc4e8d2bfe671c0592e3",
+      "selection_reason": "Header/protocol support package without a separately installed runtime source"
+    },
+    {
+      "name": "x11proto-randr-dev",
+      "version": "2018.4-4",
+      "architecture": "all",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/x/xorgproto/x11proto-randr-dev_2018.4-4_all.deb",
+      "filename": "x11proto-randr-dev_2018.4-4_all.deb",
+      "sha256": "960d70b5e8d430957656e59fc7f385059d6c075c391de73884d1ac6718eb1ded",
+      "selection_reason": "Header/protocol support package without a separately installed runtime source"
+    },
+    {
+      "name": "x11proto-record-dev",
+      "version": "2018.4-4",
+      "architecture": "all",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/x/xorgproto/x11proto-record-dev_2018.4-4_all.deb",
+      "filename": "x11proto-record-dev_2018.4-4_all.deb",
+      "sha256": "f256d29764a8baa5aa94bb94c30572b90fb0855b34bd59e9d41bb34918d84074",
+      "selection_reason": "Header/protocol support package without a separately installed runtime source"
+    },
+    {
+      "name": "x11proto-render-dev",
+      "version": "2:2018.4-4",
+      "architecture": "all",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/x/xorgproto/x11proto-render-dev_2018.4-4_all.deb",
+      "filename": "x11proto-render-dev_2018.4-4_all.deb",
+      "sha256": "0e290df4ff5f641877fdd75d666a90e3f6d35e55a7fb5f56a787651a3f0d7542",
+      "selection_reason": "Header/protocol support package without a separately installed runtime source"
+    },
+    {
+      "name": "x11proto-scrnsaver-dev",
+      "version": "2018.4-4",
+      "architecture": "all",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/x/xorgproto/x11proto-scrnsaver-dev_2018.4-4_all.deb",
+      "filename": "x11proto-scrnsaver-dev_2018.4-4_all.deb",
+      "sha256": "3a4a9f9f520e2f5e73b1fac553e59d7e59b707352a32c71de87d512ef21b36cb",
+      "selection_reason": "Header/protocol support package without a separately installed runtime source"
+    },
+    {
+      "name": "x11proto-xext-dev",
+      "version": "2018.4-4",
+      "architecture": "all",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/x/xorgproto/x11proto-xext-dev_2018.4-4_all.deb",
+      "filename": "x11proto-xext-dev_2018.4-4_all.deb",
+      "sha256": "fd5c04fa8f10bdaeadb7bde8b14534265b38fdf18de708476eefcb229a70cbc0",
+      "selection_reason": "Header/protocol support package without a separately installed runtime source"
+    },
+    {
+      "name": "x11proto-xf86vidmode-dev",
+      "version": "2018.4-4",
+      "architecture": "all",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/x/xorgproto/x11proto-xf86vidmode-dev_2018.4-4_all.deb",
+      "filename": "x11proto-xf86vidmode-dev_2018.4-4_all.deb",
+      "sha256": "ab251198b55dc453015a596ed3195e7ad8a5b930f0baf4b68b72e0104c9c1501",
+      "selection_reason": "Header/protocol support package without a separately installed runtime source"
+    },
+    {
+      "name": "x11proto-xinerama-dev",
+      "version": "2018.4-4",
+      "architecture": "all",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/x/xorgproto/x11proto-xinerama-dev_2018.4-4_all.deb",
+      "filename": "x11proto-xinerama-dev_2018.4-4_all.deb",
+      "sha256": "091ff3c9667fa246c5c9d7cff367dc40dc671d915039f4c866199966925b51c0",
+      "selection_reason": "Header/protocol support package without a separately installed runtime source"
+    },
+    {
+      "name": "xtrans-dev",
+      "version": "1.3.5-1",
+      "architecture": "all",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/x/xtrans/xtrans-dev_1.3.5-1_all.deb",
+      "filename": "xtrans-dev_1.3.5-1_all.deb",
+      "sha256": "09e4f29cf577c149293fe86ce386b3e1d54fe0b881e7982c0fdc71a9599ba3e7",
+      "selection_reason": "Header/protocol support package without a separately installed runtime source"
+    },
+    {
+      "name": "zlib1g-dev",
+      "version": "1:1.2.12.5-1+dde+sign",
+      "architecture": "loongarch64",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/z/zlib/zlib1g-dev_1.2.12.5-1+dde+sign_loongarch64.deb",
+      "filename": "zlib1g-dev_1.2.12.5-1+dde+sign_loongarch64.deb",
+      "sha256": null,
+      "selection_reason": "Exact installed source version, retained official HTTPS pool artifact; not in current APT index"
+    },
+    {
+      "name": "wayland-protocols",
+      "version": "1.31.4-deepin5-1",
+      "architecture": "all",
+      "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/w/wayland-protocols/wayland-protocols_1.31.4-deepin5-1_all.deb",
+      "filename": "wayland-protocols_1.31.4-deepin5-1_all.deb",
+      "sha256": "cf8e6ffc2d4f57b5380ef89655b4c46cb087f38d4ca9365d420f4a9f4e826a5a",
+      "selection_reason": "Wayland protocol XML and pkg-config data, required by GTK pc file; no runtime library"
+    }
+  ],
+  "skipped": [
+    "dpkg-dev",
+    "libc-dev",
+    "libc-dev-bin",
+    "libc6-dev",
+    "libffi-dev",
+    "libglib2.0-dev-bin",
+    "libz-dev",
+    "linux-libc-dev"
+  ],
+  "blocked": []
+}

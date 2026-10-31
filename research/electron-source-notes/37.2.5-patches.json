@@ -1,0 +1,50 @@
+[
+  {
+    "name": "chromium.patch",
+    "path": "patches/chromium.patch",
+    "sha": "45881f37650b8cfa028b1bba8dd2329e7263f787",
+    "size": 363558,
+    "url": "https://api.github.com/repos/darkyzhou/electron-loong64/contents/patches/chromium.patch?ref=37.2.5",
+    "html_url": "https://github.com/darkyzhou/electron-loong64/blob/37.2.5/patches/chromium.patch",
+    "git_url": "https://api.github.com/repos/darkyzhou/electron-loong64/git/blobs/45881f37650b8cfa028b1bba8dd2329e7263f787",
+    "download_url": "https://raw.githubusercontent.com/darkyzhou/electron-loong64/37.2.5/patches/chromium.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/darkyzhou/electron-loong64/contents/patches/chromium.patch?ref=37.2.5",
+      "git": "https://api.github.com/repos/darkyzhou/electron-loong64/git/blobs/45881f37650b8cfa028b1bba8dd2329e7263f787",
+      "html": "https://github.com/darkyzhou/electron-loong64/blob/37.2.5/patches/chromium.patch"
+    }
+  },
+  {
+    "name": "depot.patch",
+    "path": "patches/depot.patch",
+    "sha": "407bcf7ec7df555636e6c4915945197971625e6b",
+    "size": 558,
+    "url": "https://api.github.com/repos/darkyzhou/electron-loong64/contents/patches/depot.patch?ref=37.2.5",
+    "html_url": "https://github.com/darkyzhou/electron-loong64/blob/37.2.5/patches/depot.patch",
+    "git_url": "https://api.github.com/repos/darkyzhou/electron-loong64/git/blobs/407bcf7ec7df555636e6c4915945197971625e6b",
+    "download_url": "https://raw.githubusercontent.com/darkyzhou/electron-loong64/37.2.5/patches/depot.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/darkyzhou/electron-loong64/contents/patches/depot.patch?ref=37.2.5",
+      "git": "https://api.github.com/repos/darkyzhou/electron-loong64/git/blobs/407bcf7ec7df555636e6c4915945197971625e6b",
+      "html": "https://github.com/darkyzhou/electron-loong64/blob/37.2.5/patches/depot.patch"
+    }
+  },
+  {
+    "name": "electron.patch",
+    "path": "patches/electron.patch",
+    "sha": "d2f1e89afe11063aa6d834a2bdaaabec1b8e47e8",
+    "size": 6942,
+    "url": "https://api.github.com/repos/darkyzhou/electron-loong64/contents/patches/electron.patch?ref=37.2.5",
+    "html_url": "https://github.com/darkyzhou/electron-loong64/blob/37.2.5/patches/electron.patch",
+    "git_url": "https://api.github.com/repos/darkyzhou/electron-loong64/git/blobs/d2f1e89afe11063aa6d834a2bdaaabec1b8e47e8",
+    "download_url": "https://raw.githubusercontent.com/darkyzhou/electron-loong64/37.2.5/patches/electron.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/darkyzhou/electron-loong64/contents/patches/electron.patch?ref=37.2.5",
+      "git": "https://api.github.com/repos/darkyzhou/electron-loong64/git/blobs/d2f1e89afe11063aa6d834a2bdaaabec1b8e47e8",
+      "html": "https://github.com/darkyzhou/electron-loong64/blob/37.2.5/patches/electron.patch"
+    }
+  }
+]

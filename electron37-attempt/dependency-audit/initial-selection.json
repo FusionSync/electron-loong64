@@ -1,0 +1,568 @@
+{
+  "selected": [
+    {
+      "Package": "libnspr4-dev",
+      "Source": "nspr",
+      "Version": "2:4.20.2-1+dde",
+      "Architecture": "loongarch64",
+      "Maintainer": "Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>",
+      "Installed-Size": "3040",
+      "Depends": "libnspr4 (>= 2:4.20.2), libnspr4 (<= 2:4.20.2-1+dde.1~)",
+      "Homepage": "http://www.mozilla.org/projects/nspr/",
+      "Priority": "optional",
+      "Section": "libdevel",
+      "Filename": "pool/main/n/nspr/libnspr4-dev_4.20.2-1+dde_loongarch64.deb",
+      "Size": "345602",
+      "SHA256": "c6e0396a820eda162af7bb41c4a350f5ab58f72204c77771110cfda1793f0621",
+      "SHA1": "409c5a42f8441abe47855dc55c060f2d01b13e1a",
+      "MD5sum": "e7428578559bfcf48903379ef146614d",
+      "Description": "Development files for the NetScape Portable Runtime library\n This library provides platform independent non-GUI operating system\n facilities including:\n  * threads,\n  * thread synchronisation,\n  * normal file I/O and network I/O,\n  * interval timing and calendar time,\n  * basic memory management (malloc and free),\n  * shared library linking.\n .\n Install this package if you wish to develop your own programs using the\n NetScape Portable Runtime library.",
+      "Description-md5": "5fb64e5ffcd6242fc78f56e991c9d6df"
+    },
+    {
+      "Package": "libdrm-dev",
+      "Source": "libdrm",
+      "Version": "2.4.109-2.2",
+      "Architecture": "loongarch64",
+      "Maintainer": "Debian X Strike Force <debian-x@lists.debian.org>",
+      "Installed-Size": "1730",
+      "Depends": "libdrm2 (= 2.4.109-2.2), libdrm-radeon1 (= 2.4.109-2.2), libdrm-nouveau2 (= 2.4.109-2.2), libdrm-amdgpu1 (= 2.4.109-2.2), libdrm-gsgpu1 (= 2.4.109-2.2), libdrm-etnaviv1 (= 2.4.109-2.2), libpciaccess-dev",
+      "Multi-Arch": "same",
+      "Homepage": "https://cgit.freedesktop.org/mesa/drm/",
+      "Priority": "optional",
+      "Section": "libdevel",
+      "Filename": "pool/main/libd/libdrm/libdrm-dev_2.4.109-2.2_loongarch64.deb",
+      "Size": "287998",
+      "SHA256": "b2ad47d521d4d327147758e2db66c23a206ae6dbd7d8b7c6279974571f0b61f2",
+      "SHA1": "ff20620f4e72626c5e1a2cefee1b1b9773f7a025",
+      "MD5sum": "cf83e01b5909dad80b8a4a5aa4726f4e",
+      "Description": "Userspace interface to kernel DRM services -- development files\n This library implements the userspace interface to the kernel DRM\n services.  DRM stands for \"Direct Rendering Manager\", which is the\n kernelspace portion of the \"Direct Rendering Infrastructure\" (DRI).\n The DRI is currently used on Linux to provide hardware-accelerated\n OpenGL drivers.\n .\n This package provides the development environment for libdrm.",
+      "Description-md5": "26367cfc3b23b21ad8b59e1f0974ff45"
+    },
+    {
+      "Package": "libxcomposite-dev",
+      "Source": "libxcomposite",
+      "Version": "1:0.4.4-2+sign",
+      "Architecture": "loongarch64",
+      "Maintainer": "Debian X Strike Force <debian-x@lists.debian.org>",
+      "Installed-Size": "75",
+      "Depends": "libxcomposite1 (= 1:0.4.4-2+sign), libx11-dev, libxfixes-dev, x11proto-composite-dev (>= 1:0.4), x11proto-core-dev, libxext-dev",
+      "Multi-Arch": "same",
+      "Priority": "optional",
+      "Section": "libdevel",
+      "Filename": "pool/main/libx/libxcomposite/libxcomposite-dev_0.4.4-2+sign_loongarch64.deb",
+      "Size": "34010",
+      "SHA256": "ca5fcc462dd64fd8d307dcf9d8b1124cc8b33877c6924db2aa813fd377a73ddd",
+      "SHA1": "731ad2aa17d091eace785a41758e414ee558652f",
+      "MD5sum": "692660184ed9dad9082e98f2fed8cbdc",
+      "Description": "X11 Composite extension library (development headers)\n libXcomposite provides an X Window System client interface to the Composite\n extension to the X protocol.\n .\n The Composite extension allows clients called compositing managers to control\n the final drawing of the screen.  Rendering is done into an off-screen buffer.\n .\n This package contains the development headers for the library found in\n libxcomposite1.  Non-developers likely have little use for this package.\n .\n More information about X.Org can be found at:\n <URL:http://www.X.org>\n .\n This module can be found at\n git://anongit.freedesktop.org/git/xorg/lib/libXcomposite",
+      "Description-md5": "6c12b730c4bb5b17bd24b60d9a59a12d"
+    },
+    {
+      "Package": "libxdamage-dev",
+      "Source": "libxdamage",
+      "Version": "1:1.1.4.2-1+rebuild1",
+      "Architecture": "loongarch64",
+      "Maintainer": "Debian X Strike Force <debian-x@lists.debian.org>",
+      "Installed-Size": "50",
+      "Depends": "libxdamage1 (= 1:1.1.4.2-1+rebuild1), libx11-dev, libxfixes-dev, x11proto-damage-dev (>= 1.1)",
+      "Multi-Arch": "same",
+      "Homepage": "https://www.x.org",
+      "Priority": "optional",
+      "Section": "libdevel",
+      "Filename": "pool/main/libx/libxdamage/libxdamage-dev_1.1.4.2-1+rebuild1_loongarch64.deb",
+      "Size": "25786",
+      "SHA256": "df7d98708043f325edde382bd2620ec479d0bb78209c016d885ff0504f98b1e0",
+      "SHA1": "72b590a1a614dcb7f40e241df2ced583b1fb09e5",
+      "MD5sum": "718086856e3b9100ac537d5153d51b46",
+      "Description": "X11 damaged region extension library (development headers)\n libXdamage provides an X Window System client interface to the DAMAGE\n extension to the X protocol.\n .\n The Damage extension provides for notification of when on-screen regions have\n been 'damaged' (altered).\n .\n This package contains the development headers for the library found in\n libxdamage1.  Non-developers likely have little use for this package.\n .\n More information about X.Org can be found at:\n <URL:http://www.X.org>\n .\n This module can be found at\n git://anongit.freedesktop.org/git/xorg/lib/libXdamage",
+      "Description-md5": "f6757e2a643233758976bf0152b926d7"
+    },
+    {
+      "Package": "libxext-dev",
+      "Source": "libxext",
+      "Version": "2:1.3.3.1-1+rebuild1",
+      "Architecture": "loongarch64",
+      "Maintainer": "Debian X Strike Force <debian-x@lists.debian.org>",
+      "Installed-Size": "567",
+      "Depends": "libxext6 (= 2:1.3.3.1-1+rebuild1), x11proto-core-dev, x11proto-xext-dev (>= 7.0.99.2), libx11-dev",
+      "Suggests": "libxext-doc",
+      "Multi-Arch": "same",
+      "Priority": "optional",
+      "Section": "libdevel",
+      "Filename": "pool/main/libx/libxext/libxext-dev_1.3.3.1-1+rebuild1_loongarch64.deb",
+      "Size": "135454",
+      "SHA256": "dd37cce0935c98c8ad56ef0141f388d18fb8929f50e5bf98e441f986e783513b",
+      "SHA1": "86f6c0f768c742a351f80ba8bf75048775df80a9",
+      "MD5sum": "fdd26e33db70fa043a8193beb0e155cd",
+      "Description": "X11 miscellaneous extensions library (development headers)\n libXext provides an X Window System client interface to several extensions to\n the X protocol.\n .\n The supported protocol extensions are:\n  - DOUBLE-BUFFER (DBE), the Double Buffer extension;\n  - DPMS, the VESA Display Power Management System extension;\n  - Extended-Visual-Information (EVI), an extension for gathering extra\n    information about the X server's visuals;\n  - LBX, the Low Bandwidth X extension;\n  - MIT-SHM, the MIT X client/server shared memory extension;\n  - MIT-SUNDRY-NONSTANDARD, a miscellaneous extension by MIT;\n  - Multi-Buffering, the multi-buffering and stereo display extension;\n  - SECURITY, the X security extension;\n  - SHAPE, the non-rectangular shaped window extension;\n  - SYNC, the X synchronization extension;\n  - TOG-CUP, the Open Group's Colormap Utilization extension;\n  - XC-APPGROUP, the X Consortium's Application Group extension;\n  - XC-MISC, the X Consortium's resource ID querying extension;\n  - XTEST, the X test extension (this is one of two client-side\n    implementations; the other is in the libXtst library, provided by the\n    libxtst6 package);\n .\n libXext also provides a small set of utility functions to aid authors of\n client APIs for X protocol extensions.\n .\n This package contains the development headers for the library found in\n libxext6. Non-developers likely have little use for this package.\n .\n More information about X.Org can be found at:\n <URL:http://www.X.org>\n .\n This module can be found at\n git://anongit.freedesktop.org/git/xorg/lib/libXext",
+      "Description-md5": "9d497aabe7a8734879a278b8413e69c6"
+    },
+    {
+      "Package": "libxfixes-dev",
+      "Source": "libxfixes",
+      "Version": "1:5.0.3-1+sign",
+      "Architecture": "loongarch64",
+      "Maintainer": "Debian X Strike Force <debian-x@lists.debian.org>",
+      "Installed-Size": "112",
+      "Depends": "libxfixes3 (= 1:5.0.3-1+sign), libx11-dev, x11proto-fixes-dev (>= 1:5.0-1)",
+      "Multi-Arch": "same",
+      "Priority": "optional",
+      "Section": "libdevel",
+      "Filename": "pool/main/libx/libxfixes/libxfixes-dev_5.0.3-1+sign_loongarch64.deb",
+      "Size": "40354",
+      "SHA256": "92c0e7e51dacbcfcf8058b107690a9c04911961dba5c29962dde1d1a56c174a1",
+      "SHA1": "b74470eccaf13b2858b0e43804c9a21f66383ff8",
+      "MD5sum": "11b804470611528d50a6561550884033",
+      "Description": "X11 miscellaneous 'fixes' extension library (development headers)\n libXfixes provides an X Window System client interface to the 'XFIXES'\n extension to the X protocol.\n .\n It provides support for Region types, and some cursor functions.\n .\n This package contains the development headers for the library found in\n libxfixes3.  Non-developers likely have little use for this package.\n .\n More information about X.Org can be found at:\n <URL:https://www.X.org>\n .\n This module can be found at\n git://anongit.freedesktop.org/git/xorg/lib/libXfixes",
+      "Description-md5": "5a65344d701bc29f7804bf45b42b7371"
+    },
+    {
+      "Package": "libxrandr-dev",
+      "Source": "libxrandr",
+      "Version": "2:1.5.1-1+sign",
+      "Architecture": "loongarch64",
+      "Maintainer": "Debian X Strike Force <debian-x@lists.debian.org>",
+      "Installed-Size": "258",
+      "Depends": "libxrandr2 (= 2:1.5.1-1+sign), libx11-dev, libxext-dev, x11proto-randr-dev (>= 1.4), libxrender-dev",
+      "Multi-Arch": "same",
+      "Priority": "optional",
+      "Section": "libdevel",
+      "Filename": "pool/main/libx/libxrandr/libxrandr-dev_1.5.1-1+sign_loongarch64.deb",
+      "Size": "67350",
+      "SHA256": "c366b7be50b8aedecb841e54153914742f31a63d1782b539af2f1e979e931dbd",
+      "SHA1": "e80c7534e11f10eb24b2d398956a4e96b1437f0b",
+      "MD5sum": "1489f15cd8cb3c8284343d39f986e1a6",
+      "Description": "X11 RandR extension library (development headers)\n libXrandr provides an X Window System client interface to the RandR\n extension to the X protocol.\n .\n The RandR extension allows for run-time configuration of display attributes\n such as resolution, rotation, and reflection.\n .\n This package contains the development headers for the library found in\n libxrandr2.  Non-developers likely have little use for this package.\n .\n More information about X.Org can be found at:\n <URL:https://www.X.org>\n .\n This module can be found at\n git://anongit.freedesktop.org/git/xorg/lib/libXrandr",
+      "Description-md5": "472874e086e0625bcfaa26e20af9322b"
+    },
+    {
+      "Package": "libxi-dev",
+      "Source": "libxi",
+      "Version": "2:1.7.9-1+sign",
+      "Architecture": "loongarch64",
+      "Maintainer": "Debian X Strike Force <debian-x@lists.debian.org>",
+      "Installed-Size": "902",
+      "Depends": "libxi6 (= 2:1.7.9-1+sign), libx11-dev, libxext-dev, libxfixes-dev, x11proto-input-dev (>= 2.1.99.6), xorg-sgml-doctools (>= 1:1.5)",
+      "Replaces": "x11proto-input-dev (<< 1.9.99)",
+      "Multi-Arch": "same",
+      "Homepage": "https://www.x.org/",
+      "Priority": "optional",
+      "Section": "libdevel",
+      "Filename": "pool/main/libx/libxi/libxi-dev_1.7.9-1+sign_loongarch64.deb",
+      "Size": "269102",
+      "SHA256": "036805a242368ba0d2e216e3f60c19498bc9fd35e3c3d146571781237982527a",
+      "SHA1": "b3be4f5da587029555724a5eaabbf4d3e897461c",
+      "MD5sum": "35bb8cd884765729913cd94c0965457a",
+      "Description": "X11 Input extension library (development headers)\n libXi provides an X Window System client interface to the XINPUT\n extension to the X protocol.\n .\n The Input extension allows setup and configuration of multiple input devices,\n and hotplugging of input devices (to be added and removed on the fly).\n .\n This package contains the development headers for the library found in\n libxi6.  Non-developers likely have little use for this package.\n .\n More information about X.Org can be found at:\n <URL:https://www.X.org>\n .\n This module can be found at\n git://anongit.freedesktop.org/git/xorg/lib/libXi",
+      "Description-md5": "19f838bb11eb7de1cb4ae13186283239"
+    },
+    {
+      "Package": "libxkbcommon-dev",
+      "Source": "libxkbcommon",
+      "Version": "0.8.2-1+sign",
+      "Architecture": "loongarch64",
+      "Maintainer": "Debian X Strike Force <debian-x@lists.debian.org>",
+      "Installed-Size": "1473",
+      "Depends": "libxkbcommon0 (= 0.8.2-1+sign)",
+      "Multi-Arch": "same",
+      "Homepage": "http://www.xkbcommon.org/",
+      "Priority": "optional",
+      "Section": "libdevel",
+      "Filename": "pool/main/libx/libxkbcommon/libxkbcommon-dev_0.8.2-1+sign_loongarch64.deb",
+      "Size": "244334",
+      "SHA256": "0db3e6c80509bb0c87f39c1db8d2fb7018578c24078dcc56649401f98ea2e0cc",
+      "SHA1": "098ee48ae2fd261fd7c1c9ca5e30107befce24a5",
+      "MD5sum": "bfab484b9f363c31066b1c6c42bacb7f",
+      "Description": "library interface to the XKB compiler - development files\n xkbcommon is a library to handle keyboard descriptions, including loading them\n from disk, parsing them and handling their state. It's mainly meant for client\n toolkits, window systems, and other system applications; currently that\n includes Wayland, kmscon, GTK+, Clutter, and more.\n .\n This package contains the development headers for the library found in\n libxkbcommon0. Non-developers likely have little use for this package.\n .\n More information about X.Org can be found at:\n <URL:http://www.X.org>\n .\n This module can be found at\n https://github.com/xkbcommon/libxkbcommon.git",
+      "Description-md5": "ef653ec7ae2c3cecbf4869d7f5fe0694"
+    },
+    {
+      "Package": "libxkbcommon-x11-dev",
+      "Source": "libxkbcommon",
+      "Version": "0.8.2-1+sign",
+      "Architecture": "loongarch64",
+      "Maintainer": "Debian X Strike Force <debian-x@lists.debian.org>",
+      "Installed-Size": "164",
+      "Depends": "libxkbcommon-x11-0 (= 0.8.2-1+sign), libxkbcommon-dev (= 0.8.2-1+sign), libxcb1-dev, libxcb-xkb-dev",
+      "Multi-Arch": "same",
+      "Homepage": "http://www.xkbcommon.org/",
+      "Priority": "optional",
+      "Section": "libdevel",
+      "Filename": "pool/main/libx/libxkbcommon/libxkbcommon-x11-dev_0.8.2-1+sign_loongarch64.deb",
+      "Size": "61274",
+      "SHA256": "04f46217463fbe4e49d20ad499b37a8d862c02f041f85bdd6f62fd85c2c3727c",
+      "SHA1": "54d3d46f14df53a14e4a12cab988d3a206b518a5",
+      "MD5sum": "b8481826d7d6c6af9463f69cf4e77312",
+      "Description": "library to create keymaps with the XKB X11 protocol - development files\n This package provides an add-on library called xkbcommon-x11, to support\n creating keymaps with the XKB X11 protocol, by querying the X server directly.\n .\n This package contains the development headers for the library found in\n libxkbcommon-x11-0. Non-developers likely have little use for this package.\n .\n More information about X.Org can be found at:\n <URL:http://www.X.org>\n .\n This module can be found at\n https://github.com/xkbcommon/libxkbcommon.git",
+      "Description-md5": "4fcb4c4142b8c9a3b86ff1e0db90ab3f"
+    },
+    {
+      "Package": "libatk1.0-dev",
+      "Source": "atk1.0",
+      "Version": "2.30.0-2+sign",
+      "Architecture": "loongarch64",
+      "Maintainer": "Debian Accessibility Team <pkg-a11y-devel@lists.alioth.debian.org>",
+      "Installed-Size": "1023",
+      "Depends": "libatk1.0-0 (= 2.30.0-2+sign), gir1.2-atk-1.0 (= 2.30.0-2+sign), pkg-config, libglib2.0-dev (>= 2.31.2)",
+      "Replaces": "gir-repository-dev",
+      "Multi-Arch": "same",
+      "Homepage": "https://wiki.gnome.org/Accessibility",
+      "Priority": "optional",
+      "Section": "libdevel",
+      "Filename": "pool/main/a/atk1.0/libatk1.0-dev_2.30.0-2+sign_loongarch64.deb",
+      "Size": "98074",
+      "SHA256": "56e480c5e9370d1c4123cc0f2e76252cd7a90e172cefaace47525af798299463",
+      "SHA1": "1e5f6c5f9926d9ee9acf0308f8e47e6ce1ad8285",
+      "MD5sum": "d6327610d972282787fe82d5357064dd",
+      "Description": "Development files for the ATK accessibility toolkit\n ATK is a toolkit providing accessibility interfaces for applications or\n other toolkits. By implementing these interfaces, those other toolkits or\n applications can be used with tools such as screen readers, magnifiers, and\n other alternative input devices.\n .\n These are the development files for ATK, needed for compilation of\n programs or toolkits which use it.",
+      "Description-md5": "53650239fb69a38c98ea6ac0aaa4e43a"
+    },
+    {
+      "Package": "libatk-bridge2.0-dev",
+      "Source": "at-spi2-atk",
+      "Version": "2.30.0-5+sign",
+      "Architecture": "loongarch64",
+      "Maintainer": "Debian Accessibility Team <pkg-a11y-devel@lists.alioth.debian.org>",
+      "Installed-Size": "27",
+      "Depends": "libatk-bridge2.0-0 (= 2.30.0-5+sign), libglib2.0-dev (>= 2.4.1-2), libatspi2.0-dev",
+      "Multi-Arch": "same",
+      "Homepage": "https://wiki.gnome.org/Accessibility",
+      "Priority": "optional",
+      "Section": "libdevel",
+      "Filename": "pool/main/a/at-spi2-atk/libatk-bridge2.0-dev_2.30.0-5+sign_loongarch64.deb",
+      "Size": "18050",
+      "SHA256": "2c1119585ffddcac3d7ac6fa8c69b04b3c25aa4423e81c6082c2e9bbe58edc80",
+      "SHA1": "22ca4c31b10da00e735e2dfbd91d34b545551d6d",
+      "MD5sum": "88295cc06ad7dcc05b084e3527892c1f",
+      "Description": "Development files for the AT-SPI 2 toolkit bridge\n These are the development files for libatk-bridge2.0, needed for\n compilation of programs which use it.",
+      "Description-md5": "178e73fa408e4d41e0478ebc5a88e6f6"
+    },
+    {
+      "Package": "libatspi2.0-dev",
+      "Source": "at-spi2-core",
+      "Version": "2.30.0-7+sign",
+      "Architecture": "loongarch64",
+      "Maintainer": "Debian Accessibility Team <pkg-a11y-devel@lists.alioth.debian.org>",
+      "Installed-Size": "567",
+      "Depends": "gir1.2-atspi-2.0 (= 2.30.0-7+sign), libatspi2.0-0 (= 2.30.0-7+sign), libglib2.0-dev (>= 2.4.1-2), libdbus-1-dev, libxtst-dev",
+      "Replaces": "gir-repository-dev",
+      "Multi-Arch": "same",
+      "Homepage": "https://wiki.gnome.org/Accessibility",
+      "Priority": "optional",
+      "Section": "libdevel",
+      "Filename": "pool/main/a/at-spi2-core/libatspi2.0-dev_2.30.0-7+sign_loongarch64.deb",
+      "Size": "73498",
+      "SHA256": "6f0994e90f4740e7746705a9fb053b6d8bdd32ff6373e453eec4becda0b37794",
+      "SHA1": "8cd09531267dcd7ec14ca9e3111352896de7e1a5",
+      "MD5sum": "30371d181de82c77fdf2c30b1631d578",
+      "Description": "Development files for the assistive technology service provider\n These are the development files for at-spi2, needed for compilation of\n programs which use it.",
+      "Description-md5": "7dc88fb60d32794135d45c02455456fb"
+    },
+    {
+      "Package": "libpango1.0-dev",
+      "Source": "pango1.0",
+      "Version": "1.42.4-8~deb10u1",
+      "Architecture": "loongarch64",
+      "Maintainer": "Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>",
+      "Installed-Size": "1059",
+      "Depends": "gir1.2-pango-1.0 (= 1.42.4-8~deb10u1), libcairo2-dev (>= 1.12.10), libfontconfig1-dev (>= 2.11.91), libfreetype6-dev, libfribidi-dev (>= 0.19.7), libglib2.0-dev (>= 2.34.0), libharfbuzz-dev (>= 0.9.9), libpango-1.0-0 (= 1.42.4-8~deb10u1), libpangocairo-1.0-0 (= 1.42.4-8~deb10u1), libpangoft2-1.0-0 (= 1.42.4-8~deb10u1), libpangoxft-1.0-0 (= 1.42.4-8~deb10u1), libx11-dev, libxft-dev, libxrender-dev, pango1.0-tools (= 1.42.4-8~deb10u1), pkg-config",
+      "Suggests": "imagemagick, libpango1.0-doc",
+      "Multi-Arch": "same",
+      "Homepage": "http://www.pango.org/",
+      "Priority": "optional",
+      "Section": "libdevel",
+      "Filename": "pool/main/p/pango1.0/libpango1.0-dev_1.42.4-8~deb10u1_loongarch64.deb",
+      "Size": "139016",
+      "SHA256": "0e476c77f8528243a396e5e5749792b5d8ac989f00e02e983349525c2cb66db1",
+      "SHA1": "30bdcd5ecfaf26a30161718603040e90363a229a",
+      "MD5sum": "76128459dc4a0cf80afbf7333bccee18",
+      "Description": "Development files for the Pango\n Pango is a library for layout and rendering of text, with an emphasis\n on internationalization. Pango can be used anywhere that text layout is\n needed. however, most of the work on Pango-1.0 was done using the GTK+\n widget toolkit as a test platform. Pango forms the core of text and\n font handling for GTK+-2.0.\n .\n Pango is designed to be modular; the core Pango layout can be used with\n four different font backends:\n  - Core X windowing system fonts\n  - Client-side fonts on X using the Xft library\n  - Direct rendering of scalable fonts using the FreeType library\n  - Native fonts on Microsoft backends\n .\n This package contains the header files and some files needed for development\n with Pango.",
+      "Description-md5": "0f883ef601a4a2795f29e08f094ec275"
+    },
+    {
+      "Package": "libcairo2-dev",
+      "Source": "cairo",
+      "Version": "1.16.0.3-deepin1+sign",
+      "Architecture": "loongarch64",
+      "Maintainer": "Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>",
+      "Installed-Size": "8119",
+      "Depends": "libcairo2 (= 1.16.0.3-deepin1+sign), libcairo-gobject2 (= 1.16.0.3-deepin1+sign), libcairo-script-interpreter2 (= 1.16.0.3-deepin1+sign), libfontconfig1-dev (>= 2.2.95), libfreetype6-dev (>= 2.1.10), libx11-dev, libxrender-dev (>= 0.6), libxext-dev, libpng-dev, libsm-dev, libpixman-1-dev (>= 0.22.0), libxcb1-dev (>= 1.6), libxcb-render0-dev (>= 1.6), libxcb-shm0-dev, libglib2.0-dev",
+      "Suggests": "libcairo2-doc",
+      "Provides": "libcairo-dev",
+      "Multi-Arch": "same",
+      "Homepage": "https://cairographics.org/",
+      "Priority": "optional",
+      "Section": "libdevel",
+      "Filename": "pool/main/c/cairo/libcairo2-dev_1.16.0.3-deepin1+sign_loongarch64.deb",
+      "Size": "1151194",
+      "SHA256": "edf48fcf6ddfabc0696ba3d102d02e7c8428069a7d2928dde7102ae29518299a",
+      "SHA1": "569cd761a2ce8f4a6b6c36e2e30c1d7f556a7f3a",
+      "MD5sum": "2df88bb26de85dd8faa37f06d0030854",
+      "Description": "Development files for the Cairo 2D graphics library\n Cairo is a multi-platform library providing anti-aliased\n vector-based rendering for multiple target backends.\n .\n This package contains the development libraries, header files needed by\n programs that want to compile with Cairo.",
+      "Description-md5": "07fe86d11452aa2efc887db335b46f58"
+    },
+    {
+      "Package": "libxshmfence-dev",
+      "Source": "libxshmfence",
+      "Version": "1.3-1",
+      "Architecture": "loongarch64",
+      "Maintainer": "Debian X Strike Force <debian-x@lists.debian.org>",
+      "Installed-Size": "33",
+      "Depends": "libxshmfence1 (= 1.3-1)",
+      "Multi-Arch": "same",
+      "Priority": "optional",
+      "Section": "libdevel",
+      "Filename": "pool/main/libx/libxshmfence/libxshmfence-dev_1.3-1_loongarch64.deb",
+      "Size": "9028",
+      "SHA256": "00db1f5fdf7029ba3fd7c1f8bc2f159da720ed771dc4fd89e7226626ae0eff03",
+      "SHA1": "7b9b714e74d480a3439c67dc9f6fa9c405143ca4",
+      "MD5sum": "b1d3eb94553c2d2535981a9ccf3972d5",
+      "Description": "X shared memory fences - development files\n This library provides an interface to shared-memory fences for\n synchronization between the X server and direct-rendering clients.\n .\n This package contains the xshmfence development files.",
+      "Description-md5": "5dc82f788312a94baef43ea5bb08e086"
+    },
+    {
+      "Package": "libxcursor-dev",
+      "Source": "libxcursor",
+      "Version": "1:1.1.15.1-deepin1",
+      "Architecture": "loongarch64",
+      "Maintainer": "Debian X Strike Force <debian-x@lists.debian.org>",
+      "Installed-Size": "389",
+      "Depends": "libxcursor1 (= 1:1.1.15.1-deepin1), x11proto-core-dev, libx11-dev, libxrender-dev, libxfixes-dev",
+      "Multi-Arch": "same",
+      "Homepage": "https://www.x.org",
+      "Priority": "optional",
+      "Section": "libdevel",
+      "Filename": "pool/main/libx/libxcursor/libxcursor-dev_1.1.15.1-deepin1_loongarch64.deb",
+      "Size": "72666",
+      "SHA256": "0a4fbf63d7710f5d1bceb0533bd4761cfb238abba68af71effff29673e7d5066",
+      "SHA1": "4f543a6b4059ba61e6ced30048fdec39f22813e3",
+      "MD5sum": "a5bad7470743ec99bdf3d48f04e5151d",
+      "Description": "X cursor management library (development files)\n Header files and a static version of the X cursor management library are\n provided by this package.\n .\n See the libxcursor1 package for further information.",
+      "Description-md5": "6d945f0733e812c326a50fb6989e8cde"
+    },
+    {
+      "Package": "libxss-dev",
+      "Source": "libxss",
+      "Version": "1:1.2.3-1+sign",
+      "Architecture": "loongarch64",
+      "Maintainer": "Debian X Strike Force <debian-x@lists.debian.org>",
+      "Installed-Size": "80",
+      "Depends": "libxss1 (= 1:1.2.3-1+sign), libx11-dev, libxext-dev, x11proto-scrnsaver-dev (>= 1.2.0)",
+      "Replaces": "x11proto-scrnsaver-dev (<< 1.2.0)",
+      "Multi-Arch": "same",
+      "Priority": "optional",
+      "Section": "libdevel",
+      "Filename": "pool/main/libx/libxss/libxss-dev_1.2.3-1+sign_loongarch64.deb",
+      "Size": "37458",
+      "SHA256": "99637634ec5c41401c0083a92de25e6965c3eabfd2a9e636055625af768a35f9",
+      "SHA1": "8347f8823359e665a3ddf4e41b4e74ef87f25fd7",
+      "MD5sum": "068dd735541aca08aabb8564b6c0df7d",
+      "Description": "X11 Screen Saver extension library (development headers)\n libXss provides an X Window System client interface to the MIT-SCREEN-SAVER\n extension to the X protocol.\n .\n The Screen Saver extension allows clients behaving as screen savers to\n register themselves with the X server, to better integrate themselves with\n the running session.\n .\n This package contains the development headers for the library found in\n libxss1.  Non-developers likely have little use for this package.\n .\n More information about X.Org can be found at:\n <URL:https://www.X.org>\n .\n This module can be found at\n https://gitlab.freedesktop.org/xorg/lib/libXScrnSaver",
+      "Description-md5": "ba8df8d213594251377e061c33f2cb18"
+    },
+    {
+      "Package": "libxtst-dev",
+      "Source": "libxtst",
+      "Version": "2:1.2.3-1+sign",
+      "Architecture": "loongarch64",
+      "Maintainer": "Debian X Strike Force <debian-x@lists.debian.org>",
+      "Installed-Size": "144",
+      "Depends": "libxtst6 (= 2:1.2.3-1+sign), libx11-dev, libxext-dev, libxi-dev, x11proto-xext-dev (>= 7.0.99.3), x11proto-record-dev (>= 1.13.99.1)",
+      "Replaces": "x11proto-record-dev (<< 1.13.99.1), x11proto-xext-dev (<< 7.0.99.3)",
+      "Multi-Arch": "same",
+      "Priority": "optional",
+      "Section": "libdevel",
+      "Filename": "pool/main/libx/libxtst/libxtst-dev_1.2.3-1+sign_loongarch64.deb",
+      "Size": "49646",
+      "SHA256": "696e7788b9774ba43f71a28deb035ab175b976dd8107bb27421b9fb07a6159f2",
+      "SHA1": "8774545a7b504f876afa7233c36e1552169933f9",
+      "MD5sum": "2275313adf3eda47bd46309c650a0b26",
+      "Description": "X11 Record extension library (development headers)\n libXtst provides an X Window System client interface to the Record\n extension to the X protocol.\n .\n The Record extension allows X clients to synthesise input events, which\n is useful for automated testing.\n .\n This package contains the development headers for the library found in\n libxtst6.  Non-developers likely have little use for this package.\n .\n More information about X.Org can be found at:\n <URL:https://www.X.org>\n .\n This module can be found at\n git://anongit.freedesktop.org/git/xorg/lib/libXtst",
+      "Description-md5": "09750ecc9a856fd60b670db9e026b412"
+    },
+    {
+      "Package": "libffi-dev",
+      "Priority": "optional",
+      "Section": "libdevel",
+      "Installed-Size": "694",
+      "Maintainer": "Debian GCC Maintainers <debian-gcc@lists.debian.org>",
+      "Architecture": "loongarch64",
+      "Source": "libffi",
+      "Version": "3.2.1.2-1+dde",
+      "Depends": "libffi6 (= 3.2.1.2-1+dde), dpkg (>= 1.15.4) | install-info",
+      "Conflicts": "libffi4-dev",
+      "Filename": "pool/main/libf/libffi/libffi-dev_3.2.1.2-1+dde_loongarch64.deb",
+      "Size": "180356",
+      "SHA256": "a0f530098bab80193620e3e11ec858197041bbb272d03f16a3a9f36e60e0c4ff",
+      "SHA1": "7089ccc667236326e9a43e51f814d7150f0583d4",
+      "MD5sum": "c7bbde10b4b0d188f95c2d9e99e46c44",
+      "Description": "Foreign Function Interface library (development files)\n This package contains the headers and static library files necessary for\n building programs which use libffi.\n .\n A foreign function interface is the popular name for the interface that\n allows code written in one language to call code written in another\n language.",
+      "Description-md5": "cb5b8c2fd242772cae1be91db134642c",
+      "Homepage": "https://sourceware.org/libffi/",
+      "Multi-Arch": "same"
+    }
+  ],
+  "blocked": [
+    {
+      "name": "libgtk-3-dev",
+      "available": [
+        "3.24.5.26-deepin26",
+        "3.24.5.9-1+deepin"
+      ],
+      "installed_source_versions": [
+        "3.24.5.15-deepin15"
+      ]
+    },
+    {
+      "name": "libnss3-dev",
+      "available": [
+        "2:3.42.1.12-1+deepin1"
+      ],
+      "installed_source_versions": [
+        "2:3.42.1.8-1+deepin1"
+      ]
+    },
+    {
+      "name": "libgbm-dev",
+      "available": [
+        "19.2.6.16-1",
+        "19.2.6.3-1"
+      ],
+      "installed_source_versions": [
+        "19.2.6.11-1"
+      ]
+    },
+    {
+      "name": "libasound2-dev",
+      "available": [
+        "1.1.8.8-deepin1",
+        "1.1.8-1"
+      ],
+      "installed_source_versions": [
+        "1.1.8.4-deepin1+sign"
+      ]
+    },
+    {
+      "name": "libcups2-dev",
+      "available": [
+        "2.4.2.18-deepin1"
+      ],
+      "installed_source_versions": [
+        "2.4.2.2-deepin1"
+      ]
+    },
+    {
+      "name": "libx11-dev",
+      "available": [
+        "2:1.6.12.10-deepin1"
+      ],
+      "installed_source_versions": [
+        "2:1.6.12.9-1"
+      ]
+    },
+    {
+      "name": "libxrender-dev",
+      "available": [
+        "1:0.9.10.1-deepin1"
+      ],
+      "installed_source_versions": [
+        "1:0.9.10-1+sign"
+      ]
+    },
+    {
+      "name": "libfontconfig1-dev",
+      "available": [
+        "2.13.1.4-deepin1",
+        "2.13.1.3-deepin1"
+      ],
+      "installed_source_versions": [
+        "2.13.1.1-2+sign"
+      ]
+    },
+    {
+      "name": "libfreetype6-dev",
+      "available": [
+        "2.9.1.4-deepin1"
+      ],
+      "installed_source_versions": [
+        "2.9.1.2-1-deepin1+sign"
+      ]
+    },
+    {
+      "name": "libdbus-1-dev",
+      "available": [
+        "1.12.20.23-deepin1"
+      ],
+      "installed_source_versions": [
+        "1.12.20.15-deepin1"
+      ]
+    },
+    {
+      "name": "libglib2.0-dev",
+      "available": [
+        "2.58.3.16-deepin1"
+      ],
+      "installed_source_versions": [
+        "2.58.3.13-deepin1"
+      ]
+    },
+    {
+      "name": "libx11-xcb-dev",
+      "available": [
+        "2:1.6.12.10-deepin1"
+      ],
+      "installed_source_versions": [
+        "2:1.6.12.9-1"
+      ]
+    },
+    {
+      "name": "libudev-dev",
+      "available": [
+        "241.95-deepin1",
+        "241.50-1+deepin1"
+      ],
+      "installed_source_versions": [
+        "241.66-deepin1"
+      ]
+    },
+    {
+      "name": "libpulse-dev",
+      "available": [
+        "12.2.152-deepin1",
+        "12.2.27-1+dde"
+      ],
+      "installed_source_versions": [
+        "12.2.97-deepin1"
+      ]
+    },
+    {
+      "name": "libpci-dev",
+      "available": [
+        "1:3.5.2.38-deepin1",
+        "1:3.5.2.10-1+dde"
+      ],
+      "installed_source_versions": [
+        "1:3.5.2.19-deepin1"
+      ]
+    },
+    {
+      "name": "libexpat1-dev",
+      "available": [
+        "2.2.6.16-deepin1"
+      ],
+      "installed_source_versions": [
+        "2.2.6.5-deepin1+sign"
+      ]
+    },
+    {
+      "name": "zlib1g-dev",
+      "available": [
+        "1:1.2.12.6-deepin1"
+      ],
+      "installed_source_versions": [
+        "1:1.2.12.5-1+dde+sign"
+      ]
+    }
+  ]
+}

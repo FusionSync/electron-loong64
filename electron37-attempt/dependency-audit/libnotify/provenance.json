@@ -1,0 +1,13 @@
+{
+  "retrieved_utc": "2026-10-29T13:27:05.185271+00:00",
+  "package": "libnotify-dev",
+  "version": "0.7.7-4+sign",
+  "architecture": "loongarch64",
+  "size": 49790,
+  "sha256": "3827f8e146fbb3e0a0bd3ebe57481a711ac0a0766a6f86c0b6ef49dceacee055",
+  "checksum_source": "Target UOS cached APT package index",
+  "url": "https://professional-packages.chinauos.com/desktop-professional/pool/main/libn/libnotify/libnotify-dev_0.7.7-4+sign_loongarch64.deb",
+  "download_method": "apt-get download on UOS using its existing official repository authentication; no target package installation or upgrade",
+  "matched_installed_runtime": "libnotify4=0.7.7-4+sign",
+  "installed_payload": "four public headers, static archive, development linker symlink and pkg-config file; no runtime libraries"
+}

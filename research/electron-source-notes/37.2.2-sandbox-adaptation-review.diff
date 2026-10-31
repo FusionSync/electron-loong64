@@ -1,0 +1,44 @@
+--- 37.2.5-community/loong64_support.patch
++++ 37.2.2-adapted/loong64_support.patch
+@@ -417,15 +417,6 @@
+  #endif
+  #if defined(__arm__)
+                   PTRACE_GETVFPREGS,
+-@@ -521,7 +524,7 @@ SANDBOX_EXPORT bpf_dsl::ResultExpr RestrictSockSendFlags(int sysno) {
+-       break;
+- #endif
+- #if defined(__i386__) || defined(__x86_64__) || defined(__arm__) || \
+--    defined(__mips__) || defined(__aarch64__)
+-+    defined(__mips__) || defined(__aarch64__) || defined(__loongarch__)
+-     case __NR_sendto:  // Could specify destination.
+-       argIndex = 3;
+-       break;
+ diff --git a/sandbox/linux/seccomp-bpf-helpers/syscall_sets.cc b/sandbox/linux/seccomp-bpf-helpers/syscall_sets.cc
+ index 8fba4bb88739a1309b8b3f83866709fe0d359c50..9e533b98da186fd2510d071aa28712d37720c804 100644
+ --- a/sandbox/linux/seccomp-bpf-helpers/syscall_sets.cc
+@@ -583,21 +574,12 @@
+      case __NR_recvfrom:  // Could specify source.
+      case __NR_recvmsg:   // Could specify source.
+  #endif
+-@@ -639,7 +647,7 @@ bool SyscallSets::IsAllowedGeneralIo(int sysno) {
++@@ -623,7 +631,7 @@ bool SyscallSets::IsAllowedGeneralIo(int sysno) {
+      case __NR_send:
+  #endif
+- #if defined(__i386__) || defined(__x86_64__) || defined(__arm__) || \
+--    defined(__mips__) || defined(__aarch64__)
+-+    defined(__mips__) || defined(__aarch64__) || defined(__loongarch__)
+-     case __NR_sendmsg:  // Could specify destination.
+-     case __NR_sendto:   // Could specify destination.
+- #endif
+-@@ -656,7 +664,7 @@ bool SyscallSets::IsSockSendOneMsg(int sysno) {
+-     case __NR_send:
+- #endif
+- #if defined(__i386__) || defined(__x86_64__) || defined(__arm__) || \
+--    defined(__mips__) || defined(__aarch64__)
+-+    defined(__mips__) || defined(__aarch64__) || defined(__loongarch__)
++ #if defined(__x86_64__) || defined(__arm__) || defined(__mips__) || \
++-    defined(__aarch64__)
+++    defined(__aarch64__) || defined(__loongarch__)
+      case __NR_sendmsg:  // Could specify destination.
+      case __NR_sendto:   // Could specify destination.
+  #endif

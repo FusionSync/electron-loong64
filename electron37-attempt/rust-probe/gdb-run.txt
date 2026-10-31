@@ -1,0 +1,6 @@
+set pagination off
+run
+bt
+x/8i $pc
+info registers
+quit

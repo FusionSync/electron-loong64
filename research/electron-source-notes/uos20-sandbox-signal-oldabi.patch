@@ -1,0 +1,33 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: UOS Electron build <uos-build@localhost>
+Date: Tue, 27 Oct 2026 11:00:00 +0000
+Subject: UOS 20 LoongArch sandbox signal ABI
+
+diff --git a/sandbox/linux/system_headers/linux_signal.h b/sandbox/linux/system_headers/linux_signal.h
+--- a/sandbox/linux/system_headers/linux_signal.h
++++ b/sandbox/linux/system_headers/linux_signal.h
+@@ -104,6 +104,11 @@
+ struct LinuxSigSet {
+   unsigned long sig[_NSIG_WORDS];
+ };
++#elif defined(ARCH_CPU_LOONGARCH_FAMILY)
++// UOS 20 LoongArch ABI 1.0 has 128 kernel signals, unlike upstream ABI 2.0.
++struct LinuxSigSet {
++  unsigned long sig[2];
++};
+ #else
+ typedef uint64_t LinuxSigSet;
+ #endif
+@@ -113,6 +118,12 @@
+ struct LinuxSigAction {
+   unsigned int sa_flags;
+   void (*kernel_handler)(int);
++  LinuxSigSet sa_mask;
++};
++#elif defined(ARCH_CPU_LOONGARCH_FAMILY)
++struct LinuxSigAction {
++  void (*kernel_handler)(int);
++  unsigned long sa_flags;
+   LinuxSigSet sa_mask;
+ };
+ #else

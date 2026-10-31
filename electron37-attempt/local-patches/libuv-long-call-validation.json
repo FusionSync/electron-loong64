@@ -1,0 +1,10 @@
+{
+  "checked_utc": "2026-10-29T14:01:48.127761+00:00",
+  "object": "src/out/UOS37/obj/third_party/electron_node/deps/uv/uv/threadpool.o",
+  "sha256": "b2e225cc65616cce736a6ad0a106d4c34333755a2820e97ae5d383e46d9dcc88",
+  "machine": 258,
+  "flags": "0x3",
+  "libuv_build_exit": 0,
+  "assembly_evidence": "libuv-threadpool-large.objdump",
+  "link_validation": "pending"
+}

@@ -1,0 +1,18 @@
+diff --git a/deps/uv/unofficial.gni b/deps/uv/unofficial.gni
+index 0944d6dd..7a4b7b4d 100644
+--- a/deps/uv/unofficial.gni
++++ b/deps/uv/unofficial.gni
+@@ -57,6 +57,13 @@ template("uv_gn_build") {
+         "-Wno-unused-variable",
+       ]
+     }
++    if (is_clang && current_cpu == "loong64") {
++      # UOS glibc supplies pthread_atfork from libc_nonshared.a with hidden
++      # visibility. In a large Electron executable it can lie beyond BL range.
++      # The old-ABI LLVM20 backend needs the large model for this long call;
++      # its driver does not expose the model, so pass it to the frontend.
++      cflags_c += [ "-Xclang", "-mcmodel=large" ]
++    }
+   }
+ 
+   gypi_values = exec_script("../../tools/gypi_to_gn.py",

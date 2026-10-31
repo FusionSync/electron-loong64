@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+"""Respect GN's per-toolchain pkg-config environment, including V8's host tool."""
+import os
+from pathlib import Path
+
+attempt = Path(__file__).resolve().parent.parent
+sysroot = os.environ.get("UOS_ELECTRON_SYSROOT", str(attempt / "sysroot-complete"))
+environment = os.environ.copy()
+paths = environment.get("PKG_CONFIG_LIBDIR", "").split(":")
+environment["PKG_CONFIG_PATH"] = ""
+if any(path.startswith(sysroot.rstrip("/") + "/") for path in paths):
+    environment["PKG_CONFIG_SYSROOT_DIR"] = sysroot
+    environment["PKG_CONFIG_LIBDIR"] = ":".join([
+        sysroot + "/usr/lib/loongarch64-linux-gnu/pkgconfig",
+        sysroot + "/usr/lib/pkgconfig", sysroot + "/usr/share/pkgconfig"])
+else:
+    environment.pop("PKG_CONFIG_SYSROOT_DIR", None)
+    # Preserve GN's PKG_CONFIG_LIBDIR if a separate host sysroot is later used.
+import sys
+os.execve("/usr/bin/pkg-config", ["/usr/bin/pkg-config"] + sys.argv[1:], environment)

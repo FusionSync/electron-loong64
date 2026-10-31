@@ -1,0 +1,2018 @@
+[
+  {
+    "name": ".patches",
+    "path": "patches/chromium/.patches",
+    "sha": "a4f4fdd5ca4ddc78fecec407956b0df8ecf1cc6c",
+    "size": 5246,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/.patches?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/.patches",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/a4f4fdd5ca4ddc78fecec407956b0df8ecf1cc6c",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/.patches",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/.patches?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/a4f4fdd5ca4ddc78fecec407956b0df8ecf1cc6c",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/.patches"
+    }
+  },
+  {
+    "name": "accelerator.patch",
+    "path": "patches/chromium/accelerator.patch",
+    "sha": "04f4464c2dbbf6a7d9e64ae4e4648efad0c12387",
+    "size": 3339,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/accelerator.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/accelerator.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/04f4464c2dbbf6a7d9e64ae4e4648efad0c12387",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/accelerator.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/accelerator.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/04f4464c2dbbf6a7d9e64ae4e4648efad0c12387",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/accelerator.patch"
+    }
+  },
+  {
+    "name": "add_contentgpuclient_precreatemessageloop_callback.patch",
+    "path": "patches/chromium/add_contentgpuclient_precreatemessageloop_callback.patch",
+    "sha": "2440aa84adfbf0aaa7cd520f2f4c960900b3e5e3",
+    "size": 2109,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/add_contentgpuclient_precreatemessageloop_callback.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/add_contentgpuclient_precreatemessageloop_callback.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/2440aa84adfbf0aaa7cd520f2f4c960900b3e5e3",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/add_contentgpuclient_precreatemessageloop_callback.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/add_contentgpuclient_precreatemessageloop_callback.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/2440aa84adfbf0aaa7cd520f2f4c960900b3e5e3",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/add_contentgpuclient_precreatemessageloop_callback.patch"
+    }
+  },
+  {
+    "name": "add_didinstallconditionalfeatures.patch",
+    "path": "patches/chromium/add_didinstallconditionalfeatures.patch",
+    "sha": "1de17024eb62fea93c17083ddaa6d4c5f9d36f2f",
+    "size": 8052,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/add_didinstallconditionalfeatures.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/add_didinstallconditionalfeatures.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/1de17024eb62fea93c17083ddaa6d4c5f9d36f2f",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/add_didinstallconditionalfeatures.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/add_didinstallconditionalfeatures.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/1de17024eb62fea93c17083ddaa6d4c5f9d36f2f",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/add_didinstallconditionalfeatures.patch"
+    }
+  },
+  {
+    "name": "add_ui_scopedcliboardwriter_writeunsaferawdata.patch",
+    "path": "patches/chromium/add_ui_scopedcliboardwriter_writeunsaferawdata.patch",
+    "sha": "01c36b3c68ded44c5d02870bc6bf269051f6211b",
+    "size": 2083,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/add_ui_scopedcliboardwriter_writeunsaferawdata.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/add_ui_scopedcliboardwriter_writeunsaferawdata.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/01c36b3c68ded44c5d02870bc6bf269051f6211b",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/add_ui_scopedcliboardwriter_writeunsaferawdata.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/add_ui_scopedcliboardwriter_writeunsaferawdata.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/01c36b3c68ded44c5d02870bc6bf269051f6211b",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/add_ui_scopedcliboardwriter_writeunsaferawdata.patch"
+    }
+  },
+  {
+    "name": "add_webmessageportconverter_entangleandinjectmessageportchannel.patch",
+    "path": "patches/chromium/add_webmessageportconverter_entangleandinjectmessageportchannel.patch",
+    "sha": "c83390dde8accb58846a97d1203b01e0cbaefa91",
+    "size": 2645,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/add_webmessageportconverter_entangleandinjectmessageportchannel.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/add_webmessageportconverter_entangleandinjectmessageportchannel.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/c83390dde8accb58846a97d1203b01e0cbaefa91",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/add_webmessageportconverter_entangleandinjectmessageportchannel.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/add_webmessageportconverter_entangleandinjectmessageportchannel.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/c83390dde8accb58846a97d1203b01e0cbaefa91",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/add_webmessageportconverter_entangleandinjectmessageportchannel.patch"
+    }
+  },
+  {
+    "name": "allow_disabling_blink_scheduler_throttling_per_renderview.patch",
+    "path": "patches/chromium/allow_disabling_blink_scheduler_throttling_per_renderview.patch",
+    "sha": "7b43ecf4d2511318b461866d8ce031a717896308",
+    "size": 6833,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/allow_disabling_blink_scheduler_throttling_per_renderview.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/allow_disabling_blink_scheduler_throttling_per_renderview.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/7b43ecf4d2511318b461866d8ce031a717896308",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/allow_disabling_blink_scheduler_throttling_per_renderview.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/allow_disabling_blink_scheduler_throttling_per_renderview.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/7b43ecf4d2511318b461866d8ce031a717896308",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/allow_disabling_blink_scheduler_throttling_per_renderview.patch"
+    }
+  },
+  {
+    "name": "allow_in-process_windows_to_have_different_web_prefs.patch",
+    "path": "patches/chromium/allow_in-process_windows_to_have_different_web_prefs.patch",
+    "sha": "020ad8959be89cb50ea5b4e401661e3608c4b227",
+    "size": 9390,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/allow_in-process_windows_to_have_different_web_prefs.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/allow_in-process_windows_to_have_different_web_prefs.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/020ad8959be89cb50ea5b4e401661e3608c4b227",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/allow_in-process_windows_to_have_different_web_prefs.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/allow_in-process_windows_to_have_different_web_prefs.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/020ad8959be89cb50ea5b4e401661e3608c4b227",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/allow_in-process_windows_to_have_different_web_prefs.patch"
+    }
+  },
+  {
+    "name": "allow_new_privileges_in_unsandboxed_child_processes.patch",
+    "path": "patches/chromium/allow_new_privileges_in_unsandboxed_child_processes.patch",
+    "sha": "617c5e656d99e0a3546a0834b30486b7f77b87e2",
+    "size": 1534,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/allow_new_privileges_in_unsandboxed_child_processes.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/allow_new_privileges_in_unsandboxed_child_processes.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/617c5e656d99e0a3546a0834b30486b7f77b87e2",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/allow_new_privileges_in_unsandboxed_child_processes.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/allow_new_privileges_in_unsandboxed_child_processes.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/617c5e656d99e0a3546a0834b30486b7f77b87e2",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/allow_new_privileges_in_unsandboxed_child_processes.patch"
+    }
+  },
+  {
+    "name": "allow_setting_secondary_label_via_simplemenumodel.patch",
+    "path": "patches/chromium/allow_setting_secondary_label_via_simplemenumodel.patch",
+    "sha": "1b4e797564bb2e55150aefcae03fc19139241ed8",
+    "size": 3927,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/allow_setting_secondary_label_via_simplemenumodel.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/allow_setting_secondary_label_via_simplemenumodel.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/1b4e797564bb2e55150aefcae03fc19139241ed8",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/allow_setting_secondary_label_via_simplemenumodel.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/allow_setting_secondary_label_via_simplemenumodel.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/1b4e797564bb2e55150aefcae03fc19139241ed8",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/allow_setting_secondary_label_via_simplemenumodel.patch"
+    }
+  },
+  {
+    "name": "blink_file_path.patch",
+    "path": "patches/chromium/blink_file_path.patch",
+    "sha": "ace4aa5924ccab1149621b4cd550a5e59f1dfd81",
+    "size": 1636,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/blink_file_path.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/blink_file_path.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/ace4aa5924ccab1149621b4cd550a5e59f1dfd81",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/blink_file_path.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/blink_file_path.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/ace4aa5924ccab1149621b4cd550a5e59f1dfd81",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/blink_file_path.patch"
+    }
+  },
+  {
+    "name": "blink_local_frame.patch",
+    "path": "patches/chromium/blink_local_frame.patch",
+    "sha": "0fb2250e6a84caf0948284aa2c289d0ab2460c8a",
+    "size": 3560,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/blink_local_frame.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/blink_local_frame.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/0fb2250e6a84caf0948284aa2c289d0ab2460c8a",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/blink_local_frame.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/blink_local_frame.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/0fb2250e6a84caf0948284aa2c289d0ab2460c8a",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/blink_local_frame.patch"
+    }
+  },
+  {
+    "name": "boringssl_build_gn.patch",
+    "path": "patches/chromium/boringssl_build_gn.patch",
+    "sha": "05fde5454844e7309b022cf57a378c90cbae3478",
+    "size": 1132,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/boringssl_build_gn.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/boringssl_build_gn.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/05fde5454844e7309b022cf57a378c90cbae3478",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/boringssl_build_gn.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/boringssl_build_gn.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/05fde5454844e7309b022cf57a378c90cbae3478",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/boringssl_build_gn.patch"
+    }
+  },
+  {
+    "name": "breakpad_allow_getting_string_values_for_crash_keys.patch",
+    "path": "patches/chromium/breakpad_allow_getting_string_values_for_crash_keys.patch",
+    "sha": "0cd9d06f2e8dec50f1abf61757f40f6595cf5abd",
+    "size": 1262,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/breakpad_allow_getting_string_values_for_crash_keys.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/breakpad_allow_getting_string_values_for_crash_keys.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/0cd9d06f2e8dec50f1abf61757f40f6595cf5abd",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/breakpad_allow_getting_string_values_for_crash_keys.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/breakpad_allow_getting_string_values_for_crash_keys.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/0cd9d06f2e8dec50f1abf61757f40f6595cf5abd",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/breakpad_allow_getting_string_values_for_crash_keys.patch"
+    }
+  },
+  {
+    "name": "breakpad_treat_node_processes_as_browser_processes.patch",
+    "path": "patches/chromium/breakpad_treat_node_processes_as_browser_processes.patch",
+    "sha": "1222c47289414e13b0bb51894226d13095533124",
+    "size": 1734,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/breakpad_treat_node_processes_as_browser_processes.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/breakpad_treat_node_processes_as_browser_processes.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/1222c47289414e13b0bb51894226d13095533124",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/breakpad_treat_node_processes_as_browser_processes.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/breakpad_treat_node_processes_as_browser_processes.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/1222c47289414e13b0bb51894226d13095533124",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/breakpad_treat_node_processes_as_browser_processes.patch"
+    }
+  },
+  {
+    "name": "build_add_electron_tracing_category.patch",
+    "path": "patches/chromium/build_add_electron_tracing_category.patch",
+    "sha": "6c074efcaf8411b4165aff68a5c0044aef9d53b9",
+    "size": 1239,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/build_add_electron_tracing_category.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/build_add_electron_tracing_category.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/6c074efcaf8411b4165aff68a5c0044aef9d53b9",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/build_add_electron_tracing_category.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/build_add_electron_tracing_category.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/6c074efcaf8411b4165aff68a5c0044aef9d53b9",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/build_add_electron_tracing_category.patch"
+    }
+  },
+  {
+    "name": "build_disable_partition_alloc_on_mac.patch",
+    "path": "patches/chromium/build_disable_partition_alloc_on_mac.patch",
+    "sha": "5fd0656a2cdeabe84e05d745d3e43ab0b2116043",
+    "size": 1082,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/build_disable_partition_alloc_on_mac.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/build_disable_partition_alloc_on_mac.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/5fd0656a2cdeabe84e05d745d3e43ab0b2116043",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/build_disable_partition_alloc_on_mac.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/build_disable_partition_alloc_on_mac.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/5fd0656a2cdeabe84e05d745d3e43ab0b2116043",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/build_disable_partition_alloc_on_mac.patch"
+    }
+  },
+  {
+    "name": "build_disable_print_content_analysis.patch",
+    "path": "patches/chromium/build_disable_print_content_analysis.patch",
+    "sha": "7dff09c3e4eead38bfa8517944c3545a14261d3d",
+    "size": 1320,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/build_disable_print_content_analysis.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/build_disable_print_content_analysis.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/7dff09c3e4eead38bfa8517944c3545a14261d3d",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/build_disable_print_content_analysis.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/build_disable_print_content_analysis.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/7dff09c3e4eead38bfa8517944c3545a14261d3d",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/build_disable_print_content_analysis.patch"
+    }
+  },
+  {
+    "name": "build_do_not_depend_on_packed_resource_integrity.patch",
+    "path": "patches/chromium/build_do_not_depend_on_packed_resource_integrity.patch",
+    "sha": "2c1e1ddf1419e399b7de32a55c4c3a114c44c815",
+    "size": 3117,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/build_do_not_depend_on_packed_resource_integrity.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/build_do_not_depend_on_packed_resource_integrity.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/2c1e1ddf1419e399b7de32a55c4c3a114c44c815",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/build_do_not_depend_on_packed_resource_integrity.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/build_do_not_depend_on_packed_resource_integrity.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/2c1e1ddf1419e399b7de32a55c4c3a114c44c815",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/build_do_not_depend_on_packed_resource_integrity.patch"
+    }
+  },
+  {
+    "name": "build_gn.patch",
+    "path": "patches/chromium/build_gn.patch",
+    "sha": "bd23b789dcd3beb9dedf92d9c9103ec0119b9148",
+    "size": 1646,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/build_gn.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/build_gn.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/bd23b789dcd3beb9dedf92d9c9103ec0119b9148",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/build_gn.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/build_gn.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/bd23b789dcd3beb9dedf92d9c9103ec0119b9148",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/build_gn.patch"
+    }
+  },
+  {
+    "name": "build_libc_as_static_library.patch",
+    "path": "patches/chromium/build_libc_as_static_library.patch",
+    "sha": "15419321d710c88d5002469a5e4243a68e968e36",
+    "size": 1703,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/build_libc_as_static_library.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/build_libc_as_static_library.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/15419321d710c88d5002469a5e4243a68e968e36",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/build_libc_as_static_library.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/build_libc_as_static_library.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/15419321d710c88d5002469a5e4243a68e968e36",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/build_libc_as_static_library.patch"
+    }
+  },
+  {
+    "name": "build_make_libcxx_abi_unstable_false_for_electron.patch",
+    "path": "patches/chromium/build_make_libcxx_abi_unstable_false_for_electron.patch",
+    "sha": "89e171dc5eb232afea885e5ea9de5db1fa92ba7f",
+    "size": 905,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/build_make_libcxx_abi_unstable_false_for_electron.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/build_make_libcxx_abi_unstable_false_for_electron.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/89e171dc5eb232afea885e5ea9de5db1fa92ba7f",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/build_make_libcxx_abi_unstable_false_for_electron.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/build_make_libcxx_abi_unstable_false_for_electron.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/89e171dc5eb232afea885e5ea9de5db1fa92ba7f",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/build_make_libcxx_abi_unstable_false_for_electron.patch"
+    }
+  },
+  {
+    "name": "can_create_window.patch",
+    "path": "patches/chromium/can_create_window.patch",
+    "sha": "ba768b811d4cec31aed9f1aa19eee561804a58a3",
+    "size": 11711,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/can_create_window.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/can_create_window.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/ba768b811d4cec31aed9f1aa19eee561804a58a3",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/can_create_window.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/can_create_window.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/ba768b811d4cec31aed9f1aa19eee561804a58a3",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/can_create_window.patch"
+    }
+  },
+  {
+    "name": "chore_do_not_use_chrome_windows_in_cryptotoken_webrequestsender.patch",
+    "path": "patches/chromium/chore_do_not_use_chrome_windows_in_cryptotoken_webrequestsender.patch",
+    "sha": "380b7d15612c75adc1380ee756821e63408247b7",
+    "size": 2200,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/chore_do_not_use_chrome_windows_in_cryptotoken_webrequestsender.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/chore_do_not_use_chrome_windows_in_cryptotoken_webrequestsender.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/380b7d15612c75adc1380ee756821e63408247b7",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/chore_do_not_use_chrome_windows_in_cryptotoken_webrequestsender.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/chore_do_not_use_chrome_windows_in_cryptotoken_webrequestsender.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/380b7d15612c75adc1380ee756821e63408247b7",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/chore_do_not_use_chrome_windows_in_cryptotoken_webrequestsender.patch"
+    }
+  },
+  {
+    "name": "chore_expose_v8_initialization_isolate_callbacks.patch",
+    "path": "patches/chromium/chore_expose_v8_initialization_isolate_callbacks.patch",
+    "sha": "dfbf2c9b770cd5b220c8b6f259869cd5c2b676da",
+    "size": 2273,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/chore_expose_v8_initialization_isolate_callbacks.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/chore_expose_v8_initialization_isolate_callbacks.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/dfbf2c9b770cd5b220c8b6f259869cd5c2b676da",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/chore_expose_v8_initialization_isolate_callbacks.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/chore_expose_v8_initialization_isolate_callbacks.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/dfbf2c9b770cd5b220c8b6f259869cd5c2b676da",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/chore_expose_v8_initialization_isolate_callbacks.patch"
+    }
+  },
+  {
+    "name": "chore_provide_iswebcontentscreationoverridden_with_full_params.patch",
+    "path": "patches/chromium/chore_provide_iswebcontentscreationoverridden_with_full_params.patch",
+    "sha": "2784504b8f0e699a79b3f9e131253c1eceda31c1",
+    "size": 24405,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/chore_provide_iswebcontentscreationoverridden_with_full_params.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/chore_provide_iswebcontentscreationoverridden_with_full_params.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/2784504b8f0e699a79b3f9e131253c1eceda31c1",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/chore_provide_iswebcontentscreationoverridden_with_full_params.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/chore_provide_iswebcontentscreationoverridden_with_full_params.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/2784504b8f0e699a79b3f9e131253c1eceda31c1",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/chore_provide_iswebcontentscreationoverridden_with_full_params.patch"
+    }
+  },
+  {
+    "name": "chore_use_electron_resources_not_chrome_for_spellchecker.patch",
+    "path": "patches/chromium/chore_use_electron_resources_not_chrome_for_spellchecker.patch",
+    "sha": "2221e5dd442b416b9c33b42b32f3ebe97a8f2142",
+    "size": 2691,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/chore_use_electron_resources_not_chrome_for_spellchecker.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/chore_use_electron_resources_not_chrome_for_spellchecker.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/2221e5dd442b416b9c33b42b32f3ebe97a8f2142",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/chore_use_electron_resources_not_chrome_for_spellchecker.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/chore_use_electron_resources_not_chrome_for_spellchecker.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/2221e5dd442b416b9c33b42b32f3ebe97a8f2142",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/chore_use_electron_resources_not_chrome_for_spellchecker.patch"
+    }
+  },
+  {
+    "name": "chrome_key_systems.patch",
+    "path": "patches/chromium/chrome_key_systems.patch",
+    "sha": "2c9718a5409231b0328ed11fdad060f94aaf32cc",
+    "size": 1689,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/chrome_key_systems.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/chrome_key_systems.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/2c9718a5409231b0328ed11fdad060f94aaf32cc",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/chrome_key_systems.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/chrome_key_systems.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/2c9718a5409231b0328ed11fdad060f94aaf32cc",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/chrome_key_systems.patch"
+    }
+  },
+  {
+    "name": "chromium_add_support_for_loongarch64.patch",
+    "path": "patches/chromium/chromium_add_support_for_loongarch64.patch",
+    "sha": "d02d1153af146eb047d701ae204310819c9b8906",
+    "size": 72836,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/chromium_add_support_for_loongarch64.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/chromium_add_support_for_loongarch64.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/d02d1153af146eb047d701ae204310819c9b8906",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/chromium_add_support_for_loongarch64.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/chromium_add_support_for_loongarch64.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/d02d1153af146eb047d701ae204310819c9b8906",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/chromium_add_support_for_loongarch64.patch"
+    }
+  },
+  {
+    "name": "chromium_build_configuration_adds_loongarch64_support.patch",
+    "path": "patches/chromium/chromium_build_configuration_adds_loongarch64_support.patch",
+    "sha": "2e2617cdb78ebcab63620691b02e7cfdfadc57a8",
+    "size": 7910,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/chromium_build_configuration_adds_loongarch64_support.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/chromium_build_configuration_adds_loongarch64_support.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/2e2617cdb78ebcab63620691b02e7cfdfadc57a8",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/chromium_build_configuration_adds_loongarch64_support.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/chromium_build_configuration_adds_loongarch64_support.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/2e2617cdb78ebcab63620691b02e7cfdfadc57a8",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/chromium_build_configuration_adds_loongarch64_support.patch"
+    }
+  },
+  {
+    "name": "command-ismediakey.patch",
+    "path": "patches/chromium/command-ismediakey.patch",
+    "sha": "ab63b9153c409003b106534ad373cd7d7236c07c",
+    "size": 18619,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/command-ismediakey.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/command-ismediakey.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/ab63b9153c409003b106534ad373cd7d7236c07c",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/command-ismediakey.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/command-ismediakey.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/ab63b9153c409003b106534ad373cd7d7236c07c",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/command-ismediakey.patch"
+    }
+  },
+  {
+    "name": "crash_allow_disabling_compression_on_linux.patch",
+    "path": "patches/chromium/crash_allow_disabling_compression_on_linux.patch",
+    "sha": "6f4a3b926bbc65adf101d3ad26ee883aa33e52e5",
+    "size": 5540,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/crash_allow_disabling_compression_on_linux.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/crash_allow_disabling_compression_on_linux.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/6f4a3b926bbc65adf101d3ad26ee883aa33e52e5",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/crash_allow_disabling_compression_on_linux.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/crash_allow_disabling_compression_on_linux.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/6f4a3b926bbc65adf101d3ad26ee883aa33e52e5",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/crash_allow_disabling_compression_on_linux.patch"
+    }
+  },
+  {
+    "name": "crash_allow_setting_more_options.patch",
+    "path": "patches/chromium/crash_allow_setting_more_options.patch",
+    "sha": "ff3fe7c4fcfaec6dd621053b1c48b772bd02e73b",
+    "size": 6432,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/crash_allow_setting_more_options.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/crash_allow_setting_more_options.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/ff3fe7c4fcfaec6dd621053b1c48b772bd02e73b",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/crash_allow_setting_more_options.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/crash_allow_setting_more_options.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/ff3fe7c4fcfaec6dd621053b1c48b772bd02e73b",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/crash_allow_setting_more_options.patch"
+    }
+  },
+  {
+    "name": "crashpad_add_support_for_loongarch64.patch",
+    "path": "patches/chromium/crashpad_add_support_for_loongarch64.patch",
+    "sha": "993b25f67d4eb15c1348a4ffcfc268135b31ecff",
+    "size": 61708,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/crashpad_add_support_for_loongarch64.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/crashpad_add_support_for_loongarch64.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/993b25f67d4eb15c1348a4ffcfc268135b31ecff",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/crashpad_add_support_for_loongarch64.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/crashpad_add_support_for_loongarch64.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/993b25f67d4eb15c1348a4ffcfc268135b31ecff",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/crashpad_add_support_for_loongarch64.patch"
+    }
+  },
+  {
+    "name": "crashpad_pid_check.patch",
+    "path": "patches/chromium/crashpad_pid_check.patch",
+    "sha": "5560d4b3ec9f8e6ab2bd31c34e85cae096199574",
+    "size": 1845,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/crashpad_pid_check.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/crashpad_pid_check.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/5560d4b3ec9f8e6ab2bd31c34e85cae096199574",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/crashpad_pid_check.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/crashpad_pid_check.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/5560d4b3ec9f8e6ab2bd31c34e85cae096199574",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/crashpad_pid_check.patch"
+    }
+  },
+  {
+    "name": "custom_protocols_plzserviceworker.patch",
+    "path": "patches/chromium/custom_protocols_plzserviceworker.patch",
+    "sha": "0d49070b559b3bb103042b12a55a761d321c2044",
+    "size": 2764,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/custom_protocols_plzserviceworker.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/custom_protocols_plzserviceworker.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/0d49070b559b3bb103042b12a55a761d321c2044",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/custom_protocols_plzserviceworker.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/custom_protocols_plzserviceworker.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/0d49070b559b3bb103042b12a55a761d321c2044",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/custom_protocols_plzserviceworker.patch"
+    }
+  },
+  {
+    "name": "dcheck.patch",
+    "path": "patches/chromium/dcheck.patch",
+    "sha": "0b4fa1aa751ef62f6c100455bbf9ed53f6ebed01",
+    "size": 2795,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/dcheck.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/dcheck.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/0b4fa1aa751ef62f6c100455bbf9ed53f6ebed01",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/dcheck.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/dcheck.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/0b4fa1aa751ef62f6c100455bbf9ed53f6ebed01",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/dcheck.patch"
+    }
+  },
+  {
+    "name": "desktop_media_list.patch",
+    "path": "patches/chromium/desktop_media_list.patch",
+    "sha": "1424652443133dc52a82787ee45dc06f903adf07",
+    "size": 6621,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/desktop_media_list.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/desktop_media_list.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/1424652443133dc52a82787ee45dc06f903adf07",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/desktop_media_list.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/desktop_media_list.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/1424652443133dc52a82787ee45dc06f903adf07",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/desktop_media_list.patch"
+    }
+  },
+  {
+    "name": "disable-redraw-lock.patch",
+    "path": "patches/chromium/disable-redraw-lock.patch",
+    "sha": "a102ba88e4f8db3f9573995677f3dbc30e989b9c",
+    "size": 3597,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/disable-redraw-lock.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/disable-redraw-lock.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/a102ba88e4f8db3f9573995677f3dbc30e989b9c",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/disable-redraw-lock.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/disable-redraw-lock.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/a102ba88e4f8db3f9573995677f3dbc30e989b9c",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/disable-redraw-lock.patch"
+    }
+  },
+  {
+    "name": "disable_color_correct_rendering.patch",
+    "path": "patches/chromium/disable_color_correct_rendering.patch",
+    "sha": "4b982475b0079d00cd47f3850046f0e8125bcb91",
+    "size": 18843,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/disable_color_correct_rendering.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/disable_color_correct_rendering.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/4b982475b0079d00cd47f3850046f0e8125bcb91",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/disable_color_correct_rendering.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/disable_color_correct_rendering.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/4b982475b0079d00cd47f3850046f0e8125bcb91",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/disable_color_correct_rendering.patch"
+    }
+  },
+  {
+    "name": "disable_compositor_recycling.patch",
+    "path": "patches/chromium/disable_compositor_recycling.patch",
+    "sha": "85264ef1436802bcdbb270a3016ade25c478d4a6",
+    "size": 1700,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/disable_compositor_recycling.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/disable_compositor_recycling.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/85264ef1436802bcdbb270a3016ade25c478d4a6",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/disable_compositor_recycling.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/disable_compositor_recycling.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/85264ef1436802bcdbb270a3016ade25c478d4a6",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/disable_compositor_recycling.patch"
+    }
+  },
+  {
+    "name": "disable_hidden.patch",
+    "path": "patches/chromium/disable_hidden.patch",
+    "sha": "4ccc6a9d376353bc30f0c05e6d63008a580dc564",
+    "size": 2275,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/disable_hidden.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/disable_hidden.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/4ccc6a9d376353bc30f0c05e6d63008a580dc564",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/disable_hidden.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/disable_hidden.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/4ccc6a9d376353bc30f0c05e6d63008a580dc564",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/disable_hidden.patch"
+    }
+  },
+  {
+    "name": "disable_unload_metrics.patch",
+    "path": "patches/chromium/disable_unload_metrics.patch",
+    "sha": "00d5b411ea898edfc47467734219a9441ca6d9b0",
+    "size": 1880,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/disable_unload_metrics.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/disable_unload_metrics.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/00d5b411ea898edfc47467734219a9441ca6d9b0",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/disable_unload_metrics.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/disable_unload_metrics.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/00d5b411ea898edfc47467734219a9441ca6d9b0",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/disable_unload_metrics.patch"
+    }
+  },
+  {
+    "name": "dom_storage_limits.patch",
+    "path": "patches/chromium/dom_storage_limits.patch",
+    "sha": "c62cc1719fa04daeb85a9c0e37bc1711037d5999",
+    "size": 2375,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/dom_storage_limits.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/dom_storage_limits.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/c62cc1719fa04daeb85a9c0e37bc1711037d5999",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/dom_storage_limits.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/dom_storage_limits.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/c62cc1719fa04daeb85a9c0e37bc1711037d5999",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/dom_storage_limits.patch"
+    }
+  },
+  {
+    "name": "don_t_run_pcscan_notifythreadcreated_if_pcscan_is_disabled.patch",
+    "path": "patches/chromium/don_t_run_pcscan_notifythreadcreated_if_pcscan_is_disabled.patch",
+    "sha": "4b690a546db81ab6ef395a1623e12c13d5729b0d",
+    "size": 3649,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/don_t_run_pcscan_notifythreadcreated_if_pcscan_is_disabled.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/don_t_run_pcscan_notifythreadcreated_if_pcscan_is_disabled.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/4b690a546db81ab6ef395a1623e12c13d5729b0d",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/don_t_run_pcscan_notifythreadcreated_if_pcscan_is_disabled.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/don_t_run_pcscan_notifythreadcreated_if_pcscan_is_disabled.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/4b690a546db81ab6ef395a1623e12c13d5729b0d",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/don_t_run_pcscan_notifythreadcreated_if_pcscan_is_disabled.patch"
+    }
+  },
+  {
+    "name": "don_t_use_potentially_null_getwebframe_-_view_when_get_blink.patch",
+    "path": "patches/chromium/don_t_use_potentially_null_getwebframe_-_view_when_get_blink.patch",
+    "sha": "fbbbd4d50c02b53b4fedd7ecbd9a464b8cc2d628",
+    "size": 1264,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/don_t_use_potentially_null_getwebframe_-_view_when_get_blink.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/don_t_use_potentially_null_getwebframe_-_view_when_get_blink.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/fbbbd4d50c02b53b4fedd7ecbd9a464b8cc2d628",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/don_t_use_potentially_null_getwebframe_-_view_when_get_blink.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/don_t_use_potentially_null_getwebframe_-_view_when_get_blink.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/fbbbd4d50c02b53b4fedd7ecbd9a464b8cc2d628",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/don_t_use_potentially_null_getwebframe_-_view_when_get_blink.patch"
+    }
+  },
+  {
+    "name": "dump_syms.patch",
+    "path": "patches/chromium/dump_syms.patch",
+    "sha": "43e274d4c5e8baae3a0ef09b67f8b37b3fb165cd",
+    "size": 1091,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/dump_syms.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/dump_syms.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/43e274d4c5e8baae3a0ef09b67f8b37b3fb165cd",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/dump_syms.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/dump_syms.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/43e274d4c5e8baae3a0ef09b67f8b37b3fb165cd",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/dump_syms.patch"
+    }
+  },
+  {
+    "name": "enable_reset_aspect_ratio.patch",
+    "path": "patches/chromium/enable_reset_aspect_ratio.patch",
+    "sha": "b69182027c9db4d30af49901bb24f795d3bef346",
+    "size": 1677,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/enable_reset_aspect_ratio.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/enable_reset_aspect_ratio.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/b69182027c9db4d30af49901bb24f795d3bef346",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/enable_reset_aspect_ratio.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/enable_reset_aspect_ratio.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/b69182027c9db4d30af49901bb24f795d3bef346",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/enable_reset_aspect_ratio.patch"
+    }
+  },
+  {
+    "name": "export_gin_v8platform_pageallocator_for_usage_outside_of_the_gin.patch",
+    "path": "patches/chromium/export_gin_v8platform_pageallocator_for_usage_outside_of_the_gin.patch",
+    "sha": "aa6aa6d8e388e8b9d3c7ba6b42d0b53f4a01dbdb",
+    "size": 1650,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/export_gin_v8platform_pageallocator_for_usage_outside_of_the_gin.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/export_gin_v8platform_pageallocator_for_usage_outside_of_the_gin.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/aa6aa6d8e388e8b9d3c7ba6b42d0b53f4a01dbdb",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/export_gin_v8platform_pageallocator_for_usage_outside_of_the_gin.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/export_gin_v8platform_pageallocator_for_usage_outside_of_the_gin.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/aa6aa6d8e388e8b9d3c7ba6b42d0b53f4a01dbdb",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/export_gin_v8platform_pageallocator_for_usage_outside_of_the_gin.patch"
+    }
+  },
+  {
+    "name": "expose_setuseragent_on_networkcontext.patch",
+    "path": "patches/chromium/expose_setuseragent_on_networkcontext.patch",
+    "sha": "dcea482d9ad11cea485873347176b8d70d33e433",
+    "size": 4580,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/expose_setuseragent_on_networkcontext.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/expose_setuseragent_on_networkcontext.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/dcea482d9ad11cea485873347176b8d70d33e433",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/expose_setuseragent_on_networkcontext.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/expose_setuseragent_on_networkcontext.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/dcea482d9ad11cea485873347176b8d70d33e433",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/expose_setuseragent_on_networkcontext.patch"
+    }
+  },
+  {
+    "name": "extend_apply_webpreferences.patch",
+    "path": "patches/chromium/extend_apply_webpreferences.patch",
+    "sha": "aee90ff161efa24234e17bc46d32a9e938ffb760",
+    "size": 1726,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/extend_apply_webpreferences.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/extend_apply_webpreferences.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/aee90ff161efa24234e17bc46d32a9e938ffb760",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/extend_apply_webpreferences.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/extend_apply_webpreferences.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/aee90ff161efa24234e17bc46d32a9e938ffb760",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/extend_apply_webpreferences.patch"
+    }
+  },
+  {
+    "name": "feat_add_data_parameter_to_processsingleton.patch",
+    "path": "patches/chromium/feat_add_data_parameter_to_processsingleton.patch",
+    "sha": "919db1b42087a20a4c53bad607cce91b9e91813f",
+    "size": 15916,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/feat_add_data_parameter_to_processsingleton.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/feat_add_data_parameter_to_processsingleton.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/919db1b42087a20a4c53bad607cce91b9e91813f",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/feat_add_data_parameter_to_processsingleton.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/feat_add_data_parameter_to_processsingleton.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/919db1b42087a20a4c53bad607cce91b9e91813f",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/feat_add_data_parameter_to_processsingleton.patch"
+    }
+  },
+  {
+    "name": "feat_add_onclose_to_messageport.patch",
+    "path": "patches/chromium/feat_add_onclose_to_messageport.patch",
+    "sha": "01d4fd5beeb273b02653e3dc476c341629ef4704",
+    "size": 2520,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/feat_add_onclose_to_messageport.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/feat_add_onclose_to_messageport.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/01d4fd5beeb273b02653e3dc476c341629ef4704",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/feat_add_onclose_to_messageport.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/feat_add_onclose_to_messageport.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/01d4fd5beeb273b02653e3dc476c341629ef4704",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/feat_add_onclose_to_messageport.patch"
+    }
+  },
+  {
+    "name": "feat_add_set_theme_source_to_allow_apps_to.patch",
+    "path": "patches/chromium/feat_add_set_theme_source_to_allow_apps_to.patch",
+    "sha": "8b78ba638e7d5c6f57e54fae373ca9d4a7bad6ac",
+    "size": 3229,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/feat_add_set_theme_source_to_allow_apps_to.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/feat_add_set_theme_source_to_allow_apps_to.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/8b78ba638e7d5c6f57e54fae373ca9d4a7bad6ac",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/feat_add_set_theme_source_to_allow_apps_to.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/feat_add_set_theme_source_to_allow_apps_to.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/8b78ba638e7d5c6f57e54fae373ca9d4a7bad6ac",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/feat_add_set_theme_source_to_allow_apps_to.patch"
+    }
+  },
+  {
+    "name": "feat_add_streaming-protocol_registry_to_multibuffer_data_source.patch",
+    "path": "patches/chromium/feat_add_streaming-protocol_registry_to_multibuffer_data_source.patch",
+    "sha": "72cb9fc018ca2d92bfbf3ec3d5c6bf0eafd8b446",
+    "size": 3488,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/feat_add_streaming-protocol_registry_to_multibuffer_data_source.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/feat_add_streaming-protocol_registry_to_multibuffer_data_source.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/72cb9fc018ca2d92bfbf3ec3d5c6bf0eafd8b446",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/feat_add_streaming-protocol_registry_to_multibuffer_data_source.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/feat_add_streaming-protocol_registry_to_multibuffer_data_source.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/72cb9fc018ca2d92bfbf3ec3d5c6bf0eafd8b446",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/feat_add_streaming-protocol_registry_to_multibuffer_data_source.patch"
+    }
+  },
+  {
+    "name": "feat_add_support_for_overriding_the_base_spellchecker_download_url.patch",
+    "path": "patches/chromium/feat_add_support_for_overriding_the_base_spellchecker_download_url.patch",
+    "sha": "563ac340dc18662b7fa11d8b20b69344d1d6068a",
+    "size": 2732,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/feat_add_support_for_overriding_the_base_spellchecker_download_url.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/feat_add_support_for_overriding_the_base_spellchecker_download_url.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/563ac340dc18662b7fa11d8b20b69344d1d6068a",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/feat_add_support_for_overriding_the_base_spellchecker_download_url.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/feat_add_support_for_overriding_the_base_spellchecker_download_url.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/563ac340dc18662b7fa11d8b20b69344d1d6068a",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/feat_add_support_for_overriding_the_base_spellchecker_download_url.patch"
+    }
+  },
+  {
+    "name": "feat_allow_embedders_to_add_observers_on_created_hunspell.patch",
+    "path": "patches/chromium/feat_allow_embedders_to_add_observers_on_created_hunspell.patch",
+    "sha": "a8d36d481d1dbf928816d8409fb437dfe30e1dab",
+    "size": 2819,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/feat_allow_embedders_to_add_observers_on_created_hunspell.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/feat_allow_embedders_to_add_observers_on_created_hunspell.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/a8d36d481d1dbf928816d8409fb437dfe30e1dab",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/feat_allow_embedders_to_add_observers_on_created_hunspell.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/feat_allow_embedders_to_add_observers_on_created_hunspell.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/a8d36d481d1dbf928816d8409fb437dfe30e1dab",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/feat_allow_embedders_to_add_observers_on_created_hunspell.patch"
+    }
+  },
+  {
+    "name": "feat_enable_offscreen_rendering_with_viz_compositor.patch",
+    "path": "patches/chromium/feat_enable_offscreen_rendering_with_viz_compositor.patch",
+    "sha": "bac3abf4d6156fa34fe9ce7eb9587630fe18a052",
+    "size": 30216,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/feat_enable_offscreen_rendering_with_viz_compositor.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/feat_enable_offscreen_rendering_with_viz_compositor.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/bac3abf4d6156fa34fe9ce7eb9587630fe18a052",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/feat_enable_offscreen_rendering_with_viz_compositor.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/feat_enable_offscreen_rendering_with_viz_compositor.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/bac3abf4d6156fa34fe9ce7eb9587630fe18a052",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/feat_enable_offscreen_rendering_with_viz_compositor.patch"
+    }
+  },
+  {
+    "name": "feat_expose_raw_response_headers_from_urlloader.patch",
+    "path": "patches/chromium/feat_expose_raw_response_headers_from_urlloader.patch",
+    "sha": "25dcb6b5512054b0222697ef77f5c330de20b9ec",
+    "size": 8452,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/feat_expose_raw_response_headers_from_urlloader.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/feat_expose_raw_response_headers_from_urlloader.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/25dcb6b5512054b0222697ef77f5c330de20b9ec",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/feat_expose_raw_response_headers_from_urlloader.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/feat_expose_raw_response_headers_from_urlloader.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/25dcb6b5512054b0222697ef77f5c330de20b9ec",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/feat_expose_raw_response_headers_from_urlloader.patch"
+    }
+  },
+  {
+    "name": "feat_move_firstpartysets_to_content_browser_client.patch",
+    "path": "patches/chromium/feat_move_firstpartysets_to_content_browser_client.patch",
+    "sha": "a690951743cf31cbefc184fc80a9d59fd3d2b118",
+    "size": 39486,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/feat_move_firstpartysets_to_content_browser_client.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/feat_move_firstpartysets_to_content_browser_client.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/a690951743cf31cbefc184fc80a9d59fd3d2b118",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/feat_move_firstpartysets_to_content_browser_client.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/feat_move_firstpartysets_to_content_browser_client.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/a690951743cf31cbefc184fc80a9d59fd3d2b118",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/feat_move_firstpartysets_to_content_browser_client.patch"
+    }
+  },
+  {
+    "name": "fix_adapt_exclusive_access_for_electron_needs.patch",
+    "path": "patches/chromium/fix_adapt_exclusive_access_for_electron_needs.patch",
+    "sha": "e09760b9e735e77a7d992726245069da025f1131",
+    "size": 6262,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/fix_adapt_exclusive_access_for_electron_needs.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/fix_adapt_exclusive_access_for_electron_needs.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/e09760b9e735e77a7d992726245069da025f1131",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/fix_adapt_exclusive_access_for_electron_needs.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/fix_adapt_exclusive_access_for_electron_needs.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/e09760b9e735e77a7d992726245069da025f1131",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/fix_adapt_exclusive_access_for_electron_needs.patch"
+    }
+  },
+  {
+    "name": "fix_add_check_for_sandbox_then_result.patch",
+    "path": "patches/chromium/fix_add_check_for_sandbox_then_result.patch",
+    "sha": "5e0e4224c98d1401b26725e8ac1ee3164c051469",
+    "size": 870,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/fix_add_check_for_sandbox_then_result.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/fix_add_check_for_sandbox_then_result.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/5e0e4224c98d1401b26725e8ac1ee3164c051469",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/fix_add_check_for_sandbox_then_result.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/fix_add_check_for_sandbox_then_result.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/5e0e4224c98d1401b26725e8ac1ee3164c051469",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/fix_add_check_for_sandbox_then_result.patch"
+    }
+  },
+  {
+    "name": "fix_aspect_ratio_with_max_size.patch",
+    "path": "patches/chromium/fix_aspect_ratio_with_max_size.patch",
+    "sha": "a562bd5cd3b157b28347b21d7d4c0354d912cc29",
+    "size": 1954,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/fix_aspect_ratio_with_max_size.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/fix_aspect_ratio_with_max_size.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/a562bd5cd3b157b28347b21d7d4c0354d912cc29",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/fix_aspect_ratio_with_max_size.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/fix_aspect_ratio_with_max_size.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/a562bd5cd3b157b28347b21d7d4c0354d912cc29",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/fix_aspect_ratio_with_max_size.patch"
+    }
+  },
+  {
+    "name": "fix_crash_when_saving_edited_pdf_files.patch",
+    "path": "patches/chromium/fix_crash_when_saving_edited_pdf_files.patch",
+    "sha": "832bba5787c3eb704cefa94efdb71c1b0351ad06",
+    "size": 3437,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/fix_crash_when_saving_edited_pdf_files.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/fix_crash_when_saving_edited_pdf_files.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/832bba5787c3eb704cefa94efdb71c1b0351ad06",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/fix_crash_when_saving_edited_pdf_files.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/fix_crash_when_saving_edited_pdf_files.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/832bba5787c3eb704cefa94efdb71c1b0351ad06",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/fix_crash_when_saving_edited_pdf_files.patch"
+    }
+  },
+  {
+    "name": "fix_dont_delete_SerialPortManager_on_main_thread.patch",
+    "path": "patches/chromium/fix_dont_delete_SerialPortManager_on_main_thread.patch",
+    "sha": "d1d1cd7380be18d2fe8b4166231e05cf22a031f0",
+    "size": 3774,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/fix_dont_delete_SerialPortManager_on_main_thread.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/fix_dont_delete_SerialPortManager_on_main_thread.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/d1d1cd7380be18d2fe8b4166231e05cf22a031f0",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/fix_dont_delete_SerialPortManager_on_main_thread.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/fix_dont_delete_SerialPortManager_on_main_thread.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/d1d1cd7380be18d2fe8b4166231e05cf22a031f0",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/fix_dont_delete_SerialPortManager_on_main_thread.patch"
+    }
+  },
+  {
+    "name": "fix_error_gbm_wrapper_cc_275_failed_to_export_buffer_to_dma_buf.patch",
+    "path": "patches/chromium/fix_error_gbm_wrapper_cc_275_failed_to_export_buffer_to_dma_buf.patch",
+    "sha": "6a6d667e3cd00d7fe03a9aa45ad6968d10b92ac6",
+    "size": 1081,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/fix_error_gbm_wrapper_cc_275_failed_to_export_buffer_to_dma_buf.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/fix_error_gbm_wrapper_cc_275_failed_to_export_buffer_to_dma_buf.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/6a6d667e3cd00d7fe03a9aa45ad6968d10b92ac6",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/fix_error_gbm_wrapper_cc_275_failed_to_export_buffer_to_dma_buf.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/fix_error_gbm_wrapper_cc_275_failed_to_export_buffer_to_dma_buf.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/6a6d667e3cd00d7fe03a9aa45ad6968d10b92ac6",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/fix_error_gbm_wrapper_cc_275_failed_to_export_buffer_to_dma_buf.patch"
+    }
+  },
+  {
+    "name": "fix_export_zlib_symbols.patch",
+    "path": "patches/chromium/fix_export_zlib_symbols.patch",
+    "sha": "079d44b8eafbdec89b7a95ac4d8b1ed548de4f4a",
+    "size": 819,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/fix_export_zlib_symbols.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/fix_export_zlib_symbols.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/079d44b8eafbdec89b7a95ac4d8b1ed548de4f4a",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/fix_export_zlib_symbols.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/fix_export_zlib_symbols.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/079d44b8eafbdec89b7a95ac4d8b1ed548de4f4a",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/fix_export_zlib_symbols.patch"
+    }
+  },
+  {
+    "name": "fix_expose_decrementcapturercount_in_web_contents_impl.patch",
+    "path": "patches/chromium/fix_expose_decrementcapturercount_in_web_contents_impl.patch",
+    "sha": "09c42e0252f55767bbb16a4adf69a735d3950e6b",
+    "size": 2013,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/fix_expose_decrementcapturercount_in_web_contents_impl.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/fix_expose_decrementcapturercount_in_web_contents_impl.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/09c42e0252f55767bbb16a4adf69a735d3950e6b",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/fix_expose_decrementcapturercount_in_web_contents_impl.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/fix_expose_decrementcapturercount_in_web_contents_impl.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/09c42e0252f55767bbb16a4adf69a735d3950e6b",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/fix_expose_decrementcapturercount_in_web_contents_impl.patch"
+    }
+  },
+  {
+    "name": "fix_media_key_usage_with_globalshortcuts.patch",
+    "path": "patches/chromium/fix_media_key_usage_with_globalshortcuts.patch",
+    "sha": "f9edde8861faa2253d1983e27a5aa337e5fe455e",
+    "size": 4605,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/fix_media_key_usage_with_globalshortcuts.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/fix_media_key_usage_with_globalshortcuts.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/f9edde8861faa2253d1983e27a5aa337e5fe455e",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/fix_media_key_usage_with_globalshortcuts.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/fix_media_key_usage_with_globalshortcuts.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/f9edde8861faa2253d1983e27a5aa337e5fe455e",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/fix_media_key_usage_with_globalshortcuts.patch"
+    }
+  },
+  {
+    "name": "fix_non-client_mouse_tracking_and_message_bubbling_on_windows.patch",
+    "path": "patches/chromium/fix_non-client_mouse_tracking_and_message_bubbling_on_windows.patch",
+    "sha": "4f26f498c4d3a28bf44e8d4e893e7a3219ff9e05",
+    "size": 3141,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/fix_non-client_mouse_tracking_and_message_bubbling_on_windows.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/fix_non-client_mouse_tracking_and_message_bubbling_on_windows.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/4f26f498c4d3a28bf44e8d4e893e7a3219ff9e05",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/fix_non-client_mouse_tracking_and_message_bubbling_on_windows.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/fix_non-client_mouse_tracking_and_message_bubbling_on_windows.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/4f26f498c4d3a28bf44e8d4e893e7a3219ff9e05",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/fix_non-client_mouse_tracking_and_message_bubbling_on_windows.patch"
+    }
+  },
+  {
+    "name": "fix_patch_out_profile_refs_in_accessibility_ui.patch",
+    "path": "patches/chromium/fix_patch_out_profile_refs_in_accessibility_ui.patch",
+    "sha": "6994d7d5bdc0c5d5ef4d5a7127bf733f2f566cda",
+    "size": 6044,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/fix_patch_out_profile_refs_in_accessibility_ui.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/fix_patch_out_profile_refs_in_accessibility_ui.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/6994d7d5bdc0c5d5ef4d5a7127bf733f2f566cda",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/fix_patch_out_profile_refs_in_accessibility_ui.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/fix_patch_out_profile_refs_in_accessibility_ui.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/6994d7d5bdc0c5d5ef4d5a7127bf733f2f566cda",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/fix_patch_out_profile_refs_in_accessibility_ui.patch"
+    }
+  },
+  {
+    "name": "fix_properly_honor_printing_page_ranges.patch",
+    "path": "patches/chromium/fix_properly_honor_printing_page_ranges.patch",
+    "sha": "d67ab8eee59c7367c465afb2eb95e511a1d9eca4",
+    "size": 5593,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/fix_properly_honor_printing_page_ranges.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/fix_properly_honor_printing_page_ranges.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/d67ab8eee59c7367c465afb2eb95e511a1d9eca4",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/fix_properly_honor_printing_page_ranges.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/fix_properly_honor_printing_page_ranges.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/d67ab8eee59c7367c465afb2eb95e511a1d9eca4",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/fix_properly_honor_printing_page_ranges.patch"
+    }
+  },
+  {
+    "name": "fix_use_electron_generated_resources.patch",
+    "path": "patches/chromium/fix_use_electron_generated_resources.patch",
+    "sha": "c529f0e38c74c3993b6cf1b302059208a532d879",
+    "size": 2461,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/fix_use_electron_generated_resources.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/fix_use_electron_generated_resources.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/c529f0e38c74c3993b6cf1b302059208a532d879",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/fix_use_electron_generated_resources.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/fix_use_electron_generated_resources.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/c529f0e38c74c3993b6cf1b302059208a532d879",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/fix_use_electron_generated_resources.patch"
+    }
+  },
+  {
+    "name": "frame_host_manager.patch",
+    "path": "patches/chromium/frame_host_manager.patch",
+    "sha": "07bf53f70b53f076ee097bf8e863513d587cb4ca",
+    "size": 1714,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/frame_host_manager.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/frame_host_manager.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/07bf53f70b53f076ee097bf8e863513d587cb4ca",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/frame_host_manager.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/frame_host_manager.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/07bf53f70b53f076ee097bf8e863513d587cb4ca",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/frame_host_manager.patch"
+    }
+  },
+  {
+    "name": "gin_enable_disable_v8_platform.patch",
+    "path": "patches/chromium/gin_enable_disable_v8_platform.patch",
+    "sha": "cfe45b10a064770680fbaf0b89dbda7aad74eeee",
+    "size": 4098,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/gin_enable_disable_v8_platform.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/gin_enable_disable_v8_platform.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/cfe45b10a064770680fbaf0b89dbda7aad74eeee",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/gin_enable_disable_v8_platform.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/gin_enable_disable_v8_platform.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/cfe45b10a064770680fbaf0b89dbda7aad74eeee",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/gin_enable_disable_v8_platform.patch"
+    }
+  },
+  {
+    "name": "gpu_notify_when_dxdiag_request_fails.patch",
+    "path": "patches/chromium/gpu_notify_when_dxdiag_request_fails.patch",
+    "sha": "a5004a94886010999ef8265f01f0d49a6db0e7b7",
+    "size": 3289,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/gpu_notify_when_dxdiag_request_fails.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/gpu_notify_when_dxdiag_request_fails.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/a5004a94886010999ef8265f01f0d49a6db0e7b7",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/gpu_notify_when_dxdiag_request_fails.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/gpu_notify_when_dxdiag_request_fails.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/a5004a94886010999ef8265f01f0d49a6db0e7b7",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/gpu_notify_when_dxdiag_request_fails.patch"
+    }
+  },
+  {
+    "name": "gritsettings_resource_ids.patch",
+    "path": "patches/chromium/gritsettings_resource_ids.patch",
+    "sha": "973746711618593546a4fdc2f3ffb340f4b9193f",
+    "size": 782,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/gritsettings_resource_ids.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/gritsettings_resource_ids.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/973746711618593546a4fdc2f3ffb340f4b9193f",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/gritsettings_resource_ids.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/gritsettings_resource_ids.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/973746711618593546a4fdc2f3ffb340f4b9193f",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/gritsettings_resource_ids.patch"
+    }
+  },
+  {
+    "name": "gtk_visibility.patch",
+    "path": "patches/chromium/gtk_visibility.patch",
+    "sha": "f9b02be672a7b03c1974870ebd379a9a1a564155",
+    "size": 1237,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/gtk_visibility.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/gtk_visibility.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/f9b02be672a7b03c1974870ebd379a9a1a564155",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/gtk_visibility.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/gtk_visibility.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/f9b02be672a7b03c1974870ebd379a9a1a564155",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/gtk_visibility.patch"
+    }
+  },
+  {
+    "name": "hack_plugin_response_interceptor_to_point_to_electron.patch",
+    "path": "patches/chromium/hack_plugin_response_interceptor_to_point_to_electron.patch",
+    "sha": "af8133b783c0f06c5677670b8a5604128193ad9a",
+    "size": 1336,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/hack_plugin_response_interceptor_to_point_to_electron.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/hack_plugin_response_interceptor_to_point_to_electron.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/af8133b783c0f06c5677670b8a5604128193ad9a",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/hack_plugin_response_interceptor_to_point_to_electron.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/hack_plugin_response_interceptor_to_point_to_electron.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/af8133b783c0f06c5677670b8a5604128193ad9a",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/hack_plugin_response_interceptor_to_point_to_electron.patch"
+    }
+  },
+  {
+    "name": "hack_to_allow_gclient_sync_with_host_os_mac_on_linux_in_ci.patch",
+    "path": "patches/chromium/hack_to_allow_gclient_sync_with_host_os_mac_on_linux_in_ci.patch",
+    "sha": "faf9cc8fd29ec50e7096d4d147804cefcdc09d56",
+    "size": 1069,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/hack_to_allow_gclient_sync_with_host_os_mac_on_linux_in_ci.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/hack_to_allow_gclient_sync_with_host_os_mac_on_linux_in_ci.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/faf9cc8fd29ec50e7096d4d147804cefcdc09d56",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/hack_to_allow_gclient_sync_with_host_os_mac_on_linux_in_ci.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/hack_to_allow_gclient_sync_with_host_os_mac_on_linux_in_ci.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/faf9cc8fd29ec50e7096d4d147804cefcdc09d56",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/hack_to_allow_gclient_sync_with_host_os_mac_on_linux_in_ci.patch"
+    }
+  },
+  {
+    "name": "ignore_rc_check.patch",
+    "path": "patches/chromium/ignore_rc_check.patch",
+    "sha": "1d8b29e7f479af949428dda26c6a50fe7830540a",
+    "size": 1000,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/ignore_rc_check.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/ignore_rc_check.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/1d8b29e7f479af949428dda26c6a50fe7830540a",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/ignore_rc_check.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/ignore_rc_check.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/1d8b29e7f479af949428dda26c6a50fe7830540a",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/ignore_rc_check.patch"
+    }
+  },
+  {
+    "name": "introduce_ozoneplatform_electron_can_call_x11_property.patch",
+    "path": "patches/chromium/introduce_ozoneplatform_electron_can_call_x11_property.patch",
+    "sha": "f879002345cc1a7265dbfa5caf400d4a895030dd",
+    "size": 2066,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/introduce_ozoneplatform_electron_can_call_x11_property.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/introduce_ozoneplatform_electron_can_call_x11_property.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/f879002345cc1a7265dbfa5caf400d4a895030dd",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/introduce_ozoneplatform_electron_can_call_x11_property.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/introduce_ozoneplatform_electron_can_call_x11_property.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/f879002345cc1a7265dbfa5caf400d4a895030dd",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/introduce_ozoneplatform_electron_can_call_x11_property.patch"
+    }
+  },
+  {
+    "name": "isolate_holder.patch",
+    "path": "patches/chromium/isolate_holder.patch",
+    "sha": "70d8833b4744a70d99b56af8168f0854058f38fe",
+    "size": 2688,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/isolate_holder.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/isolate_holder.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/70d8833b4744a70d99b56af8168f0854058f38fe",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/isolate_holder.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/isolate_holder.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/70d8833b4744a70d99b56af8168f0854058f38fe",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/isolate_holder.patch"
+    }
+  },
+  {
+    "name": "load_v8_snapshot_in_browser_process.patch",
+    "path": "patches/chromium/load_v8_snapshot_in_browser_process.patch",
+    "sha": "b44a477877ab93c9f2536aabaaf6c95cb24a0f2e",
+    "size": 1286,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/load_v8_snapshot_in_browser_process.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/load_v8_snapshot_in_browser_process.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/b44a477877ab93c9f2536aabaaf6c95cb24a0f2e",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/load_v8_snapshot_in_browser_process.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/load_v8_snapshot_in_browser_process.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/b44a477877ab93c9f2536aabaaf6c95cb24a0f2e",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/load_v8_snapshot_in_browser_process.patch"
+    }
+  },
+  {
+    "name": "logging_win32_only_create_a_console_if_logging_to_stderr.patch",
+    "path": "patches/chromium/logging_win32_only_create_a_console_if_logging_to_stderr.patch",
+    "sha": "def44cb73a8ec56449c13b60d56cfaf65a205f1b",
+    "size": 1266,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/logging_win32_only_create_a_console_if_logging_to_stderr.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/logging_win32_only_create_a_console_if_logging_to_stderr.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/def44cb73a8ec56449c13b60d56cfaf65a205f1b",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/logging_win32_only_create_a_console_if_logging_to_stderr.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/logging_win32_only_create_a_console_if_logging_to_stderr.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/def44cb73a8ec56449c13b60d56cfaf65a205f1b",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/logging_win32_only_create_a_console_if_logging_to_stderr.patch"
+    }
+  },
+  {
+    "name": "make_gtk_getlibgtk_public.patch",
+    "path": "patches/chromium/make_gtk_getlibgtk_public.patch",
+    "sha": "a6bce37ae4aea3ac3fba520e795c41bf305d60b5",
+    "size": 1446,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/make_gtk_getlibgtk_public.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/make_gtk_getlibgtk_public.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/a6bce37ae4aea3ac3fba520e795c41bf305d60b5",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/make_gtk_getlibgtk_public.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/make_gtk_getlibgtk_public.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/a6bce37ae4aea3ac3fba520e795c41bf305d60b5",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/make_gtk_getlibgtk_public.patch"
+    }
+  },
+  {
+    "name": "mas-audiodeviceduck.patch",
+    "path": "patches/chromium/mas-audiodeviceduck.patch",
+    "sha": "decb1667ebd2f26384ec275def87873f1dd8c83e",
+    "size": 1262,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/mas-audiodeviceduck.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/mas-audiodeviceduck.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/decb1667ebd2f26384ec275def87873f1dd8c83e",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/mas-audiodeviceduck.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/mas-audiodeviceduck.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/decb1667ebd2f26384ec275def87873f1dd8c83e",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/mas-audiodeviceduck.patch"
+    }
+  },
+  {
+    "name": "mas-cfisobjc.patch",
+    "path": "patches/chromium/mas-cfisobjc.patch",
+    "sha": "7efd6508d3fcc269c99d97d7dcfc6e9da5b637cc",
+    "size": 1646,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/mas-cfisobjc.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/mas-cfisobjc.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/7efd6508d3fcc269c99d97d7dcfc6e9da5b637cc",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/mas-cfisobjc.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/mas-cfisobjc.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/7efd6508d3fcc269c99d97d7dcfc6e9da5b637cc",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/mas-cfisobjc.patch"
+    }
+  },
+  {
+    "name": "mas-cgdisplayusesforcetogray.patch",
+    "path": "patches/chromium/mas-cgdisplayusesforcetogray.patch",
+    "sha": "50554c76583ba9b0eac6e365bb05c31c0658274d",
+    "size": 1309,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/mas-cgdisplayusesforcetogray.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/mas-cgdisplayusesforcetogray.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/50554c76583ba9b0eac6e365bb05c31c0658274d",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/mas-cgdisplayusesforcetogray.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/mas-cgdisplayusesforcetogray.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/50554c76583ba9b0eac6e365bb05c31c0658274d",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/mas-cgdisplayusesforcetogray.patch"
+    }
+  },
+  {
+    "name": "mas_avoid_usage_of_abort_report_np.patch",
+    "path": "patches/chromium/mas_avoid_usage_of_abort_report_np.patch",
+    "sha": "5c3f9a8b72719a68b34bc85705751fd81824e4f3",
+    "size": 1019,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/mas_avoid_usage_of_abort_report_np.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/mas_avoid_usage_of_abort_report_np.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/5c3f9a8b72719a68b34bc85705751fd81824e4f3",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/mas_avoid_usage_of_abort_report_np.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/mas_avoid_usage_of_abort_report_np.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/5c3f9a8b72719a68b34bc85705751fd81824e4f3",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/mas_avoid_usage_of_abort_report_np.patch"
+    }
+  },
+  {
+    "name": "mas_avoid_usage_of_pthread_fchdir_np.patch",
+    "path": "patches/chromium/mas_avoid_usage_of_pthread_fchdir_np.patch",
+    "sha": "5ea6286df620b507a56914972d252a49ef2758ab",
+    "size": 2205,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/mas_avoid_usage_of_pthread_fchdir_np.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/mas_avoid_usage_of_pthread_fchdir_np.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/5ea6286df620b507a56914972d252a49ef2758ab",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/mas_avoid_usage_of_pthread_fchdir_np.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/mas_avoid_usage_of_pthread_fchdir_np.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/5ea6286df620b507a56914972d252a49ef2758ab",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/mas_avoid_usage_of_pthread_fchdir_np.patch"
+    }
+  },
+  {
+    "name": "mas_avoid_usage_of_setapplicationisdaemon_and.patch",
+    "path": "patches/chromium/mas_avoid_usage_of_setapplicationisdaemon_and.patch",
+    "sha": "a6d15502298b1be9225885eece4c407f75d36959",
+    "size": 1710,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/mas_avoid_usage_of_setapplicationisdaemon_and.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/mas_avoid_usage_of_setapplicationisdaemon_and.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/a6d15502298b1be9225885eece4c407f75d36959",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/mas_avoid_usage_of_setapplicationisdaemon_and.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/mas_avoid_usage_of_setapplicationisdaemon_and.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/a6d15502298b1be9225885eece4c407f75d36959",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/mas_avoid_usage_of_setapplicationisdaemon_and.patch"
+    }
+  },
+  {
+    "name": "mas_blink_no_private_api.patch",
+    "path": "patches/chromium/mas_blink_no_private_api.patch",
+    "sha": "9b285d9b9eb59a3b462b22ce5e5a84d650ce12f3",
+    "size": 1893,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/mas_blink_no_private_api.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/mas_blink_no_private_api.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/9b285d9b9eb59a3b462b22ce5e5a84d650ce12f3",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/mas_blink_no_private_api.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/mas_blink_no_private_api.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/9b285d9b9eb59a3b462b22ce5e5a84d650ce12f3",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/mas_blink_no_private_api.patch"
+    }
+  },
+  {
+    "name": "mas_disable_custom_window_frame.patch",
+    "path": "patches/chromium/mas_disable_custom_window_frame.patch",
+    "sha": "e64c5fd2f5049e83b4da0be3b4c9b76780f84821",
+    "size": 5382,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/mas_disable_custom_window_frame.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/mas_disable_custom_window_frame.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/e64c5fd2f5049e83b4da0be3b4c9b76780f84821",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/mas_disable_custom_window_frame.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/mas_disable_custom_window_frame.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/e64c5fd2f5049e83b4da0be3b4c9b76780f84821",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/mas_disable_custom_window_frame.patch"
+    }
+  },
+  {
+    "name": "mas_disable_remote_accessibility.patch",
+    "path": "patches/chromium/mas_disable_remote_accessibility.patch",
+    "sha": "e99f079d15b1df3e546f62beea09aa8239026644",
+    "size": 11420,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/mas_disable_remote_accessibility.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/mas_disable_remote_accessibility.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/e99f079d15b1df3e546f62beea09aa8239026644",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/mas_disable_remote_accessibility.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/mas_disable_remote_accessibility.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/e99f079d15b1df3e546f62beea09aa8239026644",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/mas_disable_remote_accessibility.patch"
+    }
+  },
+  {
+    "name": "mas_disable_remote_layer.patch",
+    "path": "patches/chromium/mas_disable_remote_layer.patch",
+    "sha": "940e9864b669b81c9add5155955a42209fdc6494",
+    "size": 5355,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/mas_disable_remote_layer.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/mas_disable_remote_layer.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/940e9864b669b81c9add5155955a42209fdc6494",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/mas_disable_remote_layer.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/mas_disable_remote_layer.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/940e9864b669b81c9add5155955a42209fdc6494",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/mas_disable_remote_layer.patch"
+    }
+  },
+  {
+    "name": "mas_gate_private_enterprise_APIs.patch",
+    "path": "patches/chromium/mas_gate_private_enterprise_APIs.patch",
+    "sha": "306a8c379240181ea0a184ddd8b758d34e93af83",
+    "size": 1319,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/mas_gate_private_enterprise_APIs.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/mas_gate_private_enterprise_APIs.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/306a8c379240181ea0a184ddd8b758d34e93af83",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/mas_gate_private_enterprise_APIs.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/mas_gate_private_enterprise_APIs.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/306a8c379240181ea0a184ddd8b758d34e93af83",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/mas_gate_private_enterprise_APIs.patch"
+    }
+  },
+  {
+    "name": "mas_no_private_api.patch",
+    "path": "patches/chromium/mas_no_private_api.patch",
+    "sha": "b28e29487b80020633c92ee442b58e8374b3e15d",
+    "size": 11670,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/mas_no_private_api.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/mas_no_private_api.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/b28e29487b80020633c92ee442b58e8374b3e15d",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/mas_no_private_api.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/mas_no_private_api.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/b28e29487b80020633c92ee442b58e8374b3e15d",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/mas_no_private_api.patch"
+    }
+  },
+  {
+    "name": "mas_use_public_apis_to_determine_if_a_font_is_a_system_font.patch",
+    "path": "patches/chromium/mas_use_public_apis_to_determine_if_a_font_is_a_system_font.patch",
+    "sha": "4a2895266232fa920fcbddbf18654973124911cb",
+    "size": 1568,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/mas_use_public_apis_to_determine_if_a_font_is_a_system_font.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/mas_use_public_apis_to_determine_if_a_font_is_a_system_font.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/4a2895266232fa920fcbddbf18654973124911cb",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/mas_use_public_apis_to_determine_if_a_font_is_a_system_font.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/mas_use_public_apis_to_determine_if_a_font_is_a_system_font.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/4a2895266232fa920fcbddbf18654973124911cb",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/mas_use_public_apis_to_determine_if_a_font_is_a_system_font.patch"
+    }
+  },
+  {
+    "name": "network_service_allow_remote_certificate_verification_logic.patch",
+    "path": "patches/chromium/network_service_allow_remote_certificate_verification_logic.patch",
+    "sha": "c71dc5781ce861fc88d659c1b35a1a7e345d3e01",
+    "size": 8247,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/network_service_allow_remote_certificate_verification_logic.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/network_service_allow_remote_certificate_verification_logic.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/c71dc5781ce861fc88d659c1b35a1a7e345d3e01",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/network_service_allow_remote_certificate_verification_logic.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/network_service_allow_remote_certificate_verification_logic.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/c71dc5781ce861fc88d659c1b35a1a7e345d3e01",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/network_service_allow_remote_certificate_verification_logic.patch"
+    }
+  },
+  {
+    "name": "notification_provenance.patch",
+    "path": "patches/chromium/notification_provenance.patch",
+    "sha": "e23409640635b413a9b0549c7dbeac691a549f90",
+    "size": 10730,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/notification_provenance.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/notification_provenance.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/e23409640635b413a9b0549c7dbeac691a549f90",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/notification_provenance.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/notification_provenance.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/e23409640635b413a9b0549c7dbeac691a549f90",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/notification_provenance.patch"
+    }
+  },
+  {
+    "name": "pepper_plugin_support.patch",
+    "path": "patches/chromium/pepper_plugin_support.patch",
+    "sha": "bae8f486133f3b48130dfd54e33a1844ad5c402c",
+    "size": 7786,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/pepper_plugin_support.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/pepper_plugin_support.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/bae8f486133f3b48130dfd54e33a1844ad5c402c",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/pepper_plugin_support.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/pepper_plugin_support.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/bae8f486133f3b48130dfd54e33a1844ad5c402c",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/pepper_plugin_support.patch"
+    }
+  },
+  {
+    "name": "picture-in-picture.patch",
+    "path": "patches/chromium/picture-in-picture.patch",
+    "sha": "53c36676799df0f2f18b5de2ae905258d83f6d37",
+    "size": 15941,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/picture-in-picture.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/picture-in-picture.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/53c36676799df0f2f18b5de2ae905258d83f6d37",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/picture-in-picture.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/picture-in-picture.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/53c36676799df0f2f18b5de2ae905258d83f6d37",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/picture-in-picture.patch"
+    }
+  },
+  {
+    "name": "port_autofill_colors_to_the_color_pipeline.patch",
+    "path": "patches/chromium/port_autofill_colors_to_the_color_pipeline.patch",
+    "sha": "63163d816f08c1aaddd6bb647cb4731fba2ef4d5",
+    "size": 5298,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/port_autofill_colors_to_the_color_pipeline.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/port_autofill_colors_to_the_color_pipeline.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/63163d816f08c1aaddd6bb647cb4731fba2ef4d5",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/port_autofill_colors_to_the_color_pipeline.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/port_autofill_colors_to_the_color_pipeline.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/63163d816f08c1aaddd6bb647cb4731fba2ef4d5",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/port_autofill_colors_to_the_color_pipeline.patch"
+    }
+  },
+  {
+    "name": "printing.patch",
+    "path": "patches/chromium/printing.patch",
+    "sha": "f5152855a673812730181a40048cd92d1b836505",
+    "size": 37350,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/printing.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/printing.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/f5152855a673812730181a40048cd92d1b836505",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/printing.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/printing.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/f5152855a673812730181a40048cd92d1b836505",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/printing.patch"
+    }
+  },
+  {
+    "name": "process_singleton.patch",
+    "path": "patches/chromium/process_singleton.patch",
+    "sha": "e5d125cd0dbb9a00b1030cd54b36d20bf81cdd35",
+    "size": 13121,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/process_singleton.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/process_singleton.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/e5d125cd0dbb9a00b1030cd54b36d20bf81cdd35",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/process_singleton.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/process_singleton.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/e5d125cd0dbb9a00b1030cd54b36d20bf81cdd35",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/process_singleton.patch"
+    }
+  },
+  {
+    "name": "proxy_config_monitor.patch",
+    "path": "patches/chromium/proxy_config_monitor.patch",
+    "sha": "155415a59b4288eff820f50fd1abf745c86cd0b3",
+    "size": 3569,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/proxy_config_monitor.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/proxy_config_monitor.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/155415a59b4288eff820f50fd1abf745c86cd0b3",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/proxy_config_monitor.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/proxy_config_monitor.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/155415a59b4288eff820f50fd1abf745c86cd0b3",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/proxy_config_monitor.patch"
+    }
+  },
+  {
+    "name": "refactor_expose_cursor_changes_to_the_webcontentsobserver.patch",
+    "path": "patches/chromium/refactor_expose_cursor_changes_to_the_webcontentsobserver.patch",
+    "sha": "ed75bfa584bfa2de61cc01665ecd6b9eb592c6f8",
+    "size": 5095,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/refactor_expose_cursor_changes_to_the_webcontentsobserver.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/refactor_expose_cursor_changes_to_the_webcontentsobserver.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/ed75bfa584bfa2de61cc01665ecd6b9eb592c6f8",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/refactor_expose_cursor_changes_to_the_webcontentsobserver.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/refactor_expose_cursor_changes_to_the_webcontentsobserver.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/ed75bfa584bfa2de61cc01665ecd6b9eb592c6f8",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/refactor_expose_cursor_changes_to_the_webcontentsobserver.patch"
+    }
+  },
+  {
+    "name": "refactor_restore_base_adaptcallbackforrepeating.patch",
+    "path": "patches/chromium/refactor_restore_base_adaptcallbackforrepeating.patch",
+    "sha": "66ec1ac0489e088f39b6048c7ef83ca47a89c3ba",
+    "size": 1980,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/refactor_restore_base_adaptcallbackforrepeating.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/refactor_restore_base_adaptcallbackforrepeating.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/66ec1ac0489e088f39b6048c7ef83ca47a89c3ba",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/refactor_restore_base_adaptcallbackforrepeating.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/refactor_restore_base_adaptcallbackforrepeating.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/66ec1ac0489e088f39b6048c7ef83ca47a89c3ba",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/refactor_restore_base_adaptcallbackforrepeating.patch"
+    }
+  },
+  {
+    "name": "remove_usage_of_incognito_apis_in_the_spellchecker.patch",
+    "path": "patches/chromium/remove_usage_of_incognito_apis_in_the_spellchecker.patch",
+    "sha": "4bcaed9c6c17528cd3ed835715cbde0feb7e1ca2",
+    "size": 1175,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/remove_usage_of_incognito_apis_in_the_spellchecker.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/remove_usage_of_incognito_apis_in_the_spellchecker.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/4bcaed9c6c17528cd3ed835715cbde0feb7e1ca2",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/remove_usage_of_incognito_apis_in_the_spellchecker.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/remove_usage_of_incognito_apis_in_the_spellchecker.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/4bcaed9c6c17528cd3ed835715cbde0feb7e1ca2",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/remove_usage_of_incognito_apis_in_the_spellchecker.patch"
+    }
+  },
+  {
+    "name": "render_widget_host_view_base.patch",
+    "path": "patches/chromium/render_widget_host_view_base.patch",
+    "sha": "ad382863c801c45513bf883bfb1fa9d36ea2a1c2",
+    "size": 3716,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/render_widget_host_view_base.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/render_widget_host_view_base.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/ad382863c801c45513bf883bfb1fa9d36ea2a1c2",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/render_widget_host_view_base.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/render_widget_host_view_base.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/ad382863c801c45513bf883bfb1fa9d36ea2a1c2",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/render_widget_host_view_base.patch"
+    }
+  },
+  {
+    "name": "render_widget_host_view_mac.patch",
+    "path": "patches/chromium/render_widget_host_view_mac.patch",
+    "sha": "88293ba5df857b5780afc291502c3731f13fd790",
+    "size": 3451,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/render_widget_host_view_mac.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/render_widget_host_view_mac.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/88293ba5df857b5780afc291502c3731f13fd790",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/render_widget_host_view_mac.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/render_widget_host_view_mac.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/88293ba5df857b5780afc291502c3731f13fd790",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/render_widget_host_view_mac.patch"
+    }
+  },
+  {
+    "name": "resource_file_conflict.patch",
+    "path": "patches/chromium/resource_file_conflict.patch",
+    "sha": "6b0998109b045e862d916e9cd29a57434633a088",
+    "size": 2982,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/resource_file_conflict.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/resource_file_conflict.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/6b0998109b045e862d916e9cd29a57434633a088",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/resource_file_conflict.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/resource_file_conflict.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/6b0998109b045e862d916e9cd29a57434633a088",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/resource_file_conflict.patch"
+    }
+  },
+  {
+    "name": "scroll_bounce_flag.patch",
+    "path": "patches/chromium/scroll_bounce_flag.patch",
+    "sha": "8f3c02d6263e238c18ccbb66423f9cdb954bab50",
+    "size": 829,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/scroll_bounce_flag.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/scroll_bounce_flag.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/8f3c02d6263e238c18ccbb66423f9cdb954bab50",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/scroll_bounce_flag.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/scroll_bounce_flag.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/8f3c02d6263e238c18ccbb66423f9cdb954bab50",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/scroll_bounce_flag.patch"
+    }
+  },
+  {
+    "name": "skip_atk_toolchain_check.patch",
+    "path": "patches/chromium/skip_atk_toolchain_check.patch",
+    "sha": "51d38cce62e361fe39cc263a02a9101c2b8fe69f",
+    "size": 1761,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/skip_atk_toolchain_check.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/skip_atk_toolchain_check.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/51d38cce62e361fe39cc263a02a9101c2b8fe69f",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/skip_atk_toolchain_check.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/skip_atk_toolchain_check.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/51d38cce62e361fe39cc263a02a9101c2b8fe69f",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/skip_atk_toolchain_check.patch"
+    }
+  },
+  {
+    "name": "support_loongarch64_build.patch",
+    "path": "patches/chromium/support_loongarch64_build.patch",
+    "sha": "3f9cee087f2e7a6cc8dcc60deaa0b66c16895be8",
+    "size": 6723,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/support_loongarch64_build.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/support_loongarch64_build.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/3f9cee087f2e7a6cc8dcc60deaa0b66c16895be8",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/support_loongarch64_build.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/support_loongarch64_build.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/3f9cee087f2e7a6cc8dcc60deaa0b66c16895be8",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/support_loongarch64_build.patch"
+    }
+  },
+  {
+    "name": "support_mixed_sandbox_with_zygote.patch",
+    "path": "patches/chromium/support_mixed_sandbox_with_zygote.patch",
+    "sha": "7c0abaa380e4a43c6a6dc79c43e72e8084f4d9f4",
+    "size": 4673,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/support_mixed_sandbox_with_zygote.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/support_mixed_sandbox_with_zygote.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/7c0abaa380e4a43c6a6dc79c43e72e8084f4d9f4",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/support_mixed_sandbox_with_zygote.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/support_mixed_sandbox_with_zygote.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/7c0abaa380e4a43c6a6dc79c43e72e8084f4d9f4",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/support_mixed_sandbox_with_zygote.patch"
+    }
+  },
+  {
+    "name": "sysroot.patch",
+    "path": "patches/chromium/sysroot.patch",
+    "sha": "715b58b173cd03a47091c9e7dd2eb3dc844a920d",
+    "size": 1586,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/sysroot.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/sysroot.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/715b58b173cd03a47091c9e7dd2eb3dc844a920d",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/sysroot.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/sysroot.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/715b58b173cd03a47091c9e7dd2eb3dc844a920d",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/sysroot.patch"
+    }
+  },
+  {
+    "name": "unsandboxed_ppapi_processes_skip_zygote.patch",
+    "path": "patches/chromium/unsandboxed_ppapi_processes_skip_zygote.patch",
+    "sha": "5ce4605f1e1ea6e6276e7267a130e8258234619f",
+    "size": 1435,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/unsandboxed_ppapi_processes_skip_zygote.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/unsandboxed_ppapi_processes_skip_zygote.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/5ce4605f1e1ea6e6276e7267a130e8258234619f",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/unsandboxed_ppapi_processes_skip_zygote.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/unsandboxed_ppapi_processes_skip_zygote.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/5ce4605f1e1ea6e6276e7267a130e8258234619f",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/unsandboxed_ppapi_processes_skip_zygote.patch"
+    }
+  },
+  {
+    "name": "upload_list_add_loadsync_method.patch",
+    "path": "patches/chromium/upload_list_add_loadsync_method.patch",
+    "sha": "8c0f69128cde55216b907f93c325144d6e52302c",
+    "size": 1733,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/upload_list_add_loadsync_method.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/upload_list_add_loadsync_method.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/8c0f69128cde55216b907f93c325144d6e52302c",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/upload_list_add_loadsync_method.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/upload_list_add_loadsync_method.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/8c0f69128cde55216b907f93c325144d6e52302c",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/upload_list_add_loadsync_method.patch"
+    }
+  },
+  {
+    "name": "v8_context_snapshot_generator.patch",
+    "path": "patches/chromium/v8_context_snapshot_generator.patch",
+    "sha": "6e7f5ad9c9de6c7cb5980d01139a17f49aea9571",
+    "size": 764,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/v8_context_snapshot_generator.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/v8_context_snapshot_generator.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/6e7f5ad9c9de6c7cb5980d01139a17f49aea9571",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/v8_context_snapshot_generator.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/v8_context_snapshot_generator.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/6e7f5ad9c9de6c7cb5980d01139a17f49aea9571",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/v8_context_snapshot_generator.patch"
+    }
+  },
+  {
+    "name": "web_contents.patch",
+    "path": "patches/chromium/web_contents.patch",
+    "sha": "74fe20dd8d3058ba4d861ce9383eda5f9d43a739",
+    "size": 2742,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/web_contents.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/web_contents.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/74fe20dd8d3058ba4d861ce9383eda5f9d43a739",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/web_contents.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/web_contents.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/74fe20dd8d3058ba4d861ce9383eda5f9d43a739",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/web_contents.patch"
+    }
+  },
+  {
+    "name": "webview_cross_drag.patch",
+    "path": "patches/chromium/webview_cross_drag.patch",
+    "sha": "48213583379139076bf69f95cffc4f6c7a5ece54",
+    "size": 1846,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/webview_cross_drag.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/webview_cross_drag.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/48213583379139076bf69f95cffc4f6c7a5ece54",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/webview_cross_drag.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/webview_cross_drag.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/48213583379139076bf69f95cffc4f6c7a5ece54",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/webview_cross_drag.patch"
+    }
+  },
+  {
+    "name": "webview_fullscreen.patch",
+    "path": "patches/chromium/webview_fullscreen.patch",
+    "sha": "a0fb5b2a92d2d327d427a51e04dfd9ff05164806",
+    "size": 1677,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/webview_fullscreen.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/webview_fullscreen.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/a0fb5b2a92d2d327d427a51e04dfd9ff05164806",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/webview_fullscreen.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/webview_fullscreen.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/a0fb5b2a92d2d327d427a51e04dfd9ff05164806",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/webview_fullscreen.patch"
+    }
+  },
+  {
+    "name": "worker_context_will_destroy.patch",
+    "path": "patches/chromium/worker_context_will_destroy.patch",
+    "sha": "1bdceb3df4cd9f03ca93cf83a4cecd2b5b01038c",
+    "size": 4503,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/worker_context_will_destroy.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/worker_context_will_destroy.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/1bdceb3df4cd9f03ca93cf83a4cecd2b5b01038c",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/worker_context_will_destroy.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/worker_context_will_destroy.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/1bdceb3df4cd9f03ca93cf83a4cecd2b5b01038c",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/worker_context_will_destroy.patch"
+    }
+  },
+  {
+    "name": "worker_feat_add_hook_to_notify_script_ready.patch",
+    "path": "patches/chromium/worker_feat_add_hook_to_notify_script_ready.patch",
+    "sha": "88106a19665a61725b388b975938aa38e554799f",
+    "size": 5407,
+    "url": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/worker_feat_add_hook_to_notify_script_ready.patch?ref=19-x-y-loongarch64",
+    "html_url": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/worker_feat_add_hook_to_notify_script_ready.patch",
+    "git_url": "https://api.github.com/repos/loongson/electron/git/blobs/88106a19665a61725b388b975938aa38e554799f",
+    "download_url": "https://raw.githubusercontent.com/loongson/electron/19-x-y-loongarch64/patches/chromium/worker_feat_add_hook_to_notify_script_ready.patch",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/loongson/electron/contents/patches/chromium/worker_feat_add_hook_to_notify_script_ready.patch?ref=19-x-y-loongarch64",
+      "git": "https://api.github.com/repos/loongson/electron/git/blobs/88106a19665a61725b388b975938aa38e554799f",
+      "html": "https://github.com/loongson/electron/blob/19-x-y-loongarch64/patches/chromium/worker_feat_add_hook_to_notify_script_ready.patch"
+    }
+  }
+]

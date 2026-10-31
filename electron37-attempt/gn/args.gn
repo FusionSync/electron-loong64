@@ -1,0 +1,61 @@
+import("//electron/build/args/release.gn")
+
+target_os = "linux"
+target_cpu = "loong64"
+# Electron's automatic js2c selection does not cover x64 -> LoongArch.
+# This text generator runs on the build host and has no V8 snapshot payload.
+electron_js2c_toolchain = "//build/toolchain/linux:clang_x64"
+is_clang = true
+# BUILDCONFIG selects clang_loong64 for the target and clang_x64 for the host.
+# V8 selects clang_x64_v8_loong64 for its executable snapshot generator.
+clang_base_path = "/work/electron37-attempt/gn/clang-facade"
+clang_version = "20"
+clang_use_chrome_plugins = false
+
+# A target-only sysroot: host tools use the container's complete x86_64 SDK.
+target_sysroot = "/work/electron37-attempt/sysroot-complete"
+use_sysroot = false
+pkg_config = "/work/electron37-attempt/gn/pkg-config"
+host_pkg_config = "/work/electron37-attempt/gn/pkg-config"
+system_libdir = "lib/loongarch64-linux-gnu"
+
+is_debug = false
+is_official_build = false
+is_component_build = false
+symbol_level = 0
+blink_symbol_level = 0
+v8_symbol_level = 0
+dcheck_always_on = false
+use_thin_lto = false
+chrome_pgo_phase = 0
+use_remoteexec = false
+use_siso = false
+concurrent_links = 1
+treat_warnings_as_errors = false
+fatal_linker_warnings = false
+
+# GNU ld is the initial old-ABI baseline. This also disables ELF CREL in
+# Chromium 138. Enable LLD only after its separate UOS execution probe passes.
+use_lld = false
+use_icf = false
+
+# GCC 8's libstdc++ cannot provide the C++20 library used by Chromium 138.
+use_custom_libcxx = true
+use_custom_libcxx_for_host = true
+
+enable_rust = true
+# Use Chromium's in-tree Rust toolchain so the LoongArch standard library is
+# built locally with the large code model configured by build/rust.
+rust_sysroot_absolute = ""
+rustc_version = ""
+rust_bindgen_root = "/work/electron37-attempt/gn/bindgen-facade"
+toolchain_supports_rust_thin_lto = false
+added_rust_stdlib_libs = []
+
+use_ozone = true
+ozone_auto_platforms = false
+ozone_platform = "x11"
+ozone_platform_x11 = true
+ozone_platform_wayland = false
+ozone_platform_headless = true
+use_vaapi = false

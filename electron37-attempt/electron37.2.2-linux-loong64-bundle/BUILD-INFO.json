@@ -1,0 +1,13 @@
+{
+  "electron_version": "37.2.2",
+  "target_arch": "loong64",
+  "target_os": "Linux/UOS",
+  "artifact_source": "release-assets-fixed",
+  "linker_fix": "GNU ld LoongArch R_LARCH_SOP_POP_32_S_0_5_10_16_S2 dst_mask fixed to 0x03fffc1f",
+  "runtime_validation": "UOS Loong64 physical DISPLAY=:0; direct network; Electron --version v37.2.2",
+  "notes": [
+    "electron ZIP contains the Chromium runtime and libffmpeg.so",
+    "standalone ffmpeg ZIP is retained as a replacement/inspection asset",
+    "mksnapshot ZIP is a build-time tool package"
+  ]
+}

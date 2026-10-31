@@ -1,0 +1,29 @@
+{
+  "created_utc": "2026-10-29T09:45:27.533413+00:00",
+  "purpose": "Public headers only for Crashpad dlopen of existing UOS libcurl; no runtime libraries installed or replaced.",
+  "target_runtime_package": "libcurl4 7.64.1.21-deepin1 loongarch64",
+  "upstream_header_version": "7.64.1",
+  "source_url": "https://curl.se/download/curl-7.64.1.tar.xz",
+  "source_sha256": "9252332a7f871ce37bfa7f78bdd0a0e3924d8187cc27cb57c76c9474a7168fb3",
+  "signature_url": "https://curl.se/download/curl-7.64.1.tar.xz.asc",
+  "signing_key_url": "https://daniel.haxx.se/mykey.asc",
+  "verified_signer_fingerprint": "27EDEAF22F3ABCEB50DB9A125CC908FDB71E12C2",
+  "signature_validation": "GnuPG GOODSIG and VALIDSIG; verification log retained.",
+  "headers": {
+    "curl.h": "f66aa716e2fde8cb6b3fee2ae2944772d6fca0642ea9c203c1ec905c5a2ed72d",
+    "curlver.h": "ebc228a41e414d8ebd231055aaf7232da53994c0f2aa832486123ef0c4e7c376",
+    "easy.h": "d6d73efead1ccdf9965309fe9c85b50b6faa5b987eb5e880efe0c043b4c409d5",
+    "mprintf.h": "61e8e3918f879fe4cf63992bd108eb08dfb2568fa907ec528d8ed3ac02ba0c56",
+    "multi.h": "e2e68e6c37d69abbf281a545bc8a6a0cdc867b34f9e254e3cc1f5e710ef32955",
+    "stdcheaders.h": "78eb917e7082bf7ce255840c3af5fadd927b7eb5a62305c54b36c7da852cbfd4",
+    "system.h": "02f277c4c01ac3f6b9472611e25078fc0e031218f1024e08a55913ab492f307b",
+    "typecheck-gcc.h": "93d093ee53848ab523245e5015f6aefac799a0142c6f5879fb094292345ca65e",
+    "urlapi.h": "9ec36d013b2dcbd963c61622be9ff97e592a667d368888bb8a77757b7b213b22"
+  },
+  "checks": [
+    "signature verification",
+    "LoongArch LP64 curl type/structure assertions compile",
+    "actual Crashpad http_transport_libcurl.o compilation passed"
+  ],
+  "limitations": "Upstream headers match the runtime base release, not a copy of the UOS vendor development package. UOS runtime execution pending SSH availability."
+}

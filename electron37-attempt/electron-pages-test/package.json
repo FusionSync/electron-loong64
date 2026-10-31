@@ -1,0 +1,7 @@
+{
+  "name": "electron37-loong64-pages-test",
+  "version": "1.0.0",
+  "private": true,
+  "main": "main.js",
+  "description": "Open several real web pages inside Electron 37 on Loong64"
+}

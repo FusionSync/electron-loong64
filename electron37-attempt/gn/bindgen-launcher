@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+attempt=$(cd "$(dirname "$(readlink -f "$0")")/.." && pwd)
+bindgen=${UOS_BINDGEN_BIN:-$attempt/src/third_party/rust-toolchain/bin/bindgen}
+export UOS_HOST_LIBRARY_PATH="$attempt/tools/llvm20/lib${UOS_HOST_LIBRARY_PATH:+:$UOS_HOST_LIBRARY_PATH}"
+# GN's generator also sets LIBCLANG_PATH; retain that explicit choice.
+export LIBCLANG_PATH=${LIBCLANG_PATH:-$attempt/tools/llvm20/lib}
+exec "$attempt/host-runtime/bin/host-run" "$bindgen" "$@"

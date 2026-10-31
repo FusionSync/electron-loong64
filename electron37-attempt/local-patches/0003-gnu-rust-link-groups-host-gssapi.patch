@@ -1,0 +1,53 @@
+diff --git a/build/toolchain/gcc_toolchain.gni b/build/toolchain/gcc_toolchain.gni
+--- a/build/toolchain/gcc_toolchain.gni
++++ b/build/toolchain/gcc_toolchain.gni
+@@ -433,7 +433,17 @@
+         # -soname flag is not available on aix ld
+         soname_flag = "-Wl,-soname=\"$soname\""
+       }
+-      link_command = "$ld -shared $soname_flag {{ldflags}}${extra_ldflags} -o \"$unstripped_sofile\" @\"$rspfile\" {{rlibs}}"
++      # Rust's prebuilt standard libraries arrive through ldflags while the
++      # dependent Rust crates arrive through rlibs. GNU ld is single pass for
++      # archives unless every archive is in one --start-group/--end-group;
++      # keep both sets together so Rust symbols resolve with the UOS linker.
++      solink_start_group = ""
++      solink_end_group = ""
++      if (current_os != "aix") {
++        solink_start_group = "-Wl,--start-group"
++        solink_end_group = "-Wl,--end-group"
++      }
++      link_command = "$ld $solink_start_group -shared $soname_flag {{ldflags}}${extra_ldflags} -o \"$unstripped_sofile\" @\"$rspfile\" {{rlibs}} $solink_end_group"
+ 
+       # Generate a map file to be used for binary size analysis.
+       # Map file adds ~10% to the link time on a z620.
+@@ -609,7 +619,10 @@
+       # We need to specify link groups, at least, for single pass linkers. I.e.
+       # Rust libraries are alpha-sorted instead of by dependencies so they fail
+       # to link if not properly ordered or grouped.
+-      link_command = "$ld {{ldflags}}${extra_ldflags} -o \"$unstripped_outfile\" $start_group_flag @\"$rspfile\" $end_group_flag {{solibs}} {{libs}} $start_group_flag {{rlibs}} $end_group_flag"
++      # Keep Rust's prebuilt stdlib ldflags in the same archive group as the
++      # Rust rlibs. This is required by GNU ld, which otherwise scans the
++      # stdlib archives before seeing references from the Rust crates.
++      link_command = "$ld $start_group_flag {{ldflags}}${extra_ldflags} -o \"$unstripped_outfile\" @\"$rspfile\" {{solibs}} {{libs}} {{rlibs}} $end_group_flag"
+ 
+       # Generate a map file to be used for binary size analysis.
+       # Map file adds ~10% to the link time on a z620.
+@@ -915,6 +928,18 @@
+ 
+     forward_variables_from(invoker, "*", [ "toolchain_args" ])
+ 
++    # The x64 V8 snapshot toolchain for LoongArch still compiles a few shared
++    # Chromium headers that include gssapi.h. The cross sysroot carries the
++    # architecture-independent GSSAPI headers, while the host image does not.
++    if (defined(invoker.toolchain_args)) {
++      _clang_toolchain_args = invoker.toolchain_args
++    }
++    if (defined(_clang_toolchain_args) &&
++        defined(_clang_toolchain_args.v8_current_cpu) &&
++        _clang_toolchain_args.v8_current_cpu == "loong64") {
++      extra_cppflags = "-I/work/electron37-attempt/host-gssapi-include"
++    }
++
+     toolchain_args = {
+       if (defined(invoker.toolchain_args)) {
+         forward_variables_from(invoker.toolchain_args, "*")

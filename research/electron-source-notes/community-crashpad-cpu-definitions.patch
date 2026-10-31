@@ -1,0 +1,80 @@
+diff --git a/third_party/crashpad/crashpad/snapshot/cpu_context.h b/third_party/crashpad/crashpad/snapshot/cpu_context.h
+index c3640c328c64530828d242ac1b8429c1b1649f99..54ac3716b7b35a907d4578a4816c474bbf9c2219 100644
+--- a/third_party/crashpad/crashpad/snapshot/cpu_context.h
++++ b/third_party/crashpad/crashpad/snapshot/cpu_context.h
+@@ -371,6 +371,22 @@ struct CPUContextRISCV64 {
+   uint32_t fcsr;
+ };
+ 
++//! \brief A context structure carrying LOONG64 CPU state.
++struct CPUContextLOONG64 {
++  uint64_t regs[32];
++  uint64_t csr_era;
++
++  union {
++    double dregs[32];
++    struct {
++      float _fp_fregs;
++      uint32_t _fp_pad;
++    } fregs[32];
++  } fpregs;
++  uint64_t fcc;
++  uint32_t fcsr;
++};
++
+ //! \brief A context structure capable of carrying the context of any supported
+ //!     CPU architecture.
+ struct CPUContext {
+@@ -412,6 +428,7 @@ struct CPUContext {
+     CPUContextMIPS* mipsel;
+     CPUContextMIPS64* mips64;
+     CPUContextRISCV64* riscv64;
++    CPUContextLOONG64* loong64;
+   };
+ };
+ 
+diff --git a/third_party/crashpad/crashpad/snapshot/linux/cpu_context_linux.cc b/third_party/crashpad/crashpad/snapshot/linux/cpu_context_linux.cc
+index 6c4cb3ebce6c53c6231b4c1ce2cac562ad36cbc3..b780e65f0f897a156b0f615f2bf324373aaf6373 100644
+--- a/third_party/crashpad/crashpad/snapshot/linux/cpu_context_linux.cc
++++ b/third_party/crashpad/crashpad/snapshot/linux/cpu_context_linux.cc
+@@ -281,6 +281,40 @@ void InitializeCPUContextRISCV64(const ThreadContext::t64_t& thread_context,
+   context->fcsr = float_context.fcsr;
+ }
+ 
++#elif defined(ARCH_CPU_LOONGARCH64)
++
++void InitializeCPUContextLOONG64_NoFloatingPoint(
++    const ThreadContext::t64_t& thread_context,
++    CPUContextLOONG64* context) {
++  static_assert(sizeof(context->regs) == sizeof(thread_context.regs),
++                "gpr context size mismtach");
++  memcpy(context->regs, thread_context.regs, sizeof(context->regs));
++  context->csr_era = thread_context.csr_era;
++
++  memset(&context->fpregs, 0, sizeof(context->fpregs));
++  context->fcc = 0;
++  context->fcsr = 0;
++}
++
++void InitializeCPUContextLOONG64_OnlyFPU(
++    const FloatContext::f64_t& float_context,
++    CPUContextLOONG64* context) {
++  static_assert(sizeof(context->fpregs) == sizeof(float_context.fpregs),
++                "fpu context size mismatch");
++  memcpy(&context->fpregs, &float_context.fpregs, sizeof(context->fpregs));
++  context->fcc = float_context.fcc;
++  context->fcsr = float_context.fcsr;
++}
++
++void InitializeCPUContextLOONG64(
++    const ThreadContext::t64_t& thread_context,
++    const FloatContext::f64_t& float_context,
++    CPUContextLOONG64* context) {
++  InitializeCPUContextLOONG64_NoFloatingPoint(thread_context, context);
++
++  InitializeCPUContextLOONG64_OnlyFPU(float_context, context);
++}
++
+ #endif  // ARCH_CPU_X86_FAMILY
+ 
+ }  // namespace internal

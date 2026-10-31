@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+set -euo pipefail
+sysroot=${UOS_SYSROOT:-/opt/uos-sysroot}
+compiler=gcc
+extra=()
+case "$(basename -- "$0")" in
+    uos-c++|uos-g++)
+        compiler=g++
+        extra=(-nostdinc++ -isystem "$sysroot/usr/include/c++/8"
+               -isystem "$sysroot/usr/include/loongarch64-linux-gnu/c++/8"
+               -isystem "$sysroot/usr/include/c++/8/backward")
+        ;;
+esac
+exec "/opt/loongson/bin/loongarch64-linux-gnu-$compiler" \
+    --sysroot="$sysroot" \
+    -B/opt/uos-target-runtime/ \
+    -B"$sysroot/usr/lib/loongarch64-linux-gnu/" \
+    -isystem "$sysroot/usr/include/loongarch64-linux-gnu" \
+    -L/opt/uos-target-runtime \
+    -L"$sysroot/usr/lib/loongarch64-linux-gnu" \
+    -Wl,-rpath-link,"$sysroot/usr/lib/loongarch64-linux-gnu" \
+    "${extra[@]}" "$@"

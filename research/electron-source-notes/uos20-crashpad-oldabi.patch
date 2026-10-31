@@ -1,0 +1,292 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: UOS cross-build <uos-cross-build@localhost>
+Date: Tue, 27 Oct 2026 11:00:00 +0000
+Subject: loong64: adapt Crashpad to UOS 20 old kernel ABI
+
+UOS 20's LoongArch kernel places the machine context before the signal mask,
+uses fixed 256-bit signal-frame FPU slots, and omits the new ABI's orig_a0
+ptrace register slot. Its glibc mcontext_t omits LBT scratch registers and
+cannot be used to locate the kernel's floating-point signal state.
+
+Use the kernel header layout, assert offsets rather than only struct sizes,
+read fixed FPU slots, and update context-capture assembly offsets. Verified
+on UOS 20 / kernel 4.19 with an actual signal, ptrace register sets and the
+patched assembly. This patch is specific to the exported UOS 20 sysroot.
+Remove when this target is migrated to the upstream LoongArch ABI.
+
+diff --git a/third_party/crashpad/crashpad/snapshot/linux/signal_context.h b/third_party/crashpad/crashpad/snapshot/linux/signal_context.h
+--- a/third_party/crashpad/crashpad/snapshot/linux/signal_context.h
++++ b/third_party/crashpad/crashpad/snapshot/linux/signal_context.h
+@@ -26,6 +26,10 @@
+ #include "build/build_config.h"
+ #include "util/linux/thread_info.h"
+ #include "util/linux/traits.h"
++
++#if defined(ARCH_CPU_LOONGARCH64)
++#include <asm/ucontext.h>
++#endif
+ 
+ namespace crashpad {
+ namespace internal {
+@@ -458,13 +462,20 @@
+ 
+ #elif defined(ARCH_CPU_LOONGARCH64)
+ 
+-// See asm/sigcontext.h
++// UOS 20 uses the original LoongArch kernel signal ABI. Its libc mcontext_t
++// omits the LBT scratch registers, so use the kernel sigcontext layout for FPU
++// state. These offsets were checked with SIGUSR1 on the target UOS kernel.
+ struct MContext64 {
+   uint64_t pc;
+   uint64_t gregs[32];
+   uint32_t flags;
++  uint32_t fcsr;
++  uint32_t vcsr;
+   uint32_t padding;
+-  uint64_t extcontext[0] __attribute__((__aligned__(16)));
++  uint64_t fcc;
++  uint64_t scr[4];
++  uint64_t fpregs[32][4];
++  uint8_t reserved[4096];
+ };
+ 
+ struct ContextTraits64 : public Traits64 {
+@@ -474,27 +485,37 @@
+   using CPUContext = CPUContextLOONG64;
+ };
+ 
+-// See asm/ucontext.h
+ template <typename Traits>
+ struct UContext {
+   typename Traits::ULong flags;
+   typename Traits::Address link;
+   SignalStack<Traits> stack;
++  char alignment_padding_[24];
++  MContext64 mcontext;
+   Sigset<Traits> sigmask;
+-  char alignment_padding_[8];
+-  char padding[128 - sizeof(Sigset<Traits>)];
+-  MContext64 mcontext;
+-};
+-
++};
++
++static_assert(sizeof(MContext64) == sizeof(struct sigcontext),
++              "UOS kernel signal context size mismatch");
++static_assert(offsetof(MContext64, fpregs) ==
++                  offsetof(struct sigcontext, sc_fpregs),
++              "UOS kernel floating-point context offset mismatch");
++static_assert(offsetof(MContext64, fcsr) ==
++                  offsetof(struct sigcontext, sc_fcsr),
++              "UOS kernel FCSR offset mismatch");
++static_assert(offsetof(MContext64, fcc) ==
++                  offsetof(struct sigcontext, sc_fcc),
++              "UOS kernel FCC offset mismatch");
+ static_assert(offsetof(UContext<ContextTraits64>, mcontext) ==
+-                  offsetof(ucontext_t, uc_mcontext),
+-              "context offset mismatch");
+-static_assert(offsetof(UContext<ContextTraits64>, mcontext.gregs) ==
+-                  offsetof(ucontext_t, uc_mcontext.__gregs),
+-              "context offset mismatch");
+-static_assert(offsetof(UContext<ContextTraits64>, mcontext.extcontext) ==
+-                  offsetof(ucontext_t, uc_mcontext.__extcontext),
+-              "context offset mismatch");
++                  offsetof(struct ucontext, uc_mcontext),
++              "UOS kernel machine context offset mismatch");
++static_assert(offsetof(UContext<ContextTraits64>, sigmask) ==
++                  offsetof(struct ucontext, uc_sigmask),
++              "UOS kernel signal mask offset mismatch");
++static_assert(offsetof(UContext<ContextTraits64>, mcontext.pc) == 64,
++              "Keep capture_context_linux.S PC offset in sync");
++static_assert(offsetof(UContext<ContextTraits64>, mcontext.gregs) == 72,
++              "Keep capture_context_linux.S GPR offset in sync");
+ 
+ #else
+ #error Port.
+diff --git a/third_party/crashpad/crashpad/snapshot/linux/exception_snapshot_linux.cc b/third_party/crashpad/crashpad/snapshot/linux/exception_snapshot_linux.cc
+--- a/third_party/crashpad/crashpad/snapshot/linux/exception_snapshot_linux.cc
++++ b/third_party/crashpad/crashpad/snapshot/linux/exception_snapshot_linux.cc
+@@ -374,60 +374,37 @@
+                         LinuxVMAddress context_address,
+                         typename ContextTraits64::CPUContext* dest_context) {
+   const ProcessMemory* memory = reader->Memory();
+-  LinuxVMAddress mcontext_address = context_address +
+-                                 offsetof(UContext<ContextTraits64>, mcontext);
+-  ThreadContext::t64_t thread_context;
+-  ContextTraits64::MContext mcontext;
+-  if (!memory->Read(mcontext_address, sizeof(mcontext), &mcontext)) {
+-    LOG(ERROR) << "Couldn't read gregs";
+-    return false;
+-  }
++  const LinuxVMAddress mcontext_address =
++      context_address + offsetof(UContext<ContextTraits64>, mcontext);
++  ContextTraits64::MContext mcontext = {};
++  // The reserved extension area is not needed by the original UOS ABI.
++  if (!memory->Read(mcontext_address,
++                    offsetof(ContextTraits64::MContext, reserved),
++                    &mcontext)) {
++    LOG(ERROR) << "Couldn't read UOS signal context";
++    return false;
++  }
++
++  ThreadContext::t64_t thread_context = {};
+   static_assert(sizeof(thread_context.regs) == sizeof(mcontext.gregs),
+-                "gpr context size mismtach");
++                "gpr context size mismatch");
+   memcpy(thread_context.regs, mcontext.gregs, sizeof(mcontext.gregs));
+   thread_context.csr_era = mcontext.pc;
+-  thread_context.orig_a0 = 0;
+-  thread_context.csr_badv = 0;
+   InitializeCPUContextLOONG64_NoFloatingPoint(thread_context, dest_context);
+ 
+-  LinuxVMAddress reserved_address =
+-        context_address + offsetof(UContext<ContextTraits64>, mcontext.extcontext);
+-  if ((reserved_address & 15) != 0) {
+-    LOG(ERROR) << "invalid alignment 0x" << std::hex << reserved_address;
+-    return false;
+-   }
+-  constexpr VMSize kMaxContextSpace = 4096;
+-  ProcessMemoryRange range;
+-  if (!range.Initialize(memory, true, reserved_address, kMaxContextSpace)) {
+-    return false;
+-  }
+-  do {
+-    struct sctx_info head;
+-    if (!range.Read(reserved_address, sizeof(head), &head)) {
+-      LOG(ERROR) << "missing context terminator";
+-      return false;
+-    }
+-    reserved_address += sizeof(head);
+-    switch (head.magic) {
+-      case FPU_CTX_MAGIC:
+-        if (head.size != sizeof(struct fpu_context) + sizeof(head)) {
+-          LOG(ERROR) << "unexpected fpu context size " << head.size;
+-          return false;
+-        }
+-        FloatContext::f64_t fpucontext;
+-        if (!range.Read(reserved_address, sizeof(fpucontext), &fpucontext)) {
+-          LOG(ERROR) << "Couldn't read fpu " << head.size;
+-          return false;
+-        }
+-        InitializeCPUContextLOONG64_OnlyFPU(fpucontext, dest_context);
+-        return true;
+-      case 0:
+-        return true;
+-      default:
+-        LOG(ERROR) << "invalid magic number 0x" << std::hex << head.magic;
+-        return false;
+-    }
+-  } while (true);
++  // Bit 0 is USED_FP in the UOS asm/sigcontext.h ABI. Each signal frame holds
++  // a 256-bit slot per register; Crashpad's FPU context needs its low 64 bits.
++  constexpr uint32_t kUsedFp = 1;
++  if (mcontext.flags & kUsedFp) {
++    FloatContext::f64_t float_context = {};
++    for (size_t reg = 0; reg < 32; ++reg) {
++      float_context.fpregs[reg] = mcontext.fpregs[reg][0];
++    }
++    float_context.fcc = mcontext.fcc;
++    float_context.fcsr = mcontext.fcsr;
++    InitializeCPUContextLOONG64_OnlyFPU(float_context, dest_context);
++  }
++  return true;
+ }
+ 
+ template <>
+diff --git a/third_party/crashpad/crashpad/util/linux/thread_info.h b/third_party/crashpad/crashpad/util/linux/thread_info.h
+--- a/third_party/crashpad/crashpad/util/linux/thread_info.h
++++ b/third_party/crashpad/crashpad/util/linux/thread_info.h
+@@ -16,6 +16,7 @@
+ #define CRASHPAD_UTIL_LINUX_THREAD_INFO_H_
+ 
+ #include <features.h>
++#include <stddef.h>
+ #include <stdint.h>
+ #include <sys/user.h>
+ 
+@@ -30,7 +31,7 @@
+ #endif
+ 
+ // x86_64 has compilation errors if asm/ptrace.h is #included.
+-#if defined(ARCH_CPU_RISCV64)
++#if defined(ARCH_CPU_RISCV64) || defined(ARCH_CPU_LOONGARCH64)
+ #include <asm/ptrace.h>
+ #endif
+ 
+@@ -147,16 +148,22 @@
+     uint64_t pc;
+     uint64_t regs[31];
+ #elif defined(ARCH_CPU_LOONGARCH_FAMILY)
+-    // Reflects user_regs_struct in sys/user.h.
++    // UOS old ABI user_pt_regs in asm/ptrace.h has no orig_a0 slot.
+     uint64_t regs[32];
+-    uint64_t orig_a0;
+     uint64_t csr_era;
+     uint64_t csr_badv;
+-    uint64_t reserved[10];
++    uint64_t reserved[11];
+ #else
+ #error Port.
+ #endif  // ARCH_CPU_X86_FAMILY
+   } t64;
++
++#if defined(ARCH_CPU_LOONGARCH64)
++  static_assert(offsetof(t64_t, csr_era) == offsetof(user_pt_regs, csr_era),
++                "UOS ptrace PC offset mismatch");
++  static_assert(offsetof(t64_t, csr_badv) == offsetof(user_pt_regs, csr_badv),
++                "UOS ptrace fault-address offset mismatch");
++#endif
+ 
+ #if defined(ARCH_CPU_X86_FAMILY) || defined(ARCH_CPU_ARM64) || \
+     defined(ARCH_CPU_RISCV64) || defined(ARCH_CPU_LOONGARCH_FAMILY)
+@@ -283,7 +290,7 @@
+     uint64_t fpregs[32];
+     uint64_t fcsr;
+ #elif defined(ARCH_CPU_LOONGARCH_FAMILY)
+-    // Reflects user_fp_struct in sys/user.h
++    // Reflects UOS user_fp_state in asm/ptrace.h
+     uint64_t fpregs[32];
+     uint64_t fcc;
+     uint32_t fcsr;
+@@ -319,7 +326,11 @@
+ #elif defined(ARCH_CPU_RISCV64)
+   static_assert(sizeof(f64) == sizeof(__riscv_d_ext_state), "Size mismatch");
+ #elif defined(ARCH_CPU_LOONGARCH_FAMILY)
+-  static_assert(sizeof(f64) == sizeof(user_fp_struct), "Size mismatch");
++  static_assert(sizeof(f64) == sizeof(user_fp_state), "Size mismatch");
++  static_assert(offsetof(f64_t, fcc) == offsetof(user_fp_state, fcc),
++                "UOS ptrace FCC offset mismatch");
++  static_assert(offsetof(f64_t, fcsr) == offsetof(user_fp_state, fcsr),
++                "UOS ptrace FCSR offset mismatch");
+ #else
+ #error Port.
+ #endif  // ARCH_CPU_X86
+diff --git a/third_party/crashpad/crashpad/util/linux/ptracer.cc b/third_party/crashpad/crashpad/util/linux/ptracer.cc
+--- a/third_party/crashpad/crashpad/util/linux/ptracer.cc
++++ b/third_party/crashpad/crashpad/util/linux/ptracer.cc
+@@ -436,8 +436,8 @@
+                                  FloatContext* context,
+                                  bool can_log) {
+   iovec iov;
+-  iov.iov_base = context;
+-  iov.iov_len = sizeof(*context);
++  iov.iov_base = &context->f64;
++  iov.iov_len = sizeof(context->f64);
+   if (ptrace(
+           PTRACE_GETREGSET, tid, reinterpret_cast<void*>(NT_PRFPREG), &iov) !=
+       0) {
+diff --git a/third_party/crashpad/crashpad/util/misc/capture_context_linux.S b/third_party/crashpad/crashpad/util/misc/capture_context_linux.S
+--- a/third_party/crashpad/crashpad/util/misc/capture_context_linux.S
++++ b/third_party/crashpad/crashpad/util/misc/capture_context_linux.S
+@@ -513,8 +513,9 @@
+ #elif defined(__loongarch_lp64)
+ 
+ #define MCONTEXT_GREG_SIZE 8
+-#define MCONTEXT_PC_OFFSET 176
+-#define MCONTEXT_GREGS_OFFSET 184
++// UOS kernel signal ABI; checked by snapshot/linux/signal_context.h.
++#define MCONTEXT_PC_OFFSET 64
++#define MCONTEXT_GREGS_OFFSET 72
+ 
+ #define STORE_GPR(X) st.d $r##X, $a0, MCONTEXT_GREGS_OFFSET + X * MCONTEXT_GREG_SIZE
+ #define STORE_PC st.d $ra, $a0, MCONTEXT_PC_OFFSET

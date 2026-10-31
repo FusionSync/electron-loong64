@@ -1,0 +1,88 @@
+{
+  "electron": {
+    "version": "37.2.2",
+    "repository": "https://github.com/electron/electron.git",
+    "tag": "v37.2.2",
+    "tag_object": "8eb7b0b5841f0ed219fa9b2ff4d677a7eb2faae3",
+    "commit": "102f740ec2fc8f34601c84b79ea1bf06042e8d00",
+    "archive": "https://codeload.github.com/electron/electron/tar.gz/102f740ec2fc8f34601c84b79ea1bf06042e8d00"
+  },
+  "chromium": {
+    "version": "138.0.7204.100",
+    "repository": "https://chromium.googlesource.com/chromium/src.git",
+    "commit": "5f45b4744e3d5ba82c2ca6d942f1e7a516110752"
+  },
+  "node": {
+    "version": "v22.17.0",
+    "repository": "https://github.com/nodejs/node.git",
+    "commit": "3567fa7d70fee8831ab2891e6940ca63be568b08"
+  },
+  "community_patch_source": {
+    "repository": "https://github.com/darkyzhou/electron-loong64.git",
+    "branch": "37.2.5",
+    "commit": "ca6a76b1580f45aed1f01640ba565a86e6fc3dc5",
+    "original_electron_version": "37.2.5",
+    "original_chromium_version": "138.0.7204.168",
+    "original_node_version": "v22.17.1",
+    "note": "No 37.2.2 branch or v37.2.2 release exists in this repo as checked.",
+    "workflow": "Official electron/electron source plus electron-loong64 outer patch files, as recorded by 37.2.5-scripts_env.sh and 37.2.5-scripts_patch.sh; this build remains on Electron 37.2.2."
+  },
+  "chromium_rust": {
+    "revision": "4a0969e06dbeaaa43914d2d00b2e843d49aa3886",
+    "subrevision": 1
+  },
+  "patches": {
+    "loongson19-patches_lss_linux_syscall_support_add_support_for_loongarch64.patch": "0f74c8b9c1f03a2b9d2da1ebe4f7c027ecb616202d539401c259562157c5a216",
+    "37.2.5-patches_electron.patch": "e99aa610ebbb4dbc058175f69c49659380dee16aee10efe3bb880f1c6ddb31e9",
+    "adapted-37.2.2-chromium.patch": "384204cf5416acf9799b853a201990eb30f2beda55e9a8ad5f796a815d1ca9ff",
+    "37.2.5-patches_chromium.patch": "adea4dfaebff72474599ed550b18373fed6b1dc4af37d0ad582fa5da95248d84",
+    "loongson19-patches_chromium_crashpad_add_support_for_loongarch64.patch": "491190214116fc44804bdcc99b5d4e52ec027db5963052f49f3789f99f079411",
+    "loongson19-patches_chromium_chromium_add_support_for_loongarch64.patch": "c0d980c03e322cdc720132516c034227954e6a19c1c1a195c4c72ba42bad3573",
+    "chromium138-selected-critical-files.patch": "9e2990c270bda3411b82b87ecb934145f834de3447aa6afd7f44278b86ebbc09",
+    "uos20-crashpad-oldabi.patch": "c2f06e64c6cdc7c22259429f58cd523ca5e23385a18d376497c25ea0d43db943",
+    "uos20-lss-oldabi.patch": "5ca29d481c423a162d3fbe96fa3e99e769d845001d2440686da230d32ab040e2",
+    "uos20-sandbox-signal-oldabi.patch": "c2c9a5770fdcd307bc6c1710a7602fa32e097a1e667216602e47db886fcbccc7",
+    "breakpad-old-host-elf-constant.patch": "d9e0bb9b4acdfd9b5bd348f5471d37acd06affe01e174b849e43404efb1e7d0b"
+  },
+  "validation": {
+    "electron_patch_transport": "Adapted outer patches integrated in the real official Electron 37.2.2 checkout, excluding community native-only GN arguments; manifest and nested sandbox changes documented in 37.2.2-sandbox-adaptation.md.",
+    "full_electron_build_completed": false,
+    "uos_oldabi_probe": "Failed as expected; missing mcontext_t.__extcontext, FPU_CTX_MAGIC, sctx_info",
+    "uos_oldabi_patch": "5 files; exact patch apply check, actual patched headers compile, real target signal reader/ptrace/assembly probe passed",
+    "earlier_sparse_validation": {
+      "nested_chromium_files_checked": 14,
+      "nested_chromium_files_total": 73,
+      "superseded_by_full_patch_application": true,
+      "current_fixture": "All 14 selected diff sections are byte-identical to the original community nested patch in apply-check-37.2.2."
+    },
+    "repository_patch_application": {
+      "completed_repositories": 19,
+      "configured_repositories": 19,
+      "patch_commits_total": 240,
+      "chromium_patch_commits": 146,
+      "verified_at_utc": "2026-10-27T13:20:30.520687+00:00",
+      "evidence": "source-patch-verification.json",
+      "checks": [
+        "patch stream SHA-256",
+        "HEAD matches saved completion",
+        "upstream-head ref matches base",
+        "base is ancestor of HEAD",
+        "commit count matches manifest length",
+        "clean tracked files excluding independently patched submodules",
+        "no interrupted git am transaction"
+      ]
+    },
+    "custom_hooks": "Exact-name suppression of only Electron patch_chromium verified against checked-out depot_tools implementation; other hooks and child dependency hooks are retained.",
+    "uos_lss_sandbox_patch": "Actual target patched LSS rt_sigaction, signal 100 and clone probes passed; sandbox kernel signal structs compile with a 16-byte mask.",
+    "breakpad_patch": "Actual MemoryMappedFile target runtime probe passed and complete dump_symbols.cc compiled against the older host ELF headers.",
+    "electron_yarn_dependencies": {
+      "yarn_version": "1.22.22",
+      "command": "python3 script/lib/npx.py yarn@1.22.22 install --frozen-lockfile",
+      "completed": true,
+      "exit_status": 0,
+      "lockfile_unchanged": true,
+      "lockfile_sha256": "71e388fe83444756c2a96cc26248a819c6c96b4ac3f0b588266e88d3c5e22eab",
+      "evidence": "../../electron37-attempt/logs/yarn-network-diagnosis.md"
+    }
+  }
+}

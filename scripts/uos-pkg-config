@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -euo pipefail
+export PKG_CONFIG_SYSROOT_DIR=${UOS_SYSROOT:-/opt/uos-sysroot}
+export PKG_CONFIG_LIBDIR="$PKG_CONFIG_SYSROOT_DIR/usr/lib/loongarch64-linux-gnu/pkgconfig:$PKG_CONFIG_SYSROOT_DIR/usr/lib/pkgconfig:$PKG_CONFIG_SYSROOT_DIR/usr/share/pkgconfig"
+export PKG_CONFIG_PATH=
+exec /usr/bin/pkg-config "$@"

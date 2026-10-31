@@ -1,0 +1,11 @@
+{
+  "checked_utc": "2026-10-29T07:59:36.313505+00:00",
+  "patch": "0007-uos-sandbox-return-instruction.patch",
+  "checks": [
+    "actual_ninja_syscall_object_compilation_passed",
+    "oldabi_llvm20_disassembly_jirl_zero_ra_0_encoding_2000004c",
+    "return_marker_immediately_after_syscall",
+    "local_patch_reverse_check_passed"
+  ],
+  "runtime_validation": "pending_UOS_SSH_unreachable"
+}

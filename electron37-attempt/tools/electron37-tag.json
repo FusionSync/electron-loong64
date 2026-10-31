@@ -1,0 +1,10 @@
+{
+  "ref": "refs/tags/v37.2.2",
+  "node_id": "MDM6UmVmOTM4NDI2NzpyZWZzL3RhZ3MvdjM3LjIuMg==",
+  "url": "https://api.github.com/repos/electron/electron/git/refs/tags/v37.2.2",
+  "object": {
+    "sha": "8eb7b0b5841f0ed219fa9b2ff4d677a7eb2faae3",
+    "type": "tag",
+    "url": "https://api.github.com/repos/electron/electron/git/tags/8eb7b0b5841f0ed219fa9b2ff4d677a7eb2faae3"
+  }
+}

@@ -1,0 +1,84 @@
+[
+  {
+    "sha": "a16ca1d02de04c28236ea2107bf59bf9d0341e55",
+    "node_id": "C_kwDOHgvcKdoAKGExNmNhMWQwMmRlMDRjMjgyMzZlYTIxMDdiZjU5YmY5ZDAzNDFlNTU",
+    "commit": {
+      "author": {
+        "name": "Mingtao Zhou",
+        "email": "zhoumingtao@loongson.cn",
+        "date": "2022-06-16T11:18:33Z"
+      },
+      "committer": {
+        "name": "Mingtao Zhou",
+        "email": "zhoumingtao@loongson.cn",
+        "date": "2022-06-16T11:20:37Z"
+      },
+      "message": "feat: add chromium support for loongarch64\n\nThis patch will be removed when chromium supports",
+      "tree": {
+        "sha": "5a0f2ffb847f275529bd1782f9b4e00191339503",
+        "url": "https://api.github.com/repos/loongson/electron/git/trees/5a0f2ffb847f275529bd1782f9b4e00191339503"
+      },
+      "url": "https://api.github.com/repos/loongson/electron/git/commits/a16ca1d02de04c28236ea2107bf59bf9d0341e55",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/loongson/electron/commits/a16ca1d02de04c28236ea2107bf59bf9d0341e55",
+    "html_url": "https://github.com/loongson/electron/commit/a16ca1d02de04c28236ea2107bf59bf9d0341e55",
+    "comments_url": "https://api.github.com/repos/loongson/electron/commits/a16ca1d02de04c28236ea2107bf59bf9d0341e55/comments",
+    "author": {
+      "login": "Xiao-Tao",
+      "id": 19372459,
+      "node_id": "MDQ6VXNlcjE5MzcyNDU5",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19372459?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Xiao-Tao",
+      "html_url": "https://github.com/Xiao-Tao",
+      "followers_url": "https://api.github.com/users/Xiao-Tao/followers",
+      "following_url": "https://api.github.com/users/Xiao-Tao/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Xiao-Tao/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Xiao-Tao/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Xiao-Tao/subscriptions",
+      "organizations_url": "https://api.github.com/users/Xiao-Tao/orgs",
+      "repos_url": "https://api.github.com/users/Xiao-Tao/repos",
+      "events_url": "https://api.github.com/users/Xiao-Tao/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Xiao-Tao/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Xiao-Tao",
+      "id": 19372459,
+      "node_id": "MDQ6VXNlcjE5MzcyNDU5",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19372459?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Xiao-Tao",
+      "html_url": "https://github.com/Xiao-Tao",
+      "followers_url": "https://api.github.com/users/Xiao-Tao/followers",
+      "following_url": "https://api.github.com/users/Xiao-Tao/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Xiao-Tao/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Xiao-Tao/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Xiao-Tao/subscriptions",
+      "organizations_url": "https://api.github.com/users/Xiao-Tao/orgs",
+      "repos_url": "https://api.github.com/users/Xiao-Tao/repos",
+      "events_url": "https://api.github.com/users/Xiao-Tao/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Xiao-Tao/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "b91628c2cdc9a3b3b86bb335ce80764a7c47d595",
+        "url": "https://api.github.com/repos/loongson/electron/commits/b91628c2cdc9a3b3b86bb335ce80764a7c47d595",
+        "html_url": "https://github.com/loongson/electron/commit/b91628c2cdc9a3b3b86bb335ce80764a7c47d595"
+      }
+    ]
+  }
+]

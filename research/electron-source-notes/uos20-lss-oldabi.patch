@@ -1,0 +1,41 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: UOS Electron build <uos-build@localhost>
+Date: Tue, 27 Oct 2026 11:00:00 +0000
+Subject: UOS 20 LoongArch kernel signal and clone ABI
+
+diff --git a/linux_syscall_support.h b/linux_syscall_support.h
+--- a/linux_syscall_support.h
++++ b/linux_syscall_support.h
+@@ -321,7 +321,8 @@
+  * actual number of signals is obviously the same, but the constants
+  * differ by one.
+  */
+-#ifdef __mips__
++#if defined(__mips__) || defined(__loongarch_lp64)
++/* UOS 20 LoongArch ABI 1.0 requires a 128-bit kernel signal set. */
+ #define KERNEL_NSIG 128
+ #else
+ #define KERNEL_NSIG  64
+@@ -4044,8 +4045,9 @@
+         register uint64_t __flags __asm__("a0") = flags;
+         register void *__stack __asm__("a1") = child_stack;
+         register void *__ptid  __asm__("a2") = parent_tidptr;
+-        register void *__tls   __asm__("a3") = newtls;
+-        register int  *__ctid  __asm__("a4") = child_tidptr;
++        // UOS 20 kernel ABI places child_tid before TLS.
++        register int  *__ctid  __asm__("a3") = child_tidptr;
++        register void *__tls   __asm__("a4") = newtls;
+         __asm__ __volatile__(/* Push "arg" and "fn" onto the stack that will be
+                               * used by the child.
+                               */
+@@ -4056,8 +4058,8 @@
+                              /* %a0 = syscall(%a0 = flags,
+                               *               %a1 = child_stack,
+                               *               %a2 = parent_tidptr,
+-                              *               %a3 = newtls,
+-                              *               %a4 = child_tidptr)
++                              *               %a3 = child_tidptr,
++                              *               %a4 = newtls)
+                               */
+                              "li.d      $a7, %8\n"
+                              "syscall   0x0\n"

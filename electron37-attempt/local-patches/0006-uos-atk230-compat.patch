@@ -1,0 +1,96 @@
+diff --git a/ui/accessibility/platform/ax_platform_node_auralinux.cc b/ui/accessibility/platform/ax_platform_node_auralinux.cc
+--- a/ui/accessibility/platform/ax_platform_node_auralinux.cc
++++ b/ui/accessibility/platform/ax_platform_node_auralinux.cc
+@@ -54,7 +54,9 @@
+ // TODO(https://crbug.com/40549424): This may be removed when support for
+ // Ubuntu 18.04 is dropped.
+ WEAK_ATK_FN(atk_component_scroll_to_point);
++#if defined(ATK_CHECK_VERSION) && ATK_CHECK_VERSION(2, 32, 0)
+ WEAK_ATK_FN(atk_text_scroll_substring_to_point);
++#endif
+ 
+ namespace ui {
+ 
+@@ -179,25 +181,37 @@
+ // TODO(https://crbug.com/40549424): This may be removed when support for
+ // Ubuntu 18.04 is dropped.
+ bool SupportsAtkTextScrollingInterface() {
++#if defined(ATK_CHECK_VERSION) && ATK_CHECK_VERSION(2, 32, 0)
+   return atk_text_scroll_substring_to_point;
++#else
++  return false;
++#endif
+ }
+ 
+ // TODO(https://crbug.com/40549424): This may be removed when support for
+ // Ubuntu 18.04 is dropped.
+ AtkRole GetAtkRoleContentDeletion() {
++#if defined(ATK_CHECK_VERSION) && ATK_CHECK_VERSION(2, 34, 0)
+   base::Version atk_version(atk_get_version());
+   return atk_version.CompareTo(base::Version("2.34.0")) >= 0
+              ? ATK_ROLE_CONTENT_DELETION
+              : ATK_ROLE_SECTION;
++#else
++  return ATK_ROLE_SECTION;
++#endif
+ }
+ 
+ // TODO(https://crbug.com/40549424): This may be removed when support for
+ // Ubuntu 18.04 is dropped.
+ AtkRole GetAtkRoleContentInsertion() {
++#if defined(ATK_CHECK_VERSION) && ATK_CHECK_VERSION(2, 34, 0)
+   base::Version atk_version(atk_get_version());
+   return atk_version.CompareTo(base::Version("2.34.0")) >= 0
+              ? ATK_ROLE_CONTENT_INSERTION
+              : ATK_ROLE_SECTION;
++#else
++  return ATK_ROLE_SECTION;
++#endif
+ }
+ 
+ AtkObject* FindAtkObjectParentFrame(AtkObject* atk_object) {
+@@ -1453,6 +1467,7 @@
+   return ToAtkAttributeSet(obj->GetDefaultTextAttributes());
+ }
+ 
++#if defined(ATK_CHECK_VERSION) && ATK_CHECK_VERSION(2, 32, 0)
+ gboolean ScrollSubstringTo(AtkText* atk_text,
+                            gint start_offset,
+                            gint end_offset,
+@@ -1483,6 +1498,7 @@
+   return obj->ScrollSubstringToPoint(start_offset, end_offset, atk_coord_type,
+                                      x, y);
+ }
++#endif  // defined(ATK_CHECK_VERSION) && ATK_CHECK_VERSION(2, 32, 0)
+ 
+ void Init(AtkTextIface* iface) {
+   iface->get_text = GetText;
+@@ -1507,10 +1523,12 @@
+ 
+   iface->get_string_at_offset = GetStringAtOffset;
+ 
++#if defined(ATK_CHECK_VERSION) && ATK_CHECK_VERSION(2, 32, 0)
+   if (SupportsAtkTextScrollingInterface()) {
+     iface->scroll_substring_to = ScrollSubstringTo;
+     iface->scroll_substring_to_point = ScrollSubstringToPoint;
+   }
++#endif  // defined(ATK_CHECK_VERSION) && ATK_CHECK_VERSION(2, 32, 0)
+ }
+ 
+ const GInterfaceInfo Info = {reinterpret_cast<GInterfaceInitFunc>(Init),
+@@ -4881,6 +4899,7 @@
+   ScrollNodeRectIntoView(rect, atk_scroll_type);
+ }
+ 
++#if defined(ATK_CHECK_VERSION) && ATK_CHECK_VERSION(2, 32, 0)
+ std::optional<gfx::Rect>
+ AXPlatformNodeAuraLinux::GetUnclippedHypertextRangeBoundsRect(int start_offset,
+                                                               int end_offset) {
+@@ -4939,6 +4958,7 @@
+ 
+   return true;
+ }
++#endif  // defined(ATK_CHECK_VERSION) && ATK_CHECK_VERSION(2, 32, 0)
+ 
+ void AXPlatformNodeAuraLinux::ComputeStylesIfNeeded() {
+   if (!offset_to_text_attributes_.empty())

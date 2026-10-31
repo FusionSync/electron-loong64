@@ -1,0 +1,49 @@
+diff --git a/build/config/compiler/BUILD.gn b/build/config/compiler/BUILD.gn
+--- a/build/config/compiler/BUILD.gn
++++ b/build/config/compiler/BUILD.gn
+@@ -1531,13 +1531,19 @@
+       cflags += [ "-mabi=lp64d" ]
+     } else if (current_cpu == "loong64") {
+       if (is_clang) {
+-        cflags += [ "--target=loongarch64-linux-gnu" ]
++        # Vendor old-ABI LLVM still emits short calls for medium. Its large
++        # model provides the long calls needed by Electron; pass it directly
++        # to cc1 because the vendor driver does not expose this model.
++        cflags += [
++          "--target=loongarch64-linux-gnu",
++          "-Xclang",
++          "-mcmodel=large",
++        ]
+         ldflags += [ "--target=loongarch64-linux-gnu" ]
+-      }
+-      cflags += [
+-        "-mabi=lp64d",
+-        "-mcmodel=medium",
+-      ]
++      } else {
++        cflags += [ "-mcmodel=medium" ]
++      }
++      cflags += [ "-mabi=lp64d" ]
+     } else if (current_cpu == "s390x") {
+       if (is_clang) {
+         cflags += [ "--target=s390x-unknown-linux-gnu" ]
+@@ -2470,7 +2476,9 @@
+ # 2. Remove the thin_archive config, so that the .a file actually contains all
+ #    .o files, instead of just references to .o files in the build directoy
+ config("thin_archive") {
+-  if ((is_apple && use_lld) || (is_linux && !is_clang) || current_os == "aix") {
++  # UOS 20 ships GNU ld 2.31, which rejects Chromium's thin archives when
++  # they omit the symbol index. Build regular archives for this cross build.
++  if (false && ((is_apple && use_lld) || (is_linux && !is_clang) || current_os == "aix")) {
+     # The macOS and iOS linker ld64.ldd doesn't support thin archive without
+     # symbol table, gcc on linux also throws the error `archive has no index`.
+     # AIX does support -s option, not -S option.
+@@ -2478,7 +2486,7 @@
+       "-T",
+       "-s",
+     ]
+-  } else if ((is_posix && !is_nacl && (!is_apple || use_lld)) || is_fuchsia) {
++  } else if (false && ((is_posix && !is_nacl && (!is_apple || use_lld)) || is_fuchsia)) {
+     # The macOS and iOS default linker ld64 does not support reading thin
+     # archives.
+     arflags = [

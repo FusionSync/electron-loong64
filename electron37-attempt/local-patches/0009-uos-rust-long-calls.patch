@@ -1,0 +1,14 @@
+diff --git a/build/rust/rust_target.gni b/build/rust/rust_target.gni
+--- a/build/rust/rust_target.gni
++++ b/build/rust/rust_target.gni
+@@ -440,7 +440,9 @@
+         rustflags += [ "-Cmetadata=${_rustc_metadata}" ]
+       }
+       if (current_cpu == "loong64") {
+-        rustflags += [ "-Ccode-model=medium" ]
++        # Vendor old-ABI LLVM needs large for long calls; medium still emits
++        # short branches that cannot span the complete Electron executable.
++        rustflags += [ "-Ccode-model=large" ]
+       }
+       rustenv = _rustenv
+ 

@@ -1,0 +1,248 @@
+[
+  {
+    "sha": "ca6a76b1580f45aed1f01640ba565a86e6fc3dc5",
+    "node_id": "C_kwDONNpqzNoAKGNhNmE3NmIxNTgwZjQ1YWVkMWYwMTY0MGJhNTY1YTg2ZTZmYzNkYzU",
+    "commit": {
+      "author": {
+        "name": "darkyzhou",
+        "email": "me@zqy.io",
+        "date": "2025-08-04T15:16:45Z"
+      },
+      "committer": {
+        "name": "darkyzhou",
+        "email": "me@zqy.io",
+        "date": "2025-08-04T15:16:45Z"
+      },
+      "message": "feat: release 37.2.5",
+      "tree": {
+        "sha": "987637406323dc119678e2a5909f01dbef3e923f",
+        "url": "https://api.github.com/repos/darkyzhou/electron-loong64/git/trees/987637406323dc119678e2a5909f01dbef3e923f"
+      },
+      "url": "https://api.github.com/repos/darkyzhou/electron-loong64/git/commits/ca6a76b1580f45aed1f01640ba565a86e6fc3dc5",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/darkyzhou/electron-loong64/commits/ca6a76b1580f45aed1f01640ba565a86e6fc3dc5",
+    "html_url": "https://github.com/darkyzhou/electron-loong64/commit/ca6a76b1580f45aed1f01640ba565a86e6fc3dc5",
+    "comments_url": "https://api.github.com/repos/darkyzhou/electron-loong64/commits/ca6a76b1580f45aed1f01640ba565a86e6fc3dc5/comments",
+    "author": {
+      "login": "darkyzhou",
+      "id": 7220778,
+      "node_id": "MDQ6VXNlcjcyMjA3Nzg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7220778?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/darkyzhou",
+      "html_url": "https://github.com/darkyzhou",
+      "followers_url": "https://api.github.com/users/darkyzhou/followers",
+      "following_url": "https://api.github.com/users/darkyzhou/following{/other_user}",
+      "gists_url": "https://api.github.com/users/darkyzhou/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/darkyzhou/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/darkyzhou/subscriptions",
+      "organizations_url": "https://api.github.com/users/darkyzhou/orgs",
+      "repos_url": "https://api.github.com/users/darkyzhou/repos",
+      "events_url": "https://api.github.com/users/darkyzhou/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/darkyzhou/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "darkyzhou",
+      "id": 7220778,
+      "node_id": "MDQ6VXNlcjcyMjA3Nzg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7220778?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/darkyzhou",
+      "html_url": "https://github.com/darkyzhou",
+      "followers_url": "https://api.github.com/users/darkyzhou/followers",
+      "following_url": "https://api.github.com/users/darkyzhou/following{/other_user}",
+      "gists_url": "https://api.github.com/users/darkyzhou/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/darkyzhou/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/darkyzhou/subscriptions",
+      "organizations_url": "https://api.github.com/users/darkyzhou/orgs",
+      "repos_url": "https://api.github.com/users/darkyzhou/repos",
+      "events_url": "https://api.github.com/users/darkyzhou/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/darkyzhou/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "17ec2987154c5731ba5d24829af1a3912f902c23",
+        "url": "https://api.github.com/repos/darkyzhou/electron-loong64/commits/17ec2987154c5731ba5d24829af1a3912f902c23",
+        "html_url": "https://github.com/darkyzhou/electron-loong64/commit/17ec2987154c5731ba5d24829af1a3912f902c23"
+      }
+    ]
+  },
+  {
+    "sha": "6cf51187392378dd072b90ecb99fb0196134d4a8",
+    "node_id": "C_kwDONNpqzNoAKDZjZjUxMTg3MzkyMzc4ZGQwNzJiOTBlY2I5OWZiMDE5NjEzNGQ0YTg",
+    "commit": {
+      "author": {
+        "name": "darkyzhou",
+        "email": "me@zqy.io",
+        "date": "2025-05-25T05:34:03Z"
+      },
+      "committer": {
+        "name": "darkyzhou",
+        "email": "me@zqy.io",
+        "date": "2025-05-25T05:34:03Z"
+      },
+      "message": "feat: release 35.4.0",
+      "tree": {
+        "sha": "ed75badec6f472aec65c3218a4811428f2f6219b",
+        "url": "https://api.github.com/repos/darkyzhou/electron-loong64/git/trees/ed75badec6f472aec65c3218a4811428f2f6219b"
+      },
+      "url": "https://api.github.com/repos/darkyzhou/electron-loong64/git/commits/6cf51187392378dd072b90ecb99fb0196134d4a8",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/darkyzhou/electron-loong64/commits/6cf51187392378dd072b90ecb99fb0196134d4a8",
+    "html_url": "https://github.com/darkyzhou/electron-loong64/commit/6cf51187392378dd072b90ecb99fb0196134d4a8",
+    "comments_url": "https://api.github.com/repos/darkyzhou/electron-loong64/commits/6cf51187392378dd072b90ecb99fb0196134d4a8/comments",
+    "author": {
+      "login": "darkyzhou",
+      "id": 7220778,
+      "node_id": "MDQ6VXNlcjcyMjA3Nzg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7220778?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/darkyzhou",
+      "html_url": "https://github.com/darkyzhou",
+      "followers_url": "https://api.github.com/users/darkyzhou/followers",
+      "following_url": "https://api.github.com/users/darkyzhou/following{/other_user}",
+      "gists_url": "https://api.github.com/users/darkyzhou/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/darkyzhou/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/darkyzhou/subscriptions",
+      "organizations_url": "https://api.github.com/users/darkyzhou/orgs",
+      "repos_url": "https://api.github.com/users/darkyzhou/repos",
+      "events_url": "https://api.github.com/users/darkyzhou/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/darkyzhou/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "darkyzhou",
+      "id": 7220778,
+      "node_id": "MDQ6VXNlcjcyMjA3Nzg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7220778?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/darkyzhou",
+      "html_url": "https://github.com/darkyzhou",
+      "followers_url": "https://api.github.com/users/darkyzhou/followers",
+      "following_url": "https://api.github.com/users/darkyzhou/following{/other_user}",
+      "gists_url": "https://api.github.com/users/darkyzhou/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/darkyzhou/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/darkyzhou/subscriptions",
+      "organizations_url": "https://api.github.com/users/darkyzhou/orgs",
+      "repos_url": "https://api.github.com/users/darkyzhou/repos",
+      "events_url": "https://api.github.com/users/darkyzhou/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/darkyzhou/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "5bcfabc7ade6b7f7f793a1a7e0ddad6e115084cb",
+        "url": "https://api.github.com/repos/darkyzhou/electron-loong64/commits/5bcfabc7ade6b7f7f793a1a7e0ddad6e115084cb",
+        "html_url": "https://github.com/darkyzhou/electron-loong64/commit/5bcfabc7ade6b7f7f793a1a7e0ddad6e115084cb"
+      }
+    ]
+  },
+  {
+    "sha": "1e1bedfd6dde7ba443aa6f29b3d0e7913aeb3578",
+    "node_id": "C_kwDONNpqzNoAKDFlMWJlZGZkNmRkZTdiYTQ0M2FhNmYyOWIzZDBlNzkxM2FlYjM1Nzg",
+    "commit": {
+      "author": {
+        "name": "darkyzhou",
+        "email": "me@zqy.io",
+        "date": "2025-05-07T01:27:44Z"
+      },
+      "committer": {
+        "name": "darkyzhou",
+        "email": "me@zqy.io",
+        "date": "2025-05-07T01:27:44Z"
+      },
+      "message": "feat: electron 34.5.4",
+      "tree": {
+        "sha": "ddc146472ba4ff24fcd05254c161e3c58c801da8",
+        "url": "https://api.github.com/repos/darkyzhou/electron-loong64/git/trees/ddc146472ba4ff24fcd05254c161e3c58c801da8"
+      },
+      "url": "https://api.github.com/repos/darkyzhou/electron-loong64/git/commits/1e1bedfd6dde7ba443aa6f29b3d0e7913aeb3578",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/darkyzhou/electron-loong64/commits/1e1bedfd6dde7ba443aa6f29b3d0e7913aeb3578",
+    "html_url": "https://github.com/darkyzhou/electron-loong64/commit/1e1bedfd6dde7ba443aa6f29b3d0e7913aeb3578",
+    "comments_url": "https://api.github.com/repos/darkyzhou/electron-loong64/commits/1e1bedfd6dde7ba443aa6f29b3d0e7913aeb3578/comments",
+    "author": {
+      "login": "darkyzhou",
+      "id": 7220778,
+      "node_id": "MDQ6VXNlcjcyMjA3Nzg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7220778?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/darkyzhou",
+      "html_url": "https://github.com/darkyzhou",
+      "followers_url": "https://api.github.com/users/darkyzhou/followers",
+      "following_url": "https://api.github.com/users/darkyzhou/following{/other_user}",
+      "gists_url": "https://api.github.com/users/darkyzhou/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/darkyzhou/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/darkyzhou/subscriptions",
+      "organizations_url": "https://api.github.com/users/darkyzhou/orgs",
+      "repos_url": "https://api.github.com/users/darkyzhou/repos",
+      "events_url": "https://api.github.com/users/darkyzhou/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/darkyzhou/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "darkyzhou",
+      "id": 7220778,
+      "node_id": "MDQ6VXNlcjcyMjA3Nzg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7220778?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/darkyzhou",
+      "html_url": "https://github.com/darkyzhou",
+      "followers_url": "https://api.github.com/users/darkyzhou/followers",
+      "following_url": "https://api.github.com/users/darkyzhou/following{/other_user}",
+      "gists_url": "https://api.github.com/users/darkyzhou/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/darkyzhou/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/darkyzhou/subscriptions",
+      "organizations_url": "https://api.github.com/users/darkyzhou/orgs",
+      "repos_url": "https://api.github.com/users/darkyzhou/repos",
+      "events_url": "https://api.github.com/users/darkyzhou/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/darkyzhou/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "be131cf51ceed736eb50b36ec9910c428665c76d",
+        "url": "https://api.github.com/repos/darkyzhou/electron-loong64/commits/be131cf51ceed736eb50b36ec9910c428665c76d",
+        "html_url": "https://github.com/darkyzhou/electron-loong64/commit/be131cf51ceed736eb50b36ec9910c428665c76d"
+      }
+    ]
+  }
+]

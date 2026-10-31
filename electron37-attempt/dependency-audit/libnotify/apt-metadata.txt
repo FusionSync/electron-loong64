@@ -1,0 +1,24 @@
+Package: libnotify-dev
+Source: libnotify
+Version: 0.7.7-4+sign
+Architecture: loongarch64
+Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Installed-Size: 229
+Depends: libnotify4 (= 0.7.7-4+sign), gir1.2-notify-0.7 (= 0.7.7-4+sign), libglib2.0-dev (>= 2.26), libgdk-pixbuf2.0-dev
+Multi-Arch: same
+Priority: optional
+Section: libdevel
+Filename: pool/main/libn/libnotify/libnotify-dev_0.7.7-4+sign_loongarch64.deb
+Size: 49790
+SHA256: 3827f8e146fbb3e0a0bd3ebe57481a711ac0a0766a6f86c0b6ef49dceacee055
+SHA1: 69ac93eb3fd6b886fe9cee8492382a830c5b2697
+MD5sum: 8e15b3639abf4a21ba81c46b4c98b7da
+Description: sends desktop notifications to a notification daemon (Development files)
+ A library that sends desktop notifications to a notification daemon, as
+ defined in the Desktop Notifications spec. These notifications can be
+ used to inform the user about an event or display some form of
+ information without getting in the user's way.
+ .
+ This package contains the include files and static library.
+Description-md5: 9fed5d3edf50824cfc6d54e102ff155f
+

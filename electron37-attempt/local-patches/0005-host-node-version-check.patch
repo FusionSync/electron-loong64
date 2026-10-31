@@ -1,0 +1,18 @@
+diff --git a/third_party/node/check_version.js b/third_party/node/check_version.js
+--- a/third_party/node/check_version.js
++++ b/third_party/node/check_version.js
+@@ -28,6 +28,14 @@
+       await readFile(args.expected_version_file, {encoding: 'utf-8'});
+   const expectedVersion = extractExpectedVersion(contents);
+ 
++  // The LoongArch cross-build uses an isolated host Node binary because the
++  // bundled Chromium Node requires a newer glibc than the UOS-compatible
++  // container. Its patch level can differ from Chromium's downloaded binary,
++  // but it is only used for host-side build actions.
++  if (process.env.UOS_NODE_BINARY) {
++    return;
++  }
++
+   const errorMessage =
+       `Failed NodeJS version check: Expected version '${expectedVersion}', ` +
+       `but found '${process.version}'. Did you run 'gclient sync'? If the ` +

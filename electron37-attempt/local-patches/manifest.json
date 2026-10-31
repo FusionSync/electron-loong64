@@ -1,0 +1,123 @@
+{
+  "format": 1,
+  "created_utc": "2026-10-29T07:38:56.350708+00:00",
+  "repository": "src",
+  "baseline_head": "7c3d04f8dfa78f36adb52f6f7ef11f885287f495",
+  "baseline_description": "Chromium HEAD after the recorded Electron/community/UOS repository patch series. Apply these local changes after apply-patches-resumable.py and before hooks/GN.",
+  "patches": [
+    {
+      "patch": "0001-uos-gnu-regular-archives.patch",
+      "path": "build/config/compiler/BUILD.gn",
+      "description": "Use regular archives with the old UOS GNU linker and vendor LLVM large code model for LoongArch Clang long calls; medium still emits short branches.",
+      "patch_sha256": "610a849ccadf2461bba9d4eb197a9c2961c13971c71811d29998938e78c32a5f",
+      "base_sha256": "1c184d2b8b38271aab38fa08eb1791499e9ab553dac4ebe0254cc91b8b6f53fa",
+      "applied_sha256": "ba9c5e1f3022584239b2becb6b30dc4044a9734aa72e044d25d37238680e4ff9",
+      "source_mtime_ns_at_export": 1793284246132530220,
+      "source_size_at_export": 120528
+    },
+    {
+      "patch": "0002-vendor-llvm20-bindgen-flags.patch",
+      "path": "build/rust/filter_clang_args.py",
+      "description": "Translate old-ABI LLVM20 driver flags for bindgen.",
+      "patch_sha256": "981c41f62b00912c28e8d3de82ef7841d49663066f54b285bfe9041fb2ed23a6",
+      "base_sha256": "00cdfee84bfbf0d91aed5cc4d85df32a8bd17a42341d22a326243ce00367a4af",
+      "applied_sha256": "68c1a287a2ffac194ae61a8b479558533f967cf98cfb5aced342366c68b9c243",
+      "source_mtime_ns_at_export": 1793176985087507147,
+      "source_size_at_export": 1269
+    },
+    {
+      "patch": "0003-gnu-rust-link-groups-host-gssapi.patch",
+      "path": "build/toolchain/gcc_toolchain.gni",
+      "description": "Group Rust standard libraries with crates and expose host GSSAPI headers.",
+      "patch_sha256": "f00ff743e72d6a5315eb1a6c1db47730c00feae3cb2c036625eb8bd9bb36c126",
+      "base_sha256": "ee1c90d9ff01e9115183ddc41ab2d4203ebb485bd416a7f04c543266ba9e2a0f",
+      "applied_sha256": "1f4a40a8bfb22897b67913dddcf44b76e493565f70e68615d332ba765b244290",
+      "source_mtime_ns_at_export": 1793197359878637830,
+      "source_size_at_export": 38469
+    },
+    {
+      "patch": "0004-host-node-binary.patch",
+      "path": "third_party/node/node.py",
+      "description": "Select the isolated x86_64 host Node runtime.",
+      "patch_sha256": "8b80e3be91b4138a6621e9a14212a722548cb08daf08984df93d5255d4a24cde",
+      "base_sha256": "892960660c03ddbb3998931e04f050a9401f7f12f2f12bd4cc4a63452e8167f4",
+      "applied_sha256": "aee24cf0bf8edf5d3b0c8ce5373c0e8230ece565693d0f32a4d6edbcd71625b4",
+      "source_mtime_ns_at_export": 1793170933564930854,
+      "source_size_at_export": 1603
+    },
+    {
+      "patch": "0005-host-node-version-check.patch",
+      "path": "third_party/node/check_version.js",
+      "description": "Allow the explicitly selected host Node patch version.",
+      "patch_sha256": "413e0660e0cce98dd85f2f92bf4070cf37c8c9240a603b6d3872e7dc42c695dc",
+      "base_sha256": "54bfaa4865e9972f3046042adc18fc94d4834fa6705df63f8403aac109302086",
+      "applied_sha256": "b0ddc5882665f2537c80fb44470d4f445e2b8d3e726b23b6ef0c45f7b3f9242b",
+      "source_mtime_ns_at_export": 1793186824016114121,
+      "source_size_at_export": 1734
+    },
+    {
+      "patch": "0006-uos-atk230-compat.patch",
+      "path": "ui/accessibility/platform/ax_platform_node_auralinux.cc",
+      "description": "Guard ATK 2.32 and 2.34 APIs when building with UOS ATK 2.30 headers.",
+      "patch_sha256": "ebe880606e991f21d8e64bae4c088238ddcd29d9c54cfdb632008dfaab08a166",
+      "base_sha256": "20531d2a4dd0e270eb6cde4c7fdf940b89973ea98425699671cfdf5100359fc8",
+      "applied_sha256": "22a9962fbe81f9d1dbda7fca8a471df46f0392323527453a6917e410be5cd6e8",
+      "source_mtime_ns_at_export": 1793236655739576995,
+      "source_size_at_export": 175803
+    },
+    {
+      "patch": "0007-uos-sandbox-return-instruction.patch",
+      "path": "sandbox/linux/seccomp-bpf/syscall.cc",
+      "description": "Use explicit jirl $zero, $ra, 0 return supported by vendor old-ABI LoongArch LLVM20.",
+      "patch_sha256": "54deb8f1630eeea4d148149d1ba82388e87ae7d3e8cce80457d70d391392d0c3",
+      "base_sha256": "f925d4682563cf4d6e90e6c4c5c696e325c54975860f0ce762a27b5e3b882fd2",
+      "applied_sha256": "5c8606ee6749a3768247ea9e9b70d253a52bdd3a90079f8572386105e953d635",
+      "source_mtime_ns_at_export": 1793260668370919871,
+      "source_size_at_export": 17781
+    },
+    {
+      "patch": "0008-uos-libuv-long-calls.patch",
+      "repository": "src/third_party/electron_node",
+      "baseline_head": "d7aff0d5cfc015a05e99bc9c00cf9e9679d26cd1",
+      "path": "deps/uv/unofficial.gni",
+      "description": "Use vendor LLVM large code model only for LoongArch libuv C files; pthread_atfork resolves to distant hidden libc_nonshared code.",
+      "patch_sha256": "9836b4e780de16da357e2a63d4b7a6a783332b010b204cbfcc2b66f19d7d5a1d",
+      "base_sha256": "1d17563a2590913dd1d74dbbec221bae5fcd8b530e108ad984186fbf1a077412",
+      "applied_sha256": "e175bcd903b8ec4139e20b6c4dacb9329a96003866fa0ded33328d3f5852bbcc",
+      "source_mtime_ns_at_export": 1793282332049438661,
+      "source_size_at_export": 3285
+    },
+    {
+      "patch": "0009-uos-rust-long-calls.patch",
+      "path": "build/rust/rust_target.gni",
+      "description": "Use the vendor Rust large code model for LoongArch target crates; old-ABI medium still emits short external calls.",
+      "patch_sha256": "4f67a8977703ff735b97279c2e32ae4369c1b8141056a81a4e90b2f58896443a",
+      "base_sha256": "59e5da000eda5fd634451865cc0befda040fb8423414069a18db874c623f1bf7",
+      "applied_sha256": "1169c042a73b3e28924597e20a2d7b3f710493d2066f3c4750d30d89ad07b466",
+      "source_mtime_ns_at_export": 1793284246136530251,
+      "source_size_at_export": 18324
+    },
+    {
+      "patch": "0010-uos-loongarch-disable-musttail.patch",
+      "path": "base/allocator/partition_allocator/src/partition_alloc/partition_alloc_base/compiler_specific.h",
+      "description": "Disable clang::musttail on LoongArch because vendor LLVM20 large-model indirect tail-call lowering aborts; retain ordinary dispatch calls.",
+      "repository": "src",
+      "patch_sha256": "84563601d6d3d58e9e1324ea64d8b71954bfeb807a7aacd89c42907d77b0f799",
+      "base_sha256": "c3fe6cc9908fded726fab9108ee82c897dc73933afa2668a0b75bb48207acf2f",
+      "applied_sha256": "c8091ec50c8b4b48ec55093a082a3164ecb1bfd0b1c1f20493c9ae2e4feeedfb",
+      "source_mtime_ns_at_export": 1793327263133599971,
+      "source_size_at_export": 17031
+    },
+    {
+      "patch": "0011-uos-protobuf-disable-musttail.patch",
+      "path": "third_party/protobuf/src/google/protobuf/port_def.inc",
+      "repository": "src",
+      "description": "Disable Protobuf musttail on LoongArch so PROTOBUF_TAILCALL=false selects its existing always-return trampoline for vendor LLVM20 large code model.",
+      "patch_sha256": "1be7beb1b7eb0de631985c161574c346d697189e16675df217e4fd164e12403e",
+      "base_sha256": "ed346b11e45f5f0fd3355a4c9abdb101fd5236fd20814e70124d802eeb8b1608",
+      "applied_sha256": "de680f0f582d30bd8adaea0b384c2238dd0735fc683ed1d735ff0c2cdfc6d0bb",
+      "source_mtime_ns_at_export": 1793329129152035083,
+      "source_size_at_export": 36876
+    }
+  ]
+}

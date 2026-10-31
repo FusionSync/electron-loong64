@@ -1,0 +1,7 @@
+{
+  "name": "electron37-loong64-functional-test",
+  "version": "1.0.0",
+  "private": true,
+  "main": "main.js",
+  "description": "Electron 37 Loong64 runtime functional test"
+}

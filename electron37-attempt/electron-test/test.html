@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Electron 37 Loong64 功能测试</title>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, sans-serif; }
+    body { margin: 0; min-height: 100vh; background: #0b1220; color: #e5edf8; }
+    header { padding: 22px 30px 16px; background: linear-gradient(120deg, #17243b, #26345b); }
+    h1 { margin: 0 0 8px; font-size: 25px; }
+    .sub { color: #afc2df; font-size: 13px; }
+    main { display: grid; grid-template-columns: minmax(390px, 0.9fr) minmax(520px, 1.1fr); gap: 18px; padding: 20px 30px 30px; }
+    section { background: #141f33; border: 1px solid #2a3a57; border-radius: 12px; padding: 16px; box-shadow: 0 8px 24px #0003; }
+    h2 { margin: 0 0 12px; font-size: 17px; }
+    button, input { border: 1px solid #435b82; border-radius: 7px; background: #1d2c47; color: #edf5ff; padding: 9px 12px; font: inherit; }
+    button { cursor: pointer; margin: 3px 4px 3px 0; }
+    button:hover { background: #2b4270; }
+    input { width: min(100%, 450px); }
+    #status { margin: 10px 0; min-height: 22px; color: #9db4d6; }
+    #status[data-kind="ok"] { color: #7ee2aa; }
+    #status[data-kind="error"] { color: #ff9a9a; }
+    #system { color: #a8bee0; font-size: 13px; overflow-wrap: anywhere; }
+    #canvas { display: block; width: 100%; max-width: 520px; height: 220px; border-radius: 8px; margin-top: 12px; }
+    #fps { color: #7ee2aa; font: 12px monospace; }
+    #animated-box { width: 62px; height: 22px; margin: 13px 0; border-radius: 11px; background: linear-gradient(90deg, #57c7ff, #b27aff); }
+    #animated-box.running { animation: slide 2.2s ease-in-out infinite alternate, pulse 1.1s ease-in-out infinite alternate; }
+    @keyframes slide { from { transform: translateX(0); } to { transform: translateX(420px); } }
+    @keyframes pulse { from { filter: brightness(.8); } to { filter: brightness(1.6); } }
+    pre { min-height: 230px; max-height: 390px; overflow: auto; padding: 12px; border-radius: 8px; background: #0a101c; color: #c9d7eb; font: 12px/1.45 ui-monospace, monospace; white-space: pre-wrap; overflow-wrap: anywhere; }
+    .hint { color: #8da5c8; font-size: 12px; line-height: 1.5; }
+    @media (max-width: 950px) { main { grid-template-columns: 1fr; padding: 16px; } header { padding-left: 16px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Electron 37 Loong64 功能测试</h1>
+    <div class="sub">动画、Canvas、IPC、文件对话框、文件读取、Electron net、系统浏览器外部打开</div>
+  </header>
+  <main>
+    <div>
+      <section>
+        <h2>运行环境</h2>
+        <div id="system">正在读取…</div>
+        <div id="status">准备就绪</div>
+        <button id="animate">开始/暂停 CSS 动画</button>
+        <div id="animated-box"></div>
+        <div class="hint">如果彩色条在移动，说明渲染进程、CSS 动画和窗口绘制正常。</div>
+      </section>
+      <section>
+        <h2>Canvas 动画</h2>
+        <span id="fps">-- FPS</span>
+        <canvas id="canvas" width="520" height="220"></canvas>
+        <div class="hint">如果小球持续反弹且 FPS 更新，说明 requestAnimationFrame 和 Canvas 正常。</div>
+      </section>
+      <section>
+        <h2>文件与外部应用</h2>
+        <button id="open-file">选择并读取文件</button>
+        <button id="open-bilibili">用系统浏览器打开 B 站</button>
+        <div class="hint">文件测试会调用主进程 dialog/fs；B 站按钮会调用 shell.openExternal。</div>
+      </section>
+    </div>
+    <section>
+      <h2>网络请求（Electron net）</h2>
+      <input id="url" value="https://www.bilibili.com/" aria-label="URL">
+      <button id="network">发送 GET 请求</button>
+      <div class="hint">默认请求 B 站首页。也可以改成你能访问的 HTTPS 地址；结果通过 IPC 返回主进程响应状态和正文前 4KB。</div>
+      <pre id="output">等待测试…</pre>
+    </section>
+  </main>
+  <script src="renderer.js"></script>
+</body>
+</html>
