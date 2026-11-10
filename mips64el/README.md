@@ -31,6 +31,13 @@ See [Buster validation](reports/buster-preflight.txt) and
 plus [page-size validation](reports/pa-page-sizes.md). These checks do not establish
 that the complete Electron application works on a physical desktop.
 
+[The V8 configuration review](reports/v8-3a4000-config.md) also checks the
+MIPS64R2 JIT and host snapshot settings. The
+[offline runtime smoke](tests/runtime-smoke/README.md) is ready to exercise
+optimized JavaScript, deoptimization, scalar Wasm, threads, files and local HTTP
+after the complete executable exists. Its recorded host Node result is a
+check of the test script, not evidence of MIPS Electron execution.
+
 ## Build the container
 
 From this directory:
