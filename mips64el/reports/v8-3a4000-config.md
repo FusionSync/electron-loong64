@@ -83,6 +83,12 @@ system dependency graph (`:60–61`). It is one release gate, not a complete
 instruction-set or runtime proof. A blanket byte search for MSA would also
 misclassify the upstream guarded alternatives described above.
 
+The separate [N64 register review and QEMU probes](v8-n64-fprs.md) found and
+corrected upstream floating-point save sets that matched N32. That source
+adaptation is required in addition to selecting the correct target triple.
+The [native-addon regression probe](../tests/v8-n64-fpr-addon/README.md) will
+exercise the complete native-to-JavaScript-to-Wasm entry path after linking.
+
 ## Next execution check
 
 The [offline runtime smoke](../tests/runtime-smoke/README.md) confirms optimized

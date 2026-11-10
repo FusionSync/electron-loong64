@@ -204,6 +204,27 @@ def main() -> None:
         '  }\n',
     )
 
+    # This MIPS64 target uses N64, whose callee-saved FPRs are f24..f31.
+    # The upstream list instead matched N32, leaking f31 scratch writes to C
+    # callers and omitting caller-saved allocatable f20/f22 at C calls.
+    patcher.replace(
+        "v8/src/codegen/mips64/register-mips64.h",
+        "#define C_CALL_CALLEE_SAVE_FP_REGISTERS f20, f22, f24, f26, f28, f30\n",
+        "#define C_CALL_CALLEE_SAVE_FP_REGISTERS f24, f25, f26, f27, f28, f29, f30, f31\n",
+    )
+    patcher.replace(
+        "v8/src/codegen/mips64/reglist-mips64.h",
+        "const int kNumCalleeSavedFPU = 6;\n",
+        "const int kNumCalleeSavedFPU = kCalleeSavedFPU.Count();\n",
+    )
+    patcher.replace(
+        "v8/src/codegen/mips64/reglist-mips64.h",
+        "const DoubleRegList kCallerSavedFPU = {f0,  f2,  f4,  f6,  f8,\n"
+        "                                       f10, f12, f14, f16, f18};\n",
+        "const DoubleRegList kCallerSavedFPU = {f0,  f2,  f4,  f6,  f8,\n"
+        "                                       f10, f12, f14, f16, f18, f20, f22};\n",
+    )
+
     patcher.replace(
         "third_party/swiftshader/third_party/marl/BUILD.gn",
         '    } else if (current_cpu == "mips64") {\n',
