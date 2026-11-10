@@ -20,7 +20,7 @@ outputs and sysroot; it does not modify the LoongArch64 build.
 
 ## What has passed
 
-- GN generated all 33,703 targets with the Buster sysroot.
+- GN generated 27,588 targets with the Buster sysroot and the selected snapshot configuration.
 - Rust standard library: 64/64 actions; FFmpeg: 460/460 actions, including the shared-library link.
 - QEMU's `Loongson-3A4000` CPU model ran C desktop-library, Rust and FFmpeg probes against glibc 2.28.
 - The probes cover threads, atomic operations, UTF-8, file I/O, GTK/GLib/NSS/ALSA/X11 linking, and H.264/AAC/MP3 decoder initialization.
