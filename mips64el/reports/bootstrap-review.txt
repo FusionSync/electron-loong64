@@ -1,0 +1,81 @@
+MIPS64EL source bootstrap review — 2026-11-10
+
+Scope
+-----
+Review of scripts/bootstrap-source.py, scripts/apply-official-patches.py,
+metadata/source-pins.json and their pinned upstream implementations. No full
+network source sync or Electron build was performed as part of this review.
+No existing Loong64 environment or main MIPS source/output tree was changed.
+
+Source pins
+-----------
+Electron 37.2.2: 102f740ec2fc8f34601c84b79ea1bf06042e8d00
+Chromium 138.0.7204.100: 5f45b4744e3d5ba82c2ca6d942f1e7a516110752
+depot_tools: 56f1f96c4b83ccd730616eabd24707e82dcc685c
+Node: v22.17.0, as selected by the pinned Electron DEPS.
+
+The available Electron and depot_tools checkouts match these source pins;
+Chromium's recorded upstream-head matches its source pin. Electron DEPS selects
+the stated Chromium and Node versions. The generated configuration overrides
+Chromium's version selector with the exact commit above.
+
+Bootstrap corrections
+---------------------
+* Explicitly disable all seven Chromium Bullseye GCS sysroot dependencies.
+  Electron's install_sysroot=False only disables its own hooks. It does not
+  suppress Chromium's separate DEPS downloads. Buster is supplied independently
+  by the recipe rather than downloaded into the source tree by gclient.
+* Set cache_dir=None so a user-wide GIT_CACHE_PATH does not select an external
+  shared Git cache for this standalone checkout.
+* Recover initialization interrupted between git init and git remote add.
+  A conflicting origin or HEAD still causes a refusal; nothing is reset.
+* After hooks, require nonempty host GN, host Rust, Electron Yarn integrity,
+  DAWN_VERSION, OpenGL registry XML, and EGL registry XML inputs. Missing inputs
+  are reported before a partial source cache reaches GN/Ninja.
+
+Pinned upstream inspection
+--------------------------
+* depot_tools accepts the configured shallow/no-history/no-hook flags.
+* depot_tools uses target_cpu='mips64'; GN's target_cpu is 'mips64el'.
+* Chromium recurses into Dawn's DEPS. Its normal hooks generate DAWN_VERSION;
+  Dawn DEPS supplies both Khronos registries. A small checkout retains these.
+* Official patch ordering is patches/config.json order, then each directory's
+  .patches order. The helper calls Electron's official patch-loading and Git
+  import functions; it does not substitute a LoongArch patch stack.
+* Patch state records each repository's base, combined patch SHA256 and result.
+  Interrupted git am, changed HEAD, tracked modifications and changed completed
+  patch inputs are rejected for manual review. No implicit reset is performed.
+
+The EGL sentinel api/egl.xml was fetched independently at Dawn's pinned commit
+7dea2ed79187cd13f76183c4b9100159b9e3e071 to verify its path (191460 bytes,
+SHA256 90b71edc4a46525781925e4166bb4ea527751a71a789ec5cc442571334f60bc2).
+
+Local fixture results: all 8 check groups passed
+----------------------------------------------
+1. Generated configuration: source pins, CPU selectors, seven GCS exclusions,
+   disabled automatic patches/sysroots, and disabled global Git cache.
+2. Empty workspace creation, repeated initialization, and missing-origin repair.
+3. Refusal of wrong origin, changed configuration/pins and unmarked directories.
+4. Real local Git fetch/checkout at a fixed depot commit, successful resume,
+   and refusal of an unexpected HEAD. No network was needed for this fixture.
+5. Hook-input validation rejects missing/empty files and accepts complete files.
+6. Mocked orchestration confirms sync -> actual revision log -> official patches
+   -> hooks -> input validation, plus sync-after-patches and early-hooks guards.
+7. Two temporary repositories with two patches each were processed using real
+   git am and the pinned Electron patch library. Repository/list ordering,
+   upstream refs, idempotent resume, and refusal of interrupted/dirty/changed
+   repositories all passed.
+8. Both public Python helpers compile without syntax errors.
+
+Limits
+------
+These checks validate configuration, local Git/patch behavior and error paths.
+They are not proof of a successful complete clean network sync, complete
+Electron build, real 3A4000 execution or a working GUI. The source bootstrap
+remains experimental until those checks are completed separately.
+
+Some upstream DEPS entries use version tags rather than immutable SHA values;
+the bootstrap records resolved revisions before patches, but does not replace
+every transitive upstream selector with a separately locked commit. GitHub,
+Google Git/GCS/CIPD and npm downloads must remain available. A partial copied
+source tree cannot replace recursive gclient sync plus successful hooks.

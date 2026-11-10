@@ -1,0 +1,10 @@
+gpgv: Signature made Sat Jun 10 08:54:50 2023 UTC
+gpgv:                using RSA key 0146DC6D4A0B2914BDED34DB648ACFD622F3D138
+gpgv: Good signature from "Debian Archive Automatic Signing Key (10/buster) <ftpmaster@debian.org>"
+gpgv: Signature made Sat Jun 10 08:54:51 2023 UTC
+gpgv:                using RSA key A7236886F3CCCAAD148A27F80E98404D386FA1D9
+gpgv: Good signature from "Debian Archive Automatic Signing Key (11/bullseye) <ftpmaster@debian.org>"
+gpgv: Signature made Sat Jun 10 09:30:23 2023 UTC
+gpgv:                using RSA key 6D33866EDD8FFA41C0143AEDDCC9EFBF77E11517
+gpgv:                issuer "debian-release@lists.debian.org"
+gpgv: Good signature from "Debian Stable Release Key (10/buster) <debian-release@lists.debian.org>"

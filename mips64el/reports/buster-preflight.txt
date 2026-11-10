@@ -1,0 +1,82 @@
+Debian Buster MIPS64EL preflight, 2026-11-10
+
+Result: complete target sysroot construction, GN generation, FFmpeg shared-library
+build, Rust standard-library build, and all three QEMU runtime probes passed.
+This establishes the tested components' glibc 2.28 baseline. It does not establish
+completion or hardware compatibility of the full Electron release.
+
+Target and inputs
+- Electron source: 37.2.2 bring-up checkout, with official and MIPS port patches.
+- Target: ELF64 little endian, MIPS64R2, N64, hard-float double precision.
+- Compiler: LoongNix LLVM/Clang 20.1.8; GNU target ld from the support layer.
+- Rust: Chromium rustc 1.88.0-dev, revision 4a0969e06dbeaaa43914d2d00b2e843d49aa3886.
+- Target runtime/development root: official Debian Buster archive only.
+- libc: 2.28-10+deb10u1; target CRT/libgcc/libstdc++ development files: GCC 8.3.
+- Locked package set: 558 packages, 204.3 MiB compressed, 945 MiB extracted.
+- Manifest SHA256: 5bbb65d86811e28aeec69ae33257b63b5e4f8ae9f408015de82f939d7e348839.
+- Packaged sysroot SHA256:
+  ed4c9dddc58afd35be6b3f8faef5359603f64ab9cca1893c4408a470e2c0af94.
+
+Provenance and package processing
+- Packages index:
+  https://archive.debian.org/debian/dists/buster/main/binary-mips64el/Packages.xz
+- Index SHA256:
+  1fc7e0fe112863f5cec2bde655f89f3923f97aa8c3cf5a80db4abb625d6391a6.
+- Index digest matches the official signed Buster Release metadata.
+- gpgv verified three signatures against Chromium's Debian archive keyring:
+  Buster archive key 0146DC6D4A0B2914BDED34DB648ACFD622F3D138;
+  Bullseye archive key A7236886F3CCCAAD148A27F80E98404D386FA1D9;
+  Buster stable release key 6D33866EDD8FFA41C0143AEDDCC9EFBF77E11517.
+- All 558 package sizes/SHA256 and package/version/architecture metadata passed.
+- Depends/Pre-Depends closure, including version conditions, alternatives and
+  virtual Provides, is recorded in the fixed manifest. No explicit selected
+  package Conflicts/Breaks were found. Only mips64el/all packages were selected.
+- Packages were extracted with dpkg-deb -x; no target programs, maintainer
+  scripts, apt hooks or target package installation were executed.
+- 100 absolute symlinks were converted to equivalent relative links.
+- 857 ELF shared files in the root were audited: no GLIBC requirement > 2.28.
+- Package copyright notices were retained in the tar archive.
+
+GN and component build
+- Independent preflight uses use_sysroot=false with explicit target_sysroot.
+  Host toolchains use the real x86_64 image libraries; the target root is Buster.
+- system_libdir=lib/mips64el-linux-gnuabi64, matching the unflattened Debian root.
+- use_custom_libcxx=true; use_custom_libcxx_for_host=true; mips_arch_variant=r2;
+  mips_use_msa=false; GTK3/X11, Wayland and VAAPI disabled in this probe.
+- Clang discovers the target root's GCC8 CRT and runtime automatically. No
+  --gcc-toolchain override points target headers or CRT to Bullseye GCC10.
+- GN generated 33703 targets from 4151 files with status 0.
+- ninja third_party/ffmpeg:ffmpeg completed 460 actions, status 0.
+- ninja build/rust/std:std completed 64 actions, status 0.
+- FFmpeg config disables MSA, MMI, Loongson2 and Loongson3 instruction variants.
+
+Runtime probes
+- QEMU 8.2.2, CPU model Loongson-3A4000, complete Buster glibc 2.28 root.
+- C probe: pthreads, temporary-file I/O, dlopen GTK3/GLib/NSS/ALSA/DRM/X11/udev.
+  Exit 0; highest executable GLIBC requirement: 2.2.
+- Rust probe: Vec/String allocation, spawned thread, AtomicU64, UTF-8 text,
+  temporary-file write/read/remove, assertions and stdout. It uses the newly
+  built Buster-target std and explicit libgcc_s for unwind imports.
+  Exit 0; highest executable GLIBC requirement: 2.28.
+- FFmpeg 7.1.git probe: dlopen plus H264, AAC and MP3 decoder initialization.
+  Exit 0; highest libffmpeg.so GLIBC requirement: 2.28.
+- C and Rust ELF ABI: MIPS64R2, GPR64, hard-float double precision, no ISA
+  extensions, no ASE/MSA; ELF interpreter /lib64/ld.so.1.
+
+Observed stdout
+Electron MIPS64EL Buster: 中文; pthreads, file I/O, dlopen GTK3/GLib/NSS/ALSA/DRM/X11/udev passed
+Electron MIPS64EL Rust std: 中文; heap, threads, AtomicU64, UTF-8, and file I/O passed
+FFmpeg 7.1.git: dynamic loading and H264/AAC/MP3 decoder initialization passed
+
+Reproduction
+- sysroots/buster/build.sh: fetch/verify/extract locked official packages.
+- sysroots/buster/pack.sh: normalize tar metadata and xz-compress a completed root.
+- tests/buster-preflight/run.sh: build isolated GN targets and run QEMU probes.
+- Public-path reproduction script passed end to end with exit 0.
+- Atomic JSON state uses explicit mode 0644, verified under umask 0002/0022/0077.
+- A second complete extraction at a different path under umask 0022 matched
+  all 31361 entry contents, modes and symlink targets of the first root.
+- Public pack.sh produced identical archive SHA256 from both target roots.
+- Public scripts use caller-supplied work paths. No local caches, private host
+  addresses, credentials, temporary absolute paths or large ELF outputs ship
+  with this report.

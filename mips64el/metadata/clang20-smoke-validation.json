@@ -1,0 +1,80 @@
+{
+  "status": "cross-compilation and ELF audit passed; experimental",
+  "validated_at_utc": "2026-11-10T15:48:01.680711+00:00",
+  "container_image": "electron37-mips64el:n64-clang20",
+  "container_image_id": "sha256:a38cce3bc5d4450e143c77d94c9a103c1f5ec4ae7dc20ca11ac7c8bb96ab6844",
+  "external_toolchain_mounts_used": false,
+  "final_n64_clang20_image_tested": true,
+  "host_node_version": "v22.11.0",
+  "public_recipe_host_node_version": "v22.17.0",
+  "host_tools_exactly_rebuilt_from_public_manifest": false,
+  "missing_host_pkg_config_modules": [
+    "xscrnsaver"
+  ],
+  "note": "The public Dockerfile includes libxss-dev for the next image rebuild. The local host Node differs from the public recipe; this target compiler test does not use Node.",
+  "audit": {
+    "status": "passed",
+    "target_executed": false,
+    "full_electron_verified": false,
+    "electron_libcxx_verified": false,
+    "compiler_version": "clang version 20.1.8 (Loongson 20.1.8-1)\nTarget: x86_64-unknown-linux-gnu\nThread model: posix\nInstalledDir: /opt/llvm20/bin",
+    "cxx_probe_standard_library": "GCC 10 support libstdc++; Electron uses separate in-tree libc++",
+    "sysroot": {
+      "path": "/opt/mips-sysroot",
+      "libc_file": "/opt/mips-sysroot/lib/mips64el-linux-gnuabi64/libc-2.31.so",
+      "libc_version": "2.31",
+      "glibc_header_macros": "2.26",
+      "glibc_2_28_compatibility_validated": false
+    },
+    "programs": [
+      {
+        "file": "/work/recipe/output/clang20-smoke/hello-clang20-mips64el",
+        "elf_class": 64,
+        "endianness": "little",
+        "machine": 8,
+        "flags": "0x80000007",
+        "isa": "MIPS64R2",
+        "abi": "N64",
+        "float_abi": "hard-double",
+        "interpreter": "/lib64/ld.so.1",
+        "needed": [
+          "libc.so.6"
+        ],
+        "required_glibc_versions": [
+          "2.0",
+          "2.2"
+        ],
+        "maximum_required_glibc": "2.2"
+      },
+      {
+        "file": "/work/recipe/output/clang20-smoke/concepts-clang20-mips64el",
+        "elf_class": 64,
+        "endianness": "little",
+        "machine": 8,
+        "flags": "0x80000007",
+        "isa": "MIPS64R2",
+        "abi": "N64",
+        "float_abi": "hard-double",
+        "interpreter": "/lib64/ld.so.1",
+        "needed": [
+          "libm.so.6",
+          "libgcc_s.so.1",
+          "libc.so.6",
+          "ld.so.1"
+        ],
+        "required_glibc_versions": [
+          "2.0",
+          "2.2",
+          "2.3",
+          "2.3.4",
+          "2.4"
+        ],
+        "maximum_required_glibc": "2.4"
+      }
+    ]
+  },
+  "sources": {
+    "hello-clang20.c": "511084182a9d51ab33471145c005aafecf62dfe90531cfa6ac12cdb01db246f9",
+    "concepts-clang20.cc": "734313203a2882256115d1e3f95a14d4ac7d4c1dbf9337d701f064fc746fd181"
+  }
+}

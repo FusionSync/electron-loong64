@@ -1,0 +1,15 @@
+# Downloaded binary inputs are reconstructed from metadata manifests.
+inputs/*.tar.xz
+inputs/*.tar.gz
+inputs/toolchain-debs/*.deb
+inputs/host-tools/
+inputs/llvm-host-deps/*.deb
+inputs/loongnix/
+inputs/buster-work/
+inputs/**/*.part
+
+# Generated diagnostics and smoke outputs.
+output/
+.cache/
+__pycache__/
+*.pyc

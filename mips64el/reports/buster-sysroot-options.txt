@@ -1,0 +1,83 @@
+Historical research note; the complete Buster root has since been built and tested.
+See buster-preflight.txt and ../sysroots/buster/.
+
+MIPS64EL glibc 2.28 sysroot inputs, researched 2026-11-10
+
+Current status
+- The active bring-up sysroot remains the existing Bullseye input. No sysroot
+  or main build output was changed during this investigation.
+- No ready-made Buster MIPS64EL Chromium tarball was verified in the revisions
+  checked. Chromium 75/77/78 use a sid snapshot with glibc 2.27; Chromium 79/80
+  use a sid snapshot with glibc 2.29; Chromium 110 uses Bullseye glibc 2.31.
+- Those historical names must not be interpreted as a glibc 2.28 guarantee.
+
+Verified Debian Buster source
+https://archive.debian.org/debian/dists/buster/main/binary-mips64el/Packages.xz
+Size: 7638160 bytes
+SHA256: 1fc7e0fe112863f5cec2bde655f89f3923f97aa8c3cf5a80db4abb625d6391a6
+This hash also matches the SHA256 stanza of:
+https://archive.debian.org/debian/dists/buster/Release
+
+All package filenames and SHA256 values below are from that index. Package
+URLs are https://archive.debian.org/debian/ followed by the listed filename.
+The two runtime packages marked RUN were downloaded, hash-checked, extracted,
+and successfully used to run the new Rust smoke executable under QEMU.
+
+RUN libc6 2.28-10+deb10u1
+pool/main/g/glibc/libc6_2.28-10+deb10u1_mips64el.deb
+SHA256 d1003f371aa34da0f4d229d69c48c53f89c112b02be6b3b9ede0f5d3cab9088a
+
+libc6-dev 2.28-10+deb10u1
+pool/main/g/glibc/libc6-dev_2.28-10+deb10u1_mips64el.deb
+SHA256 7d3c9491b5119b7b249b0488de9066bbd11623ca4e1f490754a4a56ac8e1b911
+
+linux-libc-dev 4.19.249-2
+pool/main/l/linux/linux-libc-dev_4.19.249-2_mips64el.deb
+SHA256 bcfa7900b7e7b3e5a775b62e2332f2b1f37d7db608530b4c304c4a7f96926596
+
+RUN libgcc1 1:8.3.0-6
+pool/main/g/gcc-8/libgcc1_8.3.0-6_mips64el.deb
+SHA256 cd3af159d41a3c673cf1fa5166ae0a5bb1b8403245affb1484e68adfadd0b73e
+
+libstdc++6 8.3.0-6
+pool/main/g/gcc-8/libstdc++6_8.3.0-6_mips64el.deb
+SHA256 8e8e8bf50477327cf594e00a143e784377187417d733ae3fb2cc7aead906e677
+
+libstdc++-8-dev 8.3.0-6
+pool/main/g/gcc-8/libstdc++-8-dev_8.3.0-6_mips64el.deb
+SHA256 a2ef2d3406360b9b393be810acf526934b9c7d75e860f4b345e2b89a40e2765c
+
+libgtk-3-dev 3.24.5-1
+pool/main/g/gtk+3.0/libgtk-3-dev_3.24.5-1_mips64el.deb
+SHA256 287de90784e5824f6cf7aa3533a6cf40df5bc8d95e628a34cf55d8a03e116269
+
+libnss3-dev 2:3.42.1-1+deb10u5
+pool/main/n/nss/libnss3-dev_3.42.1-1+deb10u5_mips64el.deb
+SHA256 f4f31733bbc9b0503009f6c3394366922b8addff7d5aa55da67a6e36cea90ab7
+
+libcups2-dev 2.2.10-6+deb10u6
+pool/main/c/cups/libcups2-dev_2.2.10-6+deb10u6_mips64el.deb
+SHA256 5e5fde2a48901629165bf82c7ff7290b184c6342095d0bb5d0cb56a7466fe643
+
+Complete sysroot construction plan
+1. Pin the Packages index above and resolve all target runtime/development
+   dependencies for the current Chromium package list, including arch=all
+   packages from the same Buster archive. Verify every package's SHA256.
+2. Extract packages with dpkg-deb -x into a fresh separate sysroot; no MIPS
+   executable needs to run for this step. Preserve runtime code and MIPS ABI
+   sections. Repair absolute symlinks to stay within the new root.
+3. Ensure pkg-config uses only the new target root and confirm GTK/CUPS/NSS/
+   X11/GBM/ALSA/udev metadata. Rebuild target CRT and runtime dependencies if
+   a chosen newer toolchain introduces symbols newer than glibc 2.28.
+4. Build into a separate output directory. Audit every release ELF's required
+   GLIBC versions and test the complete application on the real 3A4000 system.
+
+Replacing only libc6 files inside a Bullseye sysroot is insufficient: other
+Bullseye libraries can require newer glibc symbols. Keep a complete Buster
+package set together and verify the final ELF requirements.
+
+Reference metadata (accessible through a source mirror during this check):
+https://cdn.jsdelivr.net/gh/chromium/chromium@78.0.3904.108/build/linux/sysroot_scripts/sysroots.json
+https://cdn.jsdelivr.net/gh/chromium/chromium@78.0.3904.108/build/linux/sysroot_scripts/generated_package_lists/sid.mips64el
+https://cdn.jsdelivr.net/gh/chromium/chromium@80.0.3987.149/build/linux/sysroot_scripts/generated_package_lists/sid.mips64el
+https://cdn.jsdelivr.net/gh/chromium/chromium@110.0.5481.100/build/linux/sysroot_scripts/sysroots.json

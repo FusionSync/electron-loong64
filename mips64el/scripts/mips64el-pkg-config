@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euo pipefail
+sysroot=${MIPS64EL_SYSROOT:?MIPS64EL_SYSROOT is not set}
+export PKG_CONFIG_SYSROOT_DIR="$sysroot"
+export PKG_CONFIG_LIBDIR="$sysroot/usr/lib/mips64el-linux-gnuabi64/pkgconfig:$sysroot/usr/share/pkgconfig"
+unset PKG_CONFIG_PATH
+exec pkg-config "$@"

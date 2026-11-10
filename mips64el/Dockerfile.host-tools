@@ -1,0 +1,17 @@
+# Optional, independent x86_64 tool archives used by the MIPS target Dockerfile.
+# Build this only after scripts/fetch-inputs.py --host-tools has verified inputs.
+FROM ubuntu:22.04
+COPY inputs/host-tools/ /tmp/host-tools/
+COPY metadata/host-tools-SHA256SUMS /tmp/host-tools/SHA256SUMS
+# The stage is an archive carrier: the final cross image supplies system tools.
+# Archive extraction uses only Ubuntu's tar/xz and records the expected versions.
+RUN cd /tmp/host-tools \
+ && sha256sum -c SHA256SUMS \
+ && apt-get update \
+ && apt-get install -y --no-install-recommends ca-certificates xz-utils \
+ && mkdir -p /opt/node /opt/cmake /opt/zig \
+ && tar -xJf /tmp/host-tools/node-v22.17.0-linux-x64.tar.xz --strip-components=1 -C /opt/node \
+ && tar -xzf /tmp/host-tools/cmake-3.22.6-linux-x86_64.tar.gz --strip-components=1 -C /opt/cmake \
+ && tar -xJf /tmp/host-tools/zig-linux-x86_64-0.13.0.tar.xz --strip-components=1 -C /opt/zig \
+ && rm -rf /var/lib/apt/lists/* /tmp/host-tools
+ENV PATH=/opt/node/bin:/opt/cmake/bin:/opt/zig:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin

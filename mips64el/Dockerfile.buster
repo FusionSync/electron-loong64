@@ -1,0 +1,19 @@
+ARG BASE_IMAGE=electron37-mips64el:public-clang20
+FROM ${BASE_IMAGE}
+
+# Replace the target root completely. Host build packages remain in /usr.
+RUN rm -rf /opt/mips-sysroot
+COPY inputs/debian-buster-mips64el-glibc2.28-sysroot.tar.xz /tmp/mips-buster/
+COPY metadata/buster-sysroot-SHA256SUMS /tmp/mips-buster/SHA256SUMS
+RUN cd /tmp/mips-buster \
+ && sha256sum -c SHA256SUMS \
+ && mkdir -p /opt/mips-sysroot-buster \
+ && tar -xJf debian-buster-mips64el-glibc2.28-sysroot.tar.xz -C /opt/mips-sysroot-buster \
+ && rm -rf /tmp/mips-buster
+
+ENV MIPS64EL_SYSROOT=/opt/mips-sysroot-buster \
+    PKG_CONFIG_SYSROOT_DIR=/opt/mips-sysroot-buster \
+    PKG_CONFIG_LIBDIR=/opt/mips-sysroot-buster/usr/lib/mips64el-linux-gnuabi64/pkgconfig:/opt/mips-sysroot-buster/usr/share/pkgconfig
+
+LABEL org.opencontainers.image.title="Electron MIPS64EL MIPS64R2 glibc 2.28 cross compiler" \
+      org.opencontainers.image.description="LLVM 20 host compiler with an independently assembled Debian Buster N64 hard-float target sysroot"
