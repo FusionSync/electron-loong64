@@ -210,6 +210,29 @@ def main() -> None:
         '    } else if (current_cpu == "mips64" || current_cpu == "mips64el") {\n',
     )
 
+    # MIPS64 also defines __mips__. Check the narrower macro first so the
+    # software Vulkan JIT uses the N64 triple rather than a 32-bit MIPS ABI.
+    llvm_config = (
+        "third_party/swiftshader/third_party/llvm-10.0/configs/linux/"
+        "include/llvm/Config/"
+    )
+    for relative, macro in (
+        ("llvm-config.h", "LLVM_DEFAULT_TARGET_TRIPLE"),
+        ("llvm-config.h", "LLVM_HOST_TRIPLE"),
+        ("config.h", "LLVM_DEFAULT_TARGET_TRIPLE"),
+    ):
+        patcher.replace(
+            llvm_config + relative,
+            '#elif defined(__mips__)\n'
+            f'#define {macro} "mipsel-linux-gnu"\n'
+            '#elif defined(__mips64)\n'
+            f'#define {macro} "mips64el-linux-gnuabi64"\n',
+            '#elif defined(__mips64)\n'
+            f'#define {macro} "mips64el-linux-gnuabi64"\n'
+            '#elif defined(__mips__)\n'
+            f'#define {macro} "mipsel-linux-gnu"\n',
+        )
+
     patcher.replace(
         "build/config/clang/BUILD.gn",
         '        } else if (current_cpu == "loong64") {\n'
