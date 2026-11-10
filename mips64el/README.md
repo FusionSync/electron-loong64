@@ -38,6 +38,26 @@ optimized JavaScript, deoptimization, scalar Wasm, threads, files and local HTTP
 after the complete executable exists. Its recorded host Node result is a
 check of the test script, not evidence of MIPS Electron execution.
 
+## Use the prepared environment
+
+The [mips64el-env-v1 prerelease](https://github.com/FusionSync/electron-loong64/releases/tag/mips64el-env-v1)
+provides the tested Docker image and the separate glibc 2.28 sysroot. Download
+all seven assets and follow the attached `README.txt` to verify them, merge the
+three image parts and run `docker load`. These are build inputs, not an
+Electron runtime release.
+
+Get the maintained recipe from its independent branch:
+
+```bash
+git clone --branch mips64el-3a4000 --single-branch \
+  https://github.com/FusionSync/electron-loong64.git
+cd electron-loong64/mips64el
+```
+
+The imported image is `electron37-mips64el:buster-clang20`. Continue with
+the source checkout and compilation steps below. To reconstruct the image
+instead, use the following container build steps.
+
 ## Build the container
 
 From this directory:

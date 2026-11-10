@@ -5,6 +5,9 @@ Reproducible Electron 37.2.2 build for LoongArch64 Linux using the old ABI.
 - **Verified build:** [v37.2.2-loong64](https://github.com/FusionSync/electron-loong64/releases/tag/v37.2.2-loong64)
 - **Build inputs:** [toolchain-v1](https://github.com/FusionSync/electron-loong64/releases/tag/toolchain-v1)
 - **Tested on:** UOS 1070 Loong64 physical desktop
+- **Experimental 3A4000 / MIPS64EL:** [isolated recipe](mips64el/README.md) and
+  [glibc 2.28 environment](https://github.com/FusionSync/electron-loong64/releases/tag/mips64el-env-v1);
+  complete Electron build in progress, no MIPS runtime release yet.
 
 | Item | Value |
 | --- | --- |
@@ -147,6 +150,7 @@ applicable licenses before mirroring or republishing them.
 | `electron37-attempt/` | Full Electron source-build pipeline and validation records |
 | `research/electron-source-notes/` | Source pins and upstream/community patch records |
 | `metadata/` | Checksums, target package inventory, and image requirements |
+| `mips64el/` | Isolated experimental 3A4000 recipe, sysroot locks, and probes |
 | `release-notes/` | Release-specific artifact notes |
 
 ## License and notices
