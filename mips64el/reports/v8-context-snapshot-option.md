@@ -72,6 +72,9 @@ At this inspection the existing generated `buildflags.h` still contained its
 previous value `1`: its regeneration was queued in the running build. The
 new Ninja action explicitly schedules `false`. This graph inspection does
 not claim that every affected object has already rebuilt with the new value.
+Follow-up verification at **20:13 UTC** confirmed that Ninja had generated
+`BUILDFLAG_INTERNAL_USE_V8_CONTEXT_SNAPSHOT() (0)` in the actual header
+(file modification time 20:12:44 UTC).
 
 ## Packaging and validation
 

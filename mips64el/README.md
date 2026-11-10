@@ -99,6 +99,7 @@ mkdir -p /absolute/path/to/mips-work
 docker run --rm -it \
   --user "$(id -u):$(id -g)" \
   -e HOME=/tmp -e npm_config_cache=/tmp/electron-npm-cache \
+  -e HTTP_PROXY -e HTTPS_PROXY -e http_proxy -e https_proxy \
   -v /absolute/path/to/mips-work:/work/sources \
   -v "$PWD:/work/recipe:ro" \
   electron37-mips64el:buster-clang20 \
@@ -114,7 +115,8 @@ an interrupted checkout with `--stage sync`, `--stage patches` or
 **A complete clean network bootstrap through a finished Electron build has
 not yet been verified.** The current bring-up initially reused cached source
 dependencies. The public bootstrap does not depend on that local cache or a
-LoongArch checkout.
+LoongArch checkout. The [source input review](reports/source-input-review.md)
+checks the applied official patch series and public MIPS adaptations separately.
 
 ## Compile Electron
 
