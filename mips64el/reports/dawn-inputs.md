@@ -36,3 +36,20 @@ a0d22b883dfe2698002475c658bdc2ec4ba5c01d0a9aac38b707d7aaf9812b34
 
 公开的干净构建流程使用递归 `gclient sync` 和 `gclient runhooks` 获取这些输入，
 并在 hooks 后检查关键文件，避免在后续编译时才发现同步不完整。
+
+随后检查了 release 的 Dawn native / OpenGL 依赖：`khronos_platform` 需要
+EGL-Registry 的 `api/KHR/khrplatform.h`，生成的 native 编译规则也包含该库的
+`api` 路径，因此在构建走到这些源文件前，主动恢复了完整 `api` 子树的 10 个文件。
+来源为 Khronos 官方 EGL-Registry 固定 commit
+`7dea2ed79187cd13f76183c4b9100159b9e3e071`。文件从官方 API/raw 获取，逐个
+核对该 commit 的 Git blob 后写入，来源 URL、大小和 SHA256 记录在
+[egl-registry-inputs.json](egl-registry-inputs.json)。
+
+`api/egl.xml` 通过 XML 解析，`EGL/egl.h`、`EGL/eglext.h` 和
+`KHR/khrplatform.h` 通过实际 Buster 交叉编译器的头文件编译检查；
+`EGLAttrib` 和 `khronos_uintptr_t` 的 N64 尺寸均为 8 字节。
+
+外部 `webgpu-headers/src` 在 Dawn DEPS 中明确用于测试。当前 release 从
+Dawn JSON 生成 `webgpu-headers/webgpu.h`，生成的 release 构建规则未引用
+外部测试头文件目录，因此本次无需额外获取该测试依赖。干净的公开递归同步流程
+仍按上游 DEPS 下载它。
