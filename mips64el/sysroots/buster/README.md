@@ -2,6 +2,13 @@
 
 The MIPS64EL build uses a complete, independent Buster target root. All target headers, libraries and CRT objects come from the same official Debian archive. It supports the **MIPS64R2 / little-endian / N64 / hard-float** baseline used for Loongson 3A4000.
 
+Standard MIPS64R2 instructions are a conservative baseline for 3A4000; optional
+LoongISA extensions are not required. A Debian sysroot does not itself cause
+illegal instructions by omitting those extensions. The relevant compatibility
+checks are the emitted ISA, endianness, N64 floating-point ABI, loader and
+library versions. This root has passed the QEMU checks below; compatibility
+with a particular desktop distribution still needs testing on that system.
+
 | Item | Locked input |
 | --- | --- |
 | libc | glibc 2.28-10+deb10u1 |

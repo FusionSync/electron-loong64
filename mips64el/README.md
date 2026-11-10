@@ -135,6 +135,11 @@ The optional [XNNPACK inference accelerator](reports/xnnpack-backend.md) is
 disabled because this Chromium version has no MIPS backend in its GN graph.
 The standard TFLite CPU kernels and interpreter remain enabled.
 
+Optional V8 context prewarming is also disabled with
+`use_v8_context_snapshot=false`. This avoids compiling a second Blink for the
+host. The normal V8 startup snapshot, JIT and DOM initialization remain enabled;
+context creation has less prewarming. See [the configuration review](reports/v8-context-snapshot-option.md).
+
 Use a large work volume. `BUILD_MEMORY` defaults to 24 GiB and `NINJA_JOBS` to
 2; choose parallelism appropriate for the host. The settings and patches remain
 experimental until the complete application has built and been tested.
@@ -161,6 +166,11 @@ versions. It rejects accidental x86_64 artifacts. A glibc version alone does not
 prove OS compatibility: the target must also provide compatible GTK, X11, NSS,
 ALSA, graphics, sandbox and other desktop libraries. Physical 3A4000 testing
 remains necessary.
+
+The [manual desktop app](tests/manual-desktop/README.md) is ready for that later
+hardware check: animations, file selection, network requests, separate Bilibili
+and Xiaohongshu windows, and diagnostics for blank pages. Only its JavaScript
+syntax has been checked so far.
 
 After the main build exits successfully, follow [the packaging instructions](PACKAGING.md)
 to generate the official runtime and auxiliary archives. The collector checks

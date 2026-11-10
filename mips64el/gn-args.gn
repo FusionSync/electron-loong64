@@ -45,6 +45,11 @@ enable_rust = true
 toolchain_supports_rust_thin_lto = false
 use_custom_libcxx = true
 use_custom_libcxx_for_host = true
+
+# Use the normal V8 startup snapshot and initialize DOM contexts at runtime.
+# The optional context prewarming would require a second host Blink build.
+use_v8_context_snapshot = false
+
 use_ozone = true
 ozone_auto_platforms = false
 ozone_platform = "x11"

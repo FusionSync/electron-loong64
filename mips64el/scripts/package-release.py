@@ -99,7 +99,8 @@ def main():
             raise ValueError("dist.zip is missing. Generate the official electron_dist_zip target after the main build succeeds.")
         names, machines = check_zip(dist)
         required = {"electron", "version", "LICENSE", "LICENSES.chromium.html", "icudtl.dat",
-                    "resources.pak", "chrome_100_percent.pak", "resources/default_app.asar", "chrome-sandbox"}
+                    "resources.pak", "chrome_100_percent.pak", "resources/default_app.asar", "chrome-sandbox",
+                    "snapshot_blob.bin"}
         if not required.issubset(names) or not any(name.startswith("locales/") and name.endswith(".pak") for name in names):
             raise ValueError("dist.zip lacks required runtime files: " + ", ".join(sorted(required - names)))
         if machines != {8}:

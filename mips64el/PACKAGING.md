@@ -72,6 +72,12 @@ collector detects that executable architecture and names its archive
 MIPS executables. The collected `ffmpeg.zip` follows this build's codec settings;
 the upstream separately built free-codec FFmpeg variant is a distinct build.
 
+This recipe disables optional V8 context prewarming. The runtime must include
+the normal `snapshot_blob.bin`; `v8_context_snapshot.bin` and the context
+snapshot generator are not expected. The ordinary cross `mksnapshot` remains
+available. Upstream `electron/script/verify-mksnapshot.py` unconditionally calls
+the context generator and therefore cannot validate this configuration unchanged.
+
 Electron 37's Linux `electron_dist_zip` uses `electron/build/zip.py`, which writes
 the build outputs directly into the ZIP without stripping them. Its Electron
 binary should therefore match `out/electron` exactly.
