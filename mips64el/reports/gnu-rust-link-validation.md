@@ -44,6 +44,14 @@ symbol version was **2.28**. Its SHA-256 was
 `9c9b475440a8add579664173f7b9178d2414ff86b2c87deb00f2088a3cf1b9fb`.
 The corrected allocator rlib had no symbol containing byte `0x01`.
 
+The normal build subsequently linked all five regression targets successfully:
+`chrome_crashpad_handler`, `clang_x64/character_data_generator`,
+`clang_x64/transport_security_state_generator`, `clang_x64/root_store_tool`,
+and `clang_x64/top_domain_generator`. The handler from that main output had the
+same SHA-256 above and again completed `--help` under the 3A4000 QEMU model.
+The build then continued into the full Electron target; these five links are
+not a complete Electron build result.
+
 The helper was also applied twice to an isolated fixture of the current source:
 the first pass made 3 edits with 33 already applied, and the second made no
 edits with all 36 already applied. A real wrapper invocation with a fixture
