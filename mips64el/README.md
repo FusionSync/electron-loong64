@@ -129,6 +129,10 @@ Rust builds its target standard library from source. GNU ld reads indexed thin
 archives. Patches also handle MIPS tail-call limitations, scalar libaom, and
 runtime page-size selection.
 
+The optional [XNNPACK inference accelerator](reports/xnnpack-backend.md) is
+disabled because this Chromium version has no MIPS backend in its GN graph.
+The standard TFLite CPU kernels and interpreter remain enabled.
+
 Use a large work volume. `BUILD_MEMORY` defaults to 24 GiB and `NINJA_JOBS` to
 2; choose parallelism appropriate for the host. The settings and patches remain
 experimental until the complete application has built and been tested.

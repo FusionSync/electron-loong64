@@ -271,8 +271,43 @@ def main() -> None:
         '# Adds a dependency on the Clang runtime library clang_rt.profile.',
     )
 
-    # Clang 20 supplies real C++20 support and bindgen must keep the target
-    # triple/ISA flags so that generated layouts match the MIPS N64 ABI.
+    # GNU ld must be able to revisit C++ archives after Rust introduces calls
+    # to Chromium's C++ allocator. Separate C++ and Rust groups cannot do that.
+    # This also affects native host tools linked by the same GNU toolchain.
+    patcher.replace(
+        "build/toolchain/gcc_toolchain.gni",
+        '      link_command = "$ld {{ldflags}}${extra_ldflags} -o '
+        '\\"$unstripped_outfile\\" $start_group_flag @\\"$rspfile\\" '
+        '$end_group_flag {{solibs}} {{libs}} '
+        '$start_group_flag {{rlibs}} $end_group_flag"\n',
+        '      link_command = "$ld {{ldflags}}${extra_ldflags} -o '
+        '\\"$unstripped_outfile\\" $start_group_flag @\\"$rspfile\\" '
+        '{{solibs}} {{libs}} {{rlibs}} $end_group_flag"\n',
+    )
+
+    # Rust's MIPS LLVM backend strips bindgen's no-mangle marker from the
+    # CALL_HI16/LO16 relocations, but incorrectly keeps it in R_MIPS_JALR.
+    # Linux ELF has no global symbol prefix, so removing that marker from
+    # generated link_name attributes preserves the intended external name.
+    # Keep every other target's binding output unchanged.
+    patcher.replace(
+        "build/rust/run_bindgen.py",
+        'import os\nimport subprocess\n',
+        'import os\nimport re\nimport subprocess\n',
+    )
+    patcher.replace(
+        "build/rust/run_bindgen.py",
+        '      subprocess.check_call([args.exe, *genargs], env=env)\n',
+        r'''      subprocess.check_call([args.exe, *genargs], env=env)
+      if any(arg.startswith('--target=mips64el-') and '-linux-' in arg
+             for arg in args.clangargs):
+        with open(args.output, encoding='utf-8') as output:
+          bindings = output.read()
+        bindings = re.sub(r'(link_name\s*=\s*")\\u\{1\}', r'\1', bindings)
+        with open(args.output, 'w', encoding='utf-8') as output:
+          output.write(bindings)
+''',
+    )
 
     patcher.replace(
         "build/config/linux/pkg-config.py",

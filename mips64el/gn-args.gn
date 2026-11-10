@@ -35,6 +35,10 @@ system_libdir = "lib/mips64el-linux-gnuabi64"
 mips_arch_variant = "r2"
 mips_use_msa = false
 
+# Chromium's XNNPACK GN graph has no MIPS kernel/configuration set. Keep the
+# standard TFLite CPU kernels and disable only its optional XNNPACK delegate.
+build_tflite_with_xnnpack = false
+
 # Build the MIPS target Rust standard library from the bundled matching sources.
 # Setting rust_sysroot_absolute would incorrectly select absent prebuilt MIPS rlibs.
 enable_rust = true
