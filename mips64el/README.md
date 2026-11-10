@@ -21,6 +21,7 @@ outputs and sysroot; it does not modify the LoongArch64 build.
 ## What has passed
 
 - GN generated 27,588 targets with the Buster sysroot and the selected snapshot configuration.
+- [Clean network source preparation](reports/clean-bootstrap.md) passed through all 14 official patch repositories, hooks, public adaptations and independent GN generation. The 56 checked adaptation files and four host tools match the ongoing build.
 - Rust standard library: 64/64 actions; FFmpeg: 460/460 actions, including the shared-library link.
 - QEMU's `Loongson-3A4000` CPU model ran C desktop-library, Rust and FFmpeg probes against glibc 2.28.
 - The probes cover threads, atomic operations, UTF-8, file I/O, GTK/GLib/NSS/ALSA/X11 linking, and H.264/AAC/MP3 decoder initialization.
@@ -112,11 +113,14 @@ resolved revisions, applies official Electron patches, then runs hooks. Resume
 an interrupted checkout with `--stage sync`, `--stage patches` or
 `--stage hooks`; do not resync a tree after patching has begun.
 
-**A complete clean network bootstrap through a finished Electron build has
-not yet been verified.** The current bring-up initially reused cached source
-dependencies. The public bootstrap does not depend on that local cache or a
-LoongArch checkout. The [source input review](reports/source-input-review.md)
-checks the applied official patch series and public MIPS adaptations separately.
+The public bootstrap has now passed in a fresh network checkout with independent
+caches, through official patches, hooks, both adaptation helpers and GN. See the
+[clean bootstrap report](reports/clean-bootstrap.md) and its
+[machine-readable evidence](metadata/clean-bootstrap-validation.json).
+**A complete Electron build from that fresh checkout has not been verified.**
+The ongoing main build initially reused cached dependencies; the
+[source input review](reports/source-input-review.md) checks its official patch
+series and public MIPS adaptations separately.
 
 ## Compile Electron
 

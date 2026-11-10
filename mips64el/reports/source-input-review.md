@@ -2,9 +2,11 @@
 
 Checked on 2026-11-10 against Electron commit
 `102f740ec2fc8f34601c84b79ea1bf06042e8d00` and the ongoing MIPS64EL build.
-This checks the cached bring-up tree's source modifications. A clean network
-bootstrap is being tested independently; neither this review nor that bootstrap
-alone establishes a successful complete Electron build.
+This checks the cached bring-up tree's source modifications. A separate
+[clean network bootstrap](clean-bootstrap.md) has passed through all 14 official
+patch repositories, hooks, public adaptations and independent GN generation.
+Neither this review nor that bootstrap establishes a successful complete
+Electron build.
 
 ## Official Electron patches
 

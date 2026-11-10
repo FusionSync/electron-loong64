@@ -1,0 +1,84 @@
+name: MIPS64EL recipe checks
+
+on:
+  push:
+    paths:
+      - 'mips64el/**'
+      - '.github/workflows/mips64el-recipe.yml'
+  pull_request:
+    paths:
+      - 'mips64el/**'
+      - '.github/workflows/mips64el-recipe.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check tracked Python and JSON files
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          import subprocess
+
+          names = subprocess.check_output(
+              ['git', 'ls-files', '-z', '--', 'mips64el'], text=True
+          ).split('\0')
+          counts = {'.py': 0, '.json': 0}
+          for name in filter(None, names):
+              path = Path(name)
+              if path.suffix == '.py':
+                  compile(path.read_bytes(), str(path), 'exec')
+                  counts['.py'] += 1
+              elif path.suffix == '.json':
+                  json.loads(path.read_bytes())
+                  counts['.json'] += 1
+          print(f"Checked {counts['.py']} Python and {counts['.json']} JSON files")
+          PY
+      - name: Check each tracked shell script
+        shell: bash
+        run: |
+          count=0
+          while IFS= read -r -d '' path; do
+            case "$path" in
+              *.sh)
+                bash -n "$path"
+                count=$((count + 1))
+                ;;
+            esac
+          done < <(git ls-files -z -- mips64el)
+          echo "Checked $count shell scripts"
+      - name: Check desktop and runtime JavaScript with Node 22
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import subprocess
+
+          names = subprocess.check_output(
+              ['git', 'ls-files', '-z', '--', 'mips64el/tests'], text=True
+          ).split('\0')
+          directories = {
+              Path('mips64el/tests/manual-desktop'): '.js',
+              Path('mips64el/tests/runtime-smoke'): '.cjs',
+              Path('mips64el/tests/v8-n64-fpr-addon'): '.cjs',
+          }
+          count = 0
+          for name in filter(None, names):
+              path = Path(name)
+              if directories.get(path.parent) == path.suffix:
+                  subprocess.run(['node', '--check', str(path)], check=True)
+                  count += 1
+          print(f'Checked {count} JavaScript files')
+          PY

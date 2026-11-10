@@ -1,0 +1,641 @@
+{
+  "schema": 1,
+  "validated_at_utc": "2026-11-10T21:13:47.288758+00:00",
+  "scope": "Fresh network source preparation, official Electron patches, hooks, public MIPS source and FFmpeg helpers, and an independent GN graph. This validation did not compile or run Electron.",
+  "claims": {
+    "fresh_network_source_checkout": true,
+    "existing_source_or_mutable_dependency_caches_mounted": false,
+    "official_patch_repositories_complete": 14,
+    "hooks_completed": true,
+    "public_source_helper_completed": true,
+    "public_ffmpeg_helper_completed": true,
+    "main_build_source_file_comparisons_passed": 56,
+    "main_build_host_tool_comparisons_passed": 4,
+    "gn_generation_passed": true,
+    "electron_compilation_performed": false,
+    "target_runtime_executed": false,
+    "gui_or_physical_hardware_verified": false
+  },
+  "source_pins": {
+    "schema": 1,
+    "electron_version": "37.2.2",
+    "electron_commit": "102f740ec2fc8f34601c84b79ea1bf06042e8d00",
+    "electron_url": "https://github.com/electron/electron.git",
+    "chromium_version": "138.0.7204.100",
+    "chromium_commit": "5f45b4744e3d5ba82c2ca6d942f1e7a516110752",
+    "depot_tools_commit": "56f1f96c4b83ccd730616eabd24707e82dcc685c",
+    "depot_tools_url": "https://chromium.googlesource.com/chromium/tools/depot_tools.git",
+    "node_version": "v22.17.0",
+    "dependency_policy": "Use the pinned Electron DEPS and its pinned Chromium DEPS; record resolved revisions before patches.",
+    "patch_policy": "Apply only the official patch stack from the pinned Electron checkout, then the local MIPS64EL adaptations.",
+    "status": "experimental; full Electron build and target runtime have not been verified"
+  },
+  "environment": {
+    "host_architecture": "x86_64",
+    "target_architecture": "mips64el",
+    "target_cpu": "Loongson 3A4000",
+    "isa": "mips64r2",
+    "abi": "n64 hard-float little-endian",
+    "target_glibc": "2.28",
+    "container_image_validation_tag": "electron37-mips64el:public-buster-clang20",
+    "container_image_id": "sha256:70c230f468651e471fc773c9a3935ee32cad8ba20a24c9dc3761b694f03a0fbb",
+    "toolchain_and_sysroot_from_existing_recipe_image": true,
+    "cpus": 1,
+    "cpu_shares": 128,
+    "memory_limit_bytes": 3221225472,
+    "memory_and_swap_limit_bytes": 3221225472,
+    "gn_network": "none",
+    "workspace_and_caches_created_independently": true,
+    "total_validation_directory_bytes_at_completion": 29740511232
+  },
+  "stages": [
+    {
+      "stage": "bootstrap_sync_patches_hooks",
+      "returncode": 0,
+      "started_at_utc": "2026-11-10T20:18:04.512883+00:00",
+      "finished_at_utc": "2026-11-10T21:01:40.410266+00:00"
+    },
+    {
+      "stage": "public_source_helper",
+      "returncode": 0,
+      "started_at_utc": "2026-11-10T21:01:40.412070+00:00",
+      "finished_at_utc": "2026-11-10T21:01:40.708212+00:00"
+    },
+    {
+      "stage": "public_ffmpeg_helper",
+      "returncode": 0,
+      "started_at_utc": "2026-11-10T21:01:40.708740+00:00",
+      "finished_at_utc": "2026-11-10T21:01:40.812924+00:00"
+    }
+  ],
+  "recipe_input_sha256": {
+    "metadata/buster-sysroot-SHA256SUMS": "771cec55ccf8837863f2bb0445adee08807d47b4bfe914f489fdb9756c80eb81",
+    "metadata/clang20-smoke-validation.json": "f48032a0106243e1147119a76b1c54e4cc794b6e4d1f8e4f64cee762387ed1bd",
+    "metadata/host-tools-SHA256SUMS": "92155efb5e553027c4b53423ee2a231d3a8c7c402c89f4ec8980c966ff3a5542",
+    "metadata/host-tools.json": "87492bd9ba64899eb8ab3ca4ede9104d8887b138c24137b42661fb7dfdc54bf0",
+    "metadata/inputs.json": "d5cc5423285226db348a3270cbb42fa23d97a8085bcfea94697df923ea099e53",
+    "metadata/public-buster-image-validation.json": "7d6e6725c52727cc80a40b45ebe3c0c5e143f5162b12b767d55d7018d060ab07",
+    "metadata/public-image-validation.json": "feaa3b6ffeb96acdf87676e076083577032a479eed81bf6c729c09059175a603",
+    "metadata/source-pins.json": "7566655bf5a38e77de44451d84d114c885dc77a4dfb06c98a22eba18a2434097",
+    "patches/apply-mips64el-ffmpeg-patches.py": "6bd4d9142fb9e4f55338122127fc923384efee9ec8e4b4913dbbd7cf65cd6820",
+    "patches/apply-mips64el-source-patches.py": "ac04c4c4fa35d013309d97912501bd4f0d9209572f35451c154d84138633318c",
+    "patches/ffmpeg-mips64el/README.md": "8aac367b3d0cd67a5e22d615d792425736348b193e4b44611da8b73202c980f8",
+    "patches/ffmpeg-mips64el/chromium/config/Chrome/linux/mips64el/config.h": "595ed92af3779dad9d1d1b77eb58095013699083b52c2c9c372a6c22e4d140f1",
+    "patches/ffmpeg-mips64el/chromium/config/Chrome/linux/mips64el/config_components.h": "d31a35d13e411a87b3967b9062c05645d18fb1ad0f17b96039b834abe7f0a47f",
+    "patches/ffmpeg-mips64el/chromium/config/Chrome/linux/mips64el/libavcodec/bsf_list.c": "bdd8790c519c97b62a52edba0b6d0b2241695e08d3c03bf026984c5e21a3e8a7",
+    "patches/ffmpeg-mips64el/chromium/config/Chrome/linux/mips64el/libavcodec/codec_list.c": "3eec6487a4827455f2ef848bd382d652b7b7c445d8de48464884715044fb509a",
+    "patches/ffmpeg-mips64el/chromium/config/Chrome/linux/mips64el/libavcodec/parser_list.c": "cc1c11bdbaa120b7faafd719a6c8f1d6f6f09515ecd5b7bddaee5a91e9cad74c",
+    "patches/ffmpeg-mips64el/chromium/config/Chrome/linux/mips64el/libavformat/demuxer_list.c": "71b14f15be7909233422de758a5c9e6a9e4ab1a773ea666fd621cd6cf40aa5f5",
+    "patches/ffmpeg-mips64el/chromium/config/Chrome/linux/mips64el/libavformat/muxer_list.c": "286605f176b8f4c91f8e1eefabef037c51ccc12b16b7e7e94758996c490059c2",
+    "patches/ffmpeg-mips64el/chromium/config/Chrome/linux/mips64el/libavformat/protocol_list.c": "20390d2af0b45f7de454ca6f3b806275de063a3de97e80feea6857da98e60b67",
+    "patches/ffmpeg-mips64el/chromium/config/Chrome/linux/mips64el/libavutil/avconfig.h": "6d78a911a2128e926262114c9904209209674e3bc1a18c208c850ecbfc3393ec",
+    "patches/ffmpeg-mips64el/chromium/config/Chrome/linux/mips64el/libavutil/ffversion.h": "aee49c0d30c18b1150a7825fc2675920c08a0721495dce534d02177e6ce8521e",
+    "patches/ffmpeg-mips64el/chromium/config/Chromium/linux/mips64el/config.h": "49d2a1903a0a8b1c7b616b24263d89c3ed67d96bdfcbf8d82381b790f882a409",
+    "patches/ffmpeg-mips64el/chromium/config/Chromium/linux/mips64el/config_components.h": "754b2ec606f183d88c37cf49feb61fced2ada2f0f456113f62ed58e865f84188",
+    "patches/ffmpeg-mips64el/chromium/config/Chromium/linux/mips64el/libavcodec/bsf_list.c": "bdd8790c519c97b62a52edba0b6d0b2241695e08d3c03bf026984c5e21a3e8a7",
+    "patches/ffmpeg-mips64el/chromium/config/Chromium/linux/mips64el/libavcodec/codec_list.c": "52d6e9367fe38da6d7b11f3796b8a03ad1e96ca2de1cd02562d6a1fdf7402c1a",
+    "patches/ffmpeg-mips64el/chromium/config/Chromium/linux/mips64el/libavcodec/parser_list.c": "beb97da27f18089f619f200ed921506c3235237497c5dbd3cfa90e2bdca09b69",
+    "patches/ffmpeg-mips64el/chromium/config/Chromium/linux/mips64el/libavformat/demuxer_list.c": "3bf2a158ad6fbf424a4100f51e6bbf6fc1e8bfa31c196cf6080721668e7cb70b",
+    "patches/ffmpeg-mips64el/chromium/config/Chromium/linux/mips64el/libavformat/muxer_list.c": "286605f176b8f4c91f8e1eefabef037c51ccc12b16b7e7e94758996c490059c2",
+    "patches/ffmpeg-mips64el/chromium/config/Chromium/linux/mips64el/libavformat/protocol_list.c": "20390d2af0b45f7de454ca6f3b806275de063a3de97e80feea6857da98e60b67",
+    "patches/ffmpeg-mips64el/chromium/config/Chromium/linux/mips64el/libavutil/avconfig.h": "6d78a911a2128e926262114c9904209209674e3bc1a18c208c850ecbfc3393ec",
+    "patches/ffmpeg-mips64el/chromium/config/Chromium/linux/mips64el/libavutil/ffversion.h": "aee49c0d30c18b1150a7825fc2675920c08a0721495dce534d02177e6ce8521e",
+    "patches/ffmpeg-mips64el/ffmpeg_mips64el_generated.gni": "5c0434e4a9c43d9bf1f15d24e1fd3b85b9489ee290a9cffea4b12f8c78dcc42e",
+    "patches/ffmpeg-mips64el/manifest.json": "127b642f52be9ac1b922b06036343aad9d0a81c1994bbd753d93989b3b66c9c8",
+    "scripts/apply-official-patches.py": "f3aa754ac42ee86cbdc5d3b9701fa92972fcbe06d644ea1add4701cbbea68d6a",
+    "scripts/audit-dist.py": "ad62f0f576be3f196bec62ac0545c458c714f34ef06f539431d2546776e4e633",
+    "scripts/audit-smoke.py": "d35050a1fb906f8d881ac621aeb054fa2b89b8347da1f9f1159e8c0fe04c18f0",
+    "scripts/bootstrap-source.py": "8544a41f2837c0d56ba1a735157a6ba713bfcef39c610e46559998391a812ea7",
+    "scripts/build-buster-image.sh": "e01f44503886ba8412a81f63711c432d113886e79b7ebf9e5496453936d7a754",
+    "scripts/build-electron.sh": "27518a57051d4497572210fb061c4e31a616e8badf958b6cd8bc2231f17415c2",
+    "scripts/build-host-tools.sh": "5f32adedab071e8a60eb992ccc72bec214d8dcf5c91ec665fad8cb29d64467e6",
+    "scripts/build-image.sh": "29f41e2b662eeb97d2460b026d5aa2dc1612a84ab9495cb6a4d5232e7e8d5507",
+    "scripts/fetch-inputs.py": "ed039273c3ddfc85872fecb4ef1d9b654b6e60933b249ca8999a832ee48de558",
+    "scripts/generate-ffmpeg.py": "de69b48b551b3dfc3d6f13bfb52d2debcc0000735b34d9cd8d39ea3f6caab34d",
+    "scripts/mips64el-env": "eaf1ab6c8907fc39f85647bdd7d910cfcd8c254006cfffbcfa365c554d9ad2a4",
+    "scripts/mips64el-pkg-config": "060cd983583390619633d24c339fca2e32a01b9611b737045c72edc4e623d8f3",
+    "scripts/package-release.py": "9589700e78b3efe2362b3fea61ef4a2ad007628860406350bce736aedcc403a1",
+    "scripts/record-build-success.py": "be761fce1449da149b2cb15972b3a311bb0d758d077cc0b2f30f23f00d31f03a",
+    "scripts/smoke-build.sh": "cddb66794b214593c5fef4f3609e103bf424ab81f945ae93b19f1748fee14647",
+    "scripts/smoke-test.sh": "05d9efb546d871c10ddaf38fd028e701b170244388246e8085ead1a882c99f65",
+    "gn-args.gn": "eacbd122d1c0b6c05746185736c27c58a3596d0c8e8d5453a723d7cf8cf8b9aa"
+  },
+  "official_patch_commit_note": "Patched commit IDs identify this run; git-am committer timestamps can change them in a future replay. Pinned bases and official patch mbox SHA256 values identify the patch inputs.",
+  "official_patch_repositories": [
+    {
+      "path": "src",
+      "status": "complete",
+      "base_commit": "5f45b4744e3d5ba82c2ca6d942f1e7a516110752",
+      "patched_commit": "4f7f14d2e89b58896207ba131a29e3dbbeaa474c",
+      "official_patch_mbox_sha256": "540562172e004aec8790b25f6b57524b8d5473d9777bc6e66cb9b1f44a3300e4",
+      "applied_commit_count": 143
+    },
+    {
+      "path": "src/third_party/boringssl/src",
+      "status": "complete",
+      "base_commit": "9295969e1dad2c31d0d99481734c1c68dcbc6403",
+      "patched_commit": "8c60d4805a8d05ef19337b2c7961b3e43bdc66f8",
+      "official_patch_mbox_sha256": "d94c071c66ed35692b6cb0fdeaab4e259d0c1da6909f3cf75468c1e3176d6dc9",
+      "applied_commit_count": 3
+    },
+    {
+      "path": "src/third_party/devtools-frontend/src",
+      "status": "complete",
+      "base_commit": "a6dbe06dafbad00ef4b0ea139ece1a94a5e2e6d8",
+      "patched_commit": "4278c5cd51580efcfd708eb598789241d032d923",
+      "official_patch_mbox_sha256": "9f9c73be6e26a5709eb9b935c59e26b49c8bb84053626478b68b7316190f701f",
+      "applied_commit_count": 1
+    },
+    {
+      "path": "src/third_party/ffmpeg",
+      "status": "complete",
+      "base_commit": "dcdd0fa51b65a0b1688ff6b8f0cc81908f09ded2",
+      "patched_commit": "97d888a4c0ba528fd6b1931b6dba864766ffc726",
+      "official_patch_mbox_sha256": "0d32e795a2a1ff5ea5effd3bd48135e583bb3e04ef6348de7121d733187a91cc",
+      "applied_commit_count": 1
+    },
+    {
+      "path": "src/v8",
+      "status": "complete",
+      "base_commit": "e5b4c78b54e8b033b2701db3df0bf67d3030e4c1",
+      "patched_commit": "07e54e47690924bfa90d3ffcbb314fce665412e9",
+      "official_patch_mbox_sha256": "c3deb057ea1f6c5e061e1fb1b25304e8789ae93df7a0f0311df6333a91c9f66a",
+      "applied_commit_count": 1
+    },
+    {
+      "path": "src/third_party/electron_node",
+      "status": "complete",
+      "base_commit": "3567fa7d70fee8831ab2891e6940ca63be568b08",
+      "patched_commit": "7a7156dc1f82e35dc148f94010d3aa54bbf8c3ce",
+      "official_patch_mbox_sha256": "44be706e4404c455aedacf81e753115606e43da2f9e649c5523d009b681218fd",
+      "applied_commit_count": 50
+    },
+    {
+      "path": "src/third_party/nan",
+      "status": "complete",
+      "base_commit": "e14bdcd1f72d62bca1d541b66da43130384ec213",
+      "patched_commit": "37be6678e6d49c6a200f01b2616bda012fced4a3",
+      "official_patch_mbox_sha256": "97e1566a8fd67995cf2db90b9faf7812cc2517c45e4b1acc05dcf93eefaffdbc",
+      "applied_commit_count": 8
+    },
+    {
+      "path": "src/third_party/perfetto",
+      "status": "complete",
+      "base_commit": "dd35b295cd359ba094404218414955f961a0d6ae",
+      "patched_commit": "a6022bd7068a18783ceee2db3aaac892b79dfb67",
+      "official_patch_mbox_sha256": "9866eaee4ca8ca41d5babdb6156203da1d8f768553a7901e6ad91b4c3601c158",
+      "applied_commit_count": 1
+    },
+    {
+      "path": "src/third_party/squirrel.mac",
+      "status": "complete",
+      "base_commit": "0e5d146ba13101a1302d59ea6e6e0b3cace4ae38",
+      "patched_commit": "218d7ccff00287e84d1fdbe5248e36cf85bc6b27",
+      "official_patch_mbox_sha256": "6ff08dd77c922ac3c4c47d5a225d9ab49a67a4b8d47f659fc23cb47de980fa80",
+      "applied_commit_count": 10
+    },
+    {
+      "path": "src/third_party/squirrel.mac/vendor/Mantle",
+      "status": "complete",
+      "base_commit": "78d3966b3c331292ea29ec38661b25df0a245948",
+      "patched_commit": "12a10b17d330ec44ac6355ed0b1ca51ee6136a55",
+      "official_patch_mbox_sha256": "622e154e3e34bab739c64f5da65dec9af95d234bdf34b6cf3dfc1401da634795",
+      "applied_commit_count": 1
+    },
+    {
+      "path": "src/third_party/squirrel.mac/vendor/ReactiveObjC",
+      "status": "complete",
+      "base_commit": "74ab5baccc6f7202c8ac69a8d1e152c29dc1ea76",
+      "patched_commit": "430c8f20b3005f3dea4237e6dccefc17804d1eb5",
+      "official_patch_mbox_sha256": "32680504d1cfbb74204e24d4285cfbfd2c97f53d3318ce2ea8ce5cdaec73b70a",
+      "applied_commit_count": 2
+    },
+    {
+      "path": "src/third_party/webrtc",
+      "status": "complete",
+      "base_commit": "e4445e46a910eb407571ec0b0b8b7043562678cf",
+      "patched_commit": "9f754f0778e0408cc2e1ebb21d85fa61ec9ec893",
+      "official_patch_mbox_sha256": "72b4029e076dd8434e7c40f0212c902e9b0c97145aef8e78aab8c3b72835593b",
+      "applied_commit_count": 1
+    },
+    {
+      "path": "src/third_party/engflow-reclient-configs",
+      "status": "complete",
+      "base_commit": "955335c30a752e9ef7bff375baab5e0819b6c00d",
+      "patched_commit": "dd4c15e0a52a2d5002d1fa0f0cf309c75673e6bb",
+      "official_patch_mbox_sha256": "e34d3526303f460c1f453c742382ec43986da80624309850d3afc710b2598352",
+      "applied_commit_count": 5
+    },
+    {
+      "path": "src/third_party/sqlite/src",
+      "status": "complete",
+      "base_commit": "0a1397d274701c5d39e661e948160da2b9a8db1e",
+      "patched_commit": "89a22f0fdb5c9a4a395fe81f1d24b21ed8ae0ab8",
+      "official_patch_mbox_sha256": "ba2cc3e2d7aae1178009b0809246ea949e24f4ed73f98fc76e370254f84cb805",
+      "applied_commit_count": 1
+    }
+  ],
+  "official_patch_commit_count": 228,
+  "required_hook_outputs": {
+    "src/buildtools/linux64/gn": {
+      "size": 8269848,
+      "sha256": "46c09ded27d4a2264cf624e9c37042704a8b2839e083a13c6cd902b1cf5f5134"
+    },
+    "src/third_party/rust-toolchain/bin/rustc": {
+      "size": 5496,
+      "sha256": "509c89edd6e95c14aae68e7965eb08e748903c35c8ab4fba040682a331c869d8"
+    },
+    "src/electron/node_modules/.yarn-integrity": {
+      "size": 204216,
+      "sha256": "62d9700c9cd6285af80fa441b4ef663c62b338a0c5a700966423706173c7c671"
+    },
+    "src/gpu/webgpu/DAWN_VERSION": {
+      "size": 40,
+      "sha256": "a2b7ec70dc91bcd6aa28a1c76252fd9684b9e37a3bf7a18dc89ed577ffa32fd9"
+    },
+    "src/third_party/dawn/third_party/khronos/OpenGL-Registry/xml/gl.xml": {
+      "size": 2750041,
+      "sha256": "a0d22b883dfe2698002475c658bdc2ec4ba5c01d0a9aac38b707d7aaf9812b34"
+    },
+    "src/third_party/dawn/third_party/khronos/EGL-Registry/api/egl.xml": {
+      "size": 191460,
+      "sha256": "90b71edc4a46525781925e4166bb4ea527751a71a789ec5cc442571334f60bc2"
+    }
+  },
+  "public_helper_files": [
+    {
+      "path": "src/build/config/rust.gni",
+      "sha256": "6bed78c92c16fa42a9262efc3bbe5c4e4d0e69861ffb8d755744e9cc4653c08b",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/build/rust/known-target-triples.txt",
+      "sha256": "aed62646ee1b639fc21c56e6e9f636467d2b32c173f2f611e7ef555a6c972cbc",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/base/allocator/partition_allocator/partition_alloc.gni",
+      "sha256": "2b261643d51a210667103f2943e45e18625ef5788078599f75379e81640dcaa2",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/base/allocator/partition_allocator/src/partition_alloc/page_allocator_constants.h",
+      "sha256": "f0ab1d37f7f9b8f8558a5c4425304bff2c19e5240b3470a957fd5bbbc769374c",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/base/allocator/partition_allocator/src/partition_alloc/partition_page_constants.h",
+      "sha256": "004af948f156b101d905d99db88b38a408e9121074e6fa91938dc2715f5e5e86",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/build/config/compiler/BUILD.gn",
+      "sha256": "b5f076ae5af252a7951fd48b4d27189dfc5d65fc475fcb8982aee16ee285ab1d",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/base/compiler_specific.h",
+      "sha256": "756a00d942e726420071aedb062f54a1f46465462860b7d27fb5f037578cb10b",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/base/allocator/partition_allocator/src/partition_alloc/partition_alloc_base/compiler_specific.h",
+      "sha256": "ad5e27a0ca921921fb45b36a5fb35846410192c8845f7632ffbf3ae6eec2c811",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/third_party/skia/modules/skcms/src/skcms_internals.h",
+      "sha256": "9388037b382ba4d92f121e002dc009b7db6be34ec388195c265655d219e7426d",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/third_party/protobuf/src/google/protobuf/port_def.inc",
+      "sha256": "1b8ec5c2094d7c94009565168d9bef9f8cdfd61979b7a5a21f966c4f257062ce",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/third_party/skia/src/core/SkRasterPipeline.h",
+      "sha256": "c16fc3db04c3ee117b846c83fd2d10551f3fe02d91b1a23d91a5768cd2aff8b4",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/third_party/cpu_features/BUILD.gn",
+      "sha256": "18bd4ba47d41add9b44de7547398b5feb73e5508ea18aa0dafe047784e6873d8",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/third_party/angle/third_party/cpu_features/BUILD.gn",
+      "sha256": "030df3e480c641853f738cdf9583d9b791ad82f7448c106e13b627296115b56c",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/third_party/pdfium/third_party/cpu_features/BUILD.gn",
+      "sha256": "efcc7aa0f7fac575302022592dac03d987fac5dd449eef228b03ab1a302b8be6",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/v8/third_party/cpu_features/BUILD.gn",
+      "sha256": "030df3e480c641853f738cdf9583d9b791ad82f7448c106e13b627296115b56c",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/v8/BUILD.gn",
+      "sha256": "1a50ce6148e47d1e1c6cbd532a89da51776ab2945ebae1949eb87b2f7f5952aa",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/v8/src/codegen/mips64/register-mips64.h",
+      "sha256": "c4429117e37cd3888cf63bb3b1c327243af0542f4ddaa379e1b49ef65e3bccc8",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/v8/src/codegen/mips64/reglist-mips64.h",
+      "sha256": "75bfc7bf31afa56e77f4fb6b1df017e5eb068e07b813c8dc1518fb1e71b242d4",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/third_party/swiftshader/third_party/marl/BUILD.gn",
+      "sha256": "2e42815a4e349178cd2706c9304322a5f4c71fb1320cdd8d7d47869cee9c5002",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/third_party/swiftshader/third_party/llvm-10.0/configs/linux/include/llvm/Config/llvm-config.h",
+      "sha256": "735e5b6cc3f7ab04dcdf72c32b37fab942a4c73da7e6f6a0e6da35b79e74012c",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/third_party/swiftshader/third_party/llvm-10.0/configs/linux/include/llvm/Config/config.h",
+      "sha256": "d6e1ad23526cb889811ee0035b250cafce607f69333faec17d49c81a89bca69d",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/third_party/swiftshader/third_party/marl/src/osfiber_asm_mips64.S",
+      "sha256": "06a063594d8b62e40dbdeb7c3291fcbff76123659df397e730c12f9d5167833f",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/build/config/clang/BUILD.gn",
+      "sha256": "65ba9fd59cad316dea057963c0892e3a7d50f688a1bb85626ac24bee668d660f",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/build/toolchain/gcc_toolchain.gni",
+      "sha256": "be09f677f08253949e65ad7cc529ab0e5393b6d79bc1fb0fe19c356279f4a4cf",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/build/rust/run_bindgen.py",
+      "sha256": "d46a245fabc83b805d0fcf3dddafd73c114b917f371cf316de96399f9623cd24",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/build/config/linux/pkg-config.py",
+      "sha256": "fed4cc482b50b2bff805c527786c6bcc202aaa29c3e18f6557a1d855ea601176",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/printing/BUILD.gn",
+      "sha256": "c746886218727003cef03696c6ac18d2fa8a884e4ef6cd3cd815ac469aba27e7",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/third_party/libaom/BUILD.gn",
+      "sha256": "8376f3131c52831d1ed1d7ca447066ee70e648b644cf7de76db547a85d6a74ec",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/electron/shell/browser/extensions/api/runtime/electron_runtime_api_delegate.cc",
+      "sha256": "53f745728fb2809d9e55e7c153f0a6c55f2d04c5b07b6cd9f75629648a46abbd",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/electron/script/node/generate_original_fs.py",
+      "sha256": "e7fdb102c14955a2d33738b03aa011dd8310be48f554bd1a516c14bf48d70cd8",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/third_party/electron_node/tools/generate_config_gypi.py",
+      "sha256": "e66f7464343f16ac459fa2147bb8a51819bbca10c9dad191ed3c0641f3096895",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/sandbox/linux/seccomp-bpf-helpers/syscall_parameters_restrictions.cc",
+      "sha256": "c0eea21a50ac6113a0442fd01e7dfa140a1bc256013c8f2ab3c1234d2b4d947e",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/third_party/crashpad/crashpad/util/net/http_transport_libcurl.cc",
+      "sha256": "ffc284da24bd13926fd17cb787a44dfa431c8559fde530d30dc840157564d400",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/third_party/ffmpeg/chromium/config/Chrome/linux/mips64el/config.h",
+      "sha256": "595ed92af3779dad9d1d1b77eb58095013699083b52c2c9c372a6c22e4d140f1",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/third_party/ffmpeg/chromium/config/Chrome/linux/mips64el/config_components.h",
+      "sha256": "d31a35d13e411a87b3967b9062c05645d18fb1ad0f17b96039b834abe7f0a47f",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/third_party/ffmpeg/chromium/config/Chrome/linux/mips64el/libavcodec/bsf_list.c",
+      "sha256": "bdd8790c519c97b62a52edba0b6d0b2241695e08d3c03bf026984c5e21a3e8a7",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/third_party/ffmpeg/chromium/config/Chrome/linux/mips64el/libavcodec/codec_list.c",
+      "sha256": "3eec6487a4827455f2ef848bd382d652b7b7c445d8de48464884715044fb509a",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/third_party/ffmpeg/chromium/config/Chrome/linux/mips64el/libavcodec/parser_list.c",
+      "sha256": "cc1c11bdbaa120b7faafd719a6c8f1d6f6f09515ecd5b7bddaee5a91e9cad74c",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/third_party/ffmpeg/chromium/config/Chrome/linux/mips64el/libavformat/demuxer_list.c",
+      "sha256": "71b14f15be7909233422de758a5c9e6a9e4ab1a773ea666fd621cd6cf40aa5f5",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/third_party/ffmpeg/chromium/config/Chrome/linux/mips64el/libavformat/muxer_list.c",
+      "sha256": "286605f176b8f4c91f8e1eefabef037c51ccc12b16b7e7e94758996c490059c2",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/third_party/ffmpeg/chromium/config/Chrome/linux/mips64el/libavformat/protocol_list.c",
+      "sha256": "20390d2af0b45f7de454ca6f3b806275de063a3de97e80feea6857da98e60b67",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/third_party/ffmpeg/chromium/config/Chrome/linux/mips64el/libavutil/avconfig.h",
+      "sha256": "6d78a911a2128e926262114c9904209209674e3bc1a18c208c850ecbfc3393ec",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/third_party/ffmpeg/chromium/config/Chrome/linux/mips64el/libavutil/ffversion.h",
+      "sha256": "aee49c0d30c18b1150a7825fc2675920c08a0721495dce534d02177e6ce8521e",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/third_party/ffmpeg/chromium/config/Chromium/linux/mips64el/config.h",
+      "sha256": "49d2a1903a0a8b1c7b616b24263d89c3ed67d96bdfcbf8d82381b790f882a409",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/third_party/ffmpeg/chromium/config/Chromium/linux/mips64el/config_components.h",
+      "sha256": "754b2ec606f183d88c37cf49feb61fced2ada2f0f456113f62ed58e865f84188",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/third_party/ffmpeg/chromium/config/Chromium/linux/mips64el/libavcodec/bsf_list.c",
+      "sha256": "bdd8790c519c97b62a52edba0b6d0b2241695e08d3c03bf026984c5e21a3e8a7",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/third_party/ffmpeg/chromium/config/Chromium/linux/mips64el/libavcodec/codec_list.c",
+      "sha256": "52d6e9367fe38da6d7b11f3796b8a03ad1e96ca2de1cd02562d6a1fdf7402c1a",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/third_party/ffmpeg/chromium/config/Chromium/linux/mips64el/libavcodec/parser_list.c",
+      "sha256": "beb97da27f18089f619f200ed921506c3235237497c5dbd3cfa90e2bdca09b69",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/third_party/ffmpeg/chromium/config/Chromium/linux/mips64el/libavformat/demuxer_list.c",
+      "sha256": "3bf2a158ad6fbf424a4100f51e6bbf6fc1e8bfa31c196cf6080721668e7cb70b",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/third_party/ffmpeg/chromium/config/Chromium/linux/mips64el/libavformat/muxer_list.c",
+      "sha256": "286605f176b8f4c91f8e1eefabef037c51ccc12b16b7e7e94758996c490059c2",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/third_party/ffmpeg/chromium/config/Chromium/linux/mips64el/libavformat/protocol_list.c",
+      "sha256": "20390d2af0b45f7de454ca6f3b806275de063a3de97e80feea6857da98e60b67",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/third_party/ffmpeg/chromium/config/Chromium/linux/mips64el/libavutil/avconfig.h",
+      "sha256": "6d78a911a2128e926262114c9904209209674e3bc1a18c208c850ecbfc3393ec",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/third_party/ffmpeg/chromium/config/Chromium/linux/mips64el/libavutil/ffversion.h",
+      "sha256": "aee49c0d30c18b1150a7825fc2675920c08a0721495dce534d02177e6ce8521e",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/third_party/ffmpeg/ffmpeg_mips64el_generated.gni",
+      "sha256": "5c0434e4a9c43d9bf1f15d24e1fd3b85b9489ee290a9cffea4b12f8c78dcc42e",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/third_party/ffmpeg/configure",
+      "sha256": "2e32adcc0dd3f943f579dc2066b4da9ca3cb32f1af01a8d13e3fd13132dbf356",
+      "matches_main_build_source": true
+    },
+    {
+      "path": "src/third_party/ffmpeg/ffmpeg_generated.gni",
+      "sha256": "b701250e47d554006cc8595aa847008f8c894c10ee0e5a818180ae3f79be1a61",
+      "matches_main_build_source": true
+    }
+  ],
+  "host_tools": [
+    {
+      "tool": "gn",
+      "path": "src/buildtools/linux64/gn",
+      "sha256": "46c09ded27d4a2264cf624e9c37042704a8b2839e083a13c6cd902b1cf5f5134",
+      "size_bytes": 8269848,
+      "matches_main_build_tool": true,
+      "version_flags": [
+        "--version"
+      ],
+      "version_output": "2237 (ebc8f16ca7b0)",
+      "version_queries_returncode": 0,
+      "version_outputs_match": true
+    },
+    {
+      "tool": "rustc",
+      "path": "src/third_party/rust-toolchain/bin/rustc",
+      "sha256": "509c89edd6e95c14aae68e7965eb08e748903c35c8ab4fba040682a331c869d8",
+      "size_bytes": 5496,
+      "matches_main_build_tool": true,
+      "version_flags": [
+        "--version",
+        "--verbose"
+      ],
+      "version_output": "rustc 1.88.0-dev (4a0969e06dbeaaa43914d2d00b2e843d49aa3886-1-llvmorg-21-init-11777-gfd3fecfc chromium)\nbinary: rustc\ncommit-hash: unknown\ncommit-date: unknown\nhost: x86_64-unknown-linux-gnu\nrelease: 1.88.0-dev\nLLVM version: 21.0.0",
+      "version_queries_returncode": 0,
+      "version_outputs_match": true
+    },
+    {
+      "tool": "node",
+      "path": "src/third_party/node/linux/node-linux-x64/bin/node",
+      "sha256": "08a8fa363038215afda76c21853ec2c64b405b2610ba4ff04ef09448997f982d",
+      "size_bytes": 117383456,
+      "matches_main_build_tool": true,
+      "version_flags": [
+        "--version"
+      ],
+      "version_output": "v22.11.0",
+      "version_queries_returncode": 0,
+      "version_outputs_match": true
+    },
+    {
+      "tool": "rustc_driver",
+      "path": "src/third_party/rust-toolchain/lib/librustc_driver-04604cc7eebc66f3.so",
+      "sha256": "655b3696663b2fd8cad9ad22867ba4ef0a82f20ccd234ec8f946140bbf4a3580",
+      "size_bytes": 221205488,
+      "matches_main_build_tool": true,
+      "version_source": "rustc --version --verbose",
+      "version_output": "rustc 1.88.0-dev (4a0969e06dbeaaa43914d2d00b2e843d49aa3886-1-llvmorg-21-init-11777-gfd3fecfc chromium)"
+    }
+  ],
+  "gn": {
+    "gen_returncode": 0,
+    "generated_targets": 27588,
+    "listed_targets_all_toolchains": 27588,
+    "electron_dependency_target_count": 12173,
+    "gn_args_file": "gn-args.gn",
+    "gn_args_sha256": "eacbd122d1c0b6c05746185736c27c58a3596d0c8e8d5453a723d7cf8cf8b9aa",
+    "fail_on_unused_args": true,
+    "separate_empty_output_directory": true,
+    "electron_dependency_labels_verified": [
+      "//v8:run_mksnapshot_default",
+      "//v8:v8_snapshot"
+    ],
+    "snapshot_action_output": "out/snapshot_blob.bin",
+    "use_v8_context_snapshot": false,
+    "context_snapshot_generator_dependency_present": false,
+    "remaining_context_snapshot_dependency_labels": [
+      "//tools/v8_context_snapshot:buildflags"
+    ],
+    "normalization_note": "out/ denotes the independent GN output directory; source paths are relative to the bootstrap workspace.",
+    "snapshot_action_output_declared": true,
+    "snapshot_action_runtime_data_listed": true,
+    "snapshot_file_generated_or_executed": false,
+    "snapshot_evidence_scope": "GN outputs and runtime_deps listings only; snapshot_blob.bin was not generated by this validation."
+  },
+  "evidence_sha256": {
+    "bootstrap.log": "c30ae3ddd5c10b271f4ce8dc42752ee428c0ef557ae9cb686558cf150254b63c",
+    "stage-records.json": "b4fec595f64bef2a668ef0f27cdf711f05a349930f1c3b8bb7fe90cef0869432",
+    "gn-gen.stdout": "b572a72f6f64575a16f2429dac805e138b6e33c8de0e0fc353899ab33931b85f",
+    "gn-gen.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "gn-all-targets-corrected.stdout": "ee552136f37e574d9f7e5641bceb550e59ad9573d2c6c5c74b39a214b8af5026",
+    "gn-electron-deps.stdout": "7777bbf7d017eab95d380df90fddf3e8e4a13498fc819ec0a5a3d8db0254ab99",
+    "gn-mksnapshot-outputs.stdout": "b4612fb6aec4ee885bb58603938f8557ced8ee8ffc3847ee936f57d22eae9f25",
+    "gn-v8-snapshot-data.stdout": "72ac7e9557ce0f09612da8b5524ada868bd10b8f944ab0e652576e556989827f",
+    "host-tools-comparison.json": "28b2a71e13c81e256378bc3b963e85ef7470119e7369cb0fe56cdadd0a54c05f"
+  },
+  "notes": [
+    "An initial network transport failure was resumed in the script-marked workspace; no existing source or dependency cache was substituted.",
+    "The comparison covers the 56 public helper files and four listed host tool binaries, not every byte of the ongoing main build input tree.",
+    "Untracked Python __pycache__ files copied with the small recipe snapshot are generated caches and are excluded from recipe input checksums.",
+    "The 3 GiB limit was used for source preparation and GN only; it is not a memory requirement for a full Electron build.",
+    "Raw logs remain local; this public record omits private routing details, credentials, and host absolute paths."
+  ]
+}
