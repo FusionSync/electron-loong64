@@ -108,6 +108,10 @@ def verify_hook_outputs(workspace):
         "src/buildtools/linux64/gn",
         "src/third_party/rust-toolchain/bin/rustc",
         "src/electron/node_modules/.yarn-integrity",
+        "src/build/util/LASTCHANGE",
+        "src/build/util/LASTCHANGE.committime",
+        "src/gpu/config/gpu_lists_version.h",
+        "src/skia/ext/skia_commit_hash.h",
         "src/gpu/webgpu/DAWN_VERSION",
         "src/third_party/dawn/third_party/khronos/OpenGL-Registry/xml/gl.xml",
         "src/third_party/dawn/third_party/khronos/EGL-Registry/api/egl.xml",
@@ -161,6 +165,8 @@ def main():
                 raise SystemExit("Apply the complete official patch stack before running hooks.")
             run([gclient, "runhooks", "--jobs=" + str(args.jobs)], workspace)
             verify_hook_outputs(workspace)
+            run([sys.executable, ROOT / "scripts/refresh-local-hook-outputs.py",
+                 workspace / "src", "--check-only"], workspace)
     print(f"Completed {args.stage} stage: {workspace}")
     print("Apply the local MIPS adaptations after hooks. A complete Electron build is still experimental.")
 

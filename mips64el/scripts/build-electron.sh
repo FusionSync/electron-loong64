@@ -41,6 +41,7 @@ docker run --rm --user "$(id -u):$(id -g)" \
     /opt/llvm20/bin/clang --version
     python3 /work/recipe/patches/apply-mips64el-source-patches.py /work/src
     python3 /work/recipe/patches/apply-mips64el-ffmpeg-patches.py /work/src
+    python3 /work/recipe/scripts/refresh-local-hook-outputs.py /work/src
     /work/src/buildtools/linux64/gn gen /work/out \
       --fail-on-unused-args \
       --args="$(cat /work/recipe/gn-args.gn)"
