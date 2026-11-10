@@ -352,6 +352,44 @@ def main() -> None:
         "           os.path.dirname(__file__), '..', '..', '..'))])\n",
     )
 
+    # Buster's MIPS glibc omits GET_THREAD_AREA, but the target kernel UAPI
+    # provides it in asm/ptrace.h. asm/ptrace-abi.h is an x86 header.
+    patcher.replace(
+        "sandbox/linux/seccomp-bpf-helpers/syscall_parameters_restrictions.cc",
+        '#if BUILDFLAG(IS_LINUX) && !defined(__arm__) && !defined(__aarch64__) && \\\n'
+        '    !defined(PTRACE_GET_THREAD_AREA)\n'
+        '// Also include asm/ptrace-abi.h since ptrace.h in older libc (for instance\n'
+        '// the one in Ubuntu 16.04 LTS) is missing PTRACE_GET_THREAD_AREA.\n'
+        "// asm/ptrace-abi.h doesn't exist on arm32 and PTRACE_GET_THREAD_AREA isn't\n"
+        "// defined on aarch64, so don't try to include this on those platforms.\n"
+        '#include <asm/ptrace-abi.h>\n'
+        '#endif\n',
+        '#if BUILDFLAG(IS_LINUX) && !defined(__arm__) && !defined(__aarch64__) && \\\n'
+        '    !defined(PTRACE_GET_THREAD_AREA)\n'
+        '#if defined(__mips__)\n'
+        '// MIPS exposes the TLS ptrace requests in its target kernel UAPI.\n'
+        '#include <asm/ptrace.h>\n'
+        '#else\n'
+        '// Also include asm/ptrace-abi.h since ptrace.h in older libc (for instance\n'
+        '// the one in Ubuntu 16.04 LTS) is missing PTRACE_GET_THREAD_AREA.\n'
+        "// asm/ptrace-abi.h doesn't exist on arm32 and PTRACE_GET_THREAD_AREA isn't\n"
+        "// defined on aarch64, so don't try to include this on those platforms.\n"
+        '#include <asm/ptrace-abi.h>\n'
+        '#endif\n'
+        '#endif\n',
+    )
+
+    # Match Linux's N64 UTS_MACHINE spelling in Crashpad's HTTP User-Agent.
+    patcher.replace(
+        "third_party/crashpad/crashpad/util/net/http_transport_libcurl.cc",
+        '#elif defined (ARCH_CPU_RISCV64)\n'
+        '    static constexpr char arch[] = "riscv64";\n',
+        '#elif defined (ARCH_CPU_RISCV64)\n'
+        '    static constexpr char arch[] = "riscv64";\n'
+        '#elif defined(ARCH_CPU_MIPS64EL)\n'
+        '    static constexpr char arch[] = "mips64";\n',
+    )
+
     patcher.finish()
 
 
