@@ -319,6 +319,16 @@ def main() -> None:
         '    "..", "..", "..", "third_party", "electron_node")\n',
     )
 
+    # Node invokes `gn args` from the output directory. An output mounted
+    # outside src has no .gn ancestor, so identify the source root explicitly.
+    patcher.replace(
+        "third_party/electron_node/tools/generate_config_gypi.py",
+        "      [GN, 'args', '--list', '--short', '-C', out_dir])\n",
+        "      [GN, 'args', '--list', '--short', '-C', out_dir,\n"
+        "       '--root=' + os.path.abspath(os.path.join(\n"
+        "           os.path.dirname(__file__), '..', '..', '..'))])\n",
+    )
+
     patcher.finish()
 
 
