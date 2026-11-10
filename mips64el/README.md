@@ -25,6 +25,7 @@ outputs and sysroot; it does not modify the LoongArch64 build.
 - QEMU's `Loongson-3A4000` CPU model ran C desktop-library, Rust and FFmpeg probes against glibc 2.28.
 - The probes cover threads, atomic operations, UTF-8, file I/O, GTK/GLib/NSS/ALSA/X11 linking, and H.264/AAC/MP3 decoder initialization.
 - ELF checks confirm MIPS64R2/N64/hard-float without MSA; the Buster probe artifacts require no symbol newer than GLIBC_2.28.
+- [Marl fiber probes](reports/marl-fibers.md) preserve all eight N64 callee-saved floating-point registers and verify PIC entry/resume under QEMU at `-O0`, `-O2` and `-Os`, after correcting the upstream `$f30` save/restore.
 
 See [Buster validation](reports/buster-preflight.txt) and
 [final public image validation](metadata/public-buster-image-validation.json),

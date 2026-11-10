@@ -233,6 +233,15 @@ def main() -> None:
             f'#define {macro} "mipsel-linux-gnu"\n',
         )
 
+    # N64 preserves every FPR from f24 through f31. The upstream fiber switch
+    # accidentally used f31 twice and never saved/restored f30's own value.
+    for instruction, context_register in (("s.d", "$a0"), ("l.d", "$v0")):
+        patcher.replace(
+            "third_party/swiftshader/third_party/marl/src/osfiber_asm_mips64.S",
+            f"    {instruction}  $f31, MARL_REG_f30({context_register})\n",
+            f"    {instruction}  $f30, MARL_REG_f30({context_register})\n",
+        )
+
     patcher.replace(
         "build/config/clang/BUILD.gn",
         '        } else if (current_cpu == "loong64") {\n'
