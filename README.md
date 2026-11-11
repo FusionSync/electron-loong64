@@ -1,17 +1,21 @@
-# Electron Loong64
+# Electron for Loongson
 
-Reproducible Electron 37.2.2 build for LoongArch64 Linux using the old ABI.
+Reproducible Electron builds for Loongson platforms: LoongArch64 Linux using
+the old ABI, and Loongson 3A4000 MIPS64EL through an isolated cross-build.
 
 - **Verified build:** [v37.2.2-loong64](https://github.com/FusionSync/electron-loong64/releases/tag/v37.2.2-loong64)
 - **Build inputs:** [toolchain-v1](https://github.com/FusionSync/electron-loong64/releases/tag/toolchain-v1)
-- **Tested on:** UOS 1070 Loong64 physical desktop
+- **LoongArch64 validation:** physical LoongArch64 desktop, glibc 2.28 baseline
+- **3A4000 / MIPS64EL:** [isolated recipe](https://github.com/FusionSync/electron-loong64/tree/mips64el-3a4000/mips64el/README.md),
+  [glibc 2.28 environment](https://github.com/FusionSync/electron-loong64/releases/tag/mips64el-env-v1),
+  and [Electron 37.2.2 runtime release](https://github.com/FusionSync/electron-loong64/releases/tag/v37.2.2-mips64el-glibc2.28-experimental.1)
 
 | Item | Value |
 | --- | --- |
-| Target | LoongArch64 Linux, ELF flags `0x3` |
+| Targets | LoongArch64 Linux (old ABI); MIPS64EL on Loongson 3A4000 |
 | Runtime baseline | glibc 2.28, plus compatible desktop libraries |
 | Build host | x86_64 Linux with Docker |
-| Tested on | UOS 1070 Loong64 physical desktop |
+| Validation | Physical LoongArch64 desktop; QEMU Loongson 3A4000 for MIPS64EL |
 | Community patch base | Electron 37.2.5, adapted to the 37.2.2 source tree |
 
 This repository contains the build recipe, patches, toolchain metadata, audit
@@ -39,9 +43,15 @@ unzip electron-v37.2.2-linux-loong64.zip -d electron-runtime
 The runtime needs the old LoongArch ABI and glibc 2.28 or newer. A newer glibc
 alone is not sufficient: GTK, X11, NSS, ALSA, DBus, graphics, and sandbox
 libraries must also be available for the target desktop. The release was
-verified on a physical UOS 1070 Loong64 desktop. The bundle contains the
+verified on a physical LoongArch64 desktop. The bundle contains the
 manual web-page and local API test programs; their instructions are in
 `electron37-attempt/electron37.2.2-linux-loong64-bundle/README.md`.
+
+For Loongson 3A4000 MIPS64EL, use the [experimental Electron 37.2.2
+release](https://github.com/FusionSync/electron-loong64/releases/tag/v37.2.2-mips64el-glibc2.28-experimental.1)
+and the [isolated MIPS64EL recipe](https://github.com/FusionSync/electron-loong64/tree/mips64el-3a4000/mips64el/README.md). It targets MIPS64R2,
+N64 hard-float, and glibc 2.28. The packaged runtime passed QEMU Node-mode
+validation; physical 3A4000 GUI, GPU, and sandbox validation remains pending.
 
 ## Rebuild the cross compiler
 
@@ -147,6 +157,7 @@ applicable licenses before mirroring or republishing them.
 | `electron37-attempt/` | Full Electron source-build pipeline and validation records |
 | `research/electron-source-notes/` | Source pins and upstream/community patch records |
 | `metadata/` | Checksums, target package inventory, and image requirements |
+| [MIPS64EL recipe](https://github.com/FusionSync/electron-loong64/tree/mips64el-3a4000/mips64el) | Isolated 3A4000 recipe, sysroot locks, and probes |
 | `release-notes/` | Release-specific artifact notes |
 
 ## License and notices
