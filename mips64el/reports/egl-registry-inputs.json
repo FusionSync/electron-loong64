@@ -1,0 +1,67 @@
+{
+  "repository": "https://github.com/KhronosGroup/EGL-Registry",
+  "revision": "7dea2ed79187cd13f76183c4b9100159b9e3e071",
+  "files": {
+    "api/Makefile": {
+      "git_blob": "07318034223a00d9d546c68d27bb66be638ef0bb",
+      "sha256": "af5afdc8db7b0a37467cbe0f78dac4ac7ee6361eb2398cb4978fbf00d841ee0b",
+      "size": 916,
+      "url": "https://raw.githubusercontent.com/KhronosGroup/EGL-Registry/7dea2ed79187cd13f76183c4b9100159b9e3e071/api/Makefile"
+    },
+    "api/egl.xml": {
+      "git_blob": "9ced66d5c1e411a1e4f0c9158aecb520484f9b1a",
+      "sha256": "90b71edc4a46525781925e4166bb4ea527751a71a789ec5cc442571334f60bc2",
+      "size": 191460,
+      "url": "https://raw.githubusercontent.com/KhronosGroup/EGL-Registry/7dea2ed79187cd13f76183c4b9100159b9e3e071/api/egl.xml"
+    },
+    "api/egltest.c": {
+      "git_blob": "cf3fe56806fd6456ead47ddb32d02a35f4abb3bb",
+      "sha256": "fc085970e4ca2799030f7d29c00e5e48fd6cb8af9fe7ba152bcb0ac73777171f",
+      "size": 206,
+      "url": "https://raw.githubusercontent.com/KhronosGroup/EGL-Registry/7dea2ed79187cd13f76183c4b9100159b9e3e071/api/egltest.c"
+    },
+    "api/genheaders.py": {
+      "git_blob": "ce15d6deac4187399879cd5c17fdacf1e350ad80",
+      "sha256": "2b394253e5bf3840e15985af7b9ec289dae94482f8e14a77608c07dce278b539",
+      "size": 24304,
+      "url": "https://raw.githubusercontent.com/KhronosGroup/EGL-Registry/7dea2ed79187cd13f76183c4b9100159b9e3e071/api/genheaders.py"
+    },
+    "api/reg.py": {
+      "git_blob": "6ac25f3d28a3f9a29a1d932391a07b5f64a35588",
+      "sha256": "2a623a4e103f97b0eafa365c410088a77d1aa55a168183d2421dca1a4727e065",
+      "size": 54455,
+      "url": "https://raw.githubusercontent.com/KhronosGroup/EGL-Registry/7dea2ed79187cd13f76183c4b9100159b9e3e071/api/reg.py"
+    },
+    "api/registry.rnc": {
+      "git_blob": "be7066881555c82aa91f3aacaf659fcc7072bcad",
+      "sha256": "7c8f0826a2a658d8d96b14fc3cdaad301956e021363ca86f603f70ad21005f40",
+      "size": 8099,
+      "url": "https://raw.githubusercontent.com/KhronosGroup/EGL-Registry/7dea2ed79187cd13f76183c4b9100159b9e3e071/api/registry.rnc"
+    },
+    "api/EGL/egl.h": {
+      "git_blob": "97d0878cc7a29cb5ed7d9ebc546e2b8e3cd05b83",
+      "sha256": "793779fefd83bb0e2a469a712efca01890d83c5ea5b596653c3cb6cdd669e200",
+      "size": 19286,
+      "url": "https://raw.githubusercontent.com/KhronosGroup/EGL-Registry/7dea2ed79187cd13f76183c4b9100159b9e3e071/api/EGL/egl.h"
+    },
+    "api/EGL/eglext.h": {
+      "git_blob": "d58da70e6b3beb9dbc67e32986690dea19346b3a",
+      "sha256": "eb58fcc3fc07e2770fb6ea68297fa5e453e6ae3f44b8a41d60716785efd06866",
+      "size": 72051,
+      "url": "https://raw.githubusercontent.com/KhronosGroup/EGL-Registry/7dea2ed79187cd13f76183c4b9100159b9e3e071/api/EGL/eglext.h"
+    },
+    "api/EGL/eglplatform.h": {
+      "git_blob": "99362a23deeace9de3f9fb80f63995c175d4d472",
+      "sha256": "1081d0dd1099f5f0367d21c2949e3be344d3fe37c41e7cab907b12ef71f95703",
+      "size": 5011,
+      "url": "https://raw.githubusercontent.com/KhronosGroup/EGL-Registry/7dea2ed79187cd13f76183c4b9100159b9e3e071/api/EGL/eglplatform.h"
+    },
+    "api/KHR/khrplatform.h": {
+      "git_blob": "01646449caedc958effc3b450360aefd260671ab",
+      "sha256": "7b1e01aaa7ad8f6fc34b5c7bdf79ebf5189bb09e2c4d2e79fc5d350623d11e83",
+      "size": 11131,
+      "url": "https://raw.githubusercontent.com/KhronosGroup/EGL-Registry/7dea2ed79187cd13f76183c4b9100159b9e3e071/api/KHR/khrplatform.h"
+    }
+  },
+  "checkout": "Verified source snapshot of api subtree; Git metadata unavailable after network timeout."
+}

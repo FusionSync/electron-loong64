@@ -1,0 +1,81 @@
+{
+  "schema": 1,
+  "target": "mips64el-linux-gnuabi64",
+  "files": [
+    {
+      "path": "debian_bullseye_mips64el_sysroot.tar.xz",
+      "sha256": "3b6d3383614bbed33a6580ab7c15a55b92cd2d400617bd956c0ab3e5cd3873d2",
+      "url": "https://dev-cdn.electronjs.org/linux-sysroots/3b6d3383614bbed33a6580ab7c15a55b92cd2d400617bd956c0ab3e5cd3873d2",
+      "origin": "Electron linux-sysroots (Debian Bullseye MIPS64EL)"
+    },
+    {
+      "path": "toolchain-debs/binutils-mips64el-linux-gnuabi64_2.38-1ubuntu1cross2_amd64.deb",
+      "sha256": "1c55cfd4417fd0d9d37b1166f698bd36943682dd7a486e8dc2efe984d6084e6a",
+      "url": "https://archive.ubuntu.com/ubuntu/pool/universe/b/binutils-mipsen/binutils-mips64el-linux-gnuabi64_2.38-1ubuntu1cross2_amd64.deb",
+      "origin": "Ubuntu Jammy universe / binutils-mipsen"
+    },
+    {
+      "path": "toolchain-debs/cpp-10-mips64el-linux-gnuabi64_10.3.0-1ubuntu1cross2_amd64.deb",
+      "sha256": "4ed21b5a0cd3aa3e55646e7a5474fb8613a2488956ad22579faa0e36776a17b9",
+      "url": "https://archive.ubuntu.com/ubuntu/pool/universe/g/gcc-10-cross-mipsen/cpp-10-mips64el-linux-gnuabi64_10.3.0-1ubuntu1cross2_amd64.deb",
+      "origin": "Ubuntu Jammy universe / gcc-10-cross-mipsen"
+    },
+    {
+      "path": "toolchain-debs/cpp-mips64el-linux-gnuabi64_4%3a10.2.0-1_amd64.deb",
+      "sha256": "ff0ddda5e779e64f71e8d2bbb31247b5a4d37e80143ca9043d08d0e73a1dff0e",
+      "url": "https://archive.ubuntu.com/ubuntu/pool/universe/g/gcc-defaults-mipsen/cpp-mips64el-linux-gnuabi64_10.2.0-1_amd64.deb",
+      "origin": "Ubuntu Jammy universe / gcc-defaults-mipsen"
+    },
+    {
+      "path": "toolchain-debs/g++-10-mips64el-linux-gnuabi64_10.3.0-1ubuntu1cross2_amd64.deb",
+      "sha256": "2f07adb7f379a33bc5375be05fa14d248920245a66b39a4490737c6171b8959f",
+      "url": "https://archive.ubuntu.com/ubuntu/pool/universe/g/gcc-10-cross-mipsen/g++-10-mips64el-linux-gnuabi64_10.3.0-1ubuntu1cross2_amd64.deb",
+      "origin": "Ubuntu Jammy universe / gcc-10-cross-mipsen"
+    },
+    {
+      "path": "toolchain-debs/gcc-10-mips64el-linux-gnuabi64-base_10.3.0-1ubuntu1cross2_amd64.deb",
+      "sha256": "19febb0b50f486e447414054095fa3f61115458339cde69f2af8ffda3884a23a",
+      "url": "https://archive.ubuntu.com/ubuntu/pool/universe/g/gcc-10-cross-mipsen/gcc-10-mips64el-linux-gnuabi64-base_10.3.0-1ubuntu1cross2_amd64.deb",
+      "origin": "Ubuntu Jammy universe / gcc-10-cross-mipsen"
+    },
+    {
+      "path": "toolchain-debs/gcc-10-mips64el-linux-gnuabi64_10.3.0-1ubuntu1cross2_amd64.deb",
+      "sha256": "1b99ae16b13eb8eeae6b7fcc682d90862b0d18072dcd64e1075852645fb6636b",
+      "url": "https://archive.ubuntu.com/ubuntu/pool/universe/g/gcc-10-cross-mipsen/gcc-10-mips64el-linux-gnuabi64_10.3.0-1ubuntu1cross2_amd64.deb",
+      "origin": "Ubuntu Jammy universe / gcc-10-cross-mipsen"
+    },
+    {
+      "path": "toolchain-debs/gcc-mips64el-linux-gnuabi64_4%3a10.2.0-1_amd64.deb",
+      "sha256": "d5a706e09fc6a3f728e8213469c05c5ad6dd79547111f10255fae6abad278739",
+      "url": "https://archive.ubuntu.com/ubuntu/pool/universe/g/gcc-defaults-mipsen/gcc-mips64el-linux-gnuabi64_10.2.0-1_amd64.deb",
+      "origin": "Ubuntu Jammy universe / gcc-defaults-mipsen"
+    },
+    {
+      "path": "toolchain-debs/libgcc-10-dev-mips64el-cross_10.3.0-1ubuntu1cross2_all.deb",
+      "sha256": "4bff9bf936f22e297fab74646cb447557c312e15a077bbd5c5107f0c3f8e3424",
+      "url": "https://archive.ubuntu.com/ubuntu/pool/universe/g/gcc-10-cross-mipsen/libgcc-10-dev-mips64el-cross_10.3.0-1ubuntu1cross2_all.deb",
+      "origin": "Ubuntu Jammy universe / gcc-10-cross-mipsen"
+    },
+    {
+      "path": "toolchain-debs/libstdc++-10-dev-mips64el-cross_10.3.0-1ubuntu1cross2_all.deb",
+      "sha256": "b3dc69a858757006f4166aecb623ed3ad7972588dd6d3e6c224e5b8f96a8e1d6",
+      "url": "https://archive.ubuntu.com/ubuntu/pool/universe/g/gcc-10-cross-mipsen/libstdc++-10-dev-mips64el-cross_10.3.0-1ubuntu1cross2_all.deb",
+      "origin": "Ubuntu Jammy universe / gcc-10-cross-mipsen"
+    },
+    {
+      "path": "llvm-toolchain_20.1.8-1_amd64-linux-gnu_debian-10.tar.gz",
+      "sha256": "b552f93326948c7292cceaf11db7eb442327448d9f45b4b25eafdbfa9b60c25e",
+      "url": "http://ftp.loongnix.cn/toolchain/llvm/llvm20/llvm-toolchain_20.1.8-1_amd64-linux-gnu_debian-10.tar.gz",
+      "origin": "LoongNix LLVM 20.1.8, x86_64 compiler with MIPS64EL target support",
+      "role": "host compiler, target code generation"
+    },
+    {
+      "path": "llvm-host-deps/libffi6_3.2.1-8_amd64.deb",
+      "sha256": "fa26945b0aadfc72ec623c68be9cc59235a7fe42e2388f7015fd131f4fb06dc9",
+      "url": "https://archive.ubuntu.com/ubuntu/pool/main/libf/libffi/libffi6_3.2.1-8_amd64.deb",
+      "origin": "Ubuntu Bionic main / libffi; exact match for validated host libffi.so.6.0.4",
+      "role": "x86_64 LLVM host dependency; never copied into target sysroot"
+    }
+  ],
+  "compiler": "LoongNix LLVM/Clang 20.1.8; GCC10 supplies N64 runtime/CRT and GNU binutils"
+}

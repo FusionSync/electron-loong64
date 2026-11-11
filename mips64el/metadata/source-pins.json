@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "electron_version": "37.2.2",
+  "electron_commit": "102f740ec2fc8f34601c84b79ea1bf06042e8d00",
+  "electron_url": "https://github.com/electron/electron.git",
+  "chromium_version": "138.0.7204.100",
+  "chromium_commit": "5f45b4744e3d5ba82c2ca6d942f1e7a516110752",
+  "depot_tools_commit": "56f1f96c4b83ccd730616eabd24707e82dcc685c",
+  "depot_tools_url": "https://chromium.googlesource.com/chromium/tools/depot_tools.git",
+  "node_version": "v22.17.0",
+  "dependency_policy": "Use the pinned Electron DEPS and its pinned Chromium DEPS; record resolved revisions before patches.",
+  "patch_policy": "Apply only the official patch stack from the pinned Electron checkout, then the local MIPS64EL adaptations.",
+  "status": "experimental; full Electron build and target runtime have not been verified"
+}

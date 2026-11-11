@@ -1,0 +1,4 @@
+Selected packages: 558
+Explicit selected-package Conflicts/Breaks: []
+Architecture: mips64el or all only
+All Depends/Pre-Depends version conditions satisfied by resolver.

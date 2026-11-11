@@ -1,0 +1,90 @@
+{
+  "schema": 1,
+  "status": "passed; final public container and three component runtime probes, not a complete Electron release",
+  "validated_at_utc": "2026-11-10T16:48:13.160857+00:00",
+  "container_image": "electron37-mips64el:public-buster-clang20",
+  "container_image_id": "sha256:70c230f468651e471fc773c9a3935ee32cad8ba20a24c9dc3761b694f03a0fbb",
+  "container_image_size_bytes": 2614657635,
+  "base_image": "electron37-mips64el:public-clang20",
+  "base_image_id": "sha256:39db772d0b75d133e3f12bddf5c35b8219df12d4f64106a69fe05033d2ee8d25",
+  "target_sysroot": "/opt/mips-sysroot-buster",
+  "target_glibc": "2.28-10+deb10u1",
+  "target_sysroot_sha256": "ed4c9dddc58afd35be6b3f8faef5359603f64ab9cca1893c4408a470e2c0af94",
+  "old_bullseye_root_removed": true,
+  "target_gcc_runtime_discovered": "/opt/mips-sysroot-buster/usr/lib/gcc/mips64el-linux-gnuabi64/8",
+  "c_compiler": "LoongNix Clang 20.1.8",
+  "node_version": "22.17.0",
+  "validation_network": "none",
+  "external_compiler_or_library_mounts_used": false,
+  "qemu_externally_mounted": true,
+  "qemu_version": "8.2.2",
+  "qemu_cpu": "Loongson-3A4000",
+  "probe_return_codes": {
+    "C": 0,
+    "Rust": 0,
+    "FFmpeg": 0
+  },
+  "runtime_stdout": [
+    "Electron MIPS64EL Buster: 中文; pthreads, file I/O, dlopen GTK3/GLib/NSS/ALSA/DRM/X11/udev passed",
+    "Electron MIPS64EL Rust std: 中文; heap, threads, AtomicU64, UTF-8, and file I/O passed",
+    "FFmpeg 7.1.git: dynamic loading and H264/AAC/MP3 decoder initialization passed"
+  ],
+  "elf_audits": [
+    {
+      "file": "clang-smoke",
+      "machine": 8,
+      "flags": "0x80000007",
+      "maximum_glibc": "2.2",
+      "interpreter": "/lib64/ld.so.1",
+      "needed": [
+        "libpthread.so.0",
+        "libdl.so.2",
+        "libc.so.6"
+      ],
+      "errors": []
+    },
+    {
+      "file": "rust-smoke",
+      "machine": 8,
+      "flags": "0x80000007",
+      "maximum_glibc": "2.28",
+      "interpreter": "/lib64/ld.so.1",
+      "needed": [
+        "librt.so.1",
+        "libpthread.so.0",
+        "libdl.so.2",
+        "libc.so.6",
+        "ld.so.1",
+        "libgcc_s.so.1"
+      ],
+      "errors": []
+    },
+    {
+      "file": "libffmpeg.so",
+      "machine": 8,
+      "flags": "0x80000007",
+      "maximum_glibc": "2.28",
+      "interpreter": null,
+      "needed": [
+        "libpthread.so.0",
+        "librt.so.1",
+        "libm.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld.so.1"
+      ],
+      "errors": []
+    }
+  ],
+  "recipe_sha256": {
+    "Dockerfile.buster": "d7dd93417599ed902ac2bb2dc22ea7338b32673950153c1951ad5548bc50e26f",
+    "scripts/build-buster-image.sh": "e01f44503886ba8412a81f63711c432d113886e79b7ebf9e5496453936d7a754",
+    "metadata/buster-sysroot-SHA256SUMS": "771cec55ccf8837863f2bb0445adee08807d47b4bfe914f489fdb9756c80eb81"
+  },
+  "limitations": [
+    "The C probe was rebuilt entirely inside this final image. Existing Buster-target Rust and FFmpeg probes were rerun against the final image target root.",
+    "The full Electron executable is still being compiled. This record does not establish GUI, GPU, sandbox or physical 3A4000 compatibility.",
+    "Pinned archives and source recipes are public inputs; the Ubuntu apt layers remain moving inputs."
+  ],
+  "proxy_settings_embedded_in_image": false
+}

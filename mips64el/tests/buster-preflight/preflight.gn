@@ -1,0 +1,51 @@
+import("//electron/build/args/release.gn")
+
+target_os = "linux"
+target_cpu = "mips64el"
+override_electron_version = "37.2.2"
+is_clang = true
+custom_toolchain = ""
+host_toolchain = "//build/toolchain/linux:clang_x64"
+electron_js2c_toolchain = "//build/toolchain/linux:clang_x64"
+clang_base_path = "/opt/llvm20"
+clang_version = "20"
+clang_use_chrome_plugins = false
+clang_warning_suppression_file = ""
+
+is_debug = false
+is_official_build = false
+is_component_build = false
+symbol_level = 0
+blink_symbol_level = 0
+v8_symbol_level = 0
+dcheck_always_on = false
+use_thin_lto = false
+chrome_pgo_phase = 0
+use_remoteexec = false
+use_siso = false
+concurrent_links = 1
+treat_warnings_as_errors = false
+fatal_linker_warnings = false
+use_lld = false
+use_icf = false
+
+use_sysroot = false
+target_sysroot = "/work/sysroot-buster"
+system_libdir = "lib/mips64el-linux-gnuabi64"
+mips_arch_variant = "r2"
+mips_use_msa = false
+
+# Build the MIPS target Rust standard library from Chromium's vendored sources.
+enable_rust = true
+toolchain_supports_rust_thin_lto = false
+use_custom_libcxx = true
+use_custom_libcxx_for_host = true
+use_ozone = true
+ozone_auto_platforms = false
+ozone_platform = "x11"
+ozone_platform_x11 = true
+ozone_platform_wayland = false
+ozone_platform_headless = true
+use_vaapi = false
+
+use_udev = true

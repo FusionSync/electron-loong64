@@ -1,0 +1,167 @@
+{
+  "schema": 1,
+  "status": "Public Dockerfiles built successfully; native dependencies and cross compiler smoke passed; experimental",
+  "validated_at_utc": "2026-11-10T16:39:39.169369+00:00",
+  "container_image": "electron37-mips64el:public-clang20",
+  "container_image_id": "sha256:39db772d0b75d133e3f12bddf5c35b8219df12d4f64106a69fe05033d2ee8d25",
+  "container_image_size_bytes": 2091497210,
+  "host_tools_image": "electron37-mips64el-host-tools:node22",
+  "host_tools_image_id": "sha256:49086041d464552f40b3a393e4c995299251180ac8df82a4d73f14dee40870cb",
+  "host_tools_image_size_bytes": 331761832,
+  "ubuntu_base_image_id": "sha256:076e7bf82319619f28dd0aa9c02ab34b055ad37100395b4f49a2ffba04fb5e11",
+  "ubuntu_base_image_repo_digests": [
+    "ubuntu@sha256:076e7bf82319619f28dd0aa9c02ab34b055ad37100395b4f49a2ffba04fb5e11"
+  ],
+  "host_tools_exactly_rebuilt_from_public_manifest": true,
+  "original_local_native_image_used": false,
+  "external_toolchain_mounts_used": false,
+  "validation_network": "none",
+  "proxy_settings_embedded_in_image": false,
+  "host_checks": {
+    "host_versions": {
+      "node": "v22.17.0",
+      "npm": "10.9.2",
+      "cmake": "cmake version 3.22.6",
+      "zig": "0.13.0",
+      "clang": "clang version 20.1.8 (Loongson 20.1.8-1)",
+      "gcc_support": "mips64el-linux-gnuabi64-gcc (Ubuntu 10.3.0-1ubuntu1) 10.3.0",
+      "gnu_target_linker": "GNU ld (GNU Binutils for Ubuntu) 2.38"
+    },
+    "native_pkg_config_modules": {
+      "gtk+-3.0": "3.24.33",
+      "glib-2.0": "2.72.4",
+      "gio-2.0": "2.72.4",
+      "gobject-2.0": "2.72.4",
+      "gmodule-2.0": "2.72.4",
+      "nss": "3.98",
+      "nspr": "4.35.0",
+      "alsa": "1.2.6.1",
+      "libudev": "249",
+      "dbus-1": "1.12.20",
+      "x11": "1.7.5",
+      "x11-xcb": "1.7.5",
+      "xcomposite": "0.4.5",
+      "xcursor": "1.2.0",
+      "xdamage": "1.1.5",
+      "xext": "1.3.4",
+      "xfixes": "6.0.0",
+      "xi": "1.8",
+      "xrandr": "1.5.2",
+      "xrender": "0.9.10",
+      "xshmfence": "1.3",
+      "xkbcommon": "1.4.0",
+      "xkbcommon-x11": "1.4.0",
+      "gbm": "23.2.1-1ubuntu3.1~22.04.4",
+      "libdrm": "2.4.113",
+      "libpulse": "15.99.1",
+      "freetype2": "24.1.18",
+      "fontconfig": "2.13.1",
+      "libpng": "1.6.37",
+      "libnotify": "0.7.9",
+      "libva": "1.14.0",
+      "uuid": "2.37.2",
+      "xscrnsaver": "1.2.3",
+      "xtst": "1.2.3"
+    },
+    "missing_host_pkg_config_modules": [],
+    "native_tool_paths": {
+      "python3": "/usr/bin/python3",
+      "ninja": "/usr/bin/ninja",
+      "git": "/usr/bin/git",
+      "pkg-config": "/usr/bin/pkg-config",
+      "gperf": "/usr/bin/gperf",
+      "bison": "/usr/bin/bison",
+      "flex": "/usr/bin/flex",
+      "file": "/usr/bin/file",
+      "rsync": "/usr/bin/rsync",
+      "zip": "/usr/bin/zip",
+      "unzip": "/usr/bin/unzip",
+      "zstd": "/usr/bin/zstd",
+      "clang": "/opt/llvm20/bin/clang",
+      "lld": "/opt/llvm20/bin/lld"
+    },
+    "missing_native_tools": [],
+    "passed": true
+  },
+  "audit": {
+    "status": "passed",
+    "target_executed": false,
+    "full_electron_verified": false,
+    "electron_libcxx_verified": false,
+    "compiler_version": "clang version 20.1.8 (Loongson 20.1.8-1)\nTarget: x86_64-unknown-linux-gnu\nThread model: posix\nInstalledDir: /opt/llvm20/bin",
+    "cxx_probe_standard_library": "GCC 10 support libstdc++; Electron uses separate in-tree libc++",
+    "sysroot": {
+      "path": "/opt/mips-sysroot",
+      "libc_file": "/opt/mips-sysroot/lib/mips64el-linux-gnuabi64/libc-2.31.so",
+      "libc_version": "2.31",
+      "glibc_header_macros": "2.26",
+      "glibc_2_28_compatibility_validated": false
+    },
+    "programs": [
+      {
+        "file": "/work/recipe/output/public-clang20-smoke/hello-clang20-mips64el",
+        "elf_class": 64,
+        "endianness": "little",
+        "machine": 8,
+        "flags": "0x80000007",
+        "isa": "MIPS64R2",
+        "abi": "N64",
+        "float_abi": "hard-double",
+        "interpreter": "/lib64/ld.so.1",
+        "needed": [
+          "libc.so.6"
+        ],
+        "required_glibc_versions": [
+          "2.0",
+          "2.2"
+        ],
+        "maximum_required_glibc": "2.2"
+      },
+      {
+        "file": "/work/recipe/output/public-clang20-smoke/concepts-clang20-mips64el",
+        "elf_class": 64,
+        "endianness": "little",
+        "machine": 8,
+        "flags": "0x80000007",
+        "isa": "MIPS64R2",
+        "abi": "N64",
+        "float_abi": "hard-double",
+        "interpreter": "/lib64/ld.so.1",
+        "needed": [
+          "libm.so.6",
+          "libgcc_s.so.1",
+          "libc.so.6",
+          "ld.so.1"
+        ],
+        "required_glibc_versions": [
+          "2.0",
+          "2.2",
+          "2.3",
+          "2.3.4",
+          "2.4"
+        ],
+        "maximum_required_glibc": "2.4"
+      }
+    ]
+  },
+  "recipe_source_sha256": {
+    "Dockerfile": "318b92bd0db7873d2942a9339c8fdfb549ec50fcd3574991d22ca68fa950d238",
+    "Dockerfile.host-tools": "10b73c2bfc2e585f530a6ff0128e3756dfba502eed7915378fcd2c96f01c2f59",
+    "metadata/inputs.json": "d5cc5423285226db348a3270cbb42fa23d97a8085bcfea94697df923ea099e53",
+    "metadata/host-tools.json": "87492bd9ba64899eb8ab3ca4ede9104d8887b138c24137b42661fb7dfdc54bf0",
+    "inputs/SHA256SUMS": "6dda4d9445a84ab79b179df915cd3357bec098c4af64b4fcad31d3ee5d501eb4",
+    "metadata/host-tools-SHA256SUMS": "92155efb5e553027c4b53423ee2a231d3a8c7c402c89f4ec8980c966ff3a5542",
+    "scripts/mips64el-env": "eaf1ab6c8907fc39f85647bdd7d910cfcd8c254006cfffbcfa365c554d9ad2a4",
+    "scripts/mips64el-pkg-config": "060cd983583390619633d24c339fca2e32a01b9611b737045c72edc4e623d8f3"
+  },
+  "smoke_sources_sha256": {
+    "hello-clang20.c": "511084182a9d51ab33471145c005aafecf62dfe90531cfa6ac12cdb01db246f9",
+    "concepts-clang20.cc": "734313203a2882256115d1e3f95a14d4ac7d4c1dbf9337d701f064fc746fd181"
+  },
+  "limitations": [
+    "This validation records the original Bullseye base image with actual libc 2.31 and Chromium-modified 2.26 header macros. The separate Buster/glibc 2.28 flavor has its own validation.",
+    "C/C++20 frontend, target linking and ELF ABI were checked. These probes were not executed; Chromium in-tree libc++, complete Electron, and physical target behavior were not validated here.",
+    "A clean source bootstrap and complete source-to-release build were not run as part of this image validation.",
+    "Archive URLs and SHA256 are pinned; the Ubuntu base tag and apt repositories remain moving inputs, so bit-for-bit image reproduction is not promised."
+  ]
+}

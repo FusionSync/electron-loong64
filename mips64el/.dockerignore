@@ -1,0 +1,9 @@
+# Build outputs and local Python caches are mounted at runtime and are not image inputs.
+output/
+**/__pycache__/
+**/*.pyc
+# Keep unrelated architecture downloads out of this MIPS64EL build context.
+inputs/loongnix/
+inputs/buster-work/
+inputs/**/*.part
+.cache/

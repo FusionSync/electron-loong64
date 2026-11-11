@@ -18,6 +18,10 @@ electron37-attempt/electron37.2.2-linux-loong64-bundle.zip
 inputs/*.tar.gz
 inputs/*.tar.xz
 inputs/*.deb
+mips64el/inputs/*.tar.xz
+mips64el/inputs/*.tar.gz
+mips64el/inputs/*.deb
+mips64el/inputs/toolchain-debs/*.deb
 *.img
 *.tar
 *.tar.gz

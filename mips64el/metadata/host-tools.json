@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "host": "x86_64-linux",
+  "files": [
+    {
+      "path": "host-tools/node-v22.17.0-linux-x64.tar.xz",
+      "sha256": "325c0f1261e0c61bcae369a1274028e9cfb7ab7949c05512c5b1e630f7e80e12",
+      "url": "https://nodejs.org/dist/v22.17.0/node-v22.17.0-linux-x64.tar.xz",
+      "origin": "Node.js v22.17.0 / SHASUMS256.txt"
+    },
+    {
+      "path": "host-tools/cmake-3.22.6-linux-x86_64.tar.gz",
+      "sha256": "09e1b34026c406c5bf4d1b053eadb3a8519cb360e37547ebf4b70ab766d94fbc",
+      "url": "https://cmake.org/files/v3.22/cmake-3.22.6-linux-x86_64.tar.gz",
+      "origin": "CMake v3.22.6 / cmake-3.22.6-SHA-256.txt"
+    },
+    {
+      "path": "host-tools/zig-linux-x86_64-0.13.0.tar.xz",
+      "sha256": "d45312e61ebcc48032b77bc4cf7fd6915c11fa16e4aad116b66c9468211230ea",
+      "url": "https://ziglang.org/download/0.13.0/zig-linux-x86_64-0.13.0.tar.xz",
+      "origin": "Zig 0.13.0 / download/index.json"
+    }
+  ]
+}

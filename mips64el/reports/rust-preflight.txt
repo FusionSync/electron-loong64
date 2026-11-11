@@ -1,0 +1,83 @@
+MIPS64EL Rust preflight, 2026-11-10
+
+Result: Rust standard-library build, GNU ld executable link, and QEMU execution passed.
+This verifies Rust bring-up only. A complete Electron build and a Loongson 3A4000
+hardware test are separate requirements.
+
+Build configuration
+- Electron source revision: 37.2.2 bring-up checkout.
+- Rust: Chromium rustc 1.88.0-dev, revision 4a0969e06dbeaaa43914d2d00b2e843d49aa3886.
+- Target: mips64el-unknown-linux-gnuabi64.
+- Host C/C++ compiler: LoongNix LLVM/Clang 20.1.8.
+- Target linker: GNU binutils 2.38 through GCC 10.3.0.
+- GN: use_sysroot=false, explicit target_sysroot=/opt/mips-sysroot,
+  use_custom_libcxx=true, use_custom_libcxx_for_host=true.
+- The isolated std preflight additionally disabled use_udev because libudev-dev
+  was absent from the host image at that point. This does not affect Rust std.
+- Host LLVM used real x86_64 libffi.so.6, never a libffi.so.8 compatibility symlink.
+
+Standard library
+- ninja build/rust/std:std -j2 completed all 64 actions with exit status 0.
+- Produced core, alloc, compiler_builtins, std, test, and their dependency rlibs.
+- Extracted libstd object: ELF64, little-endian, MIPS64R2, GPR64, hard-float
+  double precision, no ISA extensions and no ASE/MSA.
+
+Executable smoke
+- Program uses heap allocation, Vec/String, a spawned thread, AtomicU64,
+  UTF-8 text, temporary-file write/read/remove, assertions, and stdout.
+- Compiled against the newly built target Rust sysroot with panic=abort.
+- Link driver: mips64el-linux-gnuabi64-gcc --sysroot=/opt/mips-sysroot
+  -march=mips64r2 -mabi=64 [rustc link arguments]
+  /opt/mips-sysroot/lib/mips64el-linux-gnuabi64/libgcc_s.so.1
+- rustc uses -nodefaultlibs; explicit target libgcc_s supplies _Unwind_Backtrace
+  and _Unwind_GetIP. Omitting it fails the link. C++ driver links normally may
+  already add this runtime; inspect final Electron link arguments.
+- Final ELF: ELF64 little-endian PIE, MIPS64R2 N64 hard-float.
+- ELF interpreter: /lib64/ld.so.1.
+- Final dynamic symbols pthread_getattr_np, pthread_create, __errno_location,
+  and _Unwind_Backtrace are UND, not ABS. The MIPS structural symbol
+  _DYNAMIC_LINKING is ABS as expected.
+- Highest required GLIBC symbol version in this smoke executable: GLIBC_2.18.
+  This small program does not establish a glibc baseline for all Electron files.
+
+Runtime verification
+- QEMU: qemu-mips64el 8.2.2 (Debian 1:8.2.2+ds-0ubuntu1.18).
+- The Chromium/Electron build sysroot contains link-only shared-library stubs.
+  Its libpthread lacks code and has a zero-sized PT_MIPS_ABIFLAGS segment;
+  it cannot serve as the runtime rootfs. No build sysroot was modified.
+- Runtime rootfs was independently extracted from the following complete Debian
+  packages. The loader symlink was changed from absolute to relative solely in
+  that isolated runtime rootfs so QEMU's prefix can resolve it.
+
+https://archive.debian.org/debian/pool/main/g/glibc/libc6_2.31-13+deb11u5_mips64el.deb
+SHA256 a56818d41fc38526f6c1a2246edbc6f880f64661b53e0ee09449508ea582887b
+
+https://archive.debian.org/debian/pool/main/g/gcc-10/libgcc-s1_10.2.1-6_mips64el.deb
+SHA256 eb8e61a39b7317de7503ed77d04635f012ed5ea1d3be7e72a9c87cae40e877ca
+
+- QEMU execution exit status: 0.
+- Output:
+  Electron MIPS64EL Rust std: 中文; heap, threads, AtomicU64, UTF-8, and file I/O passed
+
+Resolved host build-script crash
+- The old host executable had pthread_getattr_np linked as ABS address 0x9ab0
+  and crashed before main. Other host pthread/unwind symbols were affected.
+- Rebuilding host tools without the incomplete host sysroot made those symbols
+  undefined imports and allowed all four Rust std build scripts to run.
+- The final target smoke was separately audited for the same ABS-symbol defect
+  before running it; it does not contain that defect.
+
+Additional glibc 2.28 runtime check
+- The same executable (no rebuild) also passed the same test under QEMU 8.2.2
+  with complete Debian Buster glibc 2.28 and GCC 8 runtime packages. Exit status 0.
+- This validates this Rust program on a glibc 2.28 runtime; it does not validate
+  Chromium, Electron, FFmpeg, GPU helpers, or the full target dependency set.
+
+https://archive.debian.org/debian/pool/main/g/glibc/libc6_2.28-10+deb10u1_mips64el.deb
+SHA256 d1003f371aa34da0f4d229d69c48c53f89c112b02be6b3b9ede0f5d3cab9088a
+
+https://archive.debian.org/debian/pool/main/g/gcc-8/libgcc1_8.3.0-6_mips64el.deb
+SHA256 cd3af159d41a3c673cf1fa5166ae0a5bb1b8403245affb1484e68adfadd0b73e
+
+Smoke executable SHA256:
+88057e3e881ef97827a66bfaf6d34616be8a757a541a0c92c3324910ed870922

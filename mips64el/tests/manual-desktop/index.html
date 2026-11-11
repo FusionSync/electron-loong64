@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Electron 3A4000 手工验证</title>
+  <style>
+    :root { font: 15px/1.55 system-ui,sans-serif; color: #202d45; background: #f4f6fa; }
+    * { box-sizing: border-box; } body { margin: 0; padding: 28px; } main { max-width: 1200px; margin: auto; }
+    h1 { font-size: 26px; margin: 0 0 6px; } h2 { font-size: 18px; margin: 0 0 12px; }
+    p { margin: 8px 0; } .muted { color: #64738a; } .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    section { background: white; padding: 22px; border-radius: 14px; border: 1px solid #dde4ef; min-width: 0; }
+    .wide { grid-column: 1 / -1; } header { margin-bottom: 22px; } button,input { font: inherit; }
+    button { padding: 8px 13px; border: 1px solid #bccae0; border-radius: 7px; background: #f6f9ff; color: #174397; cursor: pointer; }
+    button:hover { background: #e8f0ff; } button:disabled { opacity: .5; cursor: wait; }
+    input { min-width: 0; flex: 1; padding: 9px; border: 1px solid #b7c6dc; border-radius: 6px; }
+    .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin: 10px 0; }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; background: #f4f7fb; padding: 12px; border-radius: 8px; max-height: 260px; overflow: auto; font: 12px/1.6 monospace; }
+    canvas { width: 100%; height: 170px; border-radius: 8px; background: #101d39; display: block; }
+    .track { height: 32px; background: #edf2fc; border-radius: 20px; margin: 14px 0; overflow: hidden; }
+    .orb { position: relative; height: 32px; width: 32px; border-radius: 50%; background: linear-gradient(120deg,#6555dd,#16b8ce); animation: travel 3s ease-in-out infinite alternate; }
+    @keyframes travel { from { left: 0; transform: rotate(0); } to { left: calc(100% - 32px); transform: rotate(360deg); } }
+    #file-image { max-width: 100%; max-height: 200px; object-fit: contain; }
+    #events { max-height: 340px; } .status { font-weight: 600; color: #245bad; } .error { color: #b32034; }
+    @media(max-width:900px) { .grid { grid-template-columns: 1fr; } body { padding: 16px; } }
+  </style>
+  <script src="renderer.js" defer></script>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Electron · 3A4000 手工验证</h1>
+    <div class="muted">本地动画、文件与网络检查；网页在独立窗口打开。请逐项观察并保留日志。</div>
+    <p id="identity" class="status">正在读取运行环境…</p>
+    <p id="notice" class="error" role="status"></p>
+  </header>
+  <div class="grid">
+    <section>
+      <h2>1 · 动画与绘制</h2>
+      <p class="muted">上方圆点应来回运动，画布内彩球应持续移动。</p>
+      <div class="track"><div class="orb"></div></div>
+      <canvas id="animation" width="640" height="220" aria-label="彩球动画"></canvas>
+      <div class="row"><span id="fps" class="status">等待帧率…</span><button id="toggle-animation">暂停 Canvas</button></div>
+      <p id="webgl" class="muted"></p>
+    </section>
+    <section>
+      <h2>2 · 打开本地文件</h2>
+      <p class="muted">选择不超过 2 MiB 的文本或图片。预览不会执行文件中的代码。</p>
+      <button id="open-file">选择文件</button>
+      <p id="file-status" role="status">尚未选择文件</p>
+      <img id="file-image" alt="所选图片预览" hidden>
+      <pre id="file-preview">文本预览和文件头将显示在这里。</pre>
+    </section>
+    <section>
+      <h2>3 · HTTP / HTTPS 请求</h2>
+      <p class="muted">通过 Electron 网络接口请求，15 秒超时；最多取前 64 KiB，显示前 16 KiB。</p>
+      <div class="row"><input id="network-url" aria-label="网络测试地址" value="https://www.bilibili.com/"><button id="network">请求</button></div>
+      <p id="network-status" role="status">尚未请求</p>
+      <pre id="network-preview">HTTP 状态、响应类型和正文预览将显示在这里。</pre>
+    </section>
+    <section>
+      <h2>4 · 实际网页窗口</h2>
+      <p class="muted">分别检查页面绘制、滚动、登录提示和视频。此处使用完整窗口加载网站。</p>
+      <div class="row"><button id="bilibili">打开 B 站</button><button id="xiaohongshu">打开小红书</button><button id="both">两个都打开</button></div>
+      <div class="row"><input id="web-url" aria-label="网页地址" value="https://www.xiaohongshu.com/explore"><button id="open-web">打开网址</button></div>
+      <p id="web-status" role="status">加载状态会记录在下方日志。</p>
+      <p class="muted">网页窗口的“查看 → 开发者工具”可检查 Console 和 Network。</p>
+    </section>
+    <section class="wide">
+      <h2>运行环境与 GPU</h2>
+      <button id="gpu">刷新 GPU 信息</button>
+      <pre id="system">等待环境信息…</pre>
+    </section>
+    <section class="wide">
+      <h2>实时诊断日志</h2>
+      <p id="log-path" class="muted"></p>
+      <p class="muted">HTTP 200 和窗口标题更新只表示收到内容，页面绘制与交互仍需观察。</p>
+      <pre id="events" aria-live="polite"></pre>
+    </section>
+  </div>
+</main>
+</body>
+</html>

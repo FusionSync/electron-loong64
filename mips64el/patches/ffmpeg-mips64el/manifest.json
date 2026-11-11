@@ -1,0 +1,63 @@
+{
+  "ffmpeg_revision": "891612882e4d6afeb259b1fc52ce477956d9bc02",
+  "compiler": "clang version 20.1.8 (Loongson 20.1.8-1)",
+  "target": "mips64el-linux-gnuabi64",
+  "isa": "mips64r2",
+  "abi": "n64",
+  "float": "hard",
+  "msa": false,
+  "source_counts": {
+    "Chromium": 197,
+    "Chrome": 251
+  },
+  "files": [
+    "chromium/config/Chrome/linux/mips64el/config.h",
+    "chromium/config/Chrome/linux/mips64el/config_components.h",
+    "chromium/config/Chrome/linux/mips64el/libavcodec/bsf_list.c",
+    "chromium/config/Chrome/linux/mips64el/libavcodec/codec_list.c",
+    "chromium/config/Chrome/linux/mips64el/libavcodec/parser_list.c",
+    "chromium/config/Chrome/linux/mips64el/libavformat/demuxer_list.c",
+    "chromium/config/Chrome/linux/mips64el/libavformat/muxer_list.c",
+    "chromium/config/Chrome/linux/mips64el/libavformat/protocol_list.c",
+    "chromium/config/Chrome/linux/mips64el/libavutil/avconfig.h",
+    "chromium/config/Chrome/linux/mips64el/libavutil/ffversion.h",
+    "chromium/config/Chromium/linux/mips64el/config.h",
+    "chromium/config/Chromium/linux/mips64el/config_components.h",
+    "chromium/config/Chromium/linux/mips64el/libavcodec/bsf_list.c",
+    "chromium/config/Chromium/linux/mips64el/libavcodec/codec_list.c",
+    "chromium/config/Chromium/linux/mips64el/libavcodec/parser_list.c",
+    "chromium/config/Chromium/linux/mips64el/libavformat/demuxer_list.c",
+    "chromium/config/Chromium/linux/mips64el/libavformat/muxer_list.c",
+    "chromium/config/Chromium/linux/mips64el/libavformat/protocol_list.c",
+    "chromium/config/Chromium/linux/mips64el/libavutil/avconfig.h",
+    "chromium/config/Chromium/linux/mips64el/libavutil/ffversion.h",
+    "ffmpeg_mips64el_generated.gni"
+  ],
+  "baseline_sha256": {
+    "configure": "2e32adcc0dd3f943f579dc2066b4da9ca3cb32f1af01a8d13e3fd13132dbf356",
+    "ffmpeg_generated.gni": "05dfe14b1eaef4c7be38a5a604628f79db35ff2246910d125872bd6e791ec879"
+  },
+  "file_sha256": {
+    "chromium/config/Chrome/linux/mips64el/config.h": "595ed92af3779dad9d1d1b77eb58095013699083b52c2c9c372a6c22e4d140f1",
+    "chromium/config/Chrome/linux/mips64el/config_components.h": "d31a35d13e411a87b3967b9062c05645d18fb1ad0f17b96039b834abe7f0a47f",
+    "chromium/config/Chrome/linux/mips64el/libavcodec/bsf_list.c": "bdd8790c519c97b62a52edba0b6d0b2241695e08d3c03bf026984c5e21a3e8a7",
+    "chromium/config/Chrome/linux/mips64el/libavcodec/codec_list.c": "3eec6487a4827455f2ef848bd382d652b7b7c445d8de48464884715044fb509a",
+    "chromium/config/Chrome/linux/mips64el/libavcodec/parser_list.c": "cc1c11bdbaa120b7faafd719a6c8f1d6f6f09515ecd5b7bddaee5a91e9cad74c",
+    "chromium/config/Chrome/linux/mips64el/libavformat/demuxer_list.c": "71b14f15be7909233422de758a5c9e6a9e4ab1a773ea666fd621cd6cf40aa5f5",
+    "chromium/config/Chrome/linux/mips64el/libavformat/muxer_list.c": "286605f176b8f4c91f8e1eefabef037c51ccc12b16b7e7e94758996c490059c2",
+    "chromium/config/Chrome/linux/mips64el/libavformat/protocol_list.c": "20390d2af0b45f7de454ca6f3b806275de063a3de97e80feea6857da98e60b67",
+    "chromium/config/Chrome/linux/mips64el/libavutil/avconfig.h": "6d78a911a2128e926262114c9904209209674e3bc1a18c208c850ecbfc3393ec",
+    "chromium/config/Chrome/linux/mips64el/libavutil/ffversion.h": "aee49c0d30c18b1150a7825fc2675920c08a0721495dce534d02177e6ce8521e",
+    "chromium/config/Chromium/linux/mips64el/config.h": "49d2a1903a0a8b1c7b616b24263d89c3ed67d96bdfcbf8d82381b790f882a409",
+    "chromium/config/Chromium/linux/mips64el/config_components.h": "754b2ec606f183d88c37cf49feb61fced2ada2f0f456113f62ed58e865f84188",
+    "chromium/config/Chromium/linux/mips64el/libavcodec/bsf_list.c": "bdd8790c519c97b62a52edba0b6d0b2241695e08d3c03bf026984c5e21a3e8a7",
+    "chromium/config/Chromium/linux/mips64el/libavcodec/codec_list.c": "52d6e9367fe38da6d7b11f3796b8a03ad1e96ca2de1cd02562d6a1fdf7402c1a",
+    "chromium/config/Chromium/linux/mips64el/libavcodec/parser_list.c": "beb97da27f18089f619f200ed921506c3235237497c5dbd3cfa90e2bdca09b69",
+    "chromium/config/Chromium/linux/mips64el/libavformat/demuxer_list.c": "3bf2a158ad6fbf424a4100f51e6bbf6fc1e8bfa31c196cf6080721668e7cb70b",
+    "chromium/config/Chromium/linux/mips64el/libavformat/muxer_list.c": "286605f176b8f4c91f8e1eefabef037c51ccc12b16b7e7e94758996c490059c2",
+    "chromium/config/Chromium/linux/mips64el/libavformat/protocol_list.c": "20390d2af0b45f7de454ca6f3b806275de063a3de97e80feea6857da98e60b67",
+    "chromium/config/Chromium/linux/mips64el/libavutil/avconfig.h": "6d78a911a2128e926262114c9904209209674e3bc1a18c208c850ecbfc3393ec",
+    "chromium/config/Chromium/linux/mips64el/libavutil/ffversion.h": "aee49c0d30c18b1150a7825fc2675920c08a0721495dce534d02177e6ce8521e",
+    "ffmpeg_mips64el_generated.gni": "5c0434e4a9c43d9bf1f15d24e1fd3b85b9489ee290a9cffea4b12f8c78dcc42e"
+  }
+}

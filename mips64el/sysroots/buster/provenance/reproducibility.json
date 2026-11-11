@@ -1,0 +1,22 @@
+{
+  "first_umask": "0002 (stamp normalized 0644)",
+  "second_umask": "0022 (fresh independent extraction)",
+  "entries": 31361,
+  "content_mode_symlink_differences": [],
+  "root_modes": [
+    "0o755",
+    "0o755"
+  ],
+  "stamp_modes": [
+    "0o644",
+    "0o644"
+  ],
+  "json_writer_modes_under_umask": {
+    "0002": "0644",
+    "0022": "0644",
+    "0077": "0644"
+  },
+  "normalized_archive_sha256": "ed4c9dddc58afd35be6b3f8faef5359603f64ab9cca1893c4408a470e2c0af94",
+  "independent_umask0022_archive_sha256": "ed4c9dddc58afd35be6b3f8faef5359603f64ab9cca1893c4408a470e2c0af94",
+  "archives_identical": true
+}

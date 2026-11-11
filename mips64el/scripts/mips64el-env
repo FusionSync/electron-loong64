@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+sysroot=${MIPS64EL_SYSROOT:?MIPS64EL_SYSROOT is not set}
+triple=${MIPS64EL_TRIPLE:-mips64el-linux-gnuabi64}
+march=${MIPS64EL_MARCH:-mips64r2}
+mabi=${MIPS64EL_MABI:-64}
+
+export PATH="/opt/llvm20/bin:/opt/node/bin:/opt/mips-toolchain/usr/bin:/opt/cmake/bin:${PATH}"
+export LD_LIBRARY_PATH="/opt/llvm-deps:/opt/llvm20/lib:/opt/mips-toolchain/usr/lib/x86_64-linux-gnu:/opt/mips-toolchain/usr/lib:/opt/mips-toolchain/lib:${LD_LIBRARY_PATH:-}"
+# These generic-project helpers remain GCC ABI probes. Electron selects LLVM 20
+# and its in-tree libc++ through the separate GN toolchain configuration.
+export CC="${triple}-gcc --sysroot=${sysroot} -march=${march} -mabi=${mabi}"
+export CXX="${triple}-g++ --sysroot=${sysroot} -march=${march} -mabi=${mabi}"
+export AR="${triple}-ar"
+export AS="${triple}-as"
+export LD="${triple}-ld"
+export NM="${triple}-nm"
+export OBJCOPY="${triple}-objcopy"
+export OBJDUMP="${triple}-objdump"
+export RANLIB="${triple}-ranlib"
+export STRIP="${triple}-strip"
+export PKG_CONFIG=mips64el-pkg-config
+export PKG_CONFIG_SYSROOT_DIR="$sysroot"
+export PKG_CONFIG_LIBDIR="$sysroot/usr/lib/mips64el-linux-gnuabi64/pkgconfig:$sysroot/usr/share/pkgconfig"
+
+exec "${@:-bash}"
