@@ -36,7 +36,7 @@ memory, and compared the result byte for byte with the active source file.
 The FFmpeg helper was also run in a new temporary directory populated with its
 unmodified baseline files, and all installed files were compared.
 
-The public source helper now contains **48 replacements across 56 checked files
+The public source helper now contains **48 replacements across 57 checked files
 in nine repositories**. The original clean bootstrap run installed and checked
 39 replacements. A later ATK compatibility follow-up applied the additional
 9 replacements in an independent clean checkout; its

@@ -9,7 +9,7 @@
     "hooks_completed": true,
     "public_source_helper_completed": true,
     "public_ffmpeg_helper_completed": true,
-    "main_build_source_file_comparisons_passed": 56,
+    "main_build_source_file_comparisons_passed": 57,
     "main_build_host_tool_comparisons_passed": 4,
     "gn_generation_passed": true,
     "electron_compilation_performed": false,
@@ -432,6 +432,11 @@
       "matches_main_build_source": true
     },
     {
+      "path": "src/ui/accessibility/platform/ax_platform_node_auralinux.cc",
+      "sha256": "22a9962fbe81f9d1dbda7fca8a471df46f0392323527453a6917e410be5cd6e8",
+      "matches_main_build_source": true
+    },
+    {
       "path": "src/third_party/ffmpeg/chromium/config/Chrome/linux/mips64el/config.h",
       "sha256": "595ed92af3779dad9d1d1b77eb58095013699083b52c2c9c372a6c22e4d140f1",
       "matches_main_build_source": true
@@ -638,7 +643,7 @@
     "An initial network transport failure was resumed in the script-marked workspace; no existing source or dependency cache was substituted.",
     "The original clean bootstrap source-helper stage installed 39 replacements; a later independent clean checkout applied nine ATK 2.30 compatibility replacements, bringing the current public helper total to 48.",
     "The ATK follow-up checked ui/accessibility/platform/ax_platform_node_auralinux.cc and matched its main-build counterpart by SHA256.",
-    "The comparison covers the 56 public helper files and four listed host tool binaries, not every byte of the ongoing main build input tree.",
+    "The comparison covers the 57 public helper files and four listed host tool binaries, not every byte of the ongoing main build input tree.",
     "Untracked Python __pycache__ files copied with the small recipe snapshot are generated caches and are excluded from recipe input checksums.",
     "The 3 GiB limit was used for source preparation and GN only; it is not a memory requirement for a full Electron build.",
     "Raw logs remain local; this public record omits private routing details, credentials, and host absolute paths."

@@ -21,7 +21,7 @@ checkout, outputs and sysroot; it does not modify the LoongArch64 build.
 ## What has passed
 
 - GN generated 27,588 targets with the Buster sysroot and the selected snapshot configuration.
-- [Clean network source preparation](reports/clean-bootstrap.md) passed through all 14 official patch repositories, hooks, public adaptations and independent GN generation. The public source helper currently has 48 replacements across 56 checked files; the four host tools also match the ongoing build.
+- [Clean network source preparation](reports/clean-bootstrap.md) passed through all 14 official patch repositories, hooks, public adaptations and independent GN generation. The public source helper currently has 48 replacements across 57 checked files; the four host tools also match the ongoing build.
 - The Buster sysroot exposes ATK 2.30 headers. The source helper guards Chromium's optional ATK 2.32 text-scrolling callbacks and falls back from the ATK 2.34 content roles when those compile-time APIs are unavailable. This keeps the source buildable against the locked headers; it does not claim a complete accessibility or desktop runtime test.
 - Rust standard library: 64/64 actions; FFmpeg: 460/460 actions, including the shared-library link.
 - QEMU's `Loongson-3A4000` CPU model ran C desktop-library, Rust and FFmpeg probes against glibc 2.28.
