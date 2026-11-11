@@ -570,6 +570,29 @@ def main() -> None:
         'void AXPlatformNodeAuraLinux::ComputeStylesIfNeeded() {',
     )
 
+    # Electron's NodeMain path requests the optional Blink context snapshot
+    # unconditionally.  This recipe deliberately disables that generator, so
+    # use the ordinary V8 startup snapshot when the build flag is off.
+    node_main = "electron/shell/app/node_main.cc"
+    patcher.replace(
+        node_main,
+        '#include "shell/common/node_util.h"\n',
+        '#include "shell/common/node_util.h"\n'
+        '#include "tools/v8_context_snapshot/buildflags.h"\n',
+    )
+    patcher.replace(
+        node_main,
+        '    gin::V8Initializer::LoadV8Snapshot(\n'
+        '        gin::V8SnapshotFileType::kWithAdditionalContext);\n',
+        '#if BUILDFLAG(USE_V8_CONTEXT_SNAPSHOT)\n'
+        '    gin::V8Initializer::LoadV8Snapshot(\n'
+        '        gin::V8SnapshotFileType::kWithAdditionalContext);\n'
+        '#else\n'
+        '    gin::V8Initializer::LoadV8Snapshot(\n'
+        '        gin::V8SnapshotFileType::kDefault);\n'
+        '#endif\n',
+    )
+
     patcher.finish()
 
 

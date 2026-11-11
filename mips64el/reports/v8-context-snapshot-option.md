@@ -23,8 +23,11 @@ Reviewed the Electron 37.2.2 / Chromium 138.0.7204.100 source tree on
 | `gin/BUILD.gn` | The regular `snapshot_blob.bin` remains runtime data when V8 external startup data is enabled. |
 | `electron/BUILD.gn` | The application adds its context snapshot dependency only when enabled. The mksnapshot package always depends on V8's normal generator and adds the Blink context generator conditionally. |
 
-The runtime selects the ordinary path explicitly; it does not first try a
-missing context file:
+The browser and renderer paths select the ordinary path explicitly; Electron's NodeMain path also needs an explicit compile-time guard. The public helper
+adds that guard so `ELECTRON_RUN_AS_NODE=1` selects the ordinary V8 snapshot when
+`use_v8_context_snapshot=false`; otherwise NodeMain would request the unavailable
+`kWithAdditionalContext` file type and abort. The runtime selects the ordinary path
+explicitly; it does not first try a missing context file:
 
 1. `content/app/content_main_runner_impl.cc`, `GetSnapshotType()`, selects
    `gin::V8SnapshotFileType::kDefault` when the buildflag is false.
@@ -99,5 +102,6 @@ unchanged to validate a configuration with context snapshots disabled.
 Normal `mksnapshot` generation and the recipe's runtime smoke tests are the
 appropriate checks for this configuration.
 
-This report establishes the source and generated graph behavior. It does not
-claim a completed Electron runtime test or physical 3A4000 validation.
+This report establishes the source and generated graph behavior. The NodeMain
+condition was exercised by the QEMU packaged-runtime smoke after the completed
+build. It does not claim a GUI test or physical 3A4000 validation.

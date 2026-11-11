@@ -9,15 +9,16 @@
     "hooks_completed": true,
     "public_source_helper_completed": true,
     "public_ffmpeg_helper_completed": true,
-    "main_build_source_file_comparisons_passed": 57,
+    "main_build_source_file_comparisons_passed": 58,
     "main_build_host_tool_comparisons_passed": 4,
     "gn_generation_passed": true,
     "electron_compilation_performed": false,
     "target_runtime_executed": false,
     "gui_or_physical_hardware_verified": false,
-    "public_source_helper_replacements_total": 48,
+    "public_source_helper_replacements_total": 50,
     "original_clean_bootstrap_source_helper_replacements": 39,
-    "follow_up_atk_replacements": 9
+    "follow_up_atk_replacements": 9,
+    "follow_up_node_snapshot_replacements": 2
   },
   "source_pins": {
     "schema": 1,
@@ -81,7 +82,7 @@
     "metadata/public-image-validation.json": "feaa3b6ffeb96acdf87676e076083577032a479eed81bf6c729c09059175a603",
     "metadata/source-pins.json": "7566655bf5a38e77de44451d84d114c885dc77a4dfb06c98a22eba18a2434097",
     "patches/apply-mips64el-ffmpeg-patches.py": "6bd4d9142fb9e4f55338122127fc923384efee9ec8e4b4913dbbd7cf65cd6820",
-    "patches/apply-mips64el-source-patches.py": "bd438f7ad18fd4814a401b427decd076f40e787c496dcd77a38f2bf0df1b92f9",
+    "patches/apply-mips64el-source-patches.py": "6be7f7fff56c6c7d2a19973f96e2b132c09ab0d7b488ebea9d798e4f96e8391d",
     "patches/ffmpeg-mips64el/README.md": "8aac367b3d0cd67a5e22d615d792425736348b193e4b44611da8b73202c980f8",
     "patches/ffmpeg-mips64el/chromium/config/Chrome/linux/mips64el/config.h": "595ed92af3779dad9d1d1b77eb58095013699083b52c2c9c372a6c22e4d140f1",
     "patches/ffmpeg-mips64el/chromium/config/Chrome/linux/mips64el/config_components.h": "d31a35d13e411a87b3967b9062c05645d18fb1ad0f17b96039b834abe7f0a47f",
@@ -437,6 +438,11 @@
       "matches_main_build_source": true
     },
     {
+      "path": "src/electron/shell/app/node_main.cc",
+      "sha256": "c2ce51f8c412f121d583a19859b716ae50ae6479710d75ebac69d3c8669300de",
+      "matches_main_build_source": true
+    },
+    {
       "path": "src/third_party/ffmpeg/chromium/config/Chrome/linux/mips64el/config.h",
       "sha256": "595ed92af3779dad9d1d1b77eb58095013699083b52c2c9c372a6c22e4d140f1",
       "matches_main_build_source": true
@@ -641,9 +647,9 @@
   },
   "notes": [
     "An initial network transport failure was resumed in the script-marked workspace; no existing source or dependency cache was substituted.",
-    "The original clean bootstrap source-helper stage installed 39 replacements; a later independent clean checkout applied nine ATK 2.30 compatibility replacements, bringing the current public helper total to 48.",
+    "The original clean bootstrap source-helper stage installed 39 replacements; later independent clean-checkout follow-ups added nine ATK 2.30 compatibility replacements and two NodeMain snapshot guards, bringing the current public helper total to 50.",
     "The ATK follow-up checked ui/accessibility/platform/ax_platform_node_auralinux.cc and matched its main-build counterpart by SHA256.",
-    "The comparison covers the 57 public helper files and four listed host tool binaries, not every byte of the ongoing main build input tree.",
+    "The comparison covers the 58 public helper files and four listed host tool binaries, not every byte of the ongoing main build input tree.",
     "Untracked Python __pycache__ files copied with the small recipe snapshot are generated caches and are excluded from recipe input checksums.",
     "The 3 GiB limit was used for source preparation and GN only; it is not a memory requirement for a full Electron build.",
     "Raw logs remain local; this public record omits private routing details, credentials, and host absolute paths."
@@ -662,5 +668,17 @@
       "ATK 2.34 content roles fall back to ATK_ROLE_SECTION with older headers."
     ],
     "source_helper_sha256": "bd438f7ad18fd4814a401b427decd076f40e787c496dcd77a38f2bf0df1b92f9"
+  },
+  "follow_up_node_snapshot_validation": {
+    "validated_at_utc": "2026-11-11T08:12:00Z",
+    "additional_replace_operations": 2,
+    "checked_files": 1,
+    "main_build_file": "electron/shell/app/node_main.cc",
+    "fresh_checkout_file_sha256": "c2ce51f8c412f121d583a19859b716ae50ae6479710d75ebac69d3c8669300de",
+    "main_checkout_file_sha256": "c2ce51f8c412f121d583a19859b716ae50ae6479710d75ebac69d3c8669300de",
+    "matched_main_checkout": true,
+    "configuration": "use_v8_context_snapshot=false",
+    "compatibility": "NodeMain selects kDefault for the normal snapshot when the optional context snapshot buildflag is disabled.",
+    "source_helper_sha256": "6be7f7fff56c6c7d2a19973f96e2b132c09ab0d7b488ebea9d798e4f96e8391d"
   }
 }
