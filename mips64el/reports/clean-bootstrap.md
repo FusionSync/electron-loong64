@@ -14,7 +14,8 @@ versions and GN results. Raw logs remain local.
 | Electron / Chromium / depot_tools | Exact pinned commits |
 | Official Electron patches | All 14 repositories; 228 applied commits |
 | Hooks | Passed, including frozen Yarn dependencies and required generated inputs |
-| Public source helper | 39 replacements installed in the fresh checkout |
+| Public source helper (original run) | 39 replacements installed in the fresh checkout |
+| ATK 2.30 compatibility follow-up | 9 additional replacements applied in an independent clean checkout; the resulting accessibility source matches the main-build file by SHA256 |
 | Public FFmpeg helper | 22 files installed from the checked payload |
 | Comparison with the ongoing main build | All 56 helper files and all four checked host binaries have identical SHA256 values |
 | Independent GN generation | Exit 0; 27,588 targets from 4,150 files; unused arguments rejected |
@@ -45,9 +46,13 @@ the executable tools' version output match the ongoing build's copies. Host
 Node is distinct from the pinned target Node source version v22.17.0.
 
 This establishes that the public source preparation and GN steps work without
-the initial source cache. It does not establish a successful complete Electron
-build, GUI, sandbox, GPU, media playback, or physical 3A4000 execution. The
-comparison covers the documented helper files and host tools, not the entire
-main build input tree. Untracked Python `__pycache__` files are generated caches,
-not recipe inputs. Official patched commit IDs can vary with git-am committer
-timestamps; the pinned bases and patch mbox hashes identify the patch inputs.
+the initial source cache. The original clean bootstrap's source-helper stage
+covered 39 replacements; the 9 ATK replacements were validated afterward in a
+separate clean checkout and matched the main-build accessibility source. The
+current public helper therefore covers 48 replacements across the same 56 files.
+It does not establish a successful complete Electron build, GUI, sandbox, GPU,
+media playback, or physical 3A4000 execution. The comparison covers the
+documented helper files and host tools, not the entire main build input tree.
+Untracked Python `__pycache__` files are generated caches, not recipe inputs.
+Official patched commit IDs can vary with git-am committer timestamps; the
+pinned bases and patch mbox hashes identify the patch inputs.

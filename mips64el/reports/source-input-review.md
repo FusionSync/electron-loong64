@@ -36,7 +36,14 @@ memory, and compared the result byte for byte with the active source file.
 The FFmpeg helper was also run in a new temporary directory populated with its
 unmodified baseline files, and all installed files were compared.
 
-All **39 source replacements and 56 checked files across nine repositories**
-matched. Every tracked working-tree change in those repositories was covered
-by the two public helpers. The check does not validate every untracked hook
-output or dependency revision and does not substitute for a clean bootstrap.
+The public source helper now contains **48 replacements across 56 checked files
+in nine repositories**. The original clean bootstrap run installed and checked
+39 replacements. A later ATK compatibility follow-up applied the additional
+9 replacements in an independent clean checkout; its
+`ui/accessibility/platform/ax_platform_node_auralinux.cc` file has the same
+SHA256 as the corresponding main-build file. Every tracked working-tree change
+in those repositories was covered by the two public helpers. The ATK additions
+guard APIs newer than the Debian Buster ATK 2.30 headers and provide the older
+role fallback. The check does not validate every untracked hook output or
+dependency revision and does not substitute for a clean bootstrap or a complete
+Electron build.

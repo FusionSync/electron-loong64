@@ -455,6 +455,121 @@ def main() -> None:
         '    static constexpr char arch[] = "mips64";\n',
     )
 
+    # Debian Buster ships ATK 2.30 headers. Chromium keeps runtime weak
+    # support for the ATK 2.32 text-scrolling API, but the implementation
+    # references newer enum values and interface fields that are absent from
+    # those headers. Guard the newer pieces at the header boundary.
+    atk_source = "ui/accessibility/platform/ax_platform_node_auralinux.cc"
+    patcher.replace(
+        atk_source,
+        'WEAK_ATK_FN(atk_component_scroll_to_point);\n'
+        'WEAK_ATK_FN(atk_text_scroll_substring_to_point);\n',
+        'WEAK_ATK_FN(atk_component_scroll_to_point);\n'
+        '#if defined(ATK_CHECK_VERSION) && ATK_CHECK_VERSION(2, 32, 0)\n'
+        'WEAK_ATK_FN(atk_text_scroll_substring_to_point);\n'
+        '#endif\n',
+    )
+    patcher.replace(
+        atk_source,
+        'bool SupportsAtkTextScrollingInterface() {\n'
+        '  return atk_text_scroll_substring_to_point;\n'
+        '}\n',
+        'bool SupportsAtkTextScrollingInterface() {\n'
+        '#if defined(ATK_CHECK_VERSION) && ATK_CHECK_VERSION(2, 32, 0)\n'
+        '  return atk_text_scroll_substring_to_point;\n'
+        '#else\n'
+        '  return false;\n'
+        '#endif\n'
+        '}\n',
+    )
+    patcher.replace(
+        atk_source,
+        'AtkRole GetAtkRoleContentDeletion() {\n'
+        '  base::Version atk_version(atk_get_version());\n'
+        '  return atk_version.CompareTo(base::Version("2.34.0")) >= 0\n'
+        '             ? ATK_ROLE_CONTENT_DELETION\n'
+        '             : ATK_ROLE_SECTION;\n'
+        '}\n',
+        'AtkRole GetAtkRoleContentDeletion() {\n'
+        '#if defined(ATK_CHECK_VERSION) && ATK_CHECK_VERSION(2, 34, 0)\n'
+        '  base::Version atk_version(atk_get_version());\n'
+        '  return atk_version.CompareTo(base::Version("2.34.0")) >= 0\n'
+        '             ? ATK_ROLE_CONTENT_DELETION\n'
+        '             : ATK_ROLE_SECTION;\n'
+        '#else\n'
+        '  return ATK_ROLE_SECTION;\n'
+        '#endif\n'
+        '}\n',
+    )
+    patcher.replace(
+        atk_source,
+        'AtkRole GetAtkRoleContentInsertion() {\n'
+        '  base::Version atk_version(atk_get_version());\n'
+        '  return atk_version.CompareTo(base::Version("2.34.0")) >= 0\n'
+        '             ? ATK_ROLE_CONTENT_INSERTION\n'
+        '             : ATK_ROLE_SECTION;\n'
+        '}\n',
+        'AtkRole GetAtkRoleContentInsertion() {\n'
+        '#if defined(ATK_CHECK_VERSION) && ATK_CHECK_VERSION(2, 34, 0)\n'
+        '  base::Version atk_version(atk_get_version());\n'
+        '  return atk_version.CompareTo(base::Version("2.34.0")) >= 0\n'
+        '             ? ATK_ROLE_CONTENT_INSERTION\n'
+        '             : ATK_ROLE_SECTION;\n'
+        '#else\n'
+        '  return ATK_ROLE_SECTION;\n'
+        '#endif\n'
+        '}\n',
+    )
+    patcher.replace(
+        atk_source,
+        'gboolean ScrollSubstringTo(AtkText* atk_text,\n',
+        '#if defined(ATK_CHECK_VERSION) && ATK_CHECK_VERSION(2, 32, 0)\n'
+        'gboolean ScrollSubstringTo(AtkText* atk_text,\n',
+    )
+    patcher.replace(
+        atk_source,
+        '  return obj->ScrollSubstringToPoint(start_offset, end_offset, atk_coord_type,\n'
+        '                                     x, y);\n'
+        '}\n\n'
+        'void Init(AtkTextIface* iface) {',
+        '  return obj->ScrollSubstringToPoint(start_offset, end_offset, atk_coord_type,\n'
+        '                                     x, y);\n'
+        '}\n'
+        '#endif  // defined(ATK_CHECK_VERSION) && ATK_CHECK_VERSION(2, 32, 0)\n\n'
+        'void Init(AtkTextIface* iface) {',
+    )
+    patcher.replace(
+        atk_source,
+        '  if (SupportsAtkTextScrollingInterface()) {\n'
+        '    iface->scroll_substring_to = ScrollSubstringTo;\n'
+        '    iface->scroll_substring_to_point = ScrollSubstringToPoint;\n'
+        '  }\n',
+        '#if defined(ATK_CHECK_VERSION) && ATK_CHECK_VERSION(2, 32, 0)\n'
+        '  if (SupportsAtkTextScrollingInterface()) {\n'
+        '    iface->scroll_substring_to = ScrollSubstringTo;\n'
+        '    iface->scroll_substring_to_point = ScrollSubstringToPoint;\n'
+        '  }\n'
+        '#endif  // defined(ATK_CHECK_VERSION) && ATK_CHECK_VERSION(2, 32, 0)\n',
+    )
+    patcher.replace(
+        atk_source,
+        'std::optional<gfx::Rect>\n'
+        'AXPlatformNodeAuraLinux::GetUnclippedHypertextRangeBoundsRect(int start_offset,',
+        '#if defined(ATK_CHECK_VERSION) && ATK_CHECK_VERSION(2, 32, 0)\n'
+        'std::optional<gfx::Rect>\n'
+        'AXPlatformNodeAuraLinux::GetUnclippedHypertextRangeBoundsRect(int start_offset,',
+    )
+    patcher.replace(
+        atk_source,
+        '  return true;\n'
+        '}\n\n'
+        'void AXPlatformNodeAuraLinux::ComputeStylesIfNeeded() {',
+        '  return true;\n'
+        '}\n'
+        '#endif  // defined(ATK_CHECK_VERSION) && ATK_CHECK_VERSION(2, 32, 0)\n\n'
+        'void AXPlatformNodeAuraLinux::ComputeStylesIfNeeded() {',
+    )
+
     patcher.finish()
 
 

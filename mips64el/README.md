@@ -1,4 +1,4 @@
-# Electron 37.2.2 for Loongson 3A4000
+# Electron 37.2.2 for MIPS64EL on Loongson 3A4000
 
 **Experimental MIPS64EL cross build.** The container, target sysroot, Rust
 standard library and FFmpeg have passed the checks below. The complete Electron
@@ -8,20 +8,21 @@ available.
 | Component | Choice |
 | --- | --- |
 | Build host | x86_64 Linux with Docker |
-| Target CPU / ABI | 3A4000: MIPS64R2, little-endian, N64, hard-float |
+| Target CPU / ABI | Loongson 3A4000: MIPS64R2, little-endian, N64, hard-float |
 | Electron | 37.2.2, with pinned Chromium and official Electron patches |
-| C/C++ compiler | LoongNix LLVM/Clang 20.1.8; Chromium's in-tree libc++ |
+| C/C++ compiler | LoongNix LLVM/Clang 20.1.8 on x86_64, generating MIPS64EL code; Chromium's in-tree libc++ |
 | Target sysroot | Debian Buster, **glibc 2.28**, assembled from 558 locked official packages |
 | Target startup/runtime | Buster GCC 8.3 CRT/libgcc; GNU binutils support layer |
 | System page sizes | Runtime selection; 4, 16 and 64 KiB probes passed |
 
-3A4000 is a MIPS CPU. This directory has its own images, source checkout,
-outputs and sysroot; it does not modify the LoongArch64 build.
+Loongson 3A4000 is a MIPS64R2 CPU. This directory has its own images, source
+checkout, outputs and sysroot; it does not modify the LoongArch64 build.
 
 ## What has passed
 
 - GN generated 27,588 targets with the Buster sysroot and the selected snapshot configuration.
-- [Clean network source preparation](reports/clean-bootstrap.md) passed through all 14 official patch repositories, hooks, public adaptations and independent GN generation. The 56 checked adaptation files and four host tools match the ongoing build.
+- [Clean network source preparation](reports/clean-bootstrap.md) passed through all 14 official patch repositories, hooks, public adaptations and independent GN generation. The public source helper currently has 48 replacements across 56 checked files; the four host tools also match the ongoing build.
+- The Buster sysroot exposes ATK 2.30 headers. The source helper guards Chromium's optional ATK 2.32 text-scrolling callbacks and falls back from the ATK 2.34 content roles when those compile-time APIs are unavailable. This keeps the source buildable against the locked headers; it does not claim a complete accessibility or desktop runtime test.
 - Rust standard library: 64/64 actions; FFmpeg: 460/460 actions, including the shared-library link.
 - QEMU's `Loongson-3A4000` CPU model ran C desktop-library, Rust and FFmpeg probes against glibc 2.28.
 - The probes cover threads, atomic operations, UTF-8, file I/O, GTK/GLib/NSS/ALSA/X11 linking, and H.264/AAC/MP3 decoder initialization.
