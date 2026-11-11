@@ -1,9 +1,9 @@
 # Electron 37.2.2 for MIPS64EL on Loongson 3A4000
 
 **Experimental MIPS64EL cross build.** The container, target sysroot, Rust
-standard library and FFmpeg have passed the checks below. The complete Electron
-build is still in progress; a hardware-tested MIPS Electron release is not yet
-available.
+standard library and FFmpeg have passed the checks below. Electron 37.2.2 has
+also completed the cross build, package audit and QEMU Node-mode runtime QA.
+Physical 3A4000 GUI/GPU/sandbox testing remains pending.
 
 | Component | Choice |
 | --- | --- |
@@ -24,13 +24,15 @@ checkout, outputs and sysroot; it does not modify the LoongArch64 build.
 - [Clean network source preparation](reports/clean-bootstrap.md) passed through all 14 official patch repositories, hooks, public adaptations and independent GN generation. The public source helper currently has 50 replacements across 58 checked files; the four host tools also match the ongoing build.
 - The Buster sysroot exposes ATK 2.30 headers. The source helper guards Chromium's optional ATK 2.32 text-scrolling callbacks and falls back from the ATK 2.34 content roles when those compile-time APIs are unavailable. This keeps the source buildable against the locked headers; it does not claim a complete accessibility or desktop runtime test.
 - The optional Blink context snapshot is disabled to avoid a second Blink build. Electron's NodeMain path is guarded to use the ordinary V8 startup snapshot in that configuration; the packaged QEMU Node-mode smoke passed after this fix.
+- The complete Electron target and nine standard release assets built successfully. The [experimental runtime release](https://github.com/FusionSync/electron-loong64/releases/tag/v37.2.2-mips64el-glibc2.28-experimental.1) includes the ELF audit, SHA256 manifests and QEMU QA archive.
+- The sysroot uses conservative Debian MIPS64R2/N64 hard-float packages. It does not require a Loongson-specific ISA extension; the compiler flags select the target ISA, and the packaged runtime passed the Loongson-3A4000 QEMU model. This keeps the sysroot reproducible without mixing unverified Kylin or Loongnix RPMs.
 - Rust standard library: 64/64 actions; FFmpeg: 460/460 actions, including the shared-library link.
 - QEMU's `Loongson-3A4000` CPU model ran C desktop-library, Rust and FFmpeg probes against glibc 2.28.
 - The probes cover threads, atomic operations, UTF-8, file I/O, GTK/GLib/NSS/ALSA/X11 linking, and H.264/AAC/MP3 decoder initialization.
 - [Actual FFmpeg decoding](reports/ffmpeg-decode.md) also passed: four H.264 frames and AAC/MP3 audio matched the generated pattern, sample counts and signal checks; a damaged H.264 stream was correctly rejected.
 - ELF checks confirm MIPS64R2/N64/hard-float without MSA; the Buster probe artifacts require no symbol newer than GLIBC_2.28.
 - [Marl fiber probes](reports/marl-fibers.md) preserve all eight N64 callee-saved floating-point registers and verify PIC entry/resume under QEMU at `-O0`, `-O2` and `-Os`, after correcting the upstream `$f30` save/restore.
-- [V8 N64 register probes](reports/v8-n64-fprs.md) reproduce and fix incorrect floating-point preservation in native entry and caller-save paths at the same three optimization levels. These focused tests precede full Electron runtime validation.
+- [V8 N64 register probes](reports/v8-n64-fprs.md) reproduce and fix incorrect floating-point preservation in native entry and caller-save paths at the same three optimization levels. The packaged Electron QA also passed the N64 FPR addon check.
 
 See [Buster validation](reports/buster-preflight.txt) and
 [final public image validation](metadata/public-buster-image-validation.json),
@@ -39,10 +41,10 @@ that the complete Electron application works on a physical desktop.
 
 [The V8 configuration review](reports/v8-3a4000-config.md) also checks the
 MIPS64R2 JIT and host snapshot settings. The
-[offline runtime smoke](tests/runtime-smoke/README.md) is ready to exercise
-optimized JavaScript, deoptimization, scalar Wasm, threads, files and local HTTP
-after the complete executable exists. Its recorded host Node result is a
-check of the test script, not evidence of MIPS Electron execution.
+[offline runtime smoke](tests/runtime-smoke/README.md) and FPR addon were run
+against the packaged Electron under QEMU; the release QA archive records the
+commands and results. This remains Node-mode validation and does not establish
+GUI, GPU, sandbox, media playback or physical-hardware compatibility.
 
 ## Use the prepared environment
 
