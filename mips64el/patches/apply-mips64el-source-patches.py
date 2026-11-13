@@ -121,6 +121,25 @@ def main() -> None:
         '     PA_BUILDFLAG(PA_ARCH_CPU_MIPS64EL))\n',
     )
 
+    # Linux MIPS64 kernels may use 4, 16, or 64 KiB pages. Chromium's
+    # protected-memory section is aligned at compile time, so generic MIPS64
+    # builds must use the largest supported alignment. The smaller alignment
+    # selected by the upstream fallback starts the section at a 4 KiB boundary
+    # and aborts on the 16 KiB Loongson kernel during renderer startup.
+    patcher.replace(
+        "base/memory/protected_memory.h",
+        'inline constexpr int kProtectedMemoryAlignment = 16384;\n'
+        '#else\n'
+        '// 4kb page size\n',
+        'inline constexpr int kProtectedMemoryAlignment = 16384;\n'
+        '#elif defined(__mips__) && defined(__mips64)\n'
+        '// MIPS64 Linux supports 4, 16, and 64 KiB page kernels.\n'
+        '// Use the largest alignment so the section is page-aligned on all of them.\n'
+        'inline constexpr int kProtectedMemoryAlignment = 65536;\n'
+        '#else\n'
+        '// 4kb page size\n',
+    )
+
     # GNU ld requires a thin archive's symbol index even with a Clang frontend.
     # Keep the upstream index-free archive optimization when linking with LLD.
     patcher.replace(
