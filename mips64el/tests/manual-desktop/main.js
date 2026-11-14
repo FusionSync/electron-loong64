@@ -19,6 +19,7 @@ const events = [];
 const remoteWindows = new Map();
 const FILE_LIMIT = 2 * 1024 * 1024;
 const RESPONSE_LIMIT = 64 * 1024;
+const MEDIA_LIMIT = 512 * 1024 * 1024;
 let localWindow;
 let remoteSession;
 let sequence = 0;
@@ -162,6 +163,28 @@ handle('manual:open-file', async () => {
       preview: content.subarray(0, RESPONSE_LIMIT).toString('utf8'), previewTruncated: read > RESPONSE_LIMIT,
       hex: content.subarray(0, 64).toString('hex'), image: mime ? `data:${mime};base64,${content.toString('base64')}` : null };
   } finally { await file.close(); }
+});
+handle('manual:open-media', async value => {
+  const kind = value === 'audio' ? 'audio' : value === 'video' ? 'video' : null;
+  if (!kind) throw new Error('未知媒体类型');
+  const filters = kind === 'audio'
+    ? [{ name: '音频', extensions: ['wav', 'mp3', 'ogg', 'oga', 'flac', 'm4a', 'aac', 'webm'] }]
+    : [{ name: '视频', extensions: ['mp4', 'webm', 'ogv', 'mkv', 'mov', 'avi'] }];
+  const selected = await dialog.showOpenDialog(localWindow, {
+    properties: ['openFile'], title: `选择${kind === 'audio' ? '音频' : '视频'}文件`, filters,
+  });
+  if (selected.canceled || !selected.filePaths.length) return { canceled: true };
+  const filename = selected.filePaths[0];
+  const stat = await fs.promises.stat(filename);
+  if (!stat.isFile() || stat.size > MEDIA_LIMIT) throw new Error('请选择不超过 512 MiB 的普通媒体文件');
+  const ext = path.extname(filename).toLowerCase();
+  const audioExt = new Set(['.wav', '.mp3', '.ogg', '.oga', '.flac', '.m4a', '.aac', '.webm']);
+  const videoExt = new Set(['.mp4', '.webm', '.ogv', '.mkv', '.mov', '.avi']);
+  const allowed = kind === 'audio' ? audioExt : videoExt;
+  if (!allowed.has(ext)) throw new Error(`请选择支持的${kind === 'audio' ? '音频' : '视频'}扩展名`);
+  const url = pathToFileURL(filename).href;
+  log('media-selected', { kind, name: path.basename(filename), size: stat.size });
+  return { name: path.basename(filename), size: stat.size, url };
 });
 handle('manual:network', async value => {
   const url = webURL(value);

@@ -29,7 +29,8 @@ function createWindow() {
     },
   });
 
-  mainWindow.loadFile(path.join(__dirname, 'test.html'));
+  const page = process.argv.includes('--media') ? 'media-test.html' : 'test.html';
+  mainWindow.loadFile(path.join(__dirname, page));
   mainWindow.once('ready-to-show', () => mainWindow.show());
 }
 

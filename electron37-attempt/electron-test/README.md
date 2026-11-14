@@ -17,3 +17,13 @@ DISPLAY=:0 ../electron --no-sandbox --disable-gpu .
 6. 点击“用系统浏览器打开 B 站”，应调用系统默认浏览器打开 `https://www.bilibili.com/`。
 
 `main.js`、`preload.js` 和 `renderer.js` 分别覆盖主进程、隔离预加载和渲染进程 IPC；页面没有加载第三方脚本。
+
+## 媒体和图形测试
+
+使用 `--media` 打开离线媒体页面：
+
+```bash
+DISPLAY=:0 ../electron --no-sandbox --disable-gpu . --media
+```
+
+页面运行时生成 3 秒 WebM、WAV 和 Web Audio 音调，并检查 `<video>` 元数据、`<audio>` 解码、WebGL 着色器、Canvas 2D 绘制及像素读取。没有网络依赖，也不需要额外的媒体文件。`--disable-gpu` 会让 WebGL 走软件实现；若要验证 GPU 合成，去掉该参数并观察 `gl-info` 的 renderer。

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Electron 媒体和图形测试</title>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, sans-serif; }
+    body { margin: 0; background: #0b1220; color: #e5edf8; }
+    header { padding: 20px 28px; background: #17243b; }
+    h1 { margin: 0 0 6px; font-size: 24px; } .sub { color: #afc2df; font-size: 13px; }
+    main { display: grid; grid-template-columns: repeat(2, minmax(320px, 1fr)); gap: 16px; padding: 18px 28px 28px; }
+    section { background: #141f33; border: 1px solid #2a3a57; border-radius: 10px; padding: 15px; }
+    h2 { margin: 0 0 10px; font-size: 17px; } button { margin: 3px 5px 3px 0; padding: 8px 11px; color: #edf5ff; background: #1d2c47; border: 1px solid #435b82; border-radius: 6px; }
+    button:hover { background: #2b4270; } .status { color: #9db4d6; min-height: 21px; margin: 7px 0; } .ok { color: #7ee2aa; } .error { color: #ff9a9a; }
+    canvas, video { display: block; width: 100%; max-width: 520px; background: #07101d; border: 1px solid #334a6d; border-radius: 6px; }
+    #canvas2d, #webgl { height: 190px; } video { margin-top: 8px; max-height: 280px; } audio { width: 100%; margin-top: 8px; }
+    pre { min-height: 100px; max-height: 230px; overflow: auto; background: #0a101c; color: #c9d7eb; padding: 10px; font: 12px/1.4 monospace; white-space: pre-wrap; }
+    @media (max-width: 760px) { main { grid-template-columns: 1fr; padding: 14px; } header { padding-left: 14px; } }
+  </style>
+</head>
+<body>
+  <header><h1>Electron 媒体和图形测试</h1><div class="sub">离线生成素材：视频、音频、WebGL、Canvas 2D 和媒体事件</div></header>
+  <main>
+    <section><h2>视频播放</h2><div id="video-status" class="status">点击生成并播放 WebM</div><button id="make-video">生成 3 秒测试视频</button><button id="play-video">播放 / 暂停</button><video id="video" controls playsinline></video><pre id="video-info">等待测试…</pre></section>
+    <section><h2>音频播放</h2><div id="audio-status" class="status">点击生成 WAV 和 Web Audio 音调</div><button id="make-audio">生成 WAV 音频</button><button id="tone">播放 Web Audio 音调</button><audio id="audio" controls></audio><pre id="audio-info">等待测试…</pre></section>
+    <section><h2>WebGL</h2><div id="gl-status" class="status">初始化中…</div><canvas id="webgl" width="520" height="190"></canvas><pre id="gl-info">等待测试…</pre></section>
+    <section><h2>Canvas 2D 与像素校验</h2><div id="canvas-status" class="status">初始化中…</div><canvas id="canvas2d" width="520" height="190"></canvas><pre id="canvas-info">等待测试…</pre></section>
+  </main>
+  <script src="media-test.js"></script>
+</body>
+</html>

@@ -13,11 +13,12 @@ cd /path/to/unpacked-electron
 
 ## 逐项观察
 
-1. **动画**：圆点往返、Canvas 彩球持续移动；暂停/继续按钮有效。帧率只供观察，不设性能通过阈值。WebGL context 成功创建也不代表已验证 WebGL 渲染正确。
+1. **动画与 Canvas**：圆点往返、Canvas 彩球持续移动；暂停/继续按钮有效。点击“Canvas 导出 PNG”应生成 data URL，说明 2D 绘制和像素导出链路可用。帧率只供观察，不设性能通过阈值。
 2. **文件**：打开小文本、中文文件名和一张 PNG/JPEG；核对文字与图片。取消选择应返回“已取消”，超过 2 MiB 的文件应明确拒绝。仅本地面板可以调用打开文件功能；文字预览不会作为 HTML 执行。
 3. **网络**：请求一个可访问的 HTTPS 地址，检查 HTTP 状态与响应预览。该项走 Electron `net.fetch`；15 秒超时、响应最多读取前 64 KiB。HTTP 403/412 等需结合网站访问策略判断。
 4. **网页**：点击“两个都打开”，B 站和小红书分别使用独立 `BrowserWindow`，无 iframe。分别观察实际内容、滚动和交互；若手动播放视频，请另行记录画面、声音和所用页面。
 5. **GPU 与日志**：记录版本、CPU、GLIBC、GPU 功能状态；关闭网页窗口后确认主面板仍能操作。
+6. **视频、音频与 WebGL**：点击“播放测试音”，确认 AudioContext 进入 running 且物理机能听到约 1 秒的 440 Hz 音；也可选择本地 WAV/MP3/Ogg 等文件，观察元数据、播放和解码错误。点击“播放 Canvas 视频”，确认画面持续变化、播放/暂停/currentTime 工作；选择本地 MP4/WebM/Ogg 文件可进一步验证实际视频解码。WebGL 区域会编译顶点/片元着色器并显示旋转三角形，状态中记录 WebGL 版本、渲染器和帧数；“重新运行 WebGL”可重复测试。Canvas captureStream 验证合成与播放链路，不能代替 H.264/VP9 等编码器验证。
 
 远程网页使用 `contextIsolation=true`、`nodeIntegration=false`、`sandbox=true`，没有本地 preload 或文件 IPC。相机、麦克风、通知等权限请求会拒绝并记日志，不属于此测试的授权范围。
 

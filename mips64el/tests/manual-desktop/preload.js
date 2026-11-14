@@ -7,6 +7,7 @@ contextBridge.exposeInMainWorld('manualDesktop', {
   state: () => ipcRenderer.invoke('manual:state'),
   gpu: () => ipcRenderer.invoke('manual:gpu'),
   openFile: () => ipcRenderer.invoke('manual:open-file'),
+  openMedia: kind => ipcRenderer.invoke('manual:open-media', kind),
   network: url => ipcRenderer.invoke('manual:network', url),
   openWeb: url => ipcRenderer.invoke('manual:open-web', url),
   onLog: callback => {

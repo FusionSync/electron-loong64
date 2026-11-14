@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self' file: blob:; connect-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'">
   <title>Electron 3A4000 手工验证</title>
   <style>
     :root { font: 15px/1.55 system-ui,sans-serif; color: #202d45; background: #f4f6fa; }
@@ -22,6 +22,13 @@
     .orb { position: relative; height: 32px; width: 32px; border-radius: 50%; background: linear-gradient(120deg,#6555dd,#16b8ce); animation: travel 3s ease-in-out infinite alternate; }
     @keyframes travel { from { left: 0; transform: rotate(0); } to { left: calc(100% - 32px); transform: rotate(360deg); } }
     #file-image { max-width: 100%; max-height: 200px; object-fit: contain; }
+    .media-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .media-card { border: 1px solid #e0e6f0; border-radius: 10px; padding: 14px; min-width: 0; }
+    video { width: 100%; max-height: 220px; background: #10131b; border-radius: 8px; display: block; }
+    audio { width: 100%; margin: 8px 0; }
+    #webgl-canvas { height: 220px; image-rendering: auto; }
+    .result { padding: 8px 10px; border-radius: 7px; background: #f4f7fb; overflow-wrap: anywhere; }
+    .pass { color: #157347; } .warn { color: #986c00; }
     #events { max-height: 340px; } .status { font-weight: 600; color: #245bad; } .error { color: #b32034; }
     @media(max-width:900px) { .grid { grid-template-columns: 1fr; } body { padding: 16px; } }
   </style>
@@ -38,10 +45,11 @@
   <div class="grid">
     <section>
       <h2>1 · 动画与绘制</h2>
-      <p class="muted">上方圆点应来回运动，画布内彩球应持续移动。</p>
+      <p class="muted">上方圆点应来回运动，画布内彩球应持续移动；按钮可验证暂停、恢复和导出像素。</p>
       <div class="track"><div class="orb"></div></div>
       <canvas id="animation" width="640" height="220" aria-label="彩球动画"></canvas>
       <div class="row"><span id="fps" class="status">等待帧率…</span><button id="toggle-animation">暂停 Canvas</button></div>
+      <div class="row"><button id="canvas-snapshot">Canvas 导出 PNG</button><span id="canvas-status" class="muted">尚未导出</span></div>
       <p id="webgl" class="muted"></p>
     </section>
     <section>
@@ -68,7 +76,34 @@
       <p class="muted">网页窗口的“查看 → 开发者工具”可检查 Console 和 Network。</p>
     </section>
     <section class="wide">
-      <h2>运行环境与 GPU</h2>
+      <h2>5 · 视频、音频与 WebGL</h2>
+      <p class="muted">先运行内置测试，再选择本地媒体文件验证解码器。媒体输出需要物理机音箱/耳机；浏览器权限不会自动授予。</p>
+      <div class="media-grid">
+        <div class="media-card">
+          <h3>音频输出与 Web Audio</h3>
+          <p class="muted">播放约 1 秒的 440 Hz 正弦音，同时测试 AudioContext 状态和音频输出链路。</p>
+          <div class="row"><button id="audio-start">播放测试音</button><button id="audio-stop">停止</button></div>
+          <audio id="audio-file" controls preload="metadata"></audio>
+          <div class="row"><button id="audio-open">选择音频文件</button><span id="audio-status" class="result">尚未测试</span></div>
+        </div>
+        <div class="media-card">
+          <h3>视频播放与合成画面</h3>
+          <p class="muted">Canvas 视频验证合成、播放、暂停和 currentTime；也可选择 MP4/WebM/Ogg 等本地视频测试解码。</p>
+          <video id="test-video" controls muted playsinline></video>
+          <div class="row"><button id="video-start">播放 Canvas 视频</button><button id="video-stop">停止</button><button id="video-open">选择视频文件</button></div>
+          <div id="video-status" class="result">尚未测试</div>
+          <p id="media-capabilities" class="muted">正在检查浏览器声明的媒体格式…</p>
+        </div>
+        <div class="media-card" style="grid-column:1/-1">
+          <h3>WebGL 着色器与纹理</h3>
+          <p class="muted">绘制带渐变色的旋转三角形；状态包含 WebGL 版本、渲染器、着色器编译和帧计数。</p>
+          <canvas id="webgl-canvas" width="800" height="260" aria-label="WebGL 测试画布"></canvas>
+          <div class="row"><button id="webgl-run">重新运行 WebGL</button><span id="webgl-status" class="result">尚未运行</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="wide">
+      <h2>6 · 运行环境与 GPU</h2>
       <button id="gpu">刷新 GPU 信息</button>
       <pre id="system">等待环境信息…</pre>
     </section>
